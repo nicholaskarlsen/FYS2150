@@ -5,7 +5,7 @@ x=0:0.1:2;
 y=a+b.*x+randn(1,length(x));
 figure(1)
 plot(x,y,'r*')
-%Tilpass med lineær modell
+%Tilpass med lineï¿½r modell
 p=polyfit(x,y,1);
 %Tilpasningsparametre m og c i y=m*x+c:
 m=p(1)
