@@ -9,12 +9,12 @@
 %
 
 %Parametre
-T=1.5; %totaltid, s
-fs=4000;% samplingsfrekvens, Hz
+T=10.5; %totaltid, s
+fs=40000;% samplingsfrekvens, Hz
 f=1000;% lydkildefrekvens, Hz
 fm_f=0.999;% Relativt Doppler-skift fm/f=c/(c-v)
 Ar=.7; % relativ amplitude
-As=1; %st?yamplitude
+As=10; %st?yamplitude
 
 %Sum av to b?lger
 t=0:1/fs:T;
