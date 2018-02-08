@@ -82,11 +82,12 @@ The goal for this lab was measuring time, and comparing three methods of doing s
 
 \section{\label{sec:intro}Introduction}
 	The lab spanned 6 hours and consisted of measuring the period of a pendulum using three different methods of measurement; an hourglass, a stopwatch and a photodiode connected to a computer. The experiments were performed by myself, and my lab partner Lars K. Skaarseth.
-	Before anything else, it is worth to note that the first experiment can largely be disregarded due to an error on our part, more on this in section \ref{subsec:hourglass}.
+	Before anything else, it is worth to note that the first experiment can largely be disregarded due to an error on our part, more on this in section \ref{subsect:exp_stopwatch}.
 
 \section{Theory}
 	The theory used in this lab report is almost entirely summed up by the following equations;
 	\begin{equation}
+        \label{eqn:period}
 		T = 2\pi \sqrt{\frac{L}{g}}
 	\end{equation}
 	Where $T$ denotes the period a swinging pendulum, $L$ the length of the wire by which the pendulum is suspended and $g$ the downward acceleration on the pendulum due to gravity.
@@ -97,27 +98,69 @@ The goal for this lab was measuring time, and comparing three methods of doing s
 
 	Further detail can be found in "Elementary Mechanics Using Python" \cite{elempy}, or most other books covering introductory mechanics.
 
-\section{Experimental Procedure}
-	\subsection{\label{subsec:hourglass}Hourglass}
-	\subsection{\label{subsect:stopwatch}Stopwatch}
-	\subsection{Photodiode}
-\section{Results}
+\section{\label{section:experimentalproced}Experimental Procedure}
+    
+    We connected an aluminium cyllinder to a block of aluminium secured to a desk with a (i believe nylon?) string as shown in Fig. \ref{fig:pendulum1}. For the purposes of this experiment the string is asumed to be inextensible. 
+
+    The string was turned on the Outer side of the screws on the top block, and the inner at the bottom so that the string would form a "V" shape, or positive angle. This was done in an attempt to limit the sideways motion of the block as much as possible, so that more of its kinetic energy would be restricted to the forward/backward motion (from the perspective of Fig. \ref{fig:pendulum1}), which is the motion being measured in these experiments.
+
+    The length of the string, and later, the dimensions of the pendulum (As shown in Fig. \ref{fig:pendulum1}) were measured using a Hultafors meter-rule with an uncertainty of $\pm 1mm$ as well as a small uncertainty due to thermal expansion. Since we did not record the temperature in the room, i will assume standard temperature and pressure, thus negating the need to account for thermal expansion.
+
+    \begin{figure}
+        \center
+        \includegraphics[scale=0.06, angle=270]{experiment1.jpg}
+        \caption{A photograph showing how the pendulum was set up}
+        \label{fig:pendulum1}
+    \end{figure}
+
+    \subsection{\label{subsec:exp_hourglass}Hourglass}
+        In this this initial part of the experiment, we wanted to measure the number of swings made by the pendulum for the duration of an hourglass with an unknown duration. After having released the pendulum, we let it swing for one period before starting the hourglass, then both i and my lab partner then counted the number of swings separately in an attempt to minimize the chance human error when counting. Since we only counted complete swings, the measured value has an uncertainty of $\pm 1T$. The hourglass was also kept still on a table for its complete duration.
+    
+    \subsection{\label{subsect:exp_stopwatch}Stopwatch}
+        This part is mostly similar to the last one, the only difference being the method of measuring the period. This time we used a stopwatch (Cielo 100MT, uncertainty of $\pm 0.01s$) to record the time. In order to minimize human error, we opted to only measure the time every 10th swing and again, both of us counted the swings individually ensuring we would not record the time at the wrong number of swings. We used the lap function of the stop watch to save the time taken for every 10th swing as well as the total running time for the 100 swings that we recorded.
+
+        A rather signifficant source of error in this experiment comes from the reaction time, and to some extent the judgement of the person who is recording the time (he had to judge when the pendulum was at its apex).
+
+
+	\subsection{\label{subsect:exp_photodiode}Photodiode}
+
+        \begin{figure}
+            \center
+            \includegraphics[scale=0.3]{experiment3.jpg}
+            \caption{A photograph showing how the photodiode was set up and connected to the data aquisition box (NI USB-6211) for experiment no. 3 (Section \ref{subsect:exp_photodiode})}
+            \label{fig:pendulum3}
+        \end{figure}
+
+        In this part, we made our measurements electronically using a photodiode connected to a computer with matlab via a data aquisition box (NI USB-6211). A photodiode sends out IR light, when this light is not reflected back to an IR sensitive reciever, the photodiode emits a constant 5V . When the IR light is reflected back to it, it instead emits 0V. For this reason, we had to attach a reflective material to the block of aluminium. We opted for some aluminium foil.
+        Once everything was properly connected (see Fig. \ref{fig:pendulum3}) we ran a matlab script \href{http://www.uio.no/studier/emner/matnat/fys/FYS2150/v18/kursmateriell/tid-og-frekvens/svingeperiode.m}{\textbf{svingeperiode.m}} to record the data and started the pendulum as previously. We repeated this 4 times with different settings and conditions.
+
+
+
+\section{\label{sect:results}Results}
 	\subsection{Pendulum \& Hourglass}
-	\begin{center} % Pendulum and hourglass
-	    \begin{tabular}{| l | l |}
-		    \hline
-		    Recording no. & Number of oscilations\\ \hline
-		    1 & 116 \\ \hline
-		    2 & 121 \\ \hline
-		    3 & 128 \\ \hline
-	    \end{tabular}
-	\end{center}
+
+	\begin{table} % Pendulum and hourglass
+        \center
+        \caption{Measurements with Hourglass}
+        \label{tab:hourglass}
+        \begin{tabular}{| l | l |}
+            \hline
+            Recording no. & Number of oscilations $(\pm 1)$\\ \hline
+            1 & 116 \\ \hline
+            2 & 121 \\ \hline
+            3 & 128 \\ \hline
+        \end{tabular}
+	\end{table}
 
 	\subsection{Pendulum \& Stopwatch}
-	\begin{center} % Pendulum and stopwatch
+
+	\begin{table} % Pendulum and stopwatch
+        \center
+        \caption{Measurements with Stopwatch}
+        \label{tab:stopwatch}
 	    \begin{tabular}{| p{1.5cm} | p{2cm} | p{2cm} |}
 		    \hline
-		    Number of periods & Time [sec] & Total time [min:sec] \\ \hline
+		    Number of periods & Time [sec] ($\pm 0.01$) & Total time [min:sec] ($\pm 0.01$)\\ \hline
 		    10 & 14.14 & 14.14 \\ \hline
 		    20 & 14.31 & 28.53 \\ \hline
 		    30 & 14.32 & 42.85 \\ \hline
@@ -128,21 +171,23 @@ The goal for this lab was measuring time, and comparing three methods of doing s
 		    80 & 14.34 & 1:54.46 \\ \hline
 		    90 & 14.20 & 2:08.76 \\ \hline
 		    100 & 14.52 & 2:23.28 \\ \hline
-	    \end{tabular}
-    \end{center}
+        \end{tabular}
+    \end{table}
     
     \subsection{Pendulum \& Photodiode}
 
-    	\begin{center} % Pendulum and stopwatch
-	    \begin{tabular}{| p{1.7cm} | p{1.5cm} | p{1.5cm} | p{1.5cm} | p{1.5cm} | p{1.5cm} |}
-		    \hline
-		    Experiment no. & Standard deviation of mean period & Mean period & Position of diode & Total measured time [s] & Measuring frequency [KHz] \\ \hline
-		    1 & 5.6540e-4 & 1.4421 & Bottom & 120 & 25 \\ \hline
-		    2 & 8.8552e-4 & 1.4502 & Bottom & 120 & 200 \\ \hline
-		    3 & 0.0483 & 1.5816 & top & 120 & 25 \\ \hline
-		    4 & 0.0026 & 1.4922 & Bottom & 120 & 25 \\ \hline
-	    \end{tabular}
-    \end{center}
+    \begin{table} % Pendulum and stopwatch
+        \caption{Measurements with photodiode}
+        \label{tab:photodiode}
+        \begin{tabular}{| p{1.7cm} | p{1.5cm} | p{1.5cm} | p{1.5cm} | p{1.5cm} | p{1.5cm} |}
+            \hline
+            Experiment no. & Standard deviation of mean period & Mean period & Position of diode & Total measured time [s] & Measuring frequency [KHz] \\ \hline
+            1 & 5.6540e-4 & 1.4421 & Bottom & 120 & 25 \\ \hline
+            2 & 8.8552e-4 & 1.4502 & Bottom & 120 & 200 \\ \hline
+            3 & 0.0483 & 1.5816 & top & 120 & 25 \\ \hline
+            4 & 0.0026 & 1.4922 & Bottom & 120 & 25 \\ \hline
+        \end{tabular}
+    \end{table}
     
     \begin{figure}[h!]
     	\center
@@ -169,14 +214,14 @@ The goal for this lab was measuring time, and comparing three methods of doing s
     	\includegraphics[scale=0.6]{forsok4fig1}
     	\caption{Data from Experiment no. 4 using the photodiode}
     \end{figure}
-  	
-  	Experimenting experiments Experimenting experiments Experimenting experiments Experimenting experiments Experimenting experiments Experimenting experiments Experimenting experiments Experimenting experiments Experimenting experiments 
 
+
+  	
 
 \section{Discussion}
-	Discussing results Discussing results Discussing results Discussing results Discussing results Discussing results Discussing results Discussing results Discussing results Discussing results Discussing results Discussing results Discussing results Discussing results Discussing results Discussing results Discussing results Discussing results Discussing results Discussing results Discussing results Discussing results Discussing results Discussing results Discussing results Discussing results Discussing results Discussing results Discussing results Discussing results Discussing results Discussing results Discussing results Discussing results Discussing results Discussing results 
+ 
 \section{Conclusion}
-	Concluding conclusions Concluding conclusions Concluding conclusions Concluding conclusions Concluding conclusions Concluding conclusions Concluding conclusions Concluding conclusions Concluding conclusions Concluding conclusions Concluding conclusions Concluding conclusions Concluding conclusions Concluding conclusions 
+	
 
 \bibliography{rapport1_ref}
 
