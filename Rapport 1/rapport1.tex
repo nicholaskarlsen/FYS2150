@@ -100,11 +100,28 @@ The goal for this lab was measuring time, and comparing three methods of doing s
 
 \section{\label{section:experimentalproced}Experimental Procedure}
     
-    We connected an aluminum cylinder to a block of aluminum secured to a desk with a (i believe nylon?) string as shown in Fig. \ref{fig:pendulum1}. For the purposes of this experiment the string is assumed to be inextensible. 
+    \subsection{List of equipment used}
+    \begin{itemize}
+        \item Hourglass, generic, unknown duration
+        \item Pendulum, Aluminium cyllinder, see Fig. \ref{fig:pendulum1}
+        \item Stopwatch, Cielo 100MT
+        \item Photodiode
+        \item Cables
+        \item Meter-rule, Hultafors
+        \item Powersupply
+        \item Data aquisition tool, NI USB-6211
+        \item PC with MATLAB installed
+        \item Umbraco Key
+        \item Screwdrivers
+        \item Reflective tape
+    \end{itemize}
 
-    The string was turned on the Outer side of the screws on the top block, and the inner at the bottom so that the string would form a "V" shape, or positive angle. This was done in an attempt to limit the sideways motion of the block as much as possible, so that more of its kinetic energy would be restricted to the forward/backward motion (from the perspective of Fig. \ref{fig:pendulum1}), which is the motion being measured in these experiments.
+    \subsection{Preparation}
+        We connected an aluminum cylinder to a block of aluminum secured to a desk with a (i believe nylon?) string as shown in Fig. \ref{fig:pendulum1}. For the purposes of this experiment the string is assumed to be inextensible. 
 
-    The length of the string, and later, the dimensions of the pendulum (As shown in Fig. \ref{fig:pendulum1}) were measured using a Hultafors meter-rule with an uncertainty of $\pm 1mm$ as well as a small uncertainty due to thermal expansion. Since we did not record the temperature in the room, i will assume standard temperature and pressure, thus negating the need to account for thermal expansion.
+        The string was turned on the Outer side of the screws on the top block, and the inner at the bottom so that the string would form a "V" shape, or positive angle. This was done in an attempt to limit the sideways motion of the block as much as possible, so that more of its kinetic energy would be restricted to the forward/backward motion (from the perspective of Fig. \ref{fig:pendulum1}), which is the motion being measured in these experiments.
+
+        The length of the string, and later, the dimensions of the pendulum (As shown in Fig. \ref{fig:pendulum1}) were measured using a Hultafors meter-rule with an uncertainty of $\pm 1mm$ as well as a small uncertainty due to thermal expansion. Since we did not record the temperature in the room, i will assume standard temperature and pressure, thus negating the need to account for thermal expansion.
 
     \begin{figure}
         \center
@@ -133,6 +150,7 @@ The goal for this lab was measuring time, and comparing three methods of doing s
 
         In this part, we made our measurements electronically using a photo-diode connected to a computer with MATLAB via a data acquisition box (NI USB-6211). A photo-diode sends out IR light, when this light is not reflected back to an IR sensitive receiver, the photo-diode emits a constant 5V . When the IR light is reflected back to it, it instead emits 0V. For this reason, we had to attach a reflective material to the block of aluminum. We opted for some aluminum foil.
         Once everything was properly connected (see Fig. \ref{fig:pendulum3}) we ran a MATLAB script \href{http://www.uio.no/studier/emner/matnat/fys/FYS2150/v18/kursmateriell/tid-og-frekvens/svingeperiode.m}{\textbf{svingeperiode.m}} to record the data and started the pendulum as previously. We repeated this 4 times with different settings and conditions.
+        Experiment 1 \& 2 were identical, measured at different frequencies. For experiment 3, we positioned the photo-diode such that it would aim at the top of the cylinder when it was at rest. In experiment 4, the pendulum was given a push rather than releasing it from rest.
 
         \subsection{Measuring lengths}
             \subsubsection{\label{subsubsect:strings}Length of string}
@@ -177,6 +195,9 @@ The goal for this lab was measuring time, and comparing three methods of doing s
             1 & 116 \\ \hline
             2 & 121 \\ \hline
             3 & 128 \\ \hline
+            \hline
+            Mean & 122 \\ \hline
+            Std. Dev. & 5 \\\hline
         \end{tabular}
 	\end{table}
 
@@ -190,7 +211,7 @@ The goal for this lab was measuring time, and comparing three methods of doing s
         \label{tab:stopwatch}
 	    \begin{tabular}{| p{1.5cm} | p{2cm} | p{2cm} |}
 		    \hline
-		    Number of periods & Time [sec] ($\pm 0.01$) & Total time [min:sec] ($\pm 0.01$)\\ \hline
+		    Number of periods & Time per 10 oscillations [sec] ($\pm 0.01$) & Total time [min:sec] ($\pm 0.01$)\\ \hline
 		    10 & 14.14 & 14.14 \\ \hline
 		    20 & 14.31 & 28.53 \\ \hline
 		    30 & 14.32 & 42.85 \\ \hline
@@ -201,6 +222,9 @@ The goal for this lab was measuring time, and comparing three methods of doing s
 		    80 & 14.34 & 1:54.46 \\ \hline
 		    90 & 14.20 & 2:08.76 \\ \hline
 		    100 & 14.52 & 2:23.28 \\ \hline
+            \hline
+            Mean period & 14.33 & N/A \\ \hline
+            Std. Dev & 0.10 & N/A \\ \hline
         \end{tabular}
     \end{table}
     
@@ -225,7 +249,7 @@ The goal for this lab was measuring time, and comparing three methods of doing s
     	\center
     	\includegraphics[scale=0.6]{forsok1fig1}
     	\caption{Data from Experiment no. 1 using the photo-diode
-    	\footnote{Due to bad planning on my part, this figure, and the following all lack figure titles.
+    	\footnote{Due to poor planning on my part, this figure, and the following all lack figure titles. I mistakingly did not keep all of the .mat files
     	}}
         \label{fig:data1}
     \end{figure}
