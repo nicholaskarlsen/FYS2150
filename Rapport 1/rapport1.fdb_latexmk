@@ -1,16 +1,16 @@
 # Fdb version 3
-["bibtex rapport1"] 1518104399 "rapport1.aux" "rapport1.bbl" "rapport1" 1518104827
+["bibtex rapport1"] 1518112437 "rapport1.aux" "rapport1.bbl" "rapport1" 1518112438
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/plain.bst" 1480098433 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "rapport1.aux" 1518104827 4550 ebafe3be0e7c8a641342593c590d3e0d ""
+  "rapport1.aux" 1518112438 5908 5e55c11fd16c2a834f8e06c38a4488a5 ""
   "rapport1.bcf" 0 -1 0 ""
-  "rapport1Notes.bib" 1518104827 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "rapport1Notes.bib" 1518112438 0 d41d8cd98f00b204e9800998ecf8427e ""
   "rapport1_ref.bib" 1518095840 688 04f5464e991efd3a5bfc3c30029be7b9 ""
   (generated)
   "rapport1.blg"
   "rapport1.bbl"
-["pdflatex"] 1518104827 "rapport1.tex" "/home/nick/Documents/uio/FYS2150/Rapport 1/rapport1.pdf" "rapport1" 1518104827
+["pdflatex"] 1518112438 "rapport1.tex" "/home/nick/Documents/uio/FYS2150/Rapport 1/rapport1.pdf" "rapport1" 1518112438
   "/etc/texmf/web2c/texmf.cnf" 1516135388 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/nick/Documents/uio/FYS2150/Rapport 1/rapport1.aux" 1518104827 4550 ebafe3be0e7c8a641342593c590d3e0d ""
+  "/home/nick/Documents/uio/FYS2150/Rapport 1/rapport1.aux" 1518112438 5908 5e55c11fd16c2a834f8e06c38a4488a5 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1480098670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1480098698 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1480098698 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
@@ -116,15 +116,15 @@
   "forsok2fig1.png" 1518095840 14661 8f73675b37615cf7d48195ef172e5622 ""
   "forsok3fig1.png" 1518095840 11372 10c248098c88844daf9dfc2f4093ce86 ""
   "forsok4fig1.png" 1518095840 15277 8c37e676a9704658b3c45e50252c57dc ""
-  "rapport1.aux" 1518104827 4550 ebafe3be0e7c8a641342593c590d3e0d ""
-  "rapport1.bbl" 1518104400 170 5f0462eec86b6fc9c4b26640513d8024 "bibtex rapport1"
-  "rapport1.out" 1518104827 917 29a8d974721e3bbd5557d4588d843dc2 ""
-  "rapport1.tex" 1518104826 10323 c7596e23e20f236495e197c66473636d ""
+  "rapport1.aux" 1518112438 5908 5e55c11fd16c2a834f8e06c38a4488a5 ""
+  "rapport1.bbl" 1518112438 170 5f0462eec86b6fc9c4b26640513d8024 "bibtex rapport1"
+  "rapport1.out" 1518112438 1178 b9cd174ea9468987156e3bc88b75ee0f ""
+  "rapport1.tex" 1518112436 13411 0ba0066f141290fc1b5d470836ff545e ""
   (generated)
-  "rapport1.log"
-  "rapport1.aux"
-  "/home/nick/Documents/uio/FYS2150/Rapport 1/rapport1.pdf"
-  "rapport1Notes.bib"
   "/home/nick/Documents/uio/FYS2150/Rapport 1/rapport1.log"
-  "rapport1.pdf"
   "rapport1.out"
+  "/home/nick/Documents/uio/FYS2150/Rapport 1/rapport1.pdf"
+  "rapport1.pdf"
+  "rapport1.aux"
+  "rapport1.log"
+  "rapport1Notes.bib"

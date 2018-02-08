@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.1.16)  8 FEB 2018 16:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.1.16)  8 FEB 2018 18:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -334,7 +334,11 @@ Class revtex4-1 Info: cite was not loaded (OK!) on input line 62.
 Class revtex4-1 Info: mcite was not loaded (OK!) on input line 62.
 Class revtex4-1 Info: multicol was not loaded (OK!) on input line 62.
 
-(/home/nick/Documents/uio/FYS2150/Rapport 1/rapport1.aux)
+(/home/nick/Documents/uio/FYS2150/Rapport 1/rapport1.aux
+
+LaTeX Warning: Label `tab:stopwatch' multiply defined.
+
+)
 \openout1 = `rapport1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 62.
@@ -351,8 +355,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 62.
 LaTeX Font Info:    ... okay on input line 62.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 62.
 LaTeX Font Info:    ... okay on input line 62.
-
-(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count117
 \scratchdimen=\dimen119
@@ -422,7 +425,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 89.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<experiment1.jpg, id=69, 4047.12pt x 3035.34pt>
+<experiment1.jpg, id=85, 4047.12pt x 3035.34pt>
 File: experiment1.jpg Graphic file (type jpg)
 <use experiment1.jpg>
 Package pdftex.def Info: experiment1.jpg  used on input line 111. on input line
@@ -431,178 +434,198 @@ Package pdftex.def Info: Requested size: 242.81673pt x 182.11253pt on input lin
 e 111.
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} </home/nick/Documents/ui
 o/FYS2150/Rapport 1/experiment1.jpg>]
-<experiment3.jpg, id=86, 716.6775pt x 963.6pt>
+<experiment3.jpg, id=102, 716.6775pt x 963.6pt>
 File: experiment3.jpg Graphic file (type jpg)
 <use experiment3.jpg>
 Package pdftex.def Info: experiment3.jpg  used on input line 129. on input line
  129.
 Package pdftex.def Info: Requested size: 215.00491pt x 289.08223pt on input lin
 e 129.
-
-Underfull \hbox (badness 10000) in paragraph at lines 163--163
+ [2 </home/nick/Documents/uio/FYS2150/Rapport 1/experiment3.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 193--193
 []|\OT1/cmr/m/n/9 Time [sec]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 163--163
+Underfull \hbox (badness 10000) in paragraph at lines 193--193
 []|\OT1/cmr/m/n/9 Total time
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 163--163
+Underfull \hbox (badness 10000) in paragraph at lines 193--193
 \OT1/cmr/m/n/9 [min:sec]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 184--184
+Overfull \hbox (1.65146pt too wide) in paragraph at lines 216--216
 []|\OT1/cmr/m/n/9 Experiment
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 184--184
+Underfull \hbox (badness 10000) in paragraph at lines 216--216
 []|\OT1/cmr/m/n/9 Standard
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 184--184
+Underfull \hbox (badness 10000) in paragraph at lines 216--216
 \OT1/cmr/m/n/9 de-vi-a-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 184--184
+Underfull \hbox (badness 10000) in paragraph at lines 216--216
 \OT1/cmr/m/n/9 of mean
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 184--184
+Underfull \hbox (badness 10000) in paragraph at lines 216--216
 []|\OT1/cmr/m/n/9 Mean
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 184--184
+Underfull \hbox (badness 10000) in paragraph at lines 216--216
+[]|\OT1/cmr/m/n/9 Position
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 216--216
 []|\OT1/cmr/m/n/9 Total
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 184--184
-\OT1/cmr/m/n/9 mea-sured
+Underfull \hbox (badness 10000) in paragraph at lines 216--216
+\OT1/cmr/m/n/9 mea-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 184--184
+Underfull \hbox (badness 10000) in paragraph at lines 216--216
+\OT1/cmr/m/n/9 sured
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 216--216
 []|\OT1/cmr/m/n/9 Measuring
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 184--184
+Underfull \hbox (badness 10000) in paragraph at lines 216--216
 \OT1/cmr/m/n/9 fre-quency
  []
 
 
-Overfull \hbox (42.56516pt too wide) in paragraph at lines 182--190
+Overfull \hbox (14.11287pt too wide) in paragraph at lines 214--222
  []$[]$ 
  []
 
-<forsok1fig1.png, id=91, 421.575pt x 316.18124pt>
+<forsok1fig1.png, id=126, 421.575pt x 316.18124pt>
 File: forsok1fig1.png Graphic file (type png)
 <use forsok1fig1.png>
-Package pdftex.def Info: forsok1fig1.png  used on input line 194. on input line
- 194.
+Package pdftex.def Info: forsok1fig1.png  used on input line 226. on input line
+ 226.
 Package pdftex.def Info: Requested size: 252.94695pt x 189.7102pt on input line
- 194.
+ 226.
 
-Overfull \hbox (6.94695pt too wide) in paragraph at lines 194--195
+Overfull \hbox (6.94695pt too wide) in paragraph at lines 226--227
  [] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<forsok2fig1.png, id=93, 421.575pt x 316.18124pt>
+<forsok2fig1.png, id=129, 421.575pt x 316.18124pt>
 File: forsok2fig1.png Graphic file (type png)
 <use forsok2fig1.png>
-Package pdftex.def Info: forsok2fig1.png  used on input line 202. on input line
- 202.
+Package pdftex.def Info: forsok2fig1.png  used on input line 235. on input line
+ 235.
 Package pdftex.def Info: Requested size: 252.94695pt x 189.7102pt on input line
- 202.
+ 235.
 
-Overfull \hbox (6.94695pt too wide) in paragraph at lines 202--203
+Overfull \hbox (6.94695pt too wide) in paragraph at lines 235--236
  [] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<forsok3fig1.png, id=94, 421.575pt x 316.18124pt>
+<forsok3fig1.png, id=130, 421.575pt x 316.18124pt>
 File: forsok3fig1.png Graphic file (type png)
 <use forsok3fig1.png>
-Package pdftex.def Info: forsok3fig1.png  used on input line 208. on input line
- 208.
+Package pdftex.def Info: forsok3fig1.png  used on input line 242. on input line
+ 242.
 Package pdftex.def Info: Requested size: 252.94695pt x 189.7102pt on input line
- 208.
+ 242.
 
-Overfull \hbox (6.94695pt too wide) in paragraph at lines 208--209
+Overfull \hbox (6.94695pt too wide) in paragraph at lines 242--243
  [] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<forsok4fig1.png, id=95, 421.575pt x 316.18124pt>
+<forsok4fig1.png, id=131, 421.575pt x 316.18124pt>
 File: forsok4fig1.png Graphic file (type png)
 <use forsok4fig1.png>
-Package pdftex.def Info: forsok4fig1.png  used on input line 214. on input line
- 214.
+Package pdftex.def Info: forsok4fig1.png  used on input line 249. on input line
+ 249.
 Package pdftex.def Info: Requested size: 252.94695pt x 189.7102pt on input line
- 214.
+ 249.
 
-Overfull \hbox (6.94695pt too wide) in paragraph at lines 214--215
+Overfull \hbox (6.94695pt too wide) in paragraph at lines 249--250
  [] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-(/home/nick/Documents/uio/FYS2150/Rapport 1/rapport1.bbl [2 </home/nick/Documen
-ts/uio/FYS2150/Rapport 1/experiment3.jpg>]) [3 </home/nick/Documents/uio/FYS215
-0/Rapport 1/forsok1fig1.png (PNG copy)> </home/nick/Documents/uio/FYS2150/Rappo
-rt 1/forsok2fig1.png (PNG copy)>] [4 </home/nick/Documents/uio/FYS2150/Rapport 
-1/forsok3fig1.png (PNG copy)> </home/nick/Documents/uio/FYS2150/Rapport 1/forso
-k4fig1.png (PNG copy)>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 228.
+(/home/nick/Documents/uio/FYS2150/Rapport 1/rapport1.bbl [3 </home/nick/Documen
+ts/uio/FYS2150/Rapport 1/forsok1fig1.png (PNG copy)> </home/nick/Documents/uio/
+FYS2150/Rapport 1/forsok2fig1.png (PNG copy)>]
+
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
+ on input line 1.
+
+) [4 </home/nick/Documents/uio/FYS2150/Rapport 1/forsok3fig1.png (PNG copy)> </
+home/nick/Documents/uio/FYS2150/Rapport 1/forsok4fig1.png (PNG copy)>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 264.
 
 (/home/nick/Documents/uio/FYS2150/Rapport 1/rapport1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 228.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 228.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 264.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 264.
 Package rerunfilecheck Info: File `rapport1.out' has not changed.
-(rerunfilecheck)             Checksum: 29A8D974721E3BBD5557D4588D843DC2;917.
+(rerunfilecheck)             Checksum: B9CD174EA9468987156E3BC88B75EE0F;1178.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 7988 strings out of 492990
- 112297 string characters out of 6135005
- 249184 words of memory out of 5000000
- 11411 multiletter control sequences out of 15000+600000
+ 8010 strings out of 492990
+ 112591 string characters out of 6135005
+ 224743 words of memory out of 5000000
+ 11427 multiletter control sequences out of 15000+600000
  16461 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,9n,28p,589b,462s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
+ 34i,9n,28p,647b,432s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exi
+st, replaced by a fixed one
+
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
 Output written on "/home/nick/Documents/uio/FYS2150/Rapport 1/rapport1.pdf" (4 
-pages, 4107235 bytes).
+pages, 4112686 bytes).
 PDF statistics:
- 178 PDF objects out of 1000 (max. 8388607)
- 148 compressed objects within 2 object streams
- 32 named destinations out of 1000 (max. 500000)
- 151 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 209 PDF objects out of 1000 (max. 8388607)
+ 178 compressed objects within 2 object streams
+ 38 named destinations out of 1000 (max. 500000)
+ 183 words of extra memory for PDF output out of 10000 (max. 10000000)
 

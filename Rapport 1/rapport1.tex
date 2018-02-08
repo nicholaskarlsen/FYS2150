@@ -73,7 +73,7 @@ Lab Report: Time and Frequency}% Force line breaks with \\
              %  but any date may be explicitly specified
 
 \begin{abstract}
-The goal for this lab was measuring time, and comparing three methods of doing so, of varying degrees of "sophistication"; an hourglass, a stopwatch and a photodiode.
+The goal for this lab was measuring time, and comparing three methods of doing so, of varying degrees of "sophistication"; an hourglass, a stopwatch and a photo-diode.
 \end{abstract}
 
 \maketitle
@@ -81,8 +81,8 @@ The goal for this lab was measuring time, and comparing three methods of doing s
 %\tableofcontents
 
 \section{\label{sec:intro}Introduction}
-	The lab spanned 6 hours and consisted of measuring the period of a pendulum using three different methods of measurement; an hourglass, a stopwatch and a photodiode connected to a computer. The experiments were performed by myself, and my lab partner Lars K. Skaarseth.
-	Before anything else, it is worth to note that the first experiment can largely be disregarded due to an error on our part, more on this in section \ref{subsect:exp_stopwatch}.
+	The lab spanned 6 hours and consisted of measuring the period of a pendulum using three different methods of measurement; an hourglass, a stopwatch and a photo-diode connected to a computer. The experiments were performed by myself, and my lab partner Lars K. Skaarseth.
+	Before anything else, it is worth to note that the first experiment can largely be disregarded due to an error on our part, more on this in section \ref{subsubsect:strings}.
 
 \section{Theory}
 	The theory used in this lab report is almost entirely summed up by the following equations;
@@ -100,7 +100,7 @@ The goal for this lab was measuring time, and comparing three methods of doing s
 
 \section{\label{section:experimentalproced}Experimental Procedure}
     
-    We connected an aluminium cyllinder to a block of aluminium secured to a desk with a (i believe nylon?) string as shown in Fig. \ref{fig:pendulum1}. For the purposes of this experiment the string is asumed to be inextensible. 
+    We connected an aluminum cylinder to a block of aluminum secured to a desk with a (i believe nylon?) string as shown in Fig. \ref{fig:pendulum1}. For the purposes of this experiment the string is assumed to be inextensible. 
 
     The string was turned on the Outer side of the screws on the top block, and the inner at the bottom so that the string would form a "V" shape, or positive angle. This was done in an attempt to limit the sideways motion of the block as much as possible, so that more of its kinetic energy would be restricted to the forward/backward motion (from the perspective of Fig. \ref{fig:pendulum1}), which is the motion being measured in these experiments.
 
@@ -119,33 +119,61 @@ The goal for this lab was measuring time, and comparing three methods of doing s
     \subsection{\label{subsect:exp_stopwatch}Stopwatch}
         This part is mostly similar to the last one, the only difference being the method of measuring the period. This time we used a stopwatch (Cielo 100MT, uncertainty of $\pm 0.01s$) to record the time. In order to minimize human error, we opted to only measure the time every 10th swing and again, both of us counted the swings individually ensuring we would not record the time at the wrong number of swings. We used the lap function of the stop watch to save the time taken for every 10th swing as well as the total running time for the 100 swings that we recorded.
 
-        A rather signifficant source of error in this experiment comes from the reaction time, and to some extent the judgement of the person who is recording the time (he had to judge when the pendulum was at its apex).
+        A rather significant source of error in this experiment comes from the reaction time, and to some extent the judgment of the person who is recording the time (he had to judge when the pendulum was at its apex).
 
 
-	\subsection{\label{subsect:exp_photodiode}Photodiode}
+	\subsection{\label{subsect:exp_photodiode}Photo-diode}
 
         \begin{figure}
             \center
             \includegraphics[scale=0.3]{experiment3.jpg}
-            \caption{A photograph showing how the photodiode was set up and connected to the data aquisition box (NI USB-6211) for experiment no. 3 (Section \ref{subsect:exp_photodiode})}
+            \caption{A photograph showing how the photo-diode was set up and connected to the data acquisition box (NI USB-6211) for experiment no. 3 (Section \ref{subsect:exp_photodiode})}
             \label{fig:pendulum3}
         \end{figure}
 
-        In this part, we made our measurements electronically using a photodiode connected to a computer with matlab via a data aquisition box (NI USB-6211). A photodiode sends out IR light, when this light is not reflected back to an IR sensitive reciever, the photodiode emits a constant 5V . When the IR light is reflected back to it, it instead emits 0V. For this reason, we had to attach a reflective material to the block of aluminium. We opted for some aluminium foil.
-        Once everything was properly connected (see Fig. \ref{fig:pendulum3}) we ran a matlab script \href{http://www.uio.no/studier/emner/matnat/fys/FYS2150/v18/kursmateriell/tid-og-frekvens/svingeperiode.m}{\textbf{svingeperiode.m}} to record the data and started the pendulum as previously. We repeated this 4 times with different settings and conditions.
+        In this part, we made our measurements electronically using a photo-diode connected to a computer with MATLAB via a data acquisition box (NI USB-6211). A photo-diode sends out IR light, when this light is not reflected back to an IR sensitive receiver, the photo-diode emits a constant 5V . When the IR light is reflected back to it, it instead emits 0V. For this reason, we had to attach a reflective material to the block of aluminum. We opted for some aluminum foil.
+        Once everything was properly connected (see Fig. \ref{fig:pendulum3}) we ran a MATLAB script \href{http://www.uio.no/studier/emner/matnat/fys/FYS2150/v18/kursmateriell/tid-og-frekvens/svingeperiode.m}{\textbf{svingeperiode.m}} to record the data and started the pendulum as previously. We repeated this 4 times with different settings and conditions.
+
+        \subsection{Measuring lengths}
+            \subsubsection{\label{subsubsect:strings}Length of string}
+                When measuring the length of the string, we measured it between the middle of the two strings, from the bottom and top of the aluminum at the top and bottom parts of the string respectively. We took great care to ensure that the pendulum was at rest when making the measurement, and kept our heads level with the ruler, and one eye closed when taking the reading in an attempt to minimize any misreading due to parallax. We also rested the Hultafors meter-rule against a right-angle ruler in an additional attempt to minimize the error. We took 3 repeated readings, one of which was performed by a different person. 
+
+                After we had completed our measurements with the hourglass, we noticed a rather large initial rotational and sideways instability in the pendulum, leading us to (mistakingly, see section \ref{disc_problems}) shorten the string by roughly 10cm. After having changed the length of the string, we repeated the exact same procedure of measuring the new length except we only did two measurements, again alternating who took the reading.
+
+            \subsubsection{\label{subsubsect:dim_cyllinder}Dimensions of cylinder}
+                The cylinder, and bracket on top where the string is connected was also measured using the Hultafors meter-rule. This time, we only made one measurement per length, all done by the same person. Other than that, similar considerations were made as when measuring the string.
+
+
 
 
 
 \section{\label{sect:results}Results}
+    
+        \begin{table}[h] % Length of string
+        \center
+        \caption{Length of string}
+        \label{tab:stopwatch}
+        \begin{tabular}{| p{5cm} | l | l | l |}
+            \hline
+            Measurement No. & 1 & 2 & 3 \\ \hline 
+            Length, Hourglass experiment [cm] ($\pm 0.1cm$) 
+            & 53.4 & 52.9 & 52.9\\ \hline
+            Length, Stopwatch \& Photo-diode experiment [cm] ($\pm 0.1cm$) 
+            & 45.3 & 45.2 &  \\ \hline
+        \end{tabular}
+    \end{table}
+
 	\subsection{Pendulum \& Hourglass}
 
-	\begin{table} % Pendulum and hourglass
+    The number of oscillations during the draining of the hourglass is listed on table \ref{tab:hourglass}
+
+	\begin{table}[h] % Pendulum and hourglass
         \center
         \caption{Measurements with Hourglass}
         \label{tab:hourglass}
         \begin{tabular}{| l | l |}
             \hline
-            Recording no. & Number of oscilations $(\pm 1)$\\ \hline
+            Recording no. & Number of oscillations $(\pm 1)$\\ \hline
             1 & 116 \\ \hline
             2 & 121 \\ \hline
             3 & 128 \\ \hline
@@ -154,7 +182,9 @@ The goal for this lab was measuring time, and comparing three methods of doing s
 
 	\subsection{Pendulum \& Stopwatch}
 
-	\begin{table} % Pendulum and stopwatch
+    The period of the pendulum measured with the stopwatch is listed on table \ref{tab:stopwatch}
+
+	\begin{table}[h] % Pendulum and stopwatch
         \center
         \caption{Measurements with Stopwatch}
         \label{tab:stopwatch}
@@ -174,12 +204,14 @@ The goal for this lab was measuring time, and comparing three methods of doing s
         \end{tabular}
     \end{table}
     
-    \subsection{Pendulum \& Photodiode}
+    \subsection{Pendulum \& Photo-diode}
 
-    \begin{table} % Pendulum and stopwatch
-        \caption{Measurements with photodiode}
+    Fig.\ref{fig:data1}, Fig.\ref{fig:data2}, Fig.\ref{fig:data3} and Fig.\ref{fig:data4} shows the result from experiments 1-4 listed on table \ref{tab:photodiode} respectively.
+
+    \begin{table}[h] % Pendulum and stopwatch
+        \caption{Measurements with photo-diode}
         \label{tab:photodiode}
-        \begin{tabular}{| p{1.7cm} | p{1.5cm} | p{1.5cm} | p{1.5cm} | p{1.5cm} | p{1.5cm} |}
+        \begin{tabular}{| p{1.6cm} | p{1.4cm} | p{1.1cm} | p{1.3cm} | p{1.3cm} | p{1.5cm} |}
             \hline
             Experiment no. & Standard deviation of mean period & Mean period & Position of diode & Total measured time [s] & Measuring frequency [KHz] \\ \hline
             1 & 5.6540e-4 & 1.4421 & Bottom & 120 & 25 \\ \hline
@@ -192,33 +224,37 @@ The goal for this lab was measuring time, and comparing three methods of doing s
     \begin{figure}[h!]
     	\center
     	\includegraphics[scale=0.6]{forsok1fig1}
-    	\caption{Data from Experiment no. 1 using the photodiode
+    	\caption{Data from Experiment no. 1 using the photo-diode
     	\footnote{Due to bad planning on my part, this figure, and the following all lack figure titles.
     	}}
+        \label{fig:data1}
     \end{figure}
 
     \begin{figure}[h!]
     	\center
     	\includegraphics[scale=0.6]{forsok2fig1}
-    	\caption{Data from Experiment no. 2 using the photodiode}
+    	\caption{Data from Experiment no. 2 using the photo-diode}
+        \label{fig:data2}
     \end{figure}
 
     \begin{figure}[h!]
     	\center
     	\includegraphics[scale=0.6]{forsok3fig1}
-    	\caption{Data from Experiment no. 3 using the photodiode}
+    	\caption{Data from Experiment no. 3 using the photo-diode}
+        \label{fig:data3}
     \end{figure}
 
     \begin{figure}[h!]
     	\center
     	\includegraphics[scale=0.6]{forsok4fig1}
-    	\caption{Data from Experiment no. 4 using the photodiode}
+    	\caption{Data from Experiment no. 4 using the photo-diode}
+        \label{fig:data4}
     \end{figure}
 
-
-  	
-
 \section{Discussion}
+    \subsection{\label{disc_problems}Problems}
+        As mentioned in the introduction, we did make one rather large experimental error, which does taint our data somewhat. After having completed our measurements with the Hourglass, we noticed a rather large initial sideways and rotational instability when attempting to start the pendulum for our measurements with the stopwatch. In order to minimize this instability, we decided to shorten the string, not considering the ramification this had on our data.
+
  
 \section{Conclusion}
 	
