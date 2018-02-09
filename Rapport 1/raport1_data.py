@@ -14,3 +14,10 @@ periods2 = np.array([
 print "\nHourglass:"
 print "Mean period", np.mean(periods2)
 print "standard dev", np.std(periods2)
+
+masses = np.array([
+	14.74, 2.037, 8.73, 753.76])
+cm = np.array([
+	0.95, 2.25, 2.275, 8])
+
+print (1.0 / np.sum(masses))*np.sum(masses*cm)

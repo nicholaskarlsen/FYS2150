@@ -92,6 +92,7 @@ The goal for this lab was measuring time, and comparing three methods of doing s
 	\end{equation}
 	Where $T$ denotes the period a swinging pendulum, $L$ the length of the wire by which the pendulum is suspended and $g$ the downward acceleration on the pendulum due to gravity.
 	\begin{equation}
+		\label{eqn:cm}
 		\vec R = \frac{1}{M} \sum_i m_i \vec r_i
 	\end{equation}
 	Where $\vec R$ denotes the position of the center of mass of a body of mass $M$ consisting of several smaller bodies of mass $m_i$ with individual center of mass at $r_i$.
@@ -103,13 +104,13 @@ The goal for this lab was measuring time, and comparing three methods of doing s
     \subsection{List of equipment used}
     \begin{itemize}
         \item Hourglass, generic, unknown duration
-        \item Pendulum, Aluminium cyllinder, see Fig. \ref{fig:pendulum1}
+        \item Pendulum, Aluminum cylinder, see Fig. \ref{fig:pendulum1}
         \item Stopwatch, Cielo 100MT
-        \item Photodiode
+        \item Photo-diode
         \item Cables
         \item Meter-rule, Hultafors
-        \item Powersupply
-        \item Data aquisition tool, NI USB-6211
+        \item Power supply
+        \item Data acquisition tool, NI USB-6211
         \item PC with MATLAB installed
         \item Umbraco Key
         \item Screwdrivers
@@ -167,12 +168,14 @@ The goal for this lab was measuring time, and comparing three methods of doing s
 
 \section{\label{sect:results}Results}
    
-    \subsection{Recorded lengths and dimensions}
+    \subsection{\label{subsect:len_dim}Recorded lengths and dimensions}
+
+    	The dimensions of the pendulum, consisting of an aluminum T-bracket connected to a cylinder is given in Fig. \ref{fig:tbracket} and table \ref{tab:cylinder} respectively. The length at which it was suspended is given in table \ref{tab:string}
 
         \begin{table}[h] % Length of string
             \center
             \caption{Length of string}
-            \label{tab:stopwatch}
+            \label{tab:string}
             \begin{tabular}{| p{5cm} | l | l | l |}
                 \hline
                 Measurement No. & 1 & 2 & 3 \\ \hline 
@@ -194,6 +197,13 @@ The goal for this lab was measuring time, and comparing three methods of doing s
 
             \end{tabular}
         \end{table}
+
+    \begin{figure}
+        \center
+        \includegraphics[scale=0.45]{T-bracket_diagram.png}
+        \caption{A sketch showing the dimensions of the T-bracket connected to the cylinder. All numbers in cm with uncertainty $\pm 0.1 cm$ (Not to scale)}
+        \label{fig:tbracket}
+    \end{figure}
 
 	\subsection{Period recorded with hourglass}
 
@@ -217,7 +227,8 @@ The goal for this lab was measuring time, and comparing three methods of doing s
 
 	\subsection{Period recorded with stopwatch}
 
-        The period of the pendulum measured with the stopwatch is listed on table \ref{tab:stopwatch}
+        The period of the pendulum measured with the stopwatch is listed on table \ref{tab:stopwatch}.
+        We also recorded the duration of the Hourglass using the stopwatch, listed in table \ref{tab:hourglass_stopwatch}
 
     	\begin{table}[h] % Pendulum and stopwatch
             \center
@@ -241,6 +252,18 @@ The goal for this lab was measuring time, and comparing three methods of doing s
                 Std. Dev & 0.10 & N/A \\ \hline
             \end{tabular}
         \end{table}
+
+    	\begin{table}[h] % Pendulum and hourglass
+            \center
+            \caption{Duration of Hourglass measured with stopwatch}
+            \label{tab:hourglass_stopwatch}
+            \begin{tabular}{| l | l |}
+                \hline
+                Recording no. & Time [min:sec] ($\pm 0.01s$)\\ \hline
+                1 & 3:08:40 \\ \hline
+                2 & 3:08:28 \\ \hline
+            \end{tabular}
+    	\end{table}
         
     \subsection{Period recorded with photo-diode}
 
@@ -294,10 +317,25 @@ The goal for this lab was measuring time, and comparing three methods of doing s
 
 
 \section{Discussion}
+	\subsection{Theoretical period}
+		\subsubsection{Center of mass}
+		The first thing to consider, and compare the measured results against would be the theoretical period of the system. Since the pendulum is roughly symmetrical in certain planes, i will assume it is and only look for the vertical component of the center of mass. Using Equation \ref{eqn:cm} and my measurements in section \ref{subsect:len_dim} \footnote{The volume of the parts serve as the mass in this case, as the entire pendulum is made of the same material} i found that the center of mass of the pendulum is $\sim 7.79cm$ from the top of the pendulum. If i had disregarded the mass of the T-bracket the C.M of the cylinder would have been at $8cm\,(\pm0.1cm)$, meaning it may be more accurate to simply neglect accounting for the T-bracket in this case. When calculating the uncertainty in the CM when accounting for the T-bracket (which is very tedious to do) i found that only one of the volumes would have an uncertainty of $\pm 2mm$. So the total uncertainty would be so large that it simply makes more sense to "ignore" the T-bracket when calculating the period of the pendulum.	
+		\subsubsection{Period}
+		Using equation \ref{eqn:period} along with the center of mass from the previous subsection i find that the theoretical period of the pendulum for the 52.9cm and 45.2cm strings respectively are 1.56s$(\pm 0.02)$ and 1.46s$(\pm 0.02)$ respectively. (Not accounting for the uncertainty that comes from my assumption that only the cylinder contributes to the C.M)
 
+	\subsection{The hourglass}
+		The most apparent problem with using the hourglass as a timekeeping tool is the rather large inconsistency it presents. While granted, we did only perform 3 readings of its duration using the pendulum, the spread of values we did get were rather significant with a standard deviation of 5 periods, equivalent of $\sim 8s$. The inconsistency of the hourglass was again observed when we timed it using a stopwatch (see table \ref{tab:hourglass_stopwatch}), observing a $12s$ difference between our two readings. This makes the hourglass a highly inconsistent, and inaccurate tool for measuring time in general.
+
+	\subsection{The stopwatch}
+		In stark contrast to the hourglass, the stopwatch is a seemingly much more accurate tool for measuring time, with a standard deviation of only $0.1s$. While the stopwatch itself is, theoretically, an excellent tool for measuring the period of a pendulum in terms of its error, one does have to consider the effects of human error in this experiment, which ultimately is what makes up the inconsistency in these results. The person recording the period has to both react and judge when the pendulum is at its apex. Either way, the mean of our recordings divided by 10 results in a mean recorded period of 14.3s, while reasonably close to the theoretical period, it is outside of three standard deviations away from the mean.
+
+	\subsection{The photo-diode}
+		As expected, the digital, automated solution comes out as the most accurate and precise with a standard deviation in order of magnitude $10^{-4}s$ in ideal conditions (As in experiment no. 1 \& 2, table \ref{tab:photodiode}). The "ideal conditions" being very important here. As we tested in experiment no. 3, table \ref{tab:photodiode} changing the position of the photo diode can have a quite significant impact on the quality of data. Note the sudden significant jump in period at $\sim 100s$ in Fig. \ref{fig:data3}, where we aimed the photo-diode much further up on the cylinder. This "error" arose because the photo-diode no longer consistently reflected its light on the aluminum foil of the pendulum. So while the photo-diode is incredibly precise and accurate, it does require careful set up to ensure that it can make its recordings properly due to how inflexible it is. 
+
+		Lastly, in regards to experiment no. 4. While it does have a standard deviation that is an order of magnitude higher than for 1 \& 2, this is likely due to the initial instability of the system after having received it's initial push. In retrospect, it would have been interesting to see how the period evolved in a longer timespan than just 120 seconds. The same goes for experiment 1 \& 2 as well, even though they are much more stable in general, it does seem that the readings has a tendency to converge after a while. 
  
 \section{Conclusion}
-	
+	In summary, having compared the three different methods of measuring time, i think it's safe to disregard this particular hourglass as a reliable source of timekeeping. I would much rather trust my own counting than its timekeeping capabilities. As for the Stopwatch and photo-diode, i believe it's a case of what is being measured. For a uniform, controlled system such as this pendulum, the photo-diode is the most suitable and accurate of the two. Where as the Stopwatch is much more flexible in its usage, making it a much safer general choice for time keeping compared to the photo-diode, even though it is far less accurate and prone to human error.
 
 \bibliography{rapport1_ref}
 

@@ -5,4 +5,8 @@ Anders Malthe-Sorenssen.
 \newblock {\em Elementary Mechanics Using Python}.
 \newblock Springer, 2015.
 
+\bibitem{Note1}
+The volume of the parts serve as the mass in this case, as the entire pendulum
+  is made of the same material.
+
 \end{thebibliography}
