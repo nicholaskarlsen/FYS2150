@@ -11,10 +11,10 @@ def importdata(filename):
 
 
 def Temp(R):
-    a = 8.420e-4
-    b = 2.0868e-4
-    c = 8.591e-8
-    return 1.0 / (a + b * np.log(R) + c * (np.log(R))**3)
+    a = 8.420e-004
+    b = 2.068e-004
+    c = 8.591e-008
+    return (1.0 / (a + b * np.log(R) + c * (np.log(R))**3)) - 273.16
 
 
 if __name__ == '__main__':
