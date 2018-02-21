@@ -1,10 +1,10 @@
 import scipy.io as sio
 import matplotlib.pyplot as plt
 import numpy as np
-
+"""
 data = sio.loadmat("maalesett.mat")    
 X = data.get("datasett")
-
+"""
 
 def prelab_func(x, y):
     n = np.size(y)
@@ -19,17 +19,29 @@ def prelab_func(x, y):
 
     return dm, dc, c, m
 
-dm, dc, c, m = prelab_func(X[:, 0], X[:, 1])
+def ex10():
+    data2 = sio.loadmat("ex10.mat")
+    dU = data2.get("dU")
+    T = data2.get("T")
+    dm, dc, c, m = prelab_func(T, dU)
+    print m * 1e3
 
-plt.plot(X[:, 0], X[:, 1])
-plt.xlabel("n")
-plt.ylabel("$f^{-1}(...)$")
-plt.close()
+ex10()
 
-print m
-D =  1.0 / (m**2)
-print D
 
-dD = D*(2*(dm / m))
+def ex15():
+    dm, dc, c, m = prelab_func(X[:, 0], X[:, 1])
 
-print dD
+    plt.plot(X[:, 0], X[:, 1])
+    plt.xlabel("n")
+    plt.ylabel("$f^{-1}(...)$")
+    plt.close()
+
+    print m
+    D =  1.0 / (m**2)
+    print D
+
+    dD = D*(2*(dm / m))
+
+    print dD
+#ex15()
