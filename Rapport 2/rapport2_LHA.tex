@@ -65,8 +65,7 @@
 
 %\preprint{APS/123-QED}
 
-\title{FYS2150 \\
-Lab Report: Time and Frequency}% Force line breaks with \\
+\title{Lab Report: Length, Velocity and Acceleration}% Force line breaks with \\
 
 \author{Nicholas Karlsen}
 % \email{nichoka@student.matnat.uio.no}
@@ -85,28 +84,40 @@ Lab Report: Time and Frequency}% Force line breaks with \\
 \section{\label{sec:intro}Introduction}
 
 \section{\label{sec:theory}Theory}
-
-\begin{equation}
-    T \approx 2\pi \sqrt{\frac{L}{g}}    
-\end{equation}
-$\pm$ 15s per day accuracy for $\theta < 1 rad$ according to wikipedia ref to wiki
-
+  \begin{equation}
+    \label{eqn:period}
+      T \approx 2\pi \sqrt{\frac{L}{g}}\enspace
+  \end{equation}
+  Where $T$ denotes the period of a pendulum, $L$ its length and $g$ the gravitational acceleration. The small angle approximation (Eqn. \ref{eqn:period})  is valid for angles $\theta \ll 1\, \textup{rad}$ with an error $\approx \pm 15 \, \textup{s}$ per day \cite{pend_wik}.
+\section{\label{sec:exp_proced}Experimental Procedure}
 \section{\label{sec:data} Results}
+  
 
-\begin{table}
-\centering
-\pgfplotstabletypeset[%
-   fixed zerofill,
-   precision=4,
-   col sep=space,
-   dec sep align,
-   columns/0/.style ={column name=1},
-   columns/1/.style ={column name=2},
-   columns/2/.style ={column name=3},
-   columns/3/.style ={column name=4},
-]{scripts/lengdedata.csv}
-\end{table}
-    
+
+  \begin{table}
+    \caption{Lenght of rods}
+    \label{tab:lenrods}
+    \input{scripts/tables/lendat}
+  \end{table}
+
+  \begin{table}
+    \caption{Uncertainty in Length measurement}
+    \label{tab:uncert}
+    \input{scripts/tables/uncertainhulta}
+  \end{table}
+  
+  \begin{table}
+    \caption{Period of pendulum}
+    \label{tab:pendel}
+    \input{scripts/tables/perioddat}
+  \end{table}
+
+
+\section{\label{sec:disc}Discussion}
+\section{\label{sec:conc}Conclusion}
+
+
+    \bibliography{rapport2_ref}
 \end{document}
 %
 % ****** End of file apssamp.tex ******
