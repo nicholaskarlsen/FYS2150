@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import numpy as np
 import matplotlib.pyplot as plt
 import  FYS2150lib
@@ -39,24 +40,31 @@ pendel_period = np.array([
     7.06, 7.32, 7.55, 7.29, 7.08, 7.82, 7.78, 7.44, 7.68, 7.46
     ])
 
+legobil_freq = 7718     # Hz 
+rc_freq = 1.286e4       # Hz
 
-def rc_data(a, b, filnavn):
-    fw, tw = import_matlab(filnavn)
+def rc_data(a, b, filename, f, title, figname):
+    fw, tw = import_matlab(filename)
     plt.plot(tw[:, a:b], fw[:, a:b], "o", color="blue")
     plt.close()
 
-    #v = FYS2150lib.vel(fw, 1.286e4)
-    v = FYS2150lib.vel(fw, 7718)
+    v = FYS2150lib.vel(fw, f)
     plt.plot(tw[:, a:b], v[:, a:b], "x", color="red")
 
     dm, dc, c, m = FYS2150lib.linfit(tw[:, a:b], v[:, a:b])
-    print np.shape(tw[:, a:b])
     v_fit = m*tw[:, a:b] + c
     plt.plot(np.transpose(tw[:, a:b]), np.transpose(v_fit), linestyle="-")
+    plt.ylabel("Velocity $[ms^{-1}]$")
+    plt.xlabel("Time [s]")
+    plt.title(title)
+    plt.savefig("figs/%s.png"%figname)
     plt.show()
 
 #rc_data(2, 8, "labdata/rc_1.mat")
-rc_data(2, 7, "labdata/legobilh_16cm.mat")
+rc_data(2, 7, "labdata/legobilh_16cm.mat", legobil_freq, "Lego car: 16cm", "lego16cm")
+
+rc_data(4, 8, "labdata/legobil1h_27cm.mat", legobil_freq, "Lego car: 27cm", "lego27cm")
+
 
 
 
