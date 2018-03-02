@@ -1,14 +1,14 @@
 # Fdb version 3
-["bibtex rapport2_LHA"] 1519989657 "rapport2_LHA.aux" "rapport2_LHA.bbl" "rapport2_LHA" 1519999056
+["bibtex rapport2_LHA"] 1519989657 "rapport2_LHA.aux" "rapport2_LHA.bbl" "rapport2_LHA" 1520002115
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/plain.bst" 1480098433 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
   "rapport2_LHA.aux" 1519999056 2569 99a8e43b43c16263ffa5086fc5802ac4 ""
   "rapport2_LHA.bcf" 0 -1 0 ""
   "rapport2_LHANotes.bib" 1519999056 0 d41d8cd98f00b204e9800998ecf8427e ""
   "rapport2_ref.bib" 1519989489 949 71789319c3534547471c16e7b8b8235e ""
   (generated)
-  "rapport2_LHA.bbl"
   "rapport2_LHA.blg"
-["pdflatex"] 1519999055 "rapport2_LHA.tex" "/home/nick/Documents/uio/FYS2150/Rapport 2/rapport2_LHA.pdf" "rapport2_LHA" 1519999056
+  "rapport2_LHA.bbl"
+["pdflatex"] 1519999055 "rapport2_LHA.tex" "/home/nick/Documents/uio/FYS2150/Rapport 2/rapport2_LHA.pdf" "rapport2_LHA" 1520002115
   "/etc/texmf/web2c/texmf.cnf" 1516135388 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/nick/Documents/uio/FYS2150/Rapport 2/rapport2_LHA.aux" 1519999056 2569 99a8e43b43c16263ffa5086fc5802ac4 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1480098670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
@@ -216,15 +216,15 @@
   "rapport2_LHA.aux" 1519999056 2569 99a8e43b43c16263ffa5086fc5802ac4 ""
   "rapport2_LHA.bbl" 1519989657 116 9d2d2f7c4ce355d72c0d8df175c0bf5b "bibtex rapport2_LHA"
   "rapport2_LHA.out" 1519999056 535 5c280c9ebc2fc08ef2a58e307085da8e ""
-  "rapport2_LHA.tex" 1519998997 3136 ac5381f8689e12c41b709e147c97fac7 ""
+  "rapport2_LHA.tex" 1520002115 3136 ac5381f8689e12c41b709e147c97fac7 ""
   "scripts/tables/lendat.tex" 1519989489 867 8d551d20b1ead83e9574079ecc49751f ""
   "scripts/tables/perioddat.tex" 1519989489 216 67976b95ef3951508c0320059d169942 ""
   "scripts/tables/uncertainhulta.tex" 1519999053 624 0430b0073698f0c0a22554362ce9de04 ""
   (generated)
-  "rapport2_LHA.pdf"
+  "rapport2_LHA.aux"
+  "rapport2_LHA.log"
   "/home/nick/Documents/uio/FYS2150/Rapport 2/rapport2_LHA.pdf"
   "rapport2_LHANotes.bib"
-  "rapport2_LHA.out"
-  "rapport2_LHA.aux"
+  "rapport2_LHA.pdf"
   "/home/nick/Documents/uio/FYS2150/Rapport 2/rapport2_LHA.log"
-  "rapport2_LHA.log"
+  "rapport2_LHA.out"

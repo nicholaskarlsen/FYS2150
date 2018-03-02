@@ -40,22 +40,23 @@ pendel_period = np.array([
     ])
 
 
-def rc_data():
-    fw, tw = import_matlab("labdata/rc_1.mat")
-    print fw[:, 2:8]
-    plt.plot(tw[:, 2:8], fw[:, 2:8], "o", color="blue")
+def rc_data(a, b, filnavn):
+    fw, tw = import_matlab(filnavn)
+    plt.plot(tw[:, a:b], fw[:, a:b], "o", color="blue")
+    plt.close()
+
+    #v = FYS2150lib.vel(fw, 1.286e4)
+    v = FYS2150lib.vel(fw, 7718)
+    plt.plot(tw[:, a:b], v[:, a:b], "x", color="red")
+
+    dm, dc, c, m = FYS2150lib.linfit(tw[:, a:b], v[:, a:b])
+    print np.shape(tw[:, a:b])
+    v_fit = m*tw[:, a:b] + c
+    plt.plot(np.transpose(tw[:, a:b]), np.transpose(v_fit), linestyle="-")
     plt.show()
 
-    v = FYS2150lib.vel(fw, 1.286e4)
-    plt.plot(tw[:, 2:8], v[:, 2:8], "x", color="blue")
-
-    dm, dc, c, m = FYS2150lib.linfit(tw[:, 2:8], v[:, 2:8])
-   # v_fit = m*tw[:, 2:8] + c
-    v_fit = np.polyfit(np.transpose(tw[:, 2:8]), np.transpose(v[:, 2:8]), 1)
-    plt.plot(tw[:, 2:8], v_fit, linestyle="--")
-    plt.show()
-
-rc_data()
+#rc_data(2, 8, "labdata/rc_1.mat")
+rc_data(2, 7, "labdata/legobilh_16cm.mat")
 
 
 
