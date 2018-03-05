@@ -62,7 +62,7 @@ pendel_period = np.array([
 legobil_freq = 7718     # Hz 
 rc_freq = 1.286e4       # Hz
 
-def rc_data(a, b, filename, f, title, figname):
+def rc_data(a, b, filename, f, title, figname, a):
     fw, tw = import_matlab(filename)
     plt.plot(tw[:, a:b], fw[:, a:b], "o", color="blue")
     plt.close()
@@ -72,6 +72,7 @@ def rc_data(a, b, filename, f, title, figname):
 
     dm, dc, c, m = FYS2150lib.linfit(tw[:, a:b], v[:, a:b])
     v_fit = m*tw[:, a:b] + c
+
     plt.plot(np.transpose(tw[:, a:b]), np.transpose(v_fit), linestyle="-")
     plt.ylabel("Velocity $[ms^{-1}]$")
     plt.xlabel("Time [s]")

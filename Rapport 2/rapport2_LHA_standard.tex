@@ -17,6 +17,34 @@
 \usepackage{amsmath}
 \usepackage{esint}
 \usepackage{hyperref}
+\usepackage{listings}
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=t,                    % sets the caption-position to bottom
+  commentstyle=\color{teal},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=single,                    % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+ % language=Python,                 % the language of the code
+  morekeywords={*,...},           % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{black}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  tabsize=2,                       % sets default tabsize to 2 spaces
+  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+
 \begin{document}
 
 %\preprint{APS/123-QED}
@@ -30,6 +58,8 @@
              %  but any date may be explicitly specified
 
 \maketitle
+
+When writing this report i worked together with my lab partner Michael Bitney. Some of our figures, and analysis may therefore be similar. But this report is entirely my own.
 
 %\tableofcontents
 \begin{abstract}
@@ -48,6 +78,7 @@
   \subsection{Doppler shift}
     \begin{equation}
       f_m = f + \Delta f = \frac{c}{c-v}f  
+      \label{eqn:doppler}
     \end{equation}
     Where $f_m$ denotes a measured frequency from an observer at rest, $f$ the frequency in the rest frame of a body moving relative to an observer, $\Delta f$ the doppler shift, $c$ the speed of sound in air and $v$ the velocity of the body relative to the observer.
 
@@ -195,12 +226,20 @@
   \begin{table}[H]
     \center
     \caption{Time for car to travel down ramp measured using stopwatch}
-    \label{tab:pendel}
+    \label{tab:legocar}
     \input{scripts/tables/legocar}
   \end{table}
 
   \subsubsection{RC-car measurements}
-
+      \subsubsection{Lego-car measurements}
+    \begin{figure}[H]%
+      \centering
+      \subfloat[]{{\includegraphics[width=9cm]{scripts/figs/RC_1abs.png}}}
+      \subfloat[]{{\includegraphics[width=9cm]{scripts/figs/RC_2abs.png}}} \\
+      \subfloat[]{{\includegraphics[width=9cm]{scripts/figs/RC_3abs.png}}}
+      \caption{The absolute value of the velocity of the RC car relative to the microphone calculated using Eqn. \ref{eqn:doppler}}%
+      \label{fig:rc_exp}%
+    \end{figure}
 
 \section{\label{sec:disc}Discussion}
 \section{\label{sec:conc}Conclusion}
@@ -229,5 +268,10 @@ G.~L. Squires.
 \url{http://www.uio.no/studier/emner/matnat/fys/FYS2150/v18/kursmateriell/datablader-og-brukermanualer/stoppeklokke.pdf}
 
 \end{thebibliography}
+
+\section{Code}
+The script containting the functions used to derive results from the measured data.
+\lstinputlisting[language=python]{scripts/FYS2150lib.py}
+
 
 \end{document}
