@@ -74,7 +74,7 @@
              %  but any date may be explicitly specified
 
 \begin{abstract}
-...
+  A study on different methods for determining the length, velocity and acceleration of different objects, and the errors involved in these methods.
 \end{abstract}
 
 \maketitle
@@ -84,16 +84,40 @@
 \section{\label{sec:intro}Introduction}
 
 \section{\label{sec:theory}Theory}
-  \begin{equation}
-    \label{eqn:period}
-      T \approx 2\pi \sqrt{\frac{L}{g}}\enspace
-  \end{equation}
-  Where $T$ denotes the period of a pendulum, $L$ its length and $g$ the gravitational acceleration. The small angle approximation (Eqn. \ref{eqn:period})  is valid for angles $\theta \ll 1\, \textup{rad}$ with an error $\approx \pm 15 \, \textup{s}$ per day \cite{pend_wik}.
+  \subsection{Pendulum}
+    \begin{equation}
+      \label{eqn:period}
+        T \approx 2\pi \sqrt{\frac{L}{g}}\enspace
+    \end{equation}
+    Where $T$ denotes the period of a pendulum, $L$ its length and $g$ the gravitational acceleration. The small angle approximation (Eqn. \ref{eqn:period})  is valid for angles $\theta \ll 1\, \textup{rad}$ with an error $\approx \pm 15 \, \textup{s}$ per day \cite{pend_wik}.
+  \subsection{Errors}
+    \begin{equation}
+    \label{eqn:sigma}
+      \sigma \approx \left(
+      \frac{\sum x_i^2 - \frac{1}{n}(\sum x_i)^2}
+      {n - 1}
+      \right)^\frac{1}{2}
+    \end{equation}
+    
+    \begin{equation}
+      \label{eqn:sigma_m}
+      \sigma_m \approx \left(
+      \frac{\sum x_i^2 - \frac{1}{n}(\sum x_i)^2}
+      {n(n - 1)}
+      \right)^\frac{1}{2}
+    \end{equation}
+
+    Where $\sigma, \sigma_m$ denotes the standard deviation, and the standard deviation of the mean respectively of a set of $n$ values $x_i$. \cite{squires}.
+
+    Any errors stated in a derived number will be calculated using the equations for combinations of errors found on page 29 in Squires \cite{squires}. Lastly, when using a linear fit on a set of linearly correlated data i used the expressions found on page 39 in Squires \cite{squires} to calculate the regression line, as well as its error.
+
 \section{\label{sec:exp_proced}Experimental Procedure}
+  \section{Measuring the lenght of a rod}
+  \section{Measuring the period and height of the Foucault's pendulum}
+  \section{Measuring the velocity of the lego-car}
+  \section{Measuring the velocity of the RC-car}
+
 \section{\label{sec:data} Results}
-  
-
-
   \begin{table}
     \caption{Lenght of rods}
     \label{tab:lenrods}
@@ -111,6 +135,12 @@
     \label{tab:pendel}
     \input{scripts/tables/perioddat}
   \end{table}
+  \begin{figure}[h!]
+    \center
+    \includegraphics[scale=0.5]{scripts/figs/period.png}
+    \caption{Measurements of the Period of the Focault's Pendulum in the entrance hall at the Institute of Physics, UiO.}
+    \label{fig:pendel}
+  \end{figure}
 
 
 \section{\label{sec:disc}Discussion}

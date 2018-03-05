@@ -58,12 +58,24 @@ def rc_data(a, b, filename, f, title, figname):
     plt.xlabel("Time [s]")
     plt.title(title)
     plt.savefig("figs/%s.png"%figname)
-    plt.show()
+    plt.close()
 
 #rc_data(2, 8, "labdata/rc_1.mat")
 rc_data(2, 7, "labdata/legobilh_16cm.mat", legobil_freq, "Lego car: 16cm", "lego16cm")
 
 rc_data(4, 8, "labdata/legobil1h_27cm.mat", legobil_freq, "Lego car: 27cm", "lego27cm")
+
+def histogram1():
+    sig_m = FYS2150lib.stddev(pendel_period)[1]
+    mean = np.mean(pendel_period)
+    plt.hist(pendel_period, bins=6, rwidth=1, color="blue")
+    plt.xlabel("T [s]")
+    plt.ylabel("Number of measurements in range")
+    plt.title("Measurements of Period of Foucault's Pendulum\n$T_{mean}$=%.2f, $\sigma_m=$%.2f"%(mean, sig_m))
+    plt.axvline(mean, linestyle="--", color="red")
+    plt.savefig("figs/period.png")
+    plt.close()
+histogram1()
 
 
 
