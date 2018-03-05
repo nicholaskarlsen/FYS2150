@@ -34,8 +34,8 @@ L_b_hultafors_err = np.array([
     ])
 
 L_a_laser = np.array([
-    120.5, 119.6, 119.5, 119.4, 119.4, 119.68, 119.9, 130.6, 119.4,
-    0
+    120.5, 119.6, 119.5, 119.4, 119.4, 119.68, 119.9, 130.6, 119.4
+
     ])
 
 L_a_laser_err = np.array([
@@ -43,8 +43,7 @@ L_a_laser_err = np.array([
     ])
 
 L_b_laser = np.array([
-    120.6, 119.8, 119.7, 119.6, 119.6, 119.72, 119.7, 130.2, 119.5,
-    0
+    120.6, 119.8, 119.7, 119.6, 119.6, 119.72, 119.7, 130.2, 119.5
     ])
 
 L_b_laser_err = np.array([
@@ -76,14 +75,42 @@ def rc_data(a, b, filename, f, title, figname):
     plt.plot(np.transpose(tw[:, a:b]), np.transpose(v_fit), linestyle="-")
     plt.ylabel("Velocity $[ms^{-1}]$")
     plt.xlabel("Time [s]")
-    plt.title(title)
+    plt.title("%s \n a=%.2f, $\delta a$ =%.2f$ms^{-1}$" % (title, m, dm))
     plt.savefig("figs/%s.png"%figname)
     plt.close()
 
-#rc_data(2, 8, "labdata/rc_1.mat")
-rc_data(2, 7, "labdata/legobilh_16cm.mat", legobil_freq, "Lego car: 16cm", "lego16cm")
+    print title, dm, dc, c, m
 
-rc_data(4, 8, "labdata/legobil1h_27cm.mat", legobil_freq, "Lego car: 27cm", "lego27cm")
+#rc_data(2, 8, "labdata/rc_1.mat")
+rc_data(2, 7, "labdata/legobilh_16cm.mat", legobil_freq, "Lego car, h=16cm", "lego16cm")
+
+rc_data(4, 8, "labdata/legobil1h_27cm.mat", legobil_freq, "Lego car, h=27cm", "lego27cm")
+
+rc_data(9, 14, "labdata/lrgebilh_37cm.mat", legobil_freq, "Lego car, h=37cm", "lego37cm1")
+rc_data(37, 42, "labdata/lrgebilh_37cm.mat", legobil_freq, "Lego car, h=37cm", "lego37cm2")
+rc_data(60, 65, "labdata/lrgebilh_37cm.mat", legobil_freq, "Lego car, h=37cm", "lego37cm3")
+
+#rc_data(4, 8, "labdata/legobil1h_37cm.mat", legobil_freq, "Lego car, h=37cm", "lego37cm")
+
+rc_data(7, 11, "labdata/RC_3.mat", rc_freq, "RC", "rc3")
+#rc_data(13, 14, "labdata/RC_3.mat", rc_freq, "RC", "rc3_2")
+
+def rc_vel(a, b, filename, f, title, figname):
+    fw, tw = import_matlab(filename)
+    plt.plot(tw[:, a:b], fw[:, a:b], "o", color="blue")
+    plt.close()
+
+    v = FYS2150lib.vel(fw, f)
+    v_abs = np.sqrt(v**2)
+    plt.plot(tw[:, a:b], v_abs[:, a:b], "x", color="red")
+
+    plt.ylabel("Absolute value ofVelocity $[ms^{-1}]$")
+    plt.xlabel("Time [s]")
+    plt.title("%s" % (title))
+    plt.savefig("figs/%s.png"%figname)
+    plt.close()
+rc_vel(0, 22, "labdata/RC_3.mat", rc_freq, "RC", "RC_3abs")
+
 
 def histogram1():
     sig_m = FYS2150lib.stddev(pendel_period)[1]
@@ -99,54 +126,16 @@ histogram1()
 
 
 print len(pendel_period)
+diff_hultfors = abs(L_a_hultafors - L_b_hultafors)
+diff_laser = abs(L_a_laser - L_b_laser)
 
+print np.mean(diff_hultfors), np.mean(diff_laser)
+print "hultafors stdev: diff",FYS2150lib.stddev(abs(L_a_hultafors - L_b_hultafors))
+print "mean diff hultafors:", np.mean(diff_hultfors)
+print "mean a hulta", np.mean(L_a_hultafors)
+print "mean b hulta", np.mean(L_b_hultafors)
+print 
+print
+print "Laser stddev:\n", FYS2150lib.stddev(abs(L_a_laser - L_b_laser))
+print "mean laser:", np.mean(diff_laser)
 
-if __name__ == '__main__':
-
-    def tab():
-        lendat = np.zeros([len(L_a_hultafors), 9])
-        lendat[:, 0] = np.transpose(L_a_hultafors)
-        lendat[:, 1] = np.transpose(L_a_hultafors_err)
-        lendat[:, 2] = np.transpose(L_b_hultafors)
-        lendat[:, 3] = np.transpose(L_b_hultafors_err)
-        lendat[:, 4] = np.transpose(L_a_laser)
-        lendat[:, 5] = np.transpose(L_a_laser_err)
-        lendat[:, 6] = np.transpose(L_b_laser)
-        lendat[:, 7] = np.transpose(L_b_laser_err)
-        lendat[:, 8] = np.transpose(L_ab_direct)
-        #L_ab_hultafors = abs(L_b_hultafors - L_a_hultafors)
-        #L_ab_laser = abs(L_b_laser - L_a_laser)
-        
-        sys.stdout = open("tables/lendat.tex", "w")   # prints output to file instead of terminal.
-        print(tabulate(lendat,
-            headers=["Ruler, la [cm]",
-                     "Ruler, dla [cm]",
-                     "Ruler, lb [cm]",
-                     "Ruler, dlb [cm]", 
-                     "Laser, la [cm]", 
-                     "Laser, dla [cm]",
-                     "Laser, lb [cm]",
-                     "Laser, dlb [cm]",
-                     "Vernier Calliper, Lab [mm]"],
-            tablefmt="latex", 
-            floatfmt=".2f"))
-        sys.stdout.close()
-    
-    def pend():
-        sys.stdout = open("tables/perioddat.tex", "w")   # prints output to file instead of terminal.
-        print(tabulate(pendel_period,
-            headers=["Period [s]"],
-            tablefmt="latex", 
-            floatfmt=".2f"))
-        sys.stdout.close()
-    
-
-    """
-    diff_hultfors = abs(L_a_hultafors - L_b_hultafors)
-    diff_laser = abs(L_a_laser - L_b_laser)
-
-    print np.mean(diff_hultfors), np.mean(diff_laser)
-    print error_mean(abs(L_a_hultafors - L_b_hultafors))
-    print error_mean(abs(L_a_laser - L_b_laser))
-
-    """

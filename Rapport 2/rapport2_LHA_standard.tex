@@ -44,6 +44,13 @@
         T \approx 2\pi \sqrt{\frac{L}{g}}\enspace
     \end{equation}
     Where $T$ denotes the period of a pendulum, $L$ its length and $g$ the gravitational acceleration. The small angle approximation (Eqn. \ref{eqn:period})  is valid for angles $\theta \ll 1\, \textup{rad}$ with an error $\approx \pm 15 \, \textup{s}$ per day \cite{pend_wik}.
+
+  \subsection{Doppler shift}
+    \begin{equation}
+      f_m = f + \Delta f = \frac{c}{c-v}f  
+    \end{equation}
+    Where $f_m$ denotes a measured frequency from an observer at rest, $f$ the frequency in the rest frame of a body moving relative to an observer, $\Delta f$ the doppler shift, $c$ the speed of sound in air and $v$ the velocity of the body relative to the observer.
+
   \subsection{Errors}
     \begin{equation}
     \label{eqn:sigma}
@@ -69,32 +76,74 @@
  
   \subsection{Measuring the difference in lengths between two rods}
     \subsubsection{Measurements using the Hultafors meter ruler}
-      The rod was placed on a flat surface, and the end of the rod was lined up with the $1cm$ marker on the Hultafors Meter ruler \cite{hultafors} in order to negate any effect the "wear and tear" of the ruler might have on the results. This $1cm$ difference was accounted for in our reading of the data. The ruler was laid down on the table along with the rod, and did flex slightly because of this. The error due to flex is accounted for in the error section of the data sheet provided by the manufacturer. This procedure was repeated for both rods a and b.
+      The rod was placed on a flat surface, and the end of the rod was lined up with the $1cm$ marker on the Hultafors Meter ruler in order to negate any effect the "wear and tear" of the ruler might have on the results. This $1cm$ difference was accounted for in our reading of the data. The ruler was laid down on the table along with the rod, and did flex slightly because of this. The error due to flex is accounted for in the error section of the data sheet provided by the manufacturer. This procedure was repeated for both rods a and b.
 
     \subsubsection{Measurements using the Bosch PLR30}
-      The rods were placed and secured to the table using adhesive tape on a table whilst being in direct contact with a wall. The Bosch PLR30 Distance measurer \cite{PLR}, henceforth referred to as laser, was then placed at the opposing end of the rod in order to measure the length from there, to the wall. Since the rod was touching the wall, this effectively means that we measured the length of the rod. There was a slight degree of systematic error in our procedure, as we could not ensure that the laser was pointing with exact parallel to the rod, nor did we have an exact way of placing the laser such that its origin would be at the exact end-point of the rod. 
+      The rods were placed and secured to the table using adhesive tape on a table whilst being in direct contact with a wall. The Bosch PLR30 Laser rangefinder \cite{PLR}, henceforth referred to as "laser", was then placed at the opposing end of the rod in order to measure the length from there, to the wall. Since the rod was touching the wall, this effectively means that we measured the length of the rod. There was a slight degree of systematic error in our procedure, as we could not ensure that the laser was pointing with exact parallel to the rod, nor did we have an exact way of placing the laser such that its origin would be at the exact end-point of the rod. 
 
     \subsection{Measurement using a digital vernier caliper}
       In order to determine the difference in length between the two rods directly we used a digital vernier caliper \cite{cocraft}. The rods were secured to a table in parallel, right next to each other with the ends on one side lined up with each other. The measurement of the difference in their lengths was then made on the other side using the vernier caliper. The vernier caliper was held above the two rods, resting on them in order to minimize any systematic error.
 
   \subsection{Measuring the period and height of the Foucault's pendulum}
-    \subsubsection{Measuring the period of the pendulum}
+
+    \subsubsection{\label{subsect:exp_period}Measuring the period of the pendulum}
     The measurements were taken in sequence using the lap function of the Cielo 100MT \cite{cielo} stopwatch. The time was recorded every other apex of the swing, which amounts to one period. All of the measurements were taken by the same person in order to ensure that the error in judgment and reaction time would remain the same throughout all of the measurements.
 
-  \subsection{Measuring the velocity of the lego-car}
-  
+    \subsubsection{Measuring the height of the center of mass}
+      In order to perform this measurement two people stood on opposing sides of the enclosure, as shown in Fig \ref{fig:pendelfy}. One rested a meter ruler up against the glass enclosure and standing on the floor, whilst the other pointed a laser from the other side. The laser was pointed to the meter ruler whilst held hotizontaly. Then, while the pendulum was still in motion, the laser was progressively adjusted during each swing untill it was just below the lowest point of the pendulums trajectory, reapeated this to fi. Needless to say, this is a highly inaccurate measurement, and there is no percise way to determine the magnitude of the error in this reading as it is almost entirely due to a systematic fault in our method.
+      \begin{figure}[H]
+        \center 
+        \includegraphics[scale=0.15]{scripts/figs/pendelimg.JPG}
+        \caption{A photograph of the Focault's Pendulum at UiO.}
+        \label{fig:pendelfy}
+      \end{figure}
+
+    \subsubsection{Measuring the height of the roof}
+      The Laser rangefinder \cite{PLR} was placed on the floor of the entrance hall, turned on and the measured value was recorded in the lab journal.
+
+
+  \subsection{Measuring the acceleration of a lego-car}
+    A model car made of lego, with an attatched speaker emitting a sound with constant frequency was placed on a ramp with variable height and constant length as sketched in Fig. \ref{fig:rampsketch}.
+    \begin{figure}[H]
+      \center
+      \includegraphics[scale=0.3]{scripts/figs/legodiag.pdf}
+      \caption{Sketch showing the properties of the ramp used}
+      \label{fig:rampsketch}
+    \end{figure}
+    The model car was released with its nose at point a (marked with black adhesive tape) and accelerated by gravity until its nose hit point b (also marked with black adhesive tape). This was timed using a stopwatch by the same person who made the measurements in section \ref{subsect:exp_period}. At the bottom of the ramp there was a microphone connected to a PC with matlab which collected sound data. Several people conducted similar experiments in the same room and at the same time, so the microphone may have picked up other signals as well.
+
+    The experiment was repeated 3 times, with varying heights, $h$.
   
   \subsection{Measuring the velocity of the RC-car}
+    An RC-Car with an attached speaker emitting a sound with constant frequency was driven along the floor. The sound was recorded with a microphone connected to a PC running matlab. The car was driven on a linoleum floor, so its wheels did not grip as well as one might hope. It was also not driven perfectly straight, so the maximum velocity of the car may not have been reached. There was also not much room for the car to reach this velocity either.
+
 
 \section{\label{sec:data} Results}
+
+  \subsection{Rod measurements}
   \begin{table}[H]
     \center
-    \caption{Lenght of rods}
+    \caption{Length of rods}
     \label{tab:lenrods}
     \input{scripts/tables/lendat}
   \end{table}
+  Table. \ref{tab:lenrods} contains all the measurements made of the rods by the Tuesday group, copied from the \href{https://uio.instructure.com/courses/910/modules/items/13592}{image} posted on canvas. Some of the data was not clearly readable, and has therefore been omitted from this table. The measurements made by me and my lab parter are located in row 1.
 
-  Table. \ref{tab:lenrods} contains all the measurements made of the rods by the tuesday group, copied from the \href{https://uio.instructure.com/courses/910/modules/items/13592}{image} posted on canvas. Some of the data was not clearly readable, and has therefore been omitted from this table.
+  Using this data i calculated the following values.
+  \begin{align}
+    \begin{split}
+      \textup{Ruler:} \\
+      \bar{l_{a}} &= 119.43 \pm  0.01\,cm \\
+      \bar{l_{b}} &= 119.58 \pm 0.02 \,cm \\
+      \bar{l_{ab}}&= 0.14 \pm 0.014
+    \end{split}
+  \end{align}
+
+  \begin{table}[H]
+    \center
+    \caption{Derived data}
+    \input{scripts/tables/lendat2}
+  \end{table}
 
   \begin{table}[H]
     \center
@@ -110,7 +159,8 @@
     \item $dl_m:$ Error due to precision of measuring lines
     \item $\alpha :\enspace 4\cdot10^{-5\circ} C^{-1}$, Coefficient of linear thermal expansion for glass fiber
   \end{itemize}
-  
+
+  \subsubsection{Pendulum measurements}
   \begin{table}[H]
     \center
     \caption{Period of pendulum}
@@ -120,9 +170,20 @@
   \begin{figure}[H]
     \center
     \includegraphics[scale=0.7]{scripts/figs/period.png}
-    \caption{Measurements of the Period of the Focault's Pendulum in the entrance hall at the Institute of Physics, UiO.}
+    \caption{Measurements of the Period of the Foucault's Pendulum in the entrance hall at the Institute of Physics, UiO.}
     \label{fig:pendel}
   \end{figure}
+
+  \subsubsection{Lego-car measurements}
+    \begin{figure}[H]%
+      \centering
+      \subfloat[]{{\includegraphics[width=9cm]{scripts/figs/lego16cm.png}}}
+      \subfloat[]{{\includegraphics[width=9cm]{scripts/figs/lego27cm.png}}}
+      \caption{}%
+      \label{fig:vel_fit}%
+    \end{figure}
+
+  \subsubsection{RC-car measurements}
 
 
 \section{\label{sec:disc}Discussion}
