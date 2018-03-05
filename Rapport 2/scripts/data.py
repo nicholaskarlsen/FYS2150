@@ -104,12 +104,17 @@ def rc_vel(a, b, filename, f, title, figname):
     v_abs = np.sqrt(v**2)
     plt.plot(tw[:, a:b], v_abs[:, a:b], "x", color="red")
 
-    plt.ylabel("Absolute value ofVelocity $[ms^{-1}]$")
+    plt.ylabel("|v| $[ms^{-1}]$")
     plt.xlabel("Time [s]")
+    plt.ylim(0, 4)
+    plt.xlim(0, 7)
     plt.title("%s" % (title))
     plt.savefig("figs/%s.png"%figname)
     plt.close()
-rc_vel(0, 22, "labdata/RC_3.mat", rc_freq, "RC", "RC_3abs")
+rc_vel(0, -1, "labdata/RC_3.mat", rc_freq, "RC-car, attempt 3", "RC_3abs")
+rc_vel(0, -1, "labdata/RC_2.mat", rc_freq, "RC-car, attempt 2", "RC_2abs")
+rc_vel(0, -1, "labdata/rc_1.mat", rc_freq, "RC-car, attempt 1", "RC_1abs")
+
 
 
 def histogram1():
