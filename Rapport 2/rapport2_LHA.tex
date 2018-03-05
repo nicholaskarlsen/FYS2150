@@ -118,26 +118,38 @@
   \section{Measuring the velocity of the RC-car}
 
 \section{\label{sec:data} Results}
-  \begin{table}
+  \begin{table}[h!]
+    \center
     \caption{Lenght of rods}
     \label{tab:lenrods}
     \input{scripts/tables/lendat}
   \end{table}
 
-  \begin{table}
-    \caption{Uncertainty in Length measurement}
+  \begin{table}[h!]
+    \center
+    \caption{Uncertainty in Length measurement using the meter ruler}
     \label{tab:uncert}
     \input{scripts/tables/uncertainhulta}
   \end{table}
   
-  \begin{table}
-    \caption{Period of pendulum}
-    \label{tab:pendel}
-    \input{scripts/tables/perioddat}
-  \end{table}
+  \begin{itemize}
+    \item $l_a:$ Recorded length
+    \item $dl_s:$ Error due to aiming of the ruler
+    \item $\sqrt n \cdot dl_l:$ Error due to curvature of joints
+    \item $dl_m:$ Error due to precision of measuring lines
+    \item $\alpha :\enspace 4\cdot10^{-5\circ} C^{-1}$, Coefficient of linear thermal expansion for glass fiber
+  \end{itemize}
+  
+  %\begin{table}[h!]
+  %  \center
+  %  \caption{Period of pendulum}
+  %  \label{tab:pendel}
+  %  \input{scripts/tables/perioddat}
+  %\end{table}
+  
   \begin{figure}[h!]
     \center
-    \includegraphics[scale=0.5]{scripts/figs/period.png}
+    \includegraphics[scale=0.6]{scripts/figs/period.png}
     \caption{Measurements of the Period of the Focault's Pendulum in the entrance hall at the Institute of Physics, UiO.}
     \label{fig:pendel}
   \end{figure}

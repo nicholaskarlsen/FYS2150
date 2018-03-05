@@ -20,9 +20,17 @@ L_a_hultafors = np.array([
     119.43
     ])
 
+L_a_hultafors_err = np.array([
+    0.23, 0, 0.37, 0, 0.4, 0.2, 0.27, 0.35, 0.39, 0.31
+    ])
+
 L_b_hultafors = np.array([
     119.6, 119.7, 119.6, 119.5, 119.55, 119.6, 119.5, 119.65, 119.6,
     119.55
+    ])
+
+L_b_hultafors_err = np.array([
+    0.23, 0, 0.37, 0, 0.4, 0.2, 0.27, 0.35, 0.39, 0.31
     ])
 
 L_a_laser = np.array([
@@ -30,9 +38,21 @@ L_a_laser = np.array([
     0
     ])
 
+L_a_laser_err = np.array([
+    0.2, 0.205, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.22, 0
+    ])
+
 L_b_laser = np.array([
     120.6, 119.8, 119.7, 119.6, 119.6, 119.72, 119.7, 130.2, 119.5,
     0
+    ])
+
+L_b_laser_err = np.array([
+    0.2, 0.205, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.22, 0
+    ])
+
+L_ab_direct = np.array([
+    1.25, 0, 1.40, 0, 1.2, 1.80, 0, 1.80, 2, 1.50
     ])
 
 pendel_period = np.array([
@@ -78,24 +98,48 @@ def histogram1():
 histogram1()
 
 
+print len(pendel_period)
 
 
 if __name__ == '__main__':
 
     def tab():
-        lendat = np.zeros([len(L_a_hultafors), 4])
+        lendat = np.zeros([len(L_a_hultafors), 9])
         lendat[:, 0] = np.transpose(L_a_hultafors)
-        lendat[:, 1] = np.transpose(L_b_hultafors)
-        lendat[:, 2] = np.transpose(L_a_laser)
-        lendat[:, 3] = np.transpose(L_b_laser)
+        lendat[:, 1] = np.transpose(L_a_hultafors_err)
+        lendat[:, 2] = np.transpose(L_b_hultafors)
+        lendat[:, 3] = np.transpose(L_b_hultafors_err)
+        lendat[:, 4] = np.transpose(L_a_laser)
+        lendat[:, 5] = np.transpose(L_a_laser_err)
+        lendat[:, 6] = np.transpose(L_b_laser)
+        lendat[:, 7] = np.transpose(L_b_laser_err)
+        lendat[:, 8] = np.transpose(L_ab_direct)
         #L_ab_hultafors = abs(L_b_hultafors - L_a_hultafors)
         #L_ab_laser = abs(L_b_laser - L_a_laser)
         
         sys.stdout = open("tables/lendat.tex", "w")   # prints output to file instead of terminal.
-        print(tabulate(lendat ,headers=["Ruler, a [cm]", "Ruler, b [cm]", "Laser, a [cm]", "Laser, b [cm]"], tablefmt="latex", floatfmt=".2f"))
+        print(tabulate(lendat,
+            headers=["Ruler, la [cm]",
+                     "Ruler, dla [cm]",
+                     "Ruler, lb [cm]",
+                     "Ruler, dlb [cm]", 
+                     "Laser, la [cm]", 
+                     "Laser, dla [cm]",
+                     "Laser, lb [cm]",
+                     "Laser, dlb [cm]",
+                     "Vernier Calliper, Lab [mm]"],
+            tablefmt="latex", 
+            floatfmt=".2f"))
         sys.stdout.close()
-
-    print np.mean(pendel_period)
+    
+    def pend():
+        sys.stdout = open("tables/perioddat.tex", "w")   # prints output to file instead of terminal.
+        print(tabulate(pendel_period,
+            headers=["Period [s]"],
+            tablefmt="latex", 
+            floatfmt=".2f"))
+        sys.stdout.close()
+    
 
     """
     diff_hultfors = abs(L_a_hultafors - L_b_hultafors)
