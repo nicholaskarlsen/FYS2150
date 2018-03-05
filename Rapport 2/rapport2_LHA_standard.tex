@@ -51,6 +51,12 @@
     \end{equation}
     Where $f_m$ denotes a measured frequency from an observer at rest, $f$ the frequency in the rest frame of a body moving relative to an observer, $\Delta f$ the doppler shift, $c$ the speed of sound in air and $v$ the velocity of the body relative to the observer.
 
+  \subsection{Linear Motion}
+    \begin{equation}
+      s = ut + \frac{1}{2}at^2
+    \end{equation}
+    Where $s$ denotes the displacement, $a$ acceleration and $t$ the time. This equation is only valid when $a$ is a constant.
+
   \subsection{Errors}
     \begin{equation}
     \label{eqn:sigma}
@@ -178,10 +184,20 @@
     \begin{figure}[H]%
       \centering
       \subfloat[]{{\includegraphics[width=9cm]{scripts/figs/lego16cm.png}}}
-      \subfloat[]{{\includegraphics[width=9cm]{scripts/figs/lego27cm.png}}}
+      \subfloat[]{{\includegraphics[width=9cm]{scripts/figs/lego27cm.png}}}\\
+      \subfloat[Attempt 1]{{\includegraphics[width=9cm]{scripts/figs/lego37cm1.png}}}
+      \subfloat[Attempt 2]{{\includegraphics[width=9cm]{scripts/figs/lego37cm2.png}}}\\
+      \subfloat[Attempt 3]{{\includegraphics[width=9cm]{scripts/figs/lego37cm3.png}}}
       \caption{}%
-      \label{fig:vel_fit}%
+      \label{fig:legocar}%
     \end{figure}
+
+  \begin{table}[H]
+    \center
+    \caption{Time for car to travel down ramp measured using stopwatch}
+    \label{tab:pendel}
+    \input{scripts/tables/legocar}
+  \end{table}
 
   \subsubsection{RC-car measurements}
 
