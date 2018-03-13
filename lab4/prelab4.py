@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def importdata(filename):
 	infile = open(filename, 'r')
 	lines = infile.readlines()
