@@ -44,7 +44,8 @@
 \usepackage{graphicx}% Include figure files
 \usepackage{dcolumn}% Align table columns on decimal point
 \usepackage{bm}% bold math
-\usepackage{hyperref}% add hypertext capabilities
+%\usepackage{hyperref}% add hypertext capabilities
+\usepackage{url}
 %\usepackage[mathlines]{lineno}% Enable numbering of text and display math
 %\linenumbers\relax % Commence numbering lines
 \usepackage{listings}
@@ -95,7 +96,7 @@
              %  but any date may be explicitly specified
 
 \begin{abstract}
-    A study on different methods to determine the Young's modulus of a brass rod.
+    A study on two different methods to determine the Young's modulus of a brass rod.
 \end{abstract}
 
 \maketitle
@@ -105,8 +106,20 @@
 \section{\label{sect:intro}Introduction}
     
 \section{\label{sect:theory}Theory}
+  \subsection{Euler-Bernoulli beam theory}
+  \begin{equation}
+    h(m) = \frac{mgl^3}{48EI}
+  \end{equation}
+  \begin{equation}
+    E = \frac{4l^3g}{3\pi |A|d^4}
+  \end{equation}
+  \cite{wiki:euler_bernouli}
+  \subsection{Errors}
+  \cite{squires}
 
 \section{\label{section:experimental}Experimental Procedure}
+  \subsection{Three-point flexural test}
+  \subsection{Measuring the speed of sound in the rod}
 
 \section{\label{sect:results}Results}
 
@@ -114,15 +127,20 @@
  
 \section{\label{sect:conclusion}Conclusion}
 
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%% END OF MAIN BODY %%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+
 \bibliography{rapport3_ref}
 
+
 \onecolumngrid % Start single collumn
+\newpage % Ensure Code starts on new page
 \section*{Code}
 All of the code used to produce this report. Anything noteworthy should already be mentioned in the main body of the report.
 \lstinputlisting[language=python]{scripts/lab_data.py}
 \lstinputlisting[language=python]{scripts/FYS2150lib.py}
+
 \twocolumngrid % Stop single collumn
 
 \end{document}
-
-              

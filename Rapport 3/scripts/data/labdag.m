@@ -103,8 +103,3 @@ E_teori = 4*l_kniver^3 * 9.81 / ( 3*pi * abs(a) * d_m^4) #Pa
 f_ear = 1214; Hz
 f_fft = 1213.75; #Hz
 E_fft = 16*m_stang * l_stang_m *  f_fft^2 / ( pi * d_m^2 ) #Pa
-
-
-
-
-

@@ -1,8 +1,8 @@
-% Ta opp lyd-data for å finne egenfrekvensen til messinggstaven
+% Ta opp lyd-data for ï¿½ finne egenfrekvensen til messinggstaven
 % Alex Read 01.03.2018 (kopierte deler av FFThastighet.m)
 
 duration = 10.0; % s (dette bestemmer 
-                 % frekvensoppløsning = 1/duration)
+                 % frekvensopplï¿½sning = 1/duration)
 samplerate = 8*1024; % Hz (best med antall samples = multipel av 2)
 fmin = 500; % minimum signal-frekvens
 
@@ -10,11 +10,11 @@ fmin = 500; % minimum signal-frekvens
 samples = duration*samplerate;
 fprintf('%d samples skal registreres\n',samples)
 
-% Gjør klar mikrofonen og samle inn data
-[DS,devicename] = initDaqSession(duration,samplerate,1);
-addAudioInputChannel(DS,devicename, 1);
-fprintf('Go!\n\n');
-[data, t] = startForeground(DS);
+% Gjï¿½r klar mikrofonen og samle inn data
+%[DS,devicename] = initDaqSession(duration,samplerate,1);
+%addAudioInputChannel(DS,devicename, 1);
+%fprintf('Go!\n\n');
+%[data, t] = startForeground(DS);
 
 % vis lyd-dataene
 figure(1)
@@ -44,10 +44,10 @@ figure(3)
 plot(fut(ipeak-5:ipeak+5),energi(ipeak-5:ipeak+5),'*-') ,xlabel('frekvens, Hz')
 ylabel('Energi')
 
-%for i=ipeak-5:ipeak+5
+%for i=ipeak-5:ipeak+56
 %    fprintf('%10.2f %10.1d\n',fut(i),energi(i))
 %end
 
-filename = input('\nHvilket filnavn vil du bruke for å lagre dataene? ','s');
-save(filename,'t','data','fut','energi','L')
+%filename = input('\nHvilket filnavn vil du bruke for ï¿½ lagre dataene? ','s');
+%save(filename,'t','data','fut','energi','L')
 
