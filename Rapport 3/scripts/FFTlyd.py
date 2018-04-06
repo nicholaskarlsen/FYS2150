@@ -21,9 +21,11 @@ def import_matlab(filename):
 
     return data, energi, fut, L, t
 
+
 rel_path = "data/"
-n=1
+n = 1
 mat_file = "forsok%i.mat" % n
+
 
 def figure1(filename):
     data, energi, fut, L, t = import_matlab(filename)
@@ -34,6 +36,9 @@ def figure1(filename):
     plt.xlabel("Frequency [Hz]")
     plt.ylabel("Energy [J]")
     plt.show()
+
+
+figure1(rel_path + "forsok1.mat")
 
 
 eigenfreqs = []
@@ -58,6 +63,7 @@ def figure2(filename):
 
     plt.plot(fut[i:j], energi[i:j])
     plt.plot(fut[ipeak], energi[ipeak], "x", label="Eigentone: %.2fHz" % fut[ipeak])
+
 
 for i in range(1, 8):
     figure2(rel_path + "forsok%i.mat" % i)

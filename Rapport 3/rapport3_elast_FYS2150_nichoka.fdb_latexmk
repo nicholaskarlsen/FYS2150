@@ -1,16 +1,16 @@
 # Fdb version 3
-["bibtex rapport3_elast_FYS2150_nichoka"] 1522523123 "rapport3_elast_FYS2150_nichoka.aux" "rapport3_elast_FYS2150_nichoka.bbl" "rapport3_elast_FYS2150_nichoka" 1522523389
+["bibtex rapport3_elast_FYS2150_nichoka"] 1522523123 "rapport3_elast_FYS2150_nichoka.aux" "rapport3_elast_FYS2150_nichoka.bbl" "rapport3_elast_FYS2150_nichoka" 1522856175
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/plain.bst" 1480098433 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "rapport3_elast_FYS2150_nichoka.aux" 1522523389 1713 ed3b290ba36b8f8fe7b4825196b65b78 ""
+  "rapport3_elast_FYS2150_nichoka.aux" 1522574077 1713 ed3b290ba36b8f8fe7b4825196b65b78 ""
   "rapport3_elast_FYS2150_nichoka.bcf" 0 -1 0 ""
-  "rapport3_elast_FYS2150_nichokaNotes.bib" 1522523389 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "rapport3_elast_FYS2150_nichokaNotes.bib" 1522574077 0 d41d8cd98f00b204e9800998ecf8427e ""
   "rapport3_ref.bib" 1522517549 1102 946774bcc2b69dfd6da33614528d59dd ""
   (generated)
-  "rapport3_elast_FYS2150_nichoka.bbl"
   "rapport3_elast_FYS2150_nichoka.blg"
-["pdflatex"] 1522523389 "rapport3_elast_FYS2150_nichoka.tex" "/home/nick/Documents/uio/FYS2150/Rapport 3/rapport3_elast_FYS2150_nichoka.pdf" "rapport3_elast_FYS2150_nichoka" 1522523389
+  "rapport3_elast_FYS2150_nichoka.bbl"
+["pdflatex"] 1522574076 "rapport3_elast_FYS2150_nichoka.tex" "/home/nick/Documents/uio/FYS2150/Rapport 3/rapport3_elast_FYS2150_nichoka.pdf" "rapport3_elast_FYS2150_nichoka" 1522856175
   "/etc/texmf/web2c/texmf.cnf" 1516135388 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/nick/Documents/uio/FYS2150/Rapport 3/rapport3_elast_FYS2150_nichoka.aux" 1522523389 1713 ed3b290ba36b8f8fe7b4825196b65b78 ""
+  "/home/nick/Documents/uio/FYS2150/Rapport 3/rapport3_elast_FYS2150_nichoka.aux" 1522574077 1713 ed3b290ba36b8f8fe7b4825196b65b78 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1480098670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1480098698 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1480098698 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
@@ -106,17 +106,17 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1503024366 32036 8f10cb8f6ef259fb5791f09c065d3d13 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1516135424 2377213 8bc19c9e6d8db8e1c35694d1be199981 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1516135441 4125883 fc05fbdfcab36ac8e9d2d1a23f2fc433 ""
-  "rapport3_elast_FYS2150_nichoka.aux" 1522523389 1713 ed3b290ba36b8f8fe7b4825196b65b78 ""
+  "rapport3_elast_FYS2150_nichoka.aux" 1522574077 1713 ed3b290ba36b8f8fe7b4825196b65b78 ""
   "rapport3_elast_FYS2150_nichoka.bbl" 1522523123 362 8a033f8102256793c46cf675180647ff "bibtex rapport3_elast_FYS2150_nichoka"
-  "rapport3_elast_FYS2150_nichoka.tex" 1522523388 5025 d700650f442591a024eeb7305751e230 ""
+  "rapport3_elast_FYS2150_nichoka.tex" 1522856174 4946 eb869a99d73c171006eb4c45db6a0c49 ""
   "scripts/FYS2150lib.py" 1522490181 1031 a51749848feb75c299b44088d6874a91 ""
-  "scripts/lab_data.py" 1522510505 3257 1b6ba0c2447728c0e74702f243db7cdc ""
+  "scripts/lab_data.py" 1522780632 3257 1b6ba0c2447728c0e74702f243db7cdc ""
   (generated)
   "/home/nick/Documents/uio/FYS2150/Rapport 3/rapport3_elast_FYS2150_nichoka.log"
-  "rapport3_elast_FYS2150_nichoka.pdf"
-  "rapport3_elast_FYS2150_nichokaNotes.bib"
-  "rapport3_elast_FYS2150_nichoka.log"
-  "rapport3_elast_FYS2150_nichoka.toc"
   "/home/nick/Documents/uio/FYS2150/Rapport 3/rapport3_elast_FYS2150_nichoka.pdf"
   "rapport3_elast_FYS2150_nichoka.out"
   "rapport3_elast_FYS2150_nichoka.aux"
+  "rapport3_elast_FYS2150_nichokaNotes.bib"
+  "rapport3_elast_FYS2150_nichoka.log"
+  "rapport3_elast_FYS2150_nichoka.pdf"
+  "rapport3_elast_FYS2150_nichoka.toc"
