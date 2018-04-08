@@ -10,6 +10,7 @@ from pylab import *
 import scipy.constants as const
 import FYS2150lib as fys
 
+
 def weight_data(set=1):
     "set decides which data set the function returns."
     set = set.lower()   # Forces lowercase
@@ -66,6 +67,8 @@ def experiment1_data():
 
     mass = linspace(0, 3.5, 8)
     h_mass = m * mass + c  # h(m)
+
+
     def plotdata():
         h_sets = [h_1, h_2, h_3, h_4, h_5]
         plot(mass, h_mass, label="Linear fit")
@@ -97,7 +100,6 @@ def experiment1_data():
 
     E = mean(4.0 * l**3 * const.g / (3 * pi * A * d_m**4)[1:-1])
     print E
-
 
 
 if __name__ == "__main__":

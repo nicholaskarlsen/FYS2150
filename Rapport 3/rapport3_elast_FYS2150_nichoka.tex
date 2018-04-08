@@ -44,7 +44,7 @@
 \usepackage{graphicx}% Include figure files
 \usepackage{dcolumn}% Align table columns on decimal point
 \usepackage{bm}% bold math
-%\usepackage{hyperref}% add hypertext capabilities
+\usepackage{hyperref}% add hypertext capabilities
 \usepackage{url}
 %\usepackage[mathlines]{lineno}% Enable numbering of text and display math
 %\linenumbers\relax % Commence numbering lines
@@ -119,7 +119,33 @@
 
 \section{\label{section:experimental}Experimental Procedure}
   \subsection{Three-point flexural test}
+
+    \begin{figure}[h!]
+      \center
+      \includegraphics[width=9cm]{scripts/figs/aparatus1.png}
+      \caption{Apparatus for measuring the deflection of a rod}
+      \label{fig:aparatus1}
+    \end{figure}
+
+    \begin{figure}[h!]
+      \center
+      \includegraphics[width=4cm]{scripts/figs/aparatus1cs.png}
+      \caption{Cross-section of apparatus where the dial indicator meets the ring in Fig. \ref{fig:aparatus1}}
+      \label{fig:aparatus1cs}
+    \end{figure}
+
+    The brass rod was placed in an apparatus similar to that which is depicted in Fig. \ref{fig:aparatus1}.  
+    
   \subsection{Measuring the speed of sound in the rod}
+      The brass rod, with a ring attached to it (same as before), was laid to rest on the flat side of the ring on a solid surface such that the rod is held up by the ring. We also made sure that the rod was not to be disturbed in any way while it was vibrating. When hit with a hammer, it will emit a sound consisting of different frequencies. Following are the two different methods we used for determining the root frequency of the rod.
+      During both experiments, we ensured there were no significant noise pollution during our recording (By which i mean people performing the same experiment as us).
+      \subsubsection{By hearing for beats}
+        A speaker was connected to a signal generator. We started the signal generator at 1200Hz and hit the brass rod with a plastic hammer on the the flat surface on one end of the rod. By ear, there was an audible beat. We adjusted the signal generator such that the the frequency of the beat was minimized, and there was essentially no audible difference between the two signals. We did this by trying above and below where we thought the root frequency was, eventually zeroing in on a value.
+
+      \subsubsection{By Fourier transform}
+        A USB microphone was placed close to the rod, and faced towards it. The microphone was connected to a computer running matlab, with a script that collects audio data from it and Fourier transforms it using FFT. The recordings made were made with a sampling frequency of $8\times1024$ Hz and varying durations.
+
+
 
 \section{\label{sect:results}Results}
 

@@ -76,7 +76,7 @@ for i=1:length(l_1)
 endfor
 
 #compute linear fit
-[a,da,b,db,r] = myfunc(m,l_avg')
+[a,da,b,db,r] = myfunc(m,l_avg)
 l_fit = m*a + b;
 
 #plot linear fit and data

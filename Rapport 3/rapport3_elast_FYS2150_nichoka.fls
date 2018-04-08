@@ -52,6 +52,27 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/bm.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/bm.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
@@ -65,28 +86,22 @@ INPUT /usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
-INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/rapport3_elast_FYS2150_nichoka.out
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/rapport3_elast_FYS2150_nichoka.out
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/rapport3_elast_FYS2150_nichoka.out
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/rapport3_elast_FYS2150_nichoka.out
+OUTPUT /home/nick/Documents/uio/FYS2150/Rapport 3/rapport3_elast_FYS2150_nichoka.pdf
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/rapport3_elast_FYS2150_nichoka.out
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/rapport3_elast_FYS2150_nichoka.out
+OUTPUT /home/nick/Documents/uio/FYS2150/Rapport 3/rapport3_elast_FYS2150_nichoka.out
 OUTPUT /home/nick/Documents/uio/FYS2150/Rapport 3/rapport3_elast_FYS2150_nichokaNotes.bib
 INPUT /usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr9.tfm
@@ -115,9 +130,14 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib5.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/figs/aparatus1.png
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/figs/aparatus1.png
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/figs/aparatus1.png
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/figs/aparatus1cs.png
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/figs/aparatus1cs.png
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/figs/aparatus1cs.png
 INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/rapport3_elast_FYS2150_nichoka.bbl
 INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/rapport3_elast_FYS2150_nichoka.bbl
-OUTPUT /home/nick/Documents/uio/FYS2150/Rapport 3/rapport3_elast_FYS2150_nichoka.pdf
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
 INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/lab_data.py
 INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -149,6 +169,8 @@ INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/FYS2150lib.py
 INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/FYS2150lib.py
 INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/FYS2150lib.py
 INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/rapport3_elast_FYS2150_nichoka.aux
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/rapport3_elast_FYS2150_nichoka.out
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/rapport3_elast_FYS2150_nichoka.out
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb
