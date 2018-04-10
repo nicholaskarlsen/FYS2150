@@ -11,6 +11,9 @@ import scipy.constants as const
 import FYS2150lib as fys
 
 
+rcParams.update({'font.size': 13})  # Sets font size of plots
+
+
 def weight_data(set=1):
     "set decides which data set the function returns."
     set = set.lower()   # Forces lowercase
@@ -75,12 +78,37 @@ def experiment1_data():
         # errorbar(mass, m * mass + c, yerr=dm, color='blue', fmt='o', label='Error Range')
 
         for dat in h_sets:
-            plot(mass_dat, dat, "x", color="r", label="data points")
+            plot(mass_dat, dat, "x", color="r")
+        plot(NaN, NaN, "xr", label="Data points")
         xlabel("mass [kg]")
         ylabel("h(m) [m]")
-        plt.legend()
-        show()
-    plotdata() 
+        ticklabel_format(style='sci', axis='y', scilimits=(0,0))
+        legend()
+        title("Flex measured by dial indicator")
+        savefig("figs/h_m_fig.png")
+        close()
+    plotdata()
+
+    def plot_stddev():
+        """Plots the standard deviation of h(m)
+        as m is increased"""
+        deviation = np.zeros(len(h_1))
+        for i in xrange(len(h_1)):
+            deviation[i] = fys.stddev(array([h_1[i],
+                                             h_2[i],
+                                             h_3[i],
+                                             h_4[i],
+                                             h_5[i]]))[0]
+            print i
+        print deviation
+        print len(mass_dat), len(deviation)
+        plot(mass_dat, deviation)
+        plot(mass_dat, deviation, "o")
+        ticklabel_format(style='sci', axis='y', scilimits=(0,0))
+        plt.title("Standard deviation of h(m)")
+        savefig("figs/h_m_deviation.png")
+        close()
+    plot_stddev()
 
     # lengde mellom yttersidene til festepunktene til knivene
     # PEE WEE 2m Y612CM LUFKIN +- 0.01cm

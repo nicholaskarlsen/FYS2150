@@ -49,6 +49,7 @@
 %\usepackage[mathlines]{lineno}% Enable numbering of text and display math
 %\linenumbers\relax % Commence numbering lines
 \usepackage{listings}
+\usepackage{subfig}
 \lstset{ %
   basicstyle=\footnotesize,        % the size of the fonts that are used for the code
   breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
@@ -113,9 +114,8 @@
   \begin{equation}
     E = \frac{4l^3g}{3\pi |A|d^4}
   \end{equation}
-  \cite{wiki:euler_bernouli}
   \subsection{Errors}
-  \cite{squires}
+    When performing arithmetic operations on recorded data, the uncertainty in the data must also carry over to the derived results. How these uncertainties carry over in different operations can be found in Practical Physics \cite{squires}.
 
 \section{\label{section:experimental}Experimental Procedure}
   \subsection{Three-point flexural test}
@@ -134,21 +134,64 @@
       \label{fig:aparatus1cs}
     \end{figure}
 
-    The brass rod was placed in an apparatus similar to that which is depicted in Fig. \ref{fig:aparatus1}.  
+    Using \ref{fig:aparatus1} as a reference; The brass rod, A, was laid on the "knives" B and C. In the middle of the rod, there was a ring as shown in Fig. \ref{fig:aparatus1cs}. The flat surface of the ring was in contact with the needle of the dial indicator at G. In order to ensure that the flat surface of the ring was at right angle with the needle, we turned the rod such that the reading of the dial indicator would be at a minimum, as the skewer the surface, the greater the reading. This process was repeated at the start of every attempt of the experiment.
     
   \subsection{Measuring the speed of sound in the rod}
       The brass rod, with a ring attached to it (same as before), was laid to rest on the flat side of the ring on a solid surface such that the rod is held up by the ring. We also made sure that the rod was not to be disturbed in any way while it was vibrating. When hit with a hammer, it will emit a sound consisting of different frequencies. Following are the two different methods we used for determining the root frequency of the rod.
       During both experiments, we ensured there were no significant noise pollution during our recording (By which i mean people performing the same experiment as us).
       \subsubsection{By hearing for beats}
-        A speaker was connected to a signal generator. We started the signal generator at 1200Hz and hit the brass rod with a plastic hammer on the the flat surface on one end of the rod. By ear, there was an audible beat. We adjusted the signal generator such that the the frequency of the beat was minimized, and there was essentially no audible difference between the two signals. We did this by trying above and below where we thought the root frequency was, eventually zeroing in on a value.
+        A speaker was connected to a signal generator. We started the signal generator at 1200Hz and hit the brass rod with a plastic hammer on the the flat surface on one end of the rod. By ear, there was an audible beat due to the superposition of the two signals. We adjusted the signal generator such that the the frequency of the beat was minimized, and there was essentially no audible difference between the two signals. We did this by trying above and below where we thought the root frequency was, eventually zeroing in on a value.
 
       \subsubsection{By Fourier transform}
-        A USB microphone was placed close to the rod, and faced towards it. The microphone was connected to a computer running matlab, with a script that collects audio data from it and Fourier transforms it using FFT. The recordings made were made with a sampling frequency of $8\times1024$ Hz and varying durations.
+        A USB microphone was placed close to the rod, and faced towards it. The microphone was connected to a computer running matlab, with a script that collects audio data from it and Fourier transforms it using FFT. The recordings made were made with a sampling frequency of $8\times1024$ Hz and varying durations. As before, we hit the rod using a plastic hammer and recorded the data.
 
 
 
 \section{\label{sect:results}Results}
+  \subsection{Results from Three-point flexural test}
+   
+    \begin{figure}[h!]
+      \centering
+      \subfloat[][Flex of rod]{
+        \includegraphics[width=8cm]{scripts/figs/h_m_fig.png}
+          \label{fig:h(m)}} \\
+      \subfloat[][Standard deviation of data]{
+        \includegraphics[width=8cm]{scripts/figs/h_m_deviation.png}
+          \label{fig:deviation_h_m}}
+      \center
+      \caption{(a) Shows the flex of the brass beam measured by the dial indicatior. (b) Shows the standard deviation of the data points in (a) at their respective masses}
+      \label{fig:exp_1}
+    \end{figure}
 
+  \subsection{Results from measuring the speed of sound in the rod}
+
+    When hearing for beats, me and my labpartner decided that the root frequency was $\approx 1240\enspace\textup{Hz}$.
+    \newline
+    \begin{figure}[h!]
+      \centering
+      \subfloat[][Time domain]{
+        \includegraphics[width=8cm]{scripts/raw_exp2_1.png}
+          \label{ }} \\
+      \subfloat[][Frequency domain]{
+        \includegraphics[width=8cm]{scripts/energy_exp2_1.png}
+          \label{ }} \\
+      \subfloat[][Zoomed frequency domain]{
+        \includegraphics[width=8cm]{scripts/freq_exp2_1.png}
+          \label{ }}
+      \caption{All of the plots generated for attempt no. 1}
+      \label{fig:sound_exp1}
+    \end{figure}
+
+    \begin{figure}[h!]
+      \centering 
+      \includegraphics[width=8cm]{scripts/freq_exp2_all.png}
+      \caption{Zoomed frequency plot for all attempts.}
+      \label{fig:sound_all}
+    \end{figure}
+
+    Fig. \ref{fig:sound_exp1} contains the data and derived results from our first attempt of the experiment. This data is representative of all consequent attempts, as there was very little variation other than the time we recorded for. Fig. \ref{fig:sound_all} Shows the peaks in the frequency domain in all of the attempts in one plot. 
+
+\newpage
 \section{\label{sect:discussion}Discussion}
  
 \section{\label{sect:conclusion}Conclusion}
@@ -162,8 +205,10 @@
 
 \onecolumngrid % Start single collumn
 \newpage % Ensure Code starts on new page
-\section*{Code}
+\appendix*
+\section{Code}
 All of the code used to produce this report. Anything noteworthy should already be mentioned in the main body of the report.
+\lstinputlisting[language=python]{scripts/FFTlyd.py}
 \lstinputlisting[language=python]{scripts/lab_data.py}
 \lstinputlisting[language=python]{scripts/FYS2150lib.py}
 

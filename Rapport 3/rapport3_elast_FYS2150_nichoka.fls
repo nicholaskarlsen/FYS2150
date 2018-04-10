@@ -79,6 +79,12 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
 INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/subfig/subfig.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/subfig/subfig.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
 INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/rapport3_elast_FYS2150_nichoka.aux
 INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/rapport3_elast_FYS2150_nichoka.aux
 OUTPUT /home/nick/Documents/uio/FYS2150/Rapport 3/rapport3_elast_FYS2150_nichoka.aux
@@ -136,15 +142,33 @@ INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/figs/aparatus1.png
 INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/figs/aparatus1cs.png
 INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/figs/aparatus1cs.png
 INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/figs/aparatus1cs.png
-INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/rapport3_elast_FYS2150_nichoka.bbl
-INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/rapport3_elast_FYS2150_nichoka.bbl
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
-INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/lab_data.py
-INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/figs/h_m_fig.png
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/figs/h_m_fig.png
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/figs/h_m_fig.png
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
-INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/lab_data.py
-INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/lab_data.py
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/figs/h_m_deviation.png
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/figs/h_m_deviation.png
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/figs/h_m_deviation.png
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/raw_exp2_1.png
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/raw_exp2_1.png
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/raw_exp2_1.png
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/energy_exp2_1.png
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/energy_exp2_1.png
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/energy_exp2_1.png
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/freq_exp2_1.png
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/freq_exp2_1.png
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/freq_exp2_1.png
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/freq_exp2_all.png
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/freq_exp2_all.png
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/freq_exp2_all.png
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/rapport3_elast_FYS2150_nichoka.bbl
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/rapport3_elast_FYS2150_nichoka.bbl
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/FFTlyd.py
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/FFTlyd.py
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/FFTlyd.py
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti8.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
@@ -165,6 +189,11 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy8.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/lab_data.py
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/lab_data.py
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/lab_data.py
 INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/FYS2150lib.py
 INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/FYS2150lib.py
 INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/FYS2150lib.py
@@ -175,6 +204,7 @@ INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
