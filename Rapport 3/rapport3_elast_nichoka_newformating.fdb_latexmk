@@ -1,14 +1,14 @@
 # Fdb version 3
-["bibtex rapport3_elast_nichoka_newformating"] 1523481944 "rapport3_elast_nichoka_newformating.aux" "rapport3_elast_nichoka_newformating.bbl" "rapport3_elast_nichoka_newformating" 1523482080
-  "rapport3_elast_nichoka_newformating.aux" 1523482080 5296 0e8fc975a4150a5fc77857918cf354a1 ""
+["bibtex rapport3_elast_nichoka_newformating"] 1523481944 "rapport3_elast_nichoka_newformating.aux" "rapport3_elast_nichoka_newformating.bbl" "rapport3_elast_nichoka_newformating" 1523483599
+  "rapport3_elast_nichoka_newformating.aux" 1523483599 5296 0e8fc975a4150a5fc77857918cf354a1 ""
   "rapport3_elast_nichoka_newformating.bcf" 0 -1 0 ""
   "rapport3_ref.bib" 1523468157 676 8ab9fedb354460a5a0009455789f6902 ""
   (generated)
   "rapport3_elast_nichoka_newformating.bbl"
   "rapport3_elast_nichoka_newformating.blg"
-["pdflatex"] 1523482079 "rapport3_elast_nichoka_newformating.tex" "/home/nick/Documents/uio/FYS2150/Rapport 3/rapport3_elast_nichoka_newformating.pdf" "rapport3_elast_nichoka_newformating" 1523482080
+["pdflatex"] 1523483598 "rapport3_elast_nichoka_newformating.tex" "/home/nick/Documents/uio/FYS2150/Rapport 3/rapport3_elast_nichoka_newformating.pdf" "rapport3_elast_nichoka_newformating" 1523483599
   "/etc/texmf/web2c/texmf.cnf" 1516135388 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/nick/Documents/uio/FYS2150/Rapport 3/rapport3_elast_nichoka_newformating.aux" 1523482080 5296 0e8fc975a4150a5fc77857918cf354a1 ""
+  "/home/nick/Documents/uio/FYS2150/Rapport 3/rapport3_elast_nichoka_newformating.aux" 1523483599 5296 0e8fc975a4150a5fc77857918cf354a1 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1480098670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx0900.tfm" 1480098696 3584 1a7de6c99457381c64abc1a7c545505f ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1000.tfm" 1480098696 3584 2d666ecf6d466d8b007246bc2f94d9da ""
@@ -201,10 +201,10 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1503024366 32036 8f10cb8f6ef259fb5791f09c065d3d13 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1516135424 2377213 8bc19c9e6d8db8e1c35694d1be199981 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1516135441 4125883 fc05fbdfcab36ac8e9d2d1a23f2fc433 ""
-  "rapport3_elast_nichoka_newformating.aux" 1523482080 5296 0e8fc975a4150a5fc77857918cf354a1 ""
+  "rapport3_elast_nichoka_newformating.aux" 1523483599 5296 0e8fc975a4150a5fc77857918cf354a1 ""
   "rapport3_elast_nichoka_newformating.bbl" 1523481945 0 d41d8cd98f00b204e9800998ecf8427e "bibtex rapport3_elast_nichoka_newformating"
-  "rapport3_elast_nichoka_newformating.out" 1523482080 962 fae31eb944d3ca851f33c05c3224d3e6 ""
-  "rapport3_elast_nichoka_newformating.tex" 1523482079 11222 88e9a4ed5468381d4085c0f85626b482 ""
+  "rapport3_elast_nichoka_newformating.out" 1523483599 962 fae31eb944d3ca851f33c05c3224d3e6 ""
+  "rapport3_elast_nichoka_newformating.tex" 1523483597 11375 524bf3a92117d76d4719589a90f9d915 ""
   "scripts/FFTlyd.py" 1523473836 3309 4799ec9e4f603099f33cb06a3ba471f5 ""
   "scripts/FYS2150lib.py" 1522490181 1031 a51749848feb75c299b44088d6874a91 ""
   "scripts/energy_exp2_4.png" 1523475668 17238 1440aed72d1e183041f1b7e8ee7c58cf ""
@@ -218,8 +218,8 @@
   "scripts/raw_exp2_4.png" 1523475668 21831 d7218a9aee43d5863f2c58fdaf12ab71 ""
   (generated)
   "rapport3_elast_nichoka_newformating.aux"
-  "rapport3_elast_nichoka_newformating.out"
   "rapport3_elast_nichoka_newformating.log"
   "rapport3_elast_nichoka_newformating.pdf"
+  "rapport3_elast_nichoka_newformating.out"
   "/home/nick/Documents/uio/FYS2150/Rapport 3/rapport3_elast_nichoka_newformating.pdf"
   "/home/nick/Documents/uio/FYS2150/Rapport 3/rapport3_elast_nichoka_newformating.log"
