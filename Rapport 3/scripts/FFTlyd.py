@@ -37,12 +37,17 @@ def raw_fig(filename):
     plt.xlabel("Time [s]")
     plt.ylabel("Amplitude")
     plt.ticklabel_format(style='sci', axis='y', scilimits=(0,0))
-    plt.title("Recorded audio of attempt no. 1")
-    plt.savefig("raw_exp2_1.png")
-    plt.close()
 
 
 raw_fig(rel_path + "forsok1.mat")
+plt.title("Recorded audio of attempt no. 1\n$f_s = 8192$ Hz")
+plt.savefig("raw_exp2_1.png")
+plt.close()
+
+raw_fig(rel_path + "forsok4.mat")
+plt.title("Recorded audio of attempt no. 4\n$f_s = 8192$ Hz")
+plt.savefig("raw_exp2_4.png")
+plt.close()
 
 
 def figure1(filename):
@@ -50,22 +55,26 @@ def figure1(filename):
     fut = np.transpose(fut)
     fh = int(len(energi) / 2.0)   # half lenght of data
     # Only plot first half of data, as FF mirrors in half-way point.
-    plt.plot(fut[:fh], energi[:fh])
+    plt.plot(fut[:fh], energi[:fh]) 
     plt.xlabel("Frequency [Hz]")
     plt.ylabel("Amplitude")
     plt.ticklabel_format(style='sci', axis='y', scilimits=(0,0))
-    plt.title("FFT of attempt no. 1 data")
-    plt.savefig("energy_exp2_1.png")
-    plt.close()
 
 
 figure1(rel_path + "forsok1.mat")
+plt.title("FFT of attempt no. 1\n$\Delta f=0.10$ Hz")
+plt.savefig("energy_exp2_1.png")
+plt.close()
 
+figure1(rel_path + "forsok4.mat")
+plt.title("FFT of attempt no. 4\n$\Delta f=0.04$ Hz")
+plt.savefig("energy_exp2_4.png")
+plt.close()
 
 eigenfreqs = []
 
 
-def figure2(filename):
+def figure2(filename, style="-", cross=0):
     data, energi, fut, L, t = import_matlab(filename)
     fut = np.transpose(fut)
 
@@ -82,16 +91,31 @@ def figure2(filename):
     while energi[j] > np.amax(energi[:fh]) * 0.01:
         j += 1
 
-    plt.plot(fut[i:j], energi[i:j])
-    plt.plot(fut[ipeak], energi[ipeak], "o", label="%.2fHz" % fut[ipeak])
+    plt.plot(fut[i:j], energi[i:j], color="blue", linestyle=style)
+    if cross == 1:
+        plt.plot(fut[i:j], energi[i:j], "rx")
+    else:
+        plt.plot(fut[ipeak], energi[ipeak], "o", label="%.2fHz" % fut[ipeak])
 
-figure2(rel_path + "forsok1.mat")
+    plt.grid("on")
+
+figure2(rel_path + "forsok1.mat", style="--", cross=1)
 plt.xlabel("Frequency [Hz]")
 plt.ylabel("Amplitude")
 plt.ticklabel_format(style='sci', axis='y', scilimits=(0,0))
 plt.xticks(rotation=10)
-plt.title("FFT of all attempts")
+plt.title("FFT of attempt no. 1 (Zoom at peak)\n$\Delta f=0.10$ Hz")
 plt.savefig("freq_exp2_1.png")
+plt.close()
+
+
+figure2(rel_path + "forsok4.mat", style="--", cross=1)
+plt.xlabel("Frequency [Hz]")
+plt.ylabel("Amplitude")
+plt.ticklabel_format(style='sci', axis='y', scilimits=(0,0))
+plt.xticks(rotation=10)
+plt.title("FFT of attempt no. 4 (Zoom at peak)\n$\Delta f=0.04$ Hz")
+plt.savefig("freq_exp2_4.png")
 plt.close()
 
 

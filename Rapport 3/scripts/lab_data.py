@@ -14,6 +14,22 @@ import FYS2150lib as fys
 rcParams.update({'font.size': 13})  # Sets font size of plots
 
 
+def E_sound(f, L, d, M):
+    '''
+    Returns youngs modulus given
+    f = root frequency
+    L = lenght of rod
+    d = diameter of rod
+    M = mass of rod
+    '''
+    return (16.0 * M * L * f**2) / (np.pi * d**2)
+
+
+def E_sound_error(E, sd, sf, sL, sM, d, f, L, M):
+    return E * np.sqrt((2 * sd / d)**2 + (2 * sf / f)**2 +
+                       (2 * sL / L)**2 + (2 * sM / M)**2)
+
+
 def weight_data(set=1):
     "set decides which data set the function returns."
     set = set.lower()   # Forces lowercase
@@ -84,7 +100,7 @@ def experiment1_data():
         ylabel("h(m) [m]")
         ticklabel_format(style='sci', axis='y', scilimits=(0,0))
         legend()
-        title("Flex measured by dial indicator")
+        title("Linear fit of flex data; h(m) = Am + B\n$\delta A =$ %.2e" % dm)
         savefig("figs/h_m_fig.png")
         close()
     plotdata()
@@ -102,10 +118,10 @@ def experiment1_data():
             print i
         print deviation
         print len(mass_dat), len(deviation)
-        plot(mass_dat, deviation)
+        plot(mass_dat, deviation, linestyle="--")
         plot(mass_dat, deviation, "o")
         ticklabel_format(style='sci', axis='y', scilimits=(0,0))
-        plt.title("Standard deviation of h(m)")
+        plt.title("Standard deviation of flex data for each m\n")
         savefig("figs/h_m_deviation.png")
         close()
     plot_stddev()
@@ -128,6 +144,9 @@ def experiment1_data():
 
     E = mean(4.0 * l**3 * const.g / (3 * pi * A * d_m**4)[1:-1])
     print E
+
+def experiment_2():
+    ''' Data pertaining to the audio exp.'''
 
 
 if __name__ == "__main__":

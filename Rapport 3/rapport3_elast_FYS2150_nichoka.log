@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.1.16)  10 APR 2018 14:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.1.16)  11 APR 2018 22:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -510,7 +510,11 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 111.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<scripts/figs/aparatus1.png, id=77, 409.53pt x 192.72pt>
+
+Package natbib Warning: Citation `squires' on page 1 undefined on input line 11
+8.
+
+<scripts/figs/aparatus1.png, id=72, 409.53pt x 192.72pt>
 File: scripts/figs/aparatus1.png Graphic file (type png)
 <use scripts/figs/aparatus1.png>
 Package pdftex.def Info: scripts/figs/aparatus1.png  used on input line 125. on
@@ -522,7 +526,7 @@ Overfull \hbox (10.0748pt too wide) in paragraph at lines 125--126
  [] 
  []
 
-<scripts/figs/aparatus1cs.png, id=79, 204.765pt x 244.915pt>
+<scripts/figs/aparatus1cs.png, id=74, 204.765pt x 244.915pt>
 File: scripts/figs/aparatus1cs.png Graphic file (type png)
 <use scripts/figs/aparatus1cs.png>
 Package pdftex.def Info: scripts/figs/aparatus1cs.png  used on input line 132. 
@@ -535,78 +539,62 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} </home/nick/Documents/uio
 /FYS2150/Rapport 3/scripts/figs/aparatus1.png> </home/nick/Documents/uio/FYS215
 0/Rapport 3/scripts/figs/aparatus1cs.png>]
-<scripts/figs/h_m_fig.png, id=103, 462.528pt x 346.896pt>
+Overfull \hbox (272.14035pt too wide) in paragraph at lines 158--169
+ []$ 
+ []
+
+<scripts/figs/h_m_fig.png, id=99, 462.528pt x 346.896pt>
 File: scripts/figs/h_m_fig.png Graphic file (type png)
 <use scripts/figs/h_m_fig.png>
-Package pdftex.def Info: scripts/figs/h_m_fig.png  used on input line 157. on i
-nput line 157.
+Package pdftex.def Info: scripts/figs/h_m_fig.png  used on input line 178. on i
+nput line 178.
 Package pdftex.def Info: Requested size: 227.62204pt x 170.71628pt on input lin
-e 157.
-<scripts/figs/h_m_deviation.png, id=104, 462.528pt x 346.896pt>
+e 178.
+<scripts/figs/h_m_deviation.png, id=100, 462.528pt x 346.896pt>
 File: scripts/figs/h_m_deviation.png Graphic file (type png)
 <use scripts/figs/h_m_deviation.png>
-Package pdftex.def Info: scripts/figs/h_m_deviation.png  used on input line 160
-. on input line 160.
+Package pdftex.def Info: scripts/figs/h_m_deviation.png  used on input line 181
+. on input line 181.
 Package pdftex.def Info: Requested size: 227.62204pt x 170.71628pt on input lin
-e 160.
-<scripts/raw_exp2_1.png, id=105, 462.528pt x 346.896pt>
-File: scripts/raw_exp2_1.png Graphic file (type png)
-<use scripts/raw_exp2_1.png>
-Package pdftex.def Info: scripts/raw_exp2_1.png  used on input line 174. on inp
-ut line 174.
-Package pdftex.def Info: Requested size: 227.62204pt x 170.71628pt on input lin
-e 174.
-<scripts/energy_exp2_1.png, id=106, 462.528pt x 346.896pt>
-File: scripts/energy_exp2_1.png Graphic file (type png)
-<use scripts/energy_exp2_1.png>
-Package pdftex.def Info: scripts/energy_exp2_1.png  used on input line 177. on 
-input line 177.
-Package pdftex.def Info: Requested size: 227.62204pt x 170.71628pt on input lin
-e 177.
-<scripts/freq_exp2_1.png, id=107, 462.528pt x 346.896pt>
-File: scripts/freq_exp2_1.png Graphic file (type png)
-<use scripts/freq_exp2_1.png>
-Package pdftex.def Info: scripts/freq_exp2_1.png  used on input line 180. on in
-put line 180.
-Package pdftex.def Info: Requested size: 227.62204pt x 170.71628pt on input lin
-e 180.
-
+e 181.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<scripts/freq_exp2_all.png, id=108, 462.528pt x 346.896pt>
+<scripts/raw_exp2_4.png, id=101, 462.528pt x 346.896pt>
+File: scripts/raw_exp2_4.png Graphic file (type png)
+<use scripts/raw_exp2_4.png>
+Package pdftex.def Info: scripts/raw_exp2_4.png  used on input line 195. on inp
+ut line 195.
+Package pdftex.def Info: Requested size: 227.62204pt x 170.71628pt on input lin
+e 195.
+<scripts/energy_exp2_4.png, id=102, 462.528pt x 346.896pt>
+File: scripts/energy_exp2_4.png Graphic file (type png)
+<use scripts/energy_exp2_4.png>
+Package pdftex.def Info: scripts/energy_exp2_4.png  used on input line 198. on 
+input line 198.
+Package pdftex.def Info: Requested size: 227.62204pt x 170.71628pt on input lin
+e 198.
+<scripts/freq_exp2_4.png, id=103, 462.528pt x 346.896pt>
+File: scripts/freq_exp2_4.png Graphic file (type png)
+<use scripts/freq_exp2_4.png>
+Package pdftex.def Info: scripts/freq_exp2_4.png  used on input line 201. on in
+put line 201.
+Package pdftex.def Info: Requested size: 227.62204pt x 170.71628pt on input lin
+e 201.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<scripts/freq_exp2_all.png, id=104, 462.528pt x 346.896pt>
 File: scripts/freq_exp2_all.png Graphic file (type png)
 <use scripts/freq_exp2_all.png>
-Package pdftex.def Info: scripts/freq_exp2_all.png  used on input line 187. on 
-input line 187.
+Package pdftex.def Info: scripts/freq_exp2_all.png  used on input line 208. on 
+input line 208.
 Package pdftex.def Info: Requested size: 227.62204pt x 170.71628pt on input lin
-e 187.
+e 208.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[2 </home/nick/Documents/uio/FYS2150/Rapport 3/scripts/figs/h_m_fig.png> </home
-/nick/Documents/uio/FYS2150/Rapport 3/scripts/figs/h_m_deviation.png>]
-
-LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 195.
-
-(/home/nick/Documents/uio/FYS2150/Rapport 3/rapport3_elast_FYS2150_nichoka.bbl
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1 \begin{thebibliography}{1}
-                              
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-) [3 </home/nick/Documents/uio/FYS2150/Rapport 3/scripts/raw_exp2_1.png> </home
-/nick/Documents/uio/FYS2150/Rapport 3/scripts/energy_exp2_1.png> </home/nick/Do
-cuments/uio/FYS2150/Rapport 3/scripts/freq_exp2_1.png>]
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+[2] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 (/home/nick/Documents/uio/FYS2150/Rapport 3/scripts/FFTlyd.py
@@ -619,16 +607,20 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <8> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 2.
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 13.
- [4 </home/nick/Documents/uio/FYS2150/Rapport 3/scripts/freq_exp2_all.png>]
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 78.
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
+ [3 </home/nick/Documents/uio/FYS2150/Rapport 3/scripts/figs/h_m_fig.png> </hom
+e/nick/Documents/uio/FYS2150/Rapport 3/scripts/figs/h_m_deviation.png>] [4 </ho
+me/nick/Documents/uio/FYS2150/Rapport 3/scripts/raw_exp2_4.png> </home/nick/Doc
+uments/uio/FYS2150/Rapport 3/scripts/energy_exp2_4.png> </home/nick/Documents/u
+io/FYS2150/Rapport 3/scripts/freq_exp2_4.png>] [5 </home/nick/Documents/uio/FYS
+2150/Rapport 3/scripts/freq_exp2_all.png>]
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 87.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <8> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 78.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 87.
 )
-(/home/nick/Documents/uio/FYS2150/Rapport 3/scripts/lab_data.py [5] [6]
+(/home/nick/Documents/uio/FYS2150/Rapport 3/scripts/lab_data.py [6] [7]
 Missing character: There is no Ã in font cmti8!
 Missing character: There is no ¥ in font cmti8!
 Missing character: There is no Ã in font cmti8!
@@ -637,45 +629,53 @@ Missing character: There is no Ã in font cmti8!
 Missing character: There is no ¥ in font cmti8!
 Missing character: There is no Ã in font cmti8!
 Missing character: There is no ¥ in font cmti8!
-)
-(/home/nick/Documents/uio/FYS2150/Rapport 3/scripts/FYS2150lib.py [7]) [8]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 217.
+
+[8]) (/home/nick/Documents/uio/FYS2150/Rapport 3/scripts/FYS2150lib.py)
+(/home/nick/Documents/uio/FYS2150/Rapport 3/rapport3_elast_FYS2150_nichoka.bbl)
+
+Package natbib Warning: There were undefined citations.
+
+[9]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 259.
 
 (/home/nick/Documents/uio/FYS2150/Rapport 3/rapport3_elast_FYS2150_nichoka.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 217.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 217.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 259.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 259.
 Package rerunfilecheck Info: File `rapport3_elast_FYS2150_nichoka.out' has not 
 changed.
-(rerunfilecheck)             Checksum: B9BE77B612B2DB29DA076EF913F94E43;1191.
+(rerunfilecheck)             Checksum: 9E1144E4181FB27FE7ABF3F983F845B7;1133.
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 10995 strings out of 492990
- 160691 string characters out of 6135005
- 1040889 words of memory out of 5000000
- 14086 multiletter control sequences out of 15000+600000
- 14954 words of font info for 55 fonts, out of 8000000 for 9000
+ 11065 strings out of 492990
+ 161642 string characters out of 6135005
+ 1177697 words of memory out of 5000000
+ 14107 multiletter control sequences out of 15000+600000
+ 16813 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  44i,10n,49p,625b,1892s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
 Output written on "/home/nick/Documents/uio/FYS2150/Rapport 3/rapport3_elast_FY
-S2150_nichoka.pdf" (8 pages, 374846 bytes).
+S2150_nichoka.pdf" (9 pages, 402234 bytes).
 PDF statistics:
- 558 PDF objects out of 1000 (max. 8388607)
- 511 compressed objects within 6 object streams
- 322 named destinations out of 1000 (max. 500000)
- 185 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 623 PDF objects out of 1000 (max. 8388607)
+ 573 compressed objects within 6 object streams
+ 366 named destinations out of 1000 (max. 500000)
+ 177 words of extra memory for PDF output out of 10000 (max. 10000000)
 

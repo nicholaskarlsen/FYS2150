@@ -15,7 +15,6 @@ fprintf('%d samples skal registreres\n',samples)
 %addAudioInputChannel(DS,devicename, 1);
 %fprintf('Go!\n\n');
 %[data, t] = startForeground(DS);
-
 % vis lyd-dataene
 figure(1)
 plot(t,data), xlabel('tid, s'),ylabel('amplitude')
@@ -50,4 +49,5 @@ ylabel('Energi')
 
 %filename = input('\nHvilket filnavn vil du bruke for � lagre dataene? ','s');
 %save(filename,'t','data','fut','energi','L')
-
+fprintf('total t = %d s\n',t(end))
+fprintf('samplerate = %d Hz\n',samplerate)

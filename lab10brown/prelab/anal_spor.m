@@ -3,29 +3,29 @@ numpart=max(tr(:,4));
 trny=[];
 trnum = [];
 
-%kontrollering av spor for å fjerne de partiklene som sitter fast
-%loop gjennom alle partiklene for å kontrollere sporene.
+%kontrollering av spor for ï¿½ fjerne de partiklene som sitter fast
+%loop gjennom alle partiklene for ï¿½ kontrollere sporene.
 figure(2), clf
 hold on
 m=1;
 for n=1:numpart 
     I=find(tr(:,4)==n);
-%     %de tre linjene nedenfor gir muligheten til å sjekke spor manuelt
+%     %de tre linjene nedenfor gir muligheten til ï¿½ sjekke spor manuelt
 %     figure(1), plot(tr(I,1),tr(I,2))
 %      godta=input('Godta/Forkast sporet? g/f: ','s');
 %     if godta=='g'
 %         trny=[trny;tr(I,:)];
 %         trnum(m)=n;
 %         m=m+1;
-%         figure(2),plot(tr(I,1),tr(I,2),'g') %plot godkjente spor i grønt
+%         figure(2),plot(tr(I,1),tr(I,2),'g') %plot godkjente spor i grï¿½nt
 %     else
 %         figure(2)
-%         plot(tr(I,1),tr(I,2),'r') % og ikke godkjente i rødt
+%         plot(tr(I,1),tr(I,2),'r') % og ikke godkjente i rï¿½dt
 %     end
     % med de neste tre linjene tar man bare med partikler som har beveget
     % seg en viss lengde i x- og y-retning (alternativ til den manuelle
     % kontrollen)
-    grense = 0; %sett inn et passende kriterium her, for å fjerne partikler som sitter fast
+    grense = 15; %sett inn et passende kriterium her, for ï¿½ fjerne partikler som sitter fast
     ddxx = max(tr(I,1))-min(tr(I,1));
     ddyy = max(tr(I,2))-min(tr(I,2));
     if ddxx > grense && ddyy > grense
@@ -33,14 +33,14 @@ for n=1:numpart
         trny=[trny;tr(I,:)];
         trnum(m)=n;
         m=m+1;
-        plot(tr(I,1),tr(I,2),'g') %plot godkjente spor i grønt
+        plot(tr(I,1),tr(I,2),'g') %plot godkjente spor i grï¿½nt
     else 
-        plot(tr(I,1),tr(I,2),'r') % og ikke godkjente i rødt
+        plot(tr(I,1),tr(I,2),'r') % og ikke godkjente i rï¿½dt
     end
    
    %plot(trny(I,1))
 end
-figure(2),title 'Partikkelspor. Grønt spor: godkjent, rødt: forkastet'
+figure(2),title 'Partikkelspor. Grï¿½nt spor: godkjent, rï¿½dt: forkastet'
 hold off,axis equal
 tr=trny;
 numpart=length(trnum);
@@ -72,7 +72,7 @@ plot(msdxy,'r')
 hold off
 
 % finne stigningstall
-% tvinge løsningen til å gå gjennom origo.
+% tvinge lï¿½sningen til ï¿½ gï¿½ gjennom origo.
 px = t(:)\msdx(:);
 py = t(:)\msdy(:);
 pxy = t(:)\msdxy(:);

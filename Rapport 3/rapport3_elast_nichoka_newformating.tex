@@ -1,55 +1,23 @@
-              
-% ****** Start of file apssamp.tex ******
-%
-%   This file is part of the APS files in the REVTeX 4.1 distribution.
-%   Version 4.1r of REVTeX, August 2010
-%
-%   Copyright (c) 2009, 2010 The American Physical Society.
-%
-%   See the REVTeX 4 README file for restrictions and more information.
-%
-% TeX'ing this file requires that you have AMS-LaTeX 2.0 installed
-% as well as the rest of the prerequisites for REVTeX 4.1
-%
-% See the REVTeX 4 README file
-% It also requires running BibTeX. The commands are as follows:
-%
-%  1)  latex apssamp.tex
-%  2)  bibtex apssamp
-%  3)  latex apssamp.tex
-%  4)  latex apssamp.tex
-%
-\documentclass[%
- reprint,
-%superscriptaddress,
-%groupedaddress,
-%unsortedaddress,
-%runinaddress,
-%frontmatterverbose, 
-%preprint,
-%showpacs,preprintnumbers,
-%nofootinbib,
-%nobibnotes,
-%bibnotes,
- amsmath,amssymb,
- aps,
-%pra,
-%prb,
-%rmp,
-%prstab,
-%prstper,
-%floatfix,
-]{revtex4-1}
-
-\usepackage{graphicx}% Include figure files
-\usepackage{dcolumn}% Align table columns on decimal point
-\usepackage{bm}% bold math
-\usepackage{hyperref}% add hypertext capabilities
-\usepackage{url}
-%\usepackage[mathlines]{lineno}% Enable numbering of text and display math
-%\linenumbers\relax % Commence numbering lines
-\usepackage{listings}
+\documentclass[11pt,a4paper]{article}
+\usepackage{float}
+\usepackage{verbatim}
 \usepackage{subfig}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{enumitem}
+%\geometry{verbose,lmargin=2cm,rmargin=2cm, bmargin=2cm, tmargin=2cm}
+\usepackage{wrapfig}
+\usepackage{tikz}
+\usetikzlibrary{decorations.markings}
+\usepackage{calc}
+\usepackage{wrapfig}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{esint}
+\usepackage{hyperref}
+\usepackage{listings}
 \lstset{ %
   basicstyle=\footnotesize,        % the size of the fonts that are used for the code
   breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
@@ -71,20 +39,9 @@
   tabsize=2,                       % sets default tabsize to 2 spaces
   title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
 }
-
-
-%\usepackage[showframe,%Uncomment any one of the following lines to test 
-%%scale=0.7, marginratio={1:1, 2:3}, ignoreall,% default settings
-%%text={7in,10in},centering,
-%%margin=1.5in,
-%%total={6.5in,8.75in}, top=1.2in, left=0.9in, includefoot,
-%%height=10in,a5paper,hmargin={3cm,0.8in},
-%]{geometry}
-\bibliographystyle{plain}
-
-%\graphicspath{{C:\Users\Nick\Documents\GitHub\FYS2150\lab1}}
-
 \begin{document}
+
+
 
 %\preprint{APS/123-QED}
 
@@ -96,11 +53,11 @@
 \date{\today}% It is always \today, today,
              %  but any date may be explicitly specified
 
+\maketitle
+
 \begin{abstract}
     A study on two different methods to determine the Young's modulus of a brass rod.
 \end{abstract}
-
-\maketitle
 
 %\tableofcontents
 
@@ -120,18 +77,17 @@
 \section{\label{section:experimental}Experimental Procedure}
   \subsection{Three-point flexural test}
 
-    \begin{figure}[h!]
+    \begin{figure}[H]
+      \centering
+      \subfloat[][]{
+        \includegraphics[width=9cm]{scripts/figs/aparatus1.png}
+          \label{fig:aparatus1}}
+      \subfloat[][]{
+        \includegraphics[width=4cm]{scripts/figs/aparatus1cs.png}
+          \label{fig:aparatus1cs}}
       \center
-      \includegraphics[width=9cm]{scripts/figs/aparatus1.png}
-      \caption{Apparatus for measuring the deflection of a rod}
-      \label{fig:aparatus1}
-    \end{figure}
-
-    \begin{figure}[h!]
-      \center
-      \includegraphics[width=4cm]{scripts/figs/aparatus1cs.png}
-      \caption{Cross-section of apparatus where the dial indicator meets the ring in Fig. \ref{fig:aparatus1}}
-      \label{fig:aparatus1cs}
+      \caption{(a) shows the apparatus used for measuring the deflection of a rod and (b) a cross section of the  aparatus at point F.}
+      \label{fig:exp_1}
     \end{figure}
 
     Using \ref{fig:aparatus1} as a reference; The brass rod, A, was laid on the "knives" B and C. In the middle of the rod, there was a ring as shown in Fig. \ref{fig:aparatus1cs}. The flat surface of the ring was in contact with the needle of the dial indicator at G. In order to ensure that the flat surface of the ring was at right angle with the needle, we turned the rod such that the reading of the dial indicator would be at a minimum, as the skewer the surface, the greater the reading. This process was repeated at the start of every attempt of the experiment.
@@ -150,12 +106,11 @@
   \subsection{Results from Three-point flexural test}
 
 
-  \onecolumngrid % Start single collumn
-    \begin{table}[t]
+    \begin{table}[H]
       % Measured flex
       \caption{Flex of beam, h(m), with rough m.}
       \center
-      \begin{tabular}{ | p{1.2cm} | l | l | l | l | l | l | l | l |}
+      \begin{tabular}{ | p{1.2cm} | p{1.4cm} | p{1.4cm} | p{1.4cm} | p{1.4cm} | p{1.4cm} | p{1.4cm} | p{1.4cm} | p{1.4cm} |}
           \hline
           Attempt no. & h(0kg) [mm] & h(0.5kg) [mm] & h(1kg) [mm] & h(1.5kg) [mm] & h(2.0kg) [mm] & h(2.5kg) [mm] & h(3.0kg) [mm] & h(3.5kg) [mm] \\ 
           \hline
@@ -167,15 +122,13 @@
       \end{tabular}
       \label{tab:flex}
     \end{table}
-  \twocolumngrid % Start single collumn
 
-  Table \ref{tab:flex} contains the data recorded with the dial indicator
    
-    \begin{figure}[h!]
+    \begin{figure}[H]
       \centering
       \subfloat[][Flex of rod]{
         \includegraphics[width=8cm]{scripts/figs/h_m_fig.png}
-          \label{fig:h(m)}} \\
+          \label{fig:h(m)}} 
       \subfloat[][Standard deviation of data]{
         \includegraphics[width=8cm]{scripts/figs/h_m_deviation.png}
           \label{fig:deviation_h_m}}
@@ -184,11 +137,16 @@
       \label{fig:exp_1}
     \end{figure}
 
+  Table \ref{tab:flex} contains the data recorded with the dial indicator
+  \newline
+  \newline
+  Fig. \ref{fig:h(m)} contains all the recorded data, as well as a linear fit on the mean of h(m) for each m. The error of the linear fit, $h(m) = Am + B$, $dA = 3.52e-06$.
+
   \subsection{Results from measuring the speed of sound in the rod}
 
     When hearing for beats, me and my labpartner decided that the root frequency was $\approx 1240\enspace\textup{Hz}$.
     \newline
-    \begin{figure}[h!]
+    \begin{figure}[H]
       \centering
       \subfloat[][Time domain]{
         \includegraphics[width=8cm]{scripts/raw_exp2_4.png}
@@ -203,7 +161,7 @@
       \label{fig:sound_exp1}
     \end{figure}
 
-    \begin{figure}[h!]
+    \begin{figure}[H]
       \centering 
       \includegraphics[width=8cm]{scripts/freq_exp2_all.png}
       \caption{Zoomed frequency plot for all 7 attempts.}
@@ -214,7 +172,7 @@
     Table \ref{tab:fftdat} contains all of the relevant numbers related to each attempt. 
 
 
-    \begin{table}[h!]
+    \begin{table}[H]
       % FFT DATA
       \center
       \caption{FFT data}
@@ -242,18 +200,22 @@
 %%% END OF MAIN BODY %%%
 %%%%%%%%%%%%%%%%%%%%%%%%
 
-%\bibliography{rapport3_ref}
+\bibliography{rapport3_ref}
 
+\begin{thebibliography}{1}
 
-\onecolumngrid % Start single collumn
-\newpage % Ensure Code starts on new page
+\bibitem{squires}
+G.~L. Squires.
+\newblock {\em Practical Physics 4th Edition}.
+\newblock Cambridge University Press, 2001.
+
+\end{thebibliography}
+
 \appendix*
 \section{Code}
 All of the code used to produce this report. Anything noteworthy should already be mentioned in the main body of the report.
 \lstinputlisting[language=python]{scripts/FFTlyd.py}
 \lstinputlisting[language=python]{scripts/lab_data.py}
 \lstinputlisting[language=python]{scripts/FYS2150lib.py}
-
-\twocolumngrid % Stop single collumn
 
 \end{document}
