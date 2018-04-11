@@ -100,7 +100,7 @@ def experiment1_data():
         ylabel("h(m) [m]")
         ticklabel_format(style='sci', axis='y', scilimits=(0,0))
         legend()
-        title("Linear fit of flex data; h(m) = Am + B\n$\delta A =$ %.2e" % dm)
+        title("Linear fit of mean deflection data; h(m) = Am + B\n$\delta A =$ %.2e" % dm)
         savefig("figs/h_m_fig.png")
         close()
     plotdata()
@@ -121,7 +121,7 @@ def experiment1_data():
         plot(mass_dat, deviation, linestyle="--")
         plot(mass_dat, deviation, "o")
         ticklabel_format(style='sci', axis='y', scilimits=(0,0))
-        plt.title("Standard deviation of flex data for each m\n")
+        plt.title("Standard deviation of deflection for each m\n")
         savefig("figs/h_m_deviation.png")
         close()
     plot_stddev()
@@ -132,10 +132,10 @@ def experiment1_data():
     # diameter til festepunkter
     # Moore & Wright 1965 MI +- 0.01mm
     l_AB_diameter = 4.09 * 1e-3  # [mm]
-    # anta festepunktet er på midtden så trekk fra diameter totalt sett
+    # anta festepunktet er paa midtden saa trekk fra diameter totalt sett
     l = l_AB - l_AB_diameter
     
-    #Målinger av stangens diameter d på forskjellige punkter
+    #Maalinger av stangens diameter d paa forskjellige punkter
     # Moore & Wright 1965 MI +- 0.01mm
     d = array([15.98, 15.99, 15.99, 16.00, 15.99, 15.99, 15.98, 15.99, 15.99, 15.99]) * 1e-3  # [m]
     d_m = mean(d); #m

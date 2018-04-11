@@ -282,6 +282,17 @@ INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/figs/h_m_deviation.png
 INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/figs/h_m_deviation.png
 INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/figs/h_m_deviation.png
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm0800.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr9.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi9.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy9.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex9.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/esint/esint10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/esint/esint10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm0600.tfm
 INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/raw_exp2_4.png
 INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/raw_exp2_4.png
@@ -304,26 +315,15 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/FFTlyd.py
 INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/FFTlyd.py
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecti0900.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr9.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi9.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy9.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex9.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/esint/esint10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/esint/esint10.tfm
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx0900.tfm
-INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/lab_data.py
-INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/lab_data.py
-INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/lab_data.py
 INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/FYS2150lib.py
 INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/FYS2150lib.py
 INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/FYS2150lib.py
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/lab_data.py
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/lab_data.py
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/scripts/lab_data.py
 INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/rapport3_elast_nichoka_newformating.aux
 INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/rapport3_elast_nichoka_newformating.out
 INPUT /home/nick/Documents/uio/FYS2150/Rapport 3/rapport3_elast_nichoka_newformating.out
@@ -339,6 +339,8 @@ INPUT /usr/share/texmf/fonts/type1/public/cm-super/sfbx1000.pfb
 INPUT /usr/share/texmf/fonts/type1/public/cm-super/sfbx1095.pfb
 INPUT /usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb
 INPUT /usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb
+INPUT /usr/share/texmf/fonts/type1/public/cm-super/sfrm0600.pfb
+INPUT /usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb
 INPUT /usr/share/texmf/fonts/type1/public/cm-super/sfrm0900.pfb
 INPUT /usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb
 INPUT /usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb

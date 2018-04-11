@@ -90,7 +90,7 @@
       \label{fig:exp_1}
     \end{figure}
 
-    Using \ref{fig:aparatus1} as a reference; The brass rod, A, was laid on the "knives" B and C. In the middle of the rod, there was a ring as shown in Fig. \ref{fig:aparatus1cs}. The flat surface of the ring was in contact with the needle of the dial indicator at G. In order to ensure that the flat surface of the ring was at right angle with the needle, we turned the rod such that the reading of the dial indicator would be at a minimum, as the skewer the surface, the greater the reading. This process was repeated at the start of every attempt of the experiment.
+    Using \ref{fig:aparatus1} as a reference; The brass rod, A, was laid on the "knives" B and C. In the middle of the rod, there was a ring as shown in Fig. \ref{fig:aparatus1cs}. The flat surface of the ring was in contact with the needle of the dial gague at G. In order to ensure that the flat surface of the ring was at right angle with the needle, we turned the rod such that the reading of the dial gague would be at a minimum, as the skewer the surface, the greater the reading. This process was repeated at the start of every attempt of the experiment.
     
   \subsection{Measuring the speed of sound in the rod}
       The brass rod, with a ring attached to it (same as before), was laid to rest on the flat side of the ring on a solid surface such that the rod is held up by the ring. We also made sure that the rod was not to be disturbed in any way while it was vibrating. When hit with a hammer, it will emit a sound consisting of different frequencies. Following are the two different methods we used for determining the root frequency of the rod.
@@ -108,7 +108,7 @@
 
     \begin{table}[H]
       % Measured flex
-      \caption{Flex of beam, h(m), with rough m.}
+      \caption{Deflection of rod}
       \center
       \begin{tabular}{ | p{1.2cm} | p{1.4cm} | p{1.4cm} | p{1.4cm} | p{1.4cm} | p{1.4cm} | p{1.4cm} | p{1.4cm} | p{1.4cm} |}
           \hline
@@ -126,25 +126,25 @@
    
     \begin{figure}[H]
       \centering
-      \subfloat[][Flex of rod]{
+      \subfloat[][Deflection of rod]{
         \includegraphics[width=8cm]{scripts/figs/h_m_fig.png}
           \label{fig:h(m)}} 
       \subfloat[][Standard deviation of data]{
         \includegraphics[width=8cm]{scripts/figs/h_m_deviation.png}
           \label{fig:deviation_h_m}}
       \center
-      \caption{(a) Shows the flex of the brass beam measured by the dial indicatior. (b) Shows the standard deviation of the data points in (a) at their respective masses}
+      \caption{(a) Shows the deflection of the brass rod measured by the dial gague. (b) Shows the standard deviation of the data points in (a) at their respective masses}
       \label{fig:exp_1}
     \end{figure}
 
-  Table \ref{tab:flex} contains the data recorded with the dial indicator
+  Table \ref{tab:flex} contains the deflection data recorded\footnote{I did not take note of the model number of the particular dial gague that was used during the lab. While working on this report, i have become aware that each Baker dial gague is individually calibrated. Therefore, i have no values for the instrumental error in the deflection measurements.} with the dial gague where the loads listed are from the rough, uncalibrated masses. Their corrected value is listed in \ref{tab:masses}. 
   \newline
   \newline
-  Fig. \ref{fig:h(m)} contains all the recorded data, as well as a linear fit on the mean of h(m) for each m. The error of the linear fit, $h(m) = Am + B$, $dA = 3.52e-06$.
+  Fig. \ref{fig:h(m)} contains all the recorded data, as well as a linear fit on the mean deflection for each load using corrected values for the mass, m. The error of the linear fit, $h(m) = Am + B$, $dA = 3.52e-06$. Fig. \ref{fig:deviation_h_m} contains the standard deviation of the deflection values for each load.
 
   \subsection{Results from measuring the speed of sound in the rod}
 
-    When hearing for beats, me and my labpartner decided that the root frequency was $\approx 1240\enspace\textup{Hz}$.
+    When hearing for beats, me and my lab-partner decided that the root frequency was $\approx 1240\enspace\textup{Hz}$.
     \newline
     \begin{figure}[H]
       \centering
@@ -213,9 +213,9 @@ G.~L. Squires.
 
 \appendix*
 \section{Code}
-All of the code used to produce this report. Anything noteworthy should already be mentioned in the main body of the report.
+All of the code used to produce this report. Anything noteworthy should already be mentioned in the main body of the report. Note that when this code was written, readability was not a huge concern, so some of it may not be very easy to interpret. 
 \lstinputlisting[language=python]{scripts/FFTlyd.py}
-\lstinputlisting[language=python]{scripts/lab_data.py}
 \lstinputlisting[language=python]{scripts/FYS2150lib.py}
+\lstinputlisting[language=python]{scripts/lab_data.py}
 
 \end{document}

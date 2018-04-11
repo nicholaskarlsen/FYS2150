@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.1.16)  11 APR 2018 22:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.1.16)  11 APR 2018 23:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1214,25 +1214,29 @@ Overfull \hbox (51.51256pt too wide) in paragraph at lines 131--135
  []
 
 [3]
+
+LaTeX Warning: Reference `tab:masses' on page 4 undefined on input line 140.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 140--144
 
  []
 
-<scripts/raw_exp2_4.png, id=112, 462.528pt x 346.896pt>
+<scripts/raw_exp2_4.png, id=114, 462.528pt x 346.896pt>
 File: scripts/raw_exp2_4.png Graphic file (type png)
 <use scripts/raw_exp2_4.png>
 Package pdftex.def Info: scripts/raw_exp2_4.png  used on input line 153. on inp
 ut line 153.
 Package pdftex.def Info: Requested size: 227.62204pt x 170.71628pt on input lin
 e 153.
-<scripts/energy_exp2_4.png, id=113, 462.528pt x 346.896pt>
+<scripts/energy_exp2_4.png, id=115, 462.528pt x 346.896pt>
 File: scripts/energy_exp2_4.png Graphic file (type png)
 <use scripts/energy_exp2_4.png>
 Package pdftex.def Info: scripts/energy_exp2_4.png  used on input line 156. on 
 input line 156.
 Package pdftex.def Info: Requested size: 227.62204pt x 170.71628pt on input lin
 e 156.
-<scripts/freq_exp2_4.png, id=114, 462.528pt x 346.896pt>
+<scripts/freq_exp2_4.png, id=116, 462.528pt x 346.896pt>
 File: scripts/freq_exp2_4.png Graphic file (type png)
 <use scripts/freq_exp2_4.png>
 Package pdftex.def Info: scripts/freq_exp2_4.png  used on input line 159. on in
@@ -1252,7 +1256,7 @@ Overfull \vbox (11.21863pt too high) has occurred while \output is active []
 [5 </home/nick/Documents/uio/FYS2150/Rapport 3/scripts/raw_exp2_4.png> </home/n
 ick/Documents/uio/FYS2150/Rapport 3/scripts/energy_exp2_4.png> </home/nick/Docu
 ments/uio/FYS2150/Rapport 3/scripts/freq_exp2_4.png>]
-<scripts/freq_exp2_all.png, id=135, 462.528pt x 346.896pt>
+<scripts/freq_exp2_all.png, id=140, 462.528pt x 346.896pt>
 File: scripts/freq_exp2_all.png Graphic file (type png)
 <use scripts/freq_exp2_all.png>
 Package pdftex.def Info: scripts/freq_exp2_all.png  used on input line 166. on 
@@ -1276,122 +1280,9 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <9> not available
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 87.
  [8])
-(/home/nick/Documents/uio/FYS2150/Rapport 3/scripts/lab_data.py [9] [10]
-[11]
-
-! Package inputenc Error: Unicode char �\expandafter (U+4F1)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.135     # anta festepunktet er på 
-                                     midtden så trekk fra diameter totalt sett
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `utf8'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.135     # anta festepunktet er på 
-                                     midtden så trekk fra diameter totalt sett
-
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
-
-! Package inputenc Error: Unicode char �\expandafter (U+4F1)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.135     # anta festepunktet er på midtden så 
-                                                 trekk fra diameter totalt sett
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `utf8'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.135     # anta festepunktet er på midtden så 
-                                                 trekk fra diameter totalt sett
-
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
-
-! Package inputenc Error: Unicode char �\expandafter (U+4F1)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.138     #Målinger 
-                     av stangens diameter d på forskjellige punkter
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `utf8'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.138     #Målinger 
-                     av stangens diameter d på forskjellige punkter
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
-
-! Package inputenc Error: Unicode char �\expandafter (U+4F1)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.138     #Målinger av stangens diameter d på 
-                                                forskjellige punkter
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `utf8'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.138     #Målinger av stangens diameter d på 
-                                                forskjellige punkter
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
-) (/home/nick/Documents/uio/FYS2150/Rapport 3/scripts/FYS2150lib.py [12])
-[13]
+(/home/nick/Documents/uio/FYS2150/Rapport 3/scripts/FYS2150lib.py [9])
+(/home/nick/Documents/uio/FYS2150/Rapport 3/scripts/lab_data.py [10] [11]
+[12]) [13]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 221.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 221.
 
@@ -1404,18 +1295,21 @@ Package rerunfilecheck Info: File `rapport3_elast_nichoka_newformating.out' has
 (rerunfilecheck)             Checksum: FAE31EB944D3CA851F33C05C3224D3E6;962.
 
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 221.
  ) 
 Here is how much of TeX's memory you used:
- 21183 strings out of 492990
- 382000 string characters out of 6135005
- 732714 words of memory out of 5000000
+ 21184 strings out of 492990
+ 382007 string characters out of 6135005
+ 754873 words of memory out of 5000000
  23976 multiletter control sequences out of 15000+600000
  23813 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,11n,65p,630b,2012s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,11n,65p,622b,2012s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/
@@ -1426,17 +1320,18 @@ sfonts/cm/cmsy9.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx0900.pfb>
 </usr/share/texmf/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/fo
 nts/type1/public/cm-super/sfbx1095.pfb></usr/share/texmf/fonts/type1/public/cm-
 super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb><
-/usr/share/texmf/fonts/type1/public/cm-super/sfrm0900.pfb></usr/share/texmf/fon
-ts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-s
-uper/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></
-usr/share/texmf/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf/font
-s/type1/public/cm-super/sfti0900.pfb></usr/share/texmf/fonts/type1/public/cm-su
-per/sfti1095.pfb>
+/usr/share/texmf/fonts/type1/public/cm-super/sfrm0600.pfb></usr/share/texmf/fon
+ts/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-s
+uper/sfrm0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></
+usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/font
+s/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-su
+per/sfrm1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti0900.pfb></u
+sr/share/texmf/fonts/type1/public/cm-super/sfti1095.pfb>
 Output written on "/home/nick/Documents/uio/FYS2150/Rapport 3/rapport3_elast_ni
-choka_newformating.pdf" (13 pages, 494997 bytes).
+choka_newformating.pdf" (13 pages, 513376 bytes).
 PDF statistics:
- 649 PDF objects out of 1000 (max. 8388607)
- 594 compressed objects within 6 object streams
- 372 named destinations out of 1000 (max. 500000)
+ 662 PDF objects out of 1000 (max. 8388607)
+ 604 compressed objects within 7 object streams
+ 373 named destinations out of 1000 (max. 500000)
  173 words of extra memory for PDF output out of 10000 (max. 10000000)
 
