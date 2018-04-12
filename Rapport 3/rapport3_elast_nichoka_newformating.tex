@@ -65,11 +65,24 @@ Determining the Youngs' modulus of a brass rod by deflection and listening for t
     
 \section{\label{sect:theory}Theory}
   \subsection{Euler-Bernoulli beam theory}
+  From the Euler-Bernoulli beam theory, it follows that the deflection of a beam supported by two points of distance $l$ and a load $mg$ halfway between the two knives is given by
   \begin{equation}
     h(m) = \frac{mgl^3}{48EI}
+    \label{eqn:hm_exp}
   \end{equation}
+  Where $E$ denotes the Young's modulus of the beam and $I$ the second moment area given by 
+  \begin{equation}
+    I = \frac{\pi d^4}{4\cdot 2^4}
+  \end{equation}
+  Where $d$ denotes the diameter of the beam.
+  \newline
+  Further, Eqn. \ref{eqn:hm_exp} can be rewritten in the following way
   \begin{equation}
     E = \frac{4l^3g}{3\pi |A|d^4}
+  \end{equation}
+  Where $A \equiv h(m)/m$, which can be obtained as the gradient from a linear fit on the data gathered when varying the load subjected and on the beam and recording the resulting deflection. Which gives the following relationship
+  \begin{equation}
+    h(m) = Am + B
   \end{equation}
   \subsection{Errors}
     When performing arithmetic operations on recorded data, the uncertainty in the data must also carry over to the derived results. How these uncertainties carry over in different operations can be found in Practical Physics \cite{squires}.
@@ -105,7 +118,7 @@ Determining the Youngs' modulus of a brass rod by deflection and listening for t
         A speaker was connected to a signal generator. We started the signal generator at 1200Hz and hit the brass rod with a plastic hammer on the the flat surface on one end of the rod. By ear, there was an audible beat due to the superposition of the two signals. We adjusted the signal generator such that the the frequency of the beat was minimized, and there was essentially no audible difference between the two signals. We did this by trying above and below where we thought the root frequency was, eventually zeroing in on a value.
 
       \subsubsection{By Fourier transform}
-        A USB microphone was placed close to the rod, and faced towards it. The microphone was connected to a computer running matlab, with a script that collects audio data from it and Fourier transforms it using FFT. The recordings made were made with a sampling frequency of $8\times1024$ Hz and varying durations. As before, we hit the rod using a plastic hammer and recorded the data.
+        A USB microphone was placed close to the rod, and faced towards it. The microphone was connected to a computer running matlab, with a script that collects audio data from it and Fourier transforms it using FFT. The recordings made were made with a sampling frequency of $8\times1024$ Hz and varying durations. As before, we hit the rod using a plastic hammer and recorded the data. A total of 7 recordings were made.
 
       \subsection{Other measurements}
         \subsubsection{Mass}
@@ -120,7 +133,7 @@ Determining the Youngs' modulus of a brass rod by deflection and listening for t
   
   \subsection{Length and mass measurements}
     
-    \begin{table}
+    \begin{table}[H]
       \center
       \caption{Mass of rough load and reference}
       \begin{tabular}{ | l | l | l |}
@@ -131,7 +144,7 @@ Determining the Youngs' modulus of a brass rod by deflection and listening for t
         $2000$g       & $2000.1$g            & $2000.5$g
         \\ \hline
       \end{tabular}
-      \label{tab:flex}
+      \label{tab:masses}
     \end{table}
 
   \subsection{Results from Three-point flexural test}
@@ -168,7 +181,7 @@ Determining the Youngs' modulus of a brass rod by deflection and listening for t
       \label{fig:exp_1}
     \end{figure}
 
-  Table \ref{tab:flex} contains the deflection data recorded with the dial gauge where the loads listed are from the rough, uncalibrated masses. Their corrected value is listed in \ref{tab:masses}. 
+  Table \ref{tab:flex} contains the deflection data recorded with the dial gauge where the loads listed are from the rough, uncalibrated masses. Their corrected value is listed in table \ref{tab:masses}. 
   \newline
   \newline
   Fig. \ref{fig:h(m)} contains all the recorded data, as well as a linear fit on the mean deflection for each load using corrected values for the mass, m. The error of the linear fit, $h(m) = Am + B$, $dA = 3.52e-06$. Fig. \ref{fig:deviation_h_m} contains the standard deviation of the deflection values for each load.
@@ -199,7 +212,7 @@ Determining the Youngs' modulus of a brass rod by deflection and listening for t
       \label{fig:sound_all}
     \end{figure}
     
-    Fig. \ref{fig:sound_exp1} contains the data and derived results from our fourth attempt of the experiment. We performed a total of 7 attempts, which all yielded in similar results to attempt no. 4. The data yielded from all of the attempts is summarized in Fig. \ref{fig:sound_all} which shows the peaks in the frequency domain in one plot.
+    Fig. \ref{fig:sound_exp1} contains the data and derived results from our fourth attempt of the experiment. We performed a total of 7 attempts, all of which yielded in similar results to attempt no. 4. The data yielded from all of the attempts is summarized in Fig. \ref{fig:sound_all} which shows the peaks in the frequency domain in one plot.
     Table \ref{tab:fftdat} contains all of the relevant numbers related to each attempt, where $f$ denotes the root frequency, $\Delta f$ the resolution of the frequency domain, $t$ the time of the recording and $f_s$ the sampling frequency. 
 
 
