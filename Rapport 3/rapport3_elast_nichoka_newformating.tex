@@ -79,13 +79,14 @@ Determining the Youngs' modulus of a brass rod by deflection and listening for t
   Further, Eqn. \ref{eqn:hm_exp} can be rewritten in the following way
   \begin{equation}
     E = \frac{4l^3g}{3\pi |A|d^4}
+    \label{eqn:E_deflection}
   \end{equation}
   Where $A \equiv h(m)/m$, which can be obtained as the gradient from a linear fit on the data gathered when varying the load subjected and on the beam and recording the resulting deflection. Which gives the following relationship
   \begin{equation}
     h(m) = Am + B
   \end{equation}
   \subsection{Errors}
-    When performing arithmetic operations on recorded data, the uncertainty in the data must also carry over to the derived results. How these uncertainties carry over in different operations can be found in Practical Physics \cite{squires}.
+    When performing arithmetic operations on recorded data, the uncertainty in the data must also carry over to the derived results. How these uncertainties are propagated in different operations can be found in Practical Physics \cite{squires}.
 
 \section{\label{section:experimental}Experimental Procedure}
   \subsection{Three-point flexural test}
@@ -185,6 +186,12 @@ Determining the Youngs' modulus of a brass rod by deflection and listening for t
   \newline
   \newline
   Fig. \ref{fig:h(m)} contains all the recorded data, as well as a linear fit on the mean deflection for each load using corrected values for the mass, m. The error of the linear fit, $h(m) = Am + B$, $dA = 3.52e-06$. Fig. \ref{fig:deviation_h_m} contains the standard deviation of the deflection values for each load.
+  \newline
+  \newline
+  From the stated data and their given uncertainties, using Eqn. \ref{eqn:E_deflection} as well as summing the error, the Young's modulus determined by deflection is as follows
+  \begin{equation}
+    E_{deflection} = 105.8 \pm 0.4\% \, \textup{G}\textup{Pa}
+  \end{equation}
 
   \subsection{Results from measuring the speed of sound in the rod}
 
@@ -213,7 +220,7 @@ Determining the Youngs' modulus of a brass rod by deflection and listening for t
     \end{figure}
     
     Fig. \ref{fig:sound_exp1} contains the data and derived results from our fourth attempt of the experiment. We performed a total of 7 attempts, all of which yielded in similar results to attempt no. 4. The data yielded from all of the attempts is summarized in Fig. \ref{fig:sound_all} which shows the peaks in the frequency domain in one plot.
-    Table \ref{tab:fftdat} contains all of the relevant numbers related to each attempt, where $f$ denotes the root frequency, $\Delta f$ the resolution of the frequency domain, $t$ the time of the recording and $f_s$ the sampling frequency. 
+    Table \ref{tab:fftdat} contains all of the relevant numbers related to each attempt, where $f$ denotes the root frequency, $\Delta f$ the resolution of the frequency domain, $t$ the time of the recording and $f_s$ the sampling frequency. ]
 
 
     \begin{table}[H]
@@ -233,6 +240,11 @@ Determining the Youngs' modulus of a brass rod by deflection and listening for t
       \end{tabular}
       \label{tab:fftdat}
     \end{table}
+
+    Using the root frequency gathered from attempt 4 and 5 (which are identical), the Young's modulus, using Eqn. \ref{eqn:E_f} is
+    \begin{equation}
+      E_{sound} = 103.7 \pm 0.2 \% \,\textup{G}\textup{Pa}
+    \end{equation}
 
 
 \newpage
