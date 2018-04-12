@@ -23,12 +23,12 @@
   breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
   breaklines=true,                 % sets automatic line breaking
   captionpos=t,                    % sets the caption-position to bottom
-  deletekeywords={...},            % if you want to delete keywords from the given language
+  deletekeywords={...},            % if you want to delete keywords from the given langauge
   escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
   extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
   frame=single,                    % adds a frame around the code
   keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
- % language=Python,                 % the language of the code
+ % langauge=Python,                 % the langauge of the code
   morekeywords={*,...},           % if you want to add more keywords to the set
   numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
   numbersep=5pt,                   % how far the line-numbers are from the code
@@ -56,7 +56,7 @@
 \maketitle
 
 \begin{abstract}
-    A study on two different methods to determine the Young's modulus of a brass rod.
+Determining the Youngs' modulus of a brass rod by deflection and listening for the root frequency.
 \end{abstract}
 
 %\tableofcontents
@@ -86,14 +86,20 @@
         \includegraphics[width=4cm]{scripts/figs/aparatus1cs.png}
           \label{fig:aparatus1cs}}
       \center
-      \caption{(a) shows the apparatus used for measuring the deflection of a rod and (b) a cross section of the  aparatus at point F.}
+      \caption{(a) shows the apparatus used for measuring the deflection of a rod and (b) a cross section of the  apparatus at point F.}
       \label{fig:exp_1}
     \end{figure}
 
-    Using \ref{fig:aparatus1} as a reference; The brass rod, A, was laid on the "knives" B and C. In the middle of the rod, there was a ring as shown in Fig. \ref{fig:aparatus1cs}. The flat surface of the ring was in contact with the needle of the dial gague at G. In order to ensure that the flat surface of the ring was at right angle with the needle, we turned the rod such that the reading of the dial gague would be at a minimum, as the skewer the surface, the greater the reading. This process was repeated at the start of every attempt of the experiment.
+    Using Fig. \ref{fig:aparatus1} as a reference; The brass rod, A, was laid on the "knives" B and C, in order to ensure that that the dial gauge, manufactured by Baker\footnote{I did not take note of the model number of the particular dial gauge that was used during the lab. While working on this report, i have become aware that each Baker dial gauge is individually calibrated. Therefore, i have no values for the instrumental error in the deflection measurements.}, was positioned halfway between B and C, we measured the distance from the dial gauge to B and C using a measuring tape of type Lufkin pee wee 2m Y612CM with uncertainty $\pm 0.1$cm, adjusting the rod such that the difference in measurements would be sufficiently small. At the middle of the rod, there was a ring attached, as shown in Fig. \ref{fig:aparatus1cs}. The flat surface of the ring was in contact with the needle of the dial gauge at G. In order to ensure that the flat surface of the ring was at right angle with the needle, we turned the rod such that the reading of the dial gauge would be at a minimum, as the skewer the surface, the greater the reading. This process was repeated at the start of every attempt of the experiment.
+
+    After having prepared the apparatus, three masses of roughly $0.5$g, $1$kg and $2$kg which we denoted $m_a, m_b$ and $m_c$ respectively. They were placed carefully in the tray denoted m in Fig. \ref{fig:aparatus1}, in different combinations so that we would get readings for the deflection of the rod at $\approx \{0.5, 1, 1.5, 2, 2.5, 3, 3.5\}$kg, recorded by reading the dial gauge.
+
+    Due to seemingly disturbing the system significantly when adding masses, we were worried that there might be a significant systematic error in the experiment. So we opted to repeat the readings in this experiment several times in order to investigate if the data in the later readings (when the system had been disturbed multiple times in succession) had an increase in its deviation.
+
+    Lastly, the distance between the knives, $l_{B, C}$, was measured using the measuring tape and a micrometer of type Moore \& Wright 1965 MI with uncertainty $\pm0.01$mm. The measuring tape was used to measure the distance between the outer edges of the "knives" at B and C, $l_{B\, outer}$, $l_{C\, outer}$. The micrometer was then used to measure the knives thickness $l_{knife}$, which was needed as the contact points between the rod and the knives are (assumed) at the middle of the identical knives. Since there are two contact points, $l_{B\,outer, C\, outer}$ - $l_{knife}$ = $l_{B, C}$
     
   \subsection{Measuring the speed of sound in the rod}
-      The brass rod, with a ring attached to it (same as before), was laid to rest on the flat side of the ring on a solid surface such that the rod is held up by the ring. We also made sure that the rod was not to be disturbed in any way while it was vibrating. When hit with a hammer, it will emit a sound consisting of different frequencies. Following are the two different methods we used for determining the root frequency of the rod.
+      The brass rod, with a ring attached to it (same as before), was laid to rest on the flat side of the ring on a solid surface such that the rod is held up by the ring, and nothing else. We also made sure that the rod was not to be disturbed in any way while it was vibrating. When hit with a hammer, it will emit a sound consisting of different frequencies. Following are the two different methods we used for determining the root frequency of the rod.
       During both experiments, we ensured there were no significant noise pollution during our recording (By which i mean people performing the same experiment as us).
       \subsubsection{By hearing for beats}
         A speaker was connected to a signal generator. We started the signal generator at 1200Hz and hit the brass rod with a plastic hammer on the the flat surface on one end of the rod. By ear, there was an audible beat due to the superposition of the two signals. We adjusted the signal generator such that the the frequency of the beat was minimized, and there was essentially no audible difference between the two signals. We did this by trying above and below where we thought the root frequency was, eventually zeroing in on a value.
@@ -101,8 +107,33 @@
       \subsubsection{By Fourier transform}
         A USB microphone was placed close to the rod, and faced towards it. The microphone was connected to a computer running matlab, with a script that collects audio data from it and Fourier transforms it using FFT. The recordings made were made with a sampling frequency of $8\times1024$ Hz and varying durations. As before, we hit the rod using a plastic hammer and recorded the data.
 
+      \subsection{Other measurements}
+        \subsubsection{Mass}
+          In order to accurately measure the mass of the rough loads and the rod, the balance scale (Ohaus triple beam balance) which we used had to be calibrated. We did this by weighing a set of three reference weight on the scale, and comparing their measured value to the measured value of the rough loads and the rod using a linear fit. When placing the masses on the scale, we made sure to position the masses in the center of the scale plate and not take a reading until the needle of the balance scale was not sufficiently stable.
+
+        \subsubsection{Length and thickness of the rod}
+          The length of the rod was measured using the measuring tape, and the thickness using the micrometer. In order to accurately determine the thickness, accounting for any irregularities in the rod due to deformation etc. The thickness was measured several times in different places on the rod, so that we could calculate the mean thickness.
+
+
 
 \section{\label{sect:results}Results}
+  
+  \subsection{Length and mass measurements}
+    
+    \begin{table}
+      \center
+      \caption{Mass of rough load and reference}
+      \begin{tabular}{ | l | l | l |}
+        \hline
+        Stated mass   & Measured reference   & Measured rough \\ \hline
+        $500$g        & $500.0$g             & $500.1$g   \\ \hline
+        $1000$g       & $999.9$g             & $1000.3$g  \\ \hline
+        $2000$g       & $2000.1$g            & $2000.5$g
+        \\ \hline
+      \end{tabular}
+      \label{tab:flex}
+    \end{table}
+
   \subsection{Results from Three-point flexural test}
 
 
@@ -133,11 +164,11 @@
         \includegraphics[width=8cm]{scripts/figs/h_m_deviation.png}
           \label{fig:deviation_h_m}}
       \center
-      \caption{(a) Shows the deflection of the brass rod measured by the dial gague. (b) Shows the standard deviation of the data points in (a) at their respective masses}
+      \caption{(a) Shows the deflection of the brass rod measured by the dial gauge. (b) Shows the standard deviation of the data points in (a) at their respective masses}
       \label{fig:exp_1}
     \end{figure}
 
-  Table \ref{tab:flex} contains the deflection data recorded\footnote{I did not take note of the model number of the particular dial gague that was used during the lab. While working on this report, i have become aware that each Baker dial gague is individually calibrated. Therefore, i have no values for the instrumental error in the deflection measurements.} with the dial gague where the loads listed are from the rough, uncalibrated masses. Their corrected value is listed in \ref{tab:masses}. 
+  Table \ref{tab:flex} contains the deflection data recorded with the dial gauge where the loads listed are from the rough, uncalibrated masses. Their corrected value is listed in \ref{tab:masses}. 
   \newline
   \newline
   Fig. \ref{fig:h(m)} contains all the recorded data, as well as a linear fit on the mean deflection for each load using corrected values for the mass, m. The error of the linear fit, $h(m) = Am + B$, $dA = 3.52e-06$. Fig. \ref{fig:deviation_h_m} contains the standard deviation of the deflection values for each load.
@@ -150,7 +181,7 @@
       \centering
       \subfloat[][Time domain]{
         \includegraphics[width=8cm]{scripts/raw_exp2_4.png}
-          \label{ }} \\
+          \label{ }} 
       \subfloat[][Frequency domain]{
         \includegraphics[width=8cm]{scripts/energy_exp2_4.png}
           \label{ }} \\
@@ -169,7 +200,7 @@
     \end{figure}
     
     Fig. \ref{fig:sound_exp1} contains the data and derived results from our fourth attempt of the experiment. We performed a total of 7 attempts, which all yielded in similar results to attempt no. 4. The data yielded from all of the attempts is summarized in Fig. \ref{fig:sound_all} which shows the peaks in the frequency domain in one plot.
-    Table \ref{tab:fftdat} contains all of the relevant numbers related to each attempt. 
+    Table \ref{tab:fftdat} contains all of the relevant numbers related to each attempt, where $f$ denotes the root frequency, $\Delta f$ the resolution of the frequency domain, $t$ the time of the recording and $f_s$ the sampling frequency. 
 
 
     \begin{table}[H]
@@ -194,7 +225,7 @@
 \newpage
 \section{\label{sect:discussion}Discussion}
 
-Note STD.DEV of deflection increases with m (system is disturbed). Asume the disturbance is normally distributed, therefore error -> given by STD. DEV.
+Note STD.DEV of deflection increases with m (system is disturbed). Assume the disturbance is normally distributed, therefore error -> given by STD. DEV.
  
 \section{\label{sect:conclusion}Conclusion}
 
