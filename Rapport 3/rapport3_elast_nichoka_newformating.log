@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.1.16)  12 APR 2018 22:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.1.16)  13 APR 2018 13:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1128,149 +1128,177 @@ File: uesint.fd
 ) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<scripts/figs/aparatus1.png, id=105, 409.53pt x 192.72pt>
+<scripts/figs/aparatus1.png, id=119, 409.53pt x 192.72pt>
 File: scripts/figs/aparatus1.png Graphic file (type png)
 <use scripts/figs/aparatus1.png>
-Package pdftex.def Info: scripts/figs/aparatus1.png  used on input line 98. on 
-input line 98.
+Package pdftex.def Info: scripts/figs/aparatus1.png  used on input line 116. on
+ input line 116.
 Package pdftex.def Info: Requested size: 256.0748pt x 120.51144pt on input line
- 98.
-<scripts/figs/aparatus1cs.png, id=107, 204.765pt x 244.915pt>
+ 116.
+<scripts/figs/aparatus1cs.png, id=121, 204.765pt x 244.915pt>
 File: scripts/figs/aparatus1cs.png Graphic file (type png)
 <use scripts/figs/aparatus1cs.png>
-Package pdftex.def Info: scripts/figs/aparatus1cs.png  used on input line 101. 
-on input line 101.
+Package pdftex.def Info: scripts/figs/aparatus1cs.png  used on input line 119. 
+on input line 119.
 Package pdftex.def Info: Requested size: 113.81102pt x 136.13123pt on input lin
-e 101.
+e 119.
  [2 </home/nick/Documents/uio/FYS2150/Rapport 3/scripts/figs/aparatus1.png> </h
 ome/nick/Documents/uio/FYS2150/Rapport 3/scripts/figs/aparatus1cs.png>] [3]
-Overfull \hbox (6.37921pt too wide) in paragraph at lines 160--160
+Overfull \hbox (82.46664pt too wide) in paragraph at lines 158--168
+ [] 
+ []
+
+[4]
+Overfull \hbox (6.37921pt too wide) in paragraph at lines 200--200
 []\T1/cmr/m/n/10.95 Attempt
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--160
+Underfull \hbox (badness 10000) in paragraph at lines 200--200
 []\T1/cmr/m/n/10.95 h(0kg)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--160
+Underfull \hbox (badness 10000) in paragraph at lines 200--200
 []\T1/cmr/m/n/10.95 h(0.5kg)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--160
+Underfull \hbox (badness 10000) in paragraph at lines 200--200
 []\T1/cmr/m/n/10.95 h(1kg)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--160
+Underfull \hbox (badness 10000) in paragraph at lines 200--200
 []\T1/cmr/m/n/10.95 h(1.5kg)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--160
+Underfull \hbox (badness 10000) in paragraph at lines 200--200
 []\T1/cmr/m/n/10.95 h(2.0kg)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--160
+Underfull \hbox (badness 10000) in paragraph at lines 200--200
 []\T1/cmr/m/n/10.95 h(2.5kg)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--160
+Underfull \hbox (badness 10000) in paragraph at lines 200--200
 []\T1/cmr/m/n/10.95 h(3.0kg)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--161
+Underfull \hbox (badness 10000) in paragraph at lines 200--201
 []\T1/cmr/m/n/10.95 h(3.5kg)
  []
 
 
-Overfull \hbox (42.55898pt too wide) in paragraph at lines 158--169
+Overfull \hbox (42.55898pt too wide) in paragraph at lines 198--209
  [] 
  []
 
-<scripts/figs/h_m_fig.png, id=132, 462.528pt x 346.896pt>
+<scripts/figs/h_m_fig.png, id=156, 462.528pt x 346.896pt>
 File: scripts/figs/h_m_fig.png Graphic file (type png)
 <use scripts/figs/h_m_fig.png>
-Package pdftex.def Info: scripts/figs/h_m_fig.png  used on input line 176. on i
-nput line 176.
+Package pdftex.def Info: scripts/figs/h_m_fig.png  used on input line 216. on i
+nput line 216.
 Package pdftex.def Info: Requested size: 227.62204pt x 170.71628pt on input lin
-e 176.
-<scripts/figs/h_m_deviation.png, id=133, 462.528pt x 346.896pt>
+e 216.
+<scripts/figs/h_m_deviation.png, id=157, 462.528pt x 346.896pt>
 File: scripts/figs/h_m_deviation.png Graphic file (type png)
 <use scripts/figs/h_m_deviation.png>
-Package pdftex.def Info: scripts/figs/h_m_deviation.png  used on input line 179
-. on input line 179.
+Package pdftex.def Info: scripts/figs/h_m_deviation.png  used on input line 219
+. on input line 219.
 Package pdftex.def Info: Requested size: 227.62204pt x 170.71628pt on input lin
-e 179.
+e 219.
 
-Overfull \hbox (51.51256pt too wide) in paragraph at lines 176--180
+Overfull \hbox (51.51256pt too wide) in paragraph at lines 216--220
  [][][][] 
  []
 
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 185--192
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 225--232
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--192
+Underfull \hbox (badness 10000) in paragraph at lines 225--232
 
  []
 
-<scripts/raw_exp2_4.png, id=145, 462.528pt x 346.896pt>
+<scripts/raw_exp2_4.png, id=171, 462.528pt x 346.896pt>
 File: scripts/raw_exp2_4.png Graphic file (type png)
 <use scripts/raw_exp2_4.png>
-Package pdftex.def Info: scripts/raw_exp2_4.png  used on input line 204. on inp
-ut line 204.
+Package pdftex.def Info: scripts/raw_exp2_4.png  used on input line 244. on inp
+ut line 244.
 Package pdftex.def Info: Requested size: 227.62204pt x 170.71628pt on input lin
-e 204.
-<scripts/energy_exp2_4.png, id=146, 462.528pt x 346.896pt>
+e 244.
+<scripts/energy_exp2_4.png, id=172, 462.528pt x 346.896pt>
 File: scripts/energy_exp2_4.png Graphic file (type png)
 <use scripts/energy_exp2_4.png>
-Package pdftex.def Info: scripts/energy_exp2_4.png  used on input line 207. on 
-input line 207.
+Package pdftex.def Info: scripts/energy_exp2_4.png  used on input line 247. on 
+input line 247.
 Package pdftex.def Info: Requested size: 227.62204pt x 170.71628pt on input lin
-e 207.
+e 247.
 
-Overfull \hbox (51.51256pt too wide) in paragraph at lines 204--207
+Overfull \hbox (51.51256pt too wide) in paragraph at lines 244--247
  [][][][] 
  []
 
-<scripts/freq_exp2_4.png, id=147, 462.528pt x 346.896pt>
+<scripts/freq_exp2_4.png, id=173, 462.528pt x 346.896pt>
 File: scripts/freq_exp2_4.png Graphic file (type png)
 <use scripts/freq_exp2_4.png>
-Package pdftex.def Info: scripts/freq_exp2_4.png  used on input line 210. on in
-put line 210.
+Package pdftex.def Info: scripts/freq_exp2_4.png  used on input line 250. on in
+put line 250.
 Package pdftex.def Info: Requested size: 227.62204pt x 170.71628pt on input lin
-e 210.
+e 250.
 
-Underfull \hbox (badness 10000) in paragraph at lines 198--213
+Underfull \hbox (badness 10000) in paragraph at lines 238--253
 
  []
 
-[5 </home/nick/Documents/uio/FYS2150/Rapport 3/scripts/figs/h_m_fig.png> </home
+[6 </home/nick/Documents/uio/FYS2150/Rapport 3/scripts/figs/h_m_fig.png> </home
 /nick/Documents/uio/FYS2150/Rapport 3/scripts/figs/h_m_deviation.png>]
-<scripts/freq_exp2_all.png, id=158, 462.528pt x 346.896pt>
+<scripts/freq_exp2_all.png, id=184, 462.528pt x 346.896pt>
 File: scripts/freq_exp2_all.png Graphic file (type png)
 <use scripts/freq_exp2_all.png>
-Package pdftex.def Info: scripts/freq_exp2_all.png  used on input line 217. on 
-input line 217.
+Package pdftex.def Info: scripts/freq_exp2_all.png  used on input line 257. on 
+input line 257.
 Package pdftex.def Info: Requested size: 227.62204pt x 170.71628pt on input lin
-e 217.
- [6 </home/nick/Documents/uio/FYS2150/Rapport 3/scripts/raw_exp2_4.png> </home/
+e 257.
+ [7 </home/nick/Documents/uio/FYS2150/Rapport 3/scripts/raw_exp2_4.png> </home/
 nick/Documents/uio/FYS2150/Rapport 3/scripts/energy_exp2_4.png> </home/nick/Doc
 uments/uio/FYS2150/Rapport 3/scripts/freq_exp2_4.png>]
 
-LaTeX Warning: Reference `eqn:E_f' on page 7 undefined on input line 244.
+LaTeX Warning: Reference `eqn:E_f' on page 8 undefined on input line 284.
 
-[7 </home/nick/Documents/uio/FYS2150/Rapport 3/scripts/freq_exp2_all.png>]
+[8 </home/nick/Documents/uio/FYS2150/Rapport 3/scripts/freq_exp2_all.png>]
 (/home/nick/Documents/uio/FYS2150/Rapport 3/rapport3_elast_nichoka_newformating
-.bbl) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+.bbl)
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 311.
+
+ (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+Underfull \hbox (badness 10000) in paragraph at lines 314--315
+[][]$\T1/cmtt/m/n/10.95 https : / / en . wikipedia . org / wiki / Beat _ (acous
+tics ) #Mathematics _ and _
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 317--318
+[][]$\T1/cmtt/m/n/10.95 https : / / en . wikipedia . org / wiki / Euler % E2 % 
+80 % 93Bernoulli _ beam _ theory #
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 320--321
+[][]$\T1/cmtt/m/n/10.95 http : / / www . uio . no / studier / emner / matnat / 
+fys / FYS2150 / v18 / kursmateriell /
+ []
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 (/home/nick/Documents/uio/FYS2150/Rapport 3/scripts/FFTlyd.py
@@ -1281,23 +1309,23 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <9> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 2.
- [8] [9]
+ [9] [10]
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 87.
-)
-(/home/nick/Documents/uio/FYS2150/Rapport 3/scripts/FYS2150lib.py [10])
-(/home/nick/Documents/uio/FYS2150/Rapport 3/scripts/lab_data.py [11] [12]
-[13] [14]) [15]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 279.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 279.
+ [11])
+(/home/nick/Documents/uio/FYS2150/Rapport 3/scripts/FYS2150lib.py) [12]
+(/home/nick/Documents/uio/FYS2150/Rapport 3/scripts/lab_data.py [13] [14]
+[15]) [16]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 332.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 332.
 
 (/home/nick/Documents/uio/FYS2150/Rapport 3/rapport3_elast_nichoka_newformating
 .aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 279.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 279.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 332.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 332.
 Package rerunfilecheck Info: File `rapport3_elast_nichoka_newformating.out' has
  not changed.
-(rerunfilecheck)             Checksum: 8E6C16E55F56584AB7C229875F488EAA;1263.
+(rerunfilecheck)             Checksum: B6BF879E9D37228ECA21093046165CA8;1390.
 
 
 LaTeX Warning: There were undefined references.
@@ -1305,38 +1333,41 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 279.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 332.
  ) 
 Here is how much of TeX's memory you used:
- 21247 strings out of 492990
- 382917 string characters out of 6135005
- 790189 words of memory out of 5000000
- 23997 multiletter control sequences out of 15000+600000
- 23813 words of font info for 68 fonts, out of 8000000 for 9000
+ 21309 strings out of 492990
+ 384110 string characters out of 6135005
+ 738486 words of memory out of 5000000
+ 24023 multiletter control sequences out of 15000+600000
+ 24127 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,11n,65p,1276b,2012s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmsy9.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx0900.pfb>
-</usr/share/texmf/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/fo
-nts/type1/public/cm-super/sfbx1095.pfb></usr/share/texmf/fonts/type1/public/cm-
-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb><
-/usr/share/texmf/fonts/type1/public/cm-super/sfrm0600.pfb></usr/share/texmf/fon
-ts/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-s
-uper/sfrm0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></
-usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/font
-s/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-su
-per/sfrm1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti0900.pfb></u
-sr/share/texmf/fonts/type1/public/cm-super/sfti1095.pfb>
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y9.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx0900.pfb></usr/share/t
+exmf/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/fonts/type1/pub
+lic/cm-super/sfbx1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx120
+0.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/te
+xmf/fonts/type1/public/cm-super/sfrm0600.pfb></usr/share/texmf/fonts/type1/publ
+ic/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0900
+.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/tex
+mf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/publi
+c/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1728.
+pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti0900.pfb></usr/share/texm
+f/fonts/type1/public/cm-super/sfti1095.pfb></usr/share/texmf/fonts/type1/public
+/cm-super/sftt1095.pfb>
 Output written on "/home/nick/Documents/uio/FYS2150/Rapport 3/rapport3_elast_ni
-choka_newformating.pdf" (15 pages, 534360 bytes).
+choka_newformating.pdf" (16 pages, 588550 bytes).
 PDF statistics:
- 734 PDF objects out of 1000 (max. 8388607)
- 674 compressed objects within 7 object streams
- 415 named destinations out of 1000 (max. 500000)
- 205 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 808 PDF objects out of 1000 (max. 8388607)
+ 743 compressed objects within 8 object streams
+ 447 named destinations out of 1000 (max. 500000)
+ 221 words of extra memory for PDF output out of 10000 (max. 10000000)
 

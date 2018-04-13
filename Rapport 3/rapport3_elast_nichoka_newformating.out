@@ -1,19 +1,21 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
 \BOOKMARK [1][-]{section.2}{Theory}{}% 2
-\BOOKMARK [2][-]{subsection.2.1}{Euler-Bernoulli beam theory}{section.2}% 3
-\BOOKMARK [2][-]{subsection.2.2}{Errors}{section.2}% 4
-\BOOKMARK [1][-]{section.3}{Experimental Procedure}{}% 5
-\BOOKMARK [2][-]{subsection.3.1}{Three-point flexural test}{section.3}% 6
-\BOOKMARK [2][-]{subsection.3.2}{Measuring the speed of sound in the rod}{section.3}% 7
-\BOOKMARK [3][-]{subsubsection.3.2.1}{By hearing for beats}{subsection.3.2}% 8
-\BOOKMARK [3][-]{subsubsection.3.2.2}{By Fourier transform}{subsection.3.2}% 9
-\BOOKMARK [2][-]{subsection.3.3}{Other measurements}{section.3}% 10
-\BOOKMARK [3][-]{subsubsection.3.3.1}{Mass}{subsection.3.3}% 11
-\BOOKMARK [3][-]{subsubsection.3.3.2}{Length and thickness of the rod}{subsection.3.3}% 12
-\BOOKMARK [1][-]{section.4}{Results}{}% 13
-\BOOKMARK [2][-]{subsection.4.1}{Length and mass measurements}{section.4}% 14
-\BOOKMARK [2][-]{subsection.4.2}{Results from Three-point flexural test}{section.4}% 15
-\BOOKMARK [2][-]{subsection.4.3}{Results from measuring the speed of sound in the rod}{section.4}% 16
-\BOOKMARK [1][-]{section.5}{Discussion}{}% 17
-\BOOKMARK [1][-]{section.6}{Conclusion}{}% 18
-\BOOKMARK [1][-]{appendix.A}{Code}{}% 19
+\BOOKMARK [2][-]{subsection.2.1}{Three-point bending}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Sound emitted from a brass rod}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{Beats}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.4}{Errors}{section.2}% 6
+\BOOKMARK [1][-]{section.3}{Experimental Procedure}{}% 7
+\BOOKMARK [2][-]{subsection.3.1}{Three-point flexural test}{section.3}% 8
+\BOOKMARK [2][-]{subsection.3.2}{Measuring the speed of sound in the rod}{section.3}% 9
+\BOOKMARK [3][-]{subsubsection.3.2.1}{By hearing for beats}{subsection.3.2}% 10
+\BOOKMARK [3][-]{subsubsection.3.2.2}{By Fourier transform}{subsection.3.2}% 11
+\BOOKMARK [2][-]{subsection.3.3}{Other measurements}{section.3}% 12
+\BOOKMARK [3][-]{subsubsection.3.3.1}{Mass}{subsection.3.3}% 13
+\BOOKMARK [3][-]{subsubsection.3.3.2}{Length and thickness of the rod}{subsection.3.3}% 14
+\BOOKMARK [1][-]{section.4}{Results}{}% 15
+\BOOKMARK [2][-]{subsection.4.1}{Length and mass measurements}{section.4}% 16
+\BOOKMARK [2][-]{subsection.4.2}{Results from Three-point flexural test}{section.4}% 17
+\BOOKMARK [2][-]{subsection.4.3}{Results from measuring the speed of sound in the rod}{section.4}% 18
+\BOOKMARK [1][-]{section.5}{Discussion}{}% 19
+\BOOKMARK [1][-]{section.6}{Conclusion}{}% 20
+\BOOKMARK [1][-]{appendix.A}{Code}{}% 21

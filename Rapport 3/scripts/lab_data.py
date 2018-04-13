@@ -13,6 +13,7 @@ import FYS2150lib as fys
 
 rcParams.update({'font.size': 13})  # Sets font size of plots
 
+
 def weight_data(set=1):
     "set decides which data set the function returns."
     set = set.lower()   # Forces lowercase
@@ -33,16 +34,27 @@ def weight_data(set=1):
     m_b = (m_b_balance - b) / a     # approx 1000g
     m_c = (m_c_balance - b) / a     # approx 2000g
 
+    # print "\nref weight \n", (m_reference_balance - b) / a
+    #print "\ncalibrated rough", m_a, m_b, m_c
+    #print "error rough", da
+    #print
+
+    m_rod_ring = np.array([2482.7, 2482.5, 2482.1]) * 1e-3
+    m_ring = 34.4 * 1e-3    # kg
+    m_rod_ring_c = (mean(m_rod_ring) - b) / a  # kg
+    m_ring_c = (m_ring - b) / a  # kg
+    m_rod_c = m_rod_ring_c - m_ring_c
+
+    #print mean(m_rod_ring)
+    #print "\ncalibrated rod", m_rod_c
+    #print "mass rod error", np.sqrt(2 * da**2)
+    #print
+
     if set == sets[0]:  # Return corrected masses
         return m_a, m_b, m_c
 
-    m_rod_ring = np.array([2482.7, 2482.5, 2482.1]) * 1e-3
-    m_ring = 34.4 * 1e-3    #kg
-    m_rod = (mean(m_rod_ring) - m_ring - b) / a  #kg
-
-
     if set == sets[1]:
-        return m_rod
+        return m_rod_c
 
     if set not in sets:
         print "Invalid set"
@@ -136,12 +148,15 @@ def plotdata():
     plot(NaN, NaN, "xr", label="Data points")
     xlabel("mass [kg]")
     ylabel("h(m) [m]")
-    ticklabel_format(style='sci', axis='y', scilimits=(0,0))
+    ticklabel_format(style='sci', axis='y', scilimits=(0, 0))
     legend()
     title("Linear fit of mean deflection data; h(m) = Am + B\n$\delta A =$ %.2e" % dA)
     savefig("figs/h_m_fig.png")
     close()
+
+
 plotdata()
+
 
 def plot_stddev():
     """Plots the standard deviation of h(m)
@@ -155,12 +170,14 @@ def plot_stddev():
                                          h_5[i]]))[0]
     plot(mass_dat, deviation, linestyle="--")
     plot(mass_dat, deviation, "o")
-    ticklabel_format(style='sci', axis='y', scilimits=(0,0))
+    ticklabel_format(style='sci', axis='y', scilimits=(0, 0))
     title("Standard deviation of deflection for each m\n")
     xlabel("Load [kg]")
     ylabel("$\sigma$ (Std. dev.)")
     savefig("figs/h_m_deviation.png")
     close()
+
+
 plot_stddev()
 
 
@@ -169,18 +186,25 @@ l_knife_diameter = 4.09 * 1e-3
 l_BC = l_BC_outer - l_knife_diameter
 s_l_BC = np.sqrt((0.1e-2)**2 + (0.01e-3)**2)
 
-
-
-
 E_deflect = (4.0 * l_BC**3 * const.g / (3 * pi * abs(A) * d_mean**4))
-print "\nE from deflection = %e"%E_deflect
-S_E = E_deflect * np.sqrt((dA / A)**2 + (4.0 * d_err / d_mean)**2 +(3.0 * s_l_BC / l_BC)**2)
+print "\nE from deflection = %e" % E_deflect
+S_E = E_deflect * np.sqrt((dA / A)**2 + (4.0 * d_err / d_mean)**2 +
+                                        (3.0 * s_l_BC / l_BC)**2)
 print "error in deflection E = %e" % S_E
 
-print "percentage error in deflection = %.3f percent\n" %(100 * S_E / E_deflect) 
+print "percentage error in deflection = %.3f percent\n" % (100 * S_E /
+                                                           E_deflect)
 
 
 print "indestigating if they override"
 D = E_sound - E_deflect
 s_D = np.sqrt(S_E**2 + E_sound_err**2)
+if abs(D) > s_D:
+    print "D > s_D"
+if abs(D) < s_D:
+    print "D < s_D"
 print abs(D) - s_D
+
+print "|D| = %e" % abs(D)
+print "s_D = %e" % s_D
+print "2s_D = %e" % (2 * s_D)

@@ -56,7 +56,7 @@
 \maketitle
 
 \begin{abstract}
-Determining the Youngs' modulus of a brass rod by deflection and listening for the root frequency.
+Determining the Youngs' modulus of a brass rod by measuring the deflection in three-point bending and determining its root frequency. Comparing the two methods and investigating if their results overlap.
 \end{abstract}
 
 %\tableofcontents
@@ -64,13 +64,13 @@ Determining the Youngs' modulus of a brass rod by deflection and listening for t
 \section{\label{sect:intro}Introduction}
     
 \section{\label{sect:theory}Theory}
-  \subsection{Euler-Bernoulli beam theory}
-  From the Euler-Bernoulli beam theory, it follows that the deflection of a beam supported by two points of distance $l$ and a load $mg$ halfway between the two knives is given by
+  \subsection{Three-point bending}
+  From the Euler-Bernoulli beam theory \cite{3pt}, it follows that the deflection of a beam supported by two points of distance $l$ and a load $mg$ halfway between the two knives is given by
   \begin{equation}
     h(m) = \frac{mgl^3}{48EI}
     \label{eqn:hm_exp}
   \end{equation}
-  Where $E$ denotes the Young's modulus of the beam and $I$ the second moment area given by 
+  Where $E$ denotes the Young's modulus \cite{ymodul} of the beam and $I$ the second moment area given by 
   \begin{equation}
     I = \frac{\pi d^4}{4\cdot 2^4}
   \end{equation}
@@ -85,8 +85,26 @@ Determining the Youngs' modulus of a brass rod by deflection and listening for t
   \begin{equation}
     h(m) = Am + B
   \end{equation}
+  
+  \subsection{Sound emitted from a brass rod}
+
+  When struck on its axial side, a metallic rod of certain specifications emit an audible sound made up of signals of varying frequencies. The most audible of which is the root tone. The root tones' frequency is determined by Eqn. \ref{eqn:root_tone} where $d$ denotes the diameter of the rod, $M$ its mass, $L$ its length and $E$ its Young's modulus.
+
+  \begin{equation}
+    f = \frac{d}{4}\sqrt{\frac{\pi E}{M L}}
+    \label{eqn:root_tone}
+  \end{equation}
+
+  \subsection{Beats}
+    \begin{equation}
+      f_S = \frac{|\omega - \omega'|}{2}\frac{1}{2\pi}
+      \label{eqn:beats}
+    \end{equation}
+    When two signals of similar frequencies, $\omega, \omega'$, superimpose, there is an audible beat of a certain frequency, $f_S$. The frequency of this audible beat is given by Eqn. \ref{eqn:beats}, and becomes shorter the lower the difference in frequencies between the two signals.
+
   \subsection{Errors}
     When performing arithmetic operations on recorded data, the uncertainty in the data must also carry over to the derived results. How these uncertainties are propagated in different operations can be found in Practical Physics \cite{squires}.
+
 
 \section{\label{section:experimental}Experimental Procedure}
   \subsection{Three-point flexural test}
@@ -102,7 +120,7 @@ Determining the Youngs' modulus of a brass rod by deflection and listening for t
       \center
       \caption{(a) shows the apparatus used for measuring the deflection of a rod and (b) a cross section of the  apparatus at point F.}
       \label{fig:exp_1}
-    \end{figure}
+     \end{figure}
 
     Using Fig. \ref{fig:aparatus1} as a reference; The brass rod, A, was laid on the "knives" B and C, in order to ensure that that the dial gauge, manufactured by Baker\footnote{I did not take note of the model number of the particular dial gauge that was used during the lab. While working on this report, i have become aware that each Baker dial gauge is individually calibrated. Therefore, i have no values for the instrumental error in the deflection measurements.}, was positioned halfway between B and C, we measured the distance from the dial gauge to B and C using a measuring tape of type Lufkin pee wee 2m Y612CM with uncertainty $\pm 0.1$cm, adjusting the rod such that the difference in measurements would be sufficiently small. At the middle of the rod, there was a ring attached, as shown in Fig. \ref{fig:aparatus1cs}. The flat surface of the ring was in contact with the needle of the dial gauge at G. In order to ensure that the flat surface of the ring was at right angle with the needle, we turned the rod such that the reading of the dial gauge would be at a minimum, as the skewer the surface, the greater the reading. This process was repeated at the start of every attempt of the experiment.
 
@@ -123,7 +141,7 @@ Determining the Youngs' modulus of a brass rod by deflection and listening for t
 
       \subsection{Other measurements}
         \subsubsection{Mass}
-          In order to accurately measure the mass of the rough loads and the rod, the balance scale (Ohaus triple beam balance) which we used had to be calibrated. We did this by weighing a set of three reference weight on the scale, and comparing their measured value to the measured value of the rough loads and the rod using a linear fit. When placing the masses on the scale, we made sure to position the masses in the center of the scale plate and not take a reading until the needle of the balance scale was not sufficiently stable.
+          In order to accurately measure the mass of the rough loads and the rod, the balance scale (Ohaus triple beam balance) which we used had to be calibrated. We did this by weighing a set of three reference weights on the scale, and comparing their measured value to the measured value of the rough loads and the rod using a linear fit.When placing the masses on the scale, we made sure to position the masses in the center of the scale plate and not take a reading until the needle of the balance scale was not sufficiently stable.
 
         \subsubsection{Length and thickness of the rod}
           The length of the rod was measured using the measuring tape, and the thickness using the micrometer. In order to accurately determine the thickness, accounting for any irregularities in the rod due to deformation etc. The thickness was measured several times in different places on the rod, so that we could calculate the mean thickness.
@@ -137,16 +155,38 @@ Determining the Youngs' modulus of a brass rod by deflection and listening for t
     \begin{table}[H]
       \center
       \caption{Mass of rough load and reference}
-      \begin{tabular}{ | l | l | l |}
+      \begin{tabular}{ | l | l | l | l | l |}
         \hline
-        Stated mass   & Measured reference   & Measured rough \\ \hline
-        $500$g        & $500.0$g             & $500.1$g   \\ \hline
-        $1000$g       & $999.9$g             & $1000.3$g  \\ \hline
-        $2000$g       & $2000.1$g            & $2000.5$g
+        Stated mass   & Measured reference load   & Measured rough load & Measured ring & Measured rod + ring \\ \hline
+        $500$g        & $500.0$g             & $500.1$g &   &  \\ \hline
+        $1000$g       & $999.9$g             & $1000.3$g &  &  \\ \hline
+        $2000$g       & $2000.1$g            & $2000.5$g &  &  \\ \hline
+        n/a           &  &  & 34.4g & 2482.5g
         \\ \hline
       \end{tabular}
       \label{tab:masses}
     \end{table}
+
+    \begin{table}[H]
+      \center
+      \caption{Calibrated masses}
+      \begin{tabular}{ | l | l | l |}
+        \hline
+        Stated mass & Calibrated rough load & Calibrated rod \\ \hline
+        $500$g  & $500.2\pm 0.1$g  &  \\ \hline
+        $1000$g &$1000.3\pm 0.1$g  &  \\ \hline
+        $2000$g &$2000.4\pm 0.1$g  &  \\ \hline
+        n/a     &            & $2447.9\pm 0.1$g
+        \\ \hline
+      \end{tabular}
+      \label{tab:masses_calibrated}
+    \end{table}
+
+    Table \ref{tab:masses} contains all of the masses measured by the balance scale. The measured mass of the reference weight (which is assumed to be its true mass) is fitted against its measured value with the balance scale using a least square fit, the gradient and zero point in this fit is used to calibrate the weight, and the corrected masses are given in table \ref{tab:masses_calibrated}.
+
+
+
+
 
   \subsection{Results from Three-point flexural test}
 
@@ -182,7 +222,7 @@ Determining the Youngs' modulus of a brass rod by deflection and listening for t
       \label{fig:exp_1}
     \end{figure}
 
-  Table \ref{tab:flex} contains the deflection data recorded with the dial gauge where the loads listed are from the rough, uncalibrated masses. Their corrected value is listed in table \ref{tab:masses}. 
+  Table \ref{tab:flex} contains the deflection data recorded with the dial gauge where the loads listed are from the rough, uncalibrated masses. Their corrected value is listed in table \ref{tab:masses_calibrated}. 
   \newline
   \newline
   Fig. \ref{fig:h(m)} contains all the recorded data, as well as a linear fit on the mean deflection for each load using corrected values for the mass, m. The error of the linear fit, $h(m) = Am + B$, $dA = 3.52e-06$. Fig. \ref{fig:deviation_h_m} contains the standard deviation of the deflection values for each load.
@@ -266,6 +306,19 @@ Note STD.DEV of deflection increases with m (system is disturbed). Assume the di
 G.~L. Squires.
 \newblock {\em Practical Physics 4th Edition}.
 \newblock Cambridge University Press, 2001.
+
+\bibitem{ymodul}
+\url {https://en.wikipedia.org/wiki/Young's_modulus}
+
+\bibitem{beats}
+\url{https://en.wikipedia.org/wiki/Beat_(acoustics)#Mathematics_and_physics_of_beat_tones}.
+
+\bibitem{3pt}
+\url{https://en.wikipedia.org/wiki/Euler%E2%80%93Bernoulli_beam_theory#Three-point_bending}.
+
+\bibitem{elast}
+\url{http://www.uio.no/studier/emner/matnat/fys/FYS2150/v18/kursmateriell/elastisitet/elastisitet.pdf}
+
 
 \end{thebibliography}
 
