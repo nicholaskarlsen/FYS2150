@@ -83,7 +83,16 @@ d = np.array([15.98, 15.99, 15.99, 16.00,
               15.99, 15.99, 15.98, 15.99,
               15.99, 15.99]) * 1e-3
 d_mean = np.mean(d)
-d_err = np.sqrt(fys.stddev(d)[1]**2 + (0.01e-3)**2) # Std dev of mean + instrumentation error
+d_err = fys.stddev(d)[1] # Std dev of mean
+
+hist(d)
+ticklabel_format(style='sci', axis='x', scilimits=(0, 0))
+xlabel("thickness [m]")
+ylabel("No. occurrences")
+xticks(rotation=20)
+title("Measured thickness of rod\nmean thickness=%.3em, $\sigma_m=$%.3e"%(d_mean, d_err))
+savefig("figs/thickdat.png")
+close()
 
 f_root = 1213.72
 f_err = 0.04  # resolution of FFT
