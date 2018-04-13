@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.1.16)  13 APR 2018 13:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.1.16)  13 APR 2018 17:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1149,151 +1149,165 @@ Overfull \hbox (82.46664pt too wide) in paragraph at lines 158--168
  []
 
 [4]
-Overfull \hbox (6.37921pt too wide) in paragraph at lines 200--200
+<scripts/figs/thickdat.png, id=154, 462.528pt x 346.896pt>
+File: scripts/figs/thickdat.png Graphic file (type png)
+<use scripts/figs/thickdat.png>
+Package pdftex.def Info: scripts/figs/thickdat.png  used on input line 187. on 
+input line 187.
+Package pdftex.def Info: Requested size: 227.62204pt x 170.71628pt on input lin
+e 187.
+
+Underfull \hbox (badness 10000) in paragraph at lines 192--198
+
+ []
+
+[5 </home/nick/Documents/uio/FYS2150/Rapport 3/scripts/figs/thickdat.png>]
+Overfull \hbox (6.37921pt too wide) in paragraph at lines 212--212
 []\T1/cmr/m/n/10.95 Attempt
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 200--200
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 []\T1/cmr/m/n/10.95 h(0kg)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 200--200
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 []\T1/cmr/m/n/10.95 h(0.5kg)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 200--200
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 []\T1/cmr/m/n/10.95 h(1kg)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 200--200
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 []\T1/cmr/m/n/10.95 h(1.5kg)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 200--200
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 []\T1/cmr/m/n/10.95 h(2.0kg)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 200--200
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 []\T1/cmr/m/n/10.95 h(2.5kg)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 200--200
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 []\T1/cmr/m/n/10.95 h(3.0kg)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 200--201
+Underfull \hbox (badness 10000) in paragraph at lines 212--213
 []\T1/cmr/m/n/10.95 h(3.5kg)
  []
 
 
-Overfull \hbox (42.55898pt too wide) in paragraph at lines 198--209
+Overfull \hbox (42.55898pt too wide) in paragraph at lines 210--221
  [] 
  []
 
-<scripts/figs/h_m_fig.png, id=156, 462.528pt x 346.896pt>
+<scripts/figs/h_m_fig.png, id=168, 462.528pt x 346.896pt>
 File: scripts/figs/h_m_fig.png Graphic file (type png)
 <use scripts/figs/h_m_fig.png>
-Package pdftex.def Info: scripts/figs/h_m_fig.png  used on input line 216. on i
-nput line 216.
+Package pdftex.def Info: scripts/figs/h_m_fig.png  used on input line 228. on i
+nput line 228.
 Package pdftex.def Info: Requested size: 227.62204pt x 170.71628pt on input lin
-e 216.
-<scripts/figs/h_m_deviation.png, id=157, 462.528pt x 346.896pt>
+e 228.
+<scripts/figs/h_m_deviation.png, id=169, 462.528pt x 346.896pt>
 File: scripts/figs/h_m_deviation.png Graphic file (type png)
 <use scripts/figs/h_m_deviation.png>
-Package pdftex.def Info: scripts/figs/h_m_deviation.png  used on input line 219
-. on input line 219.
+Package pdftex.def Info: scripts/figs/h_m_deviation.png  used on input line 231
+. on input line 231.
 Package pdftex.def Info: Requested size: 227.62204pt x 170.71628pt on input lin
-e 219.
+e 231.
 
-Overfull \hbox (51.51256pt too wide) in paragraph at lines 216--220
+Overfull \hbox (51.51256pt too wide) in paragraph at lines 228--232
  [][][][] 
  []
 
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 225--232
+
+Underfull \hbox (badness 10000) in paragraph at lines 237--244
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 225--232
-
- []
-
-<scripts/raw_exp2_4.png, id=171, 462.528pt x 346.896pt>
-File: scripts/raw_exp2_4.png Graphic file (type png)
-<use scripts/raw_exp2_4.png>
-Package pdftex.def Info: scripts/raw_exp2_4.png  used on input line 244. on inp
-ut line 244.
-Package pdftex.def Info: Requested size: 227.62204pt x 170.71628pt on input lin
-e 244.
-<scripts/energy_exp2_4.png, id=172, 462.528pt x 346.896pt>
-File: scripts/energy_exp2_4.png Graphic file (type png)
-<use scripts/energy_exp2_4.png>
-Package pdftex.def Info: scripts/energy_exp2_4.png  used on input line 247. on 
-input line 247.
-Package pdftex.def Info: Requested size: 227.62204pt x 170.71628pt on input lin
-e 247.
-
-Overfull \hbox (51.51256pt too wide) in paragraph at lines 244--247
- [][][][] 
- []
-
-<scripts/freq_exp2_4.png, id=173, 462.528pt x 346.896pt>
-File: scripts/freq_exp2_4.png Graphic file (type png)
-<use scripts/freq_exp2_4.png>
-Package pdftex.def Info: scripts/freq_exp2_4.png  used on input line 250. on in
-put line 250.
-Package pdftex.def Info: Requested size: 227.62204pt x 170.71628pt on input lin
-e 250.
-
-Underfull \hbox (badness 10000) in paragraph at lines 238--253
+Underfull \hbox (badness 10000) in paragraph at lines 237--244
 
  []
 
 [6 </home/nick/Documents/uio/FYS2150/Rapport 3/scripts/figs/h_m_fig.png> </home
 /nick/Documents/uio/FYS2150/Rapport 3/scripts/figs/h_m_deviation.png>]
-<scripts/freq_exp2_all.png, id=184, 462.528pt x 346.896pt>
+<scripts/raw_exp2_4.png, id=185, 462.528pt x 346.896pt>
+File: scripts/raw_exp2_4.png Graphic file (type png)
+<use scripts/raw_exp2_4.png>
+Package pdftex.def Info: scripts/raw_exp2_4.png  used on input line 256. on inp
+ut line 256.
+Package pdftex.def Info: Requested size: 227.62204pt x 170.71628pt on input lin
+e 256.
+<scripts/energy_exp2_4.png, id=186, 462.528pt x 346.896pt>
+File: scripts/energy_exp2_4.png Graphic file (type png)
+<use scripts/energy_exp2_4.png>
+Package pdftex.def Info: scripts/energy_exp2_4.png  used on input line 259. on 
+input line 259.
+Package pdftex.def Info: Requested size: 227.62204pt x 170.71628pt on input lin
+e 259.
+
+Overfull \hbox (51.51256pt too wide) in paragraph at lines 256--259
+ [][][][] 
+ []
+
+<scripts/freq_exp2_4.png, id=187, 462.528pt x 346.896pt>
+File: scripts/freq_exp2_4.png Graphic file (type png)
+<use scripts/freq_exp2_4.png>
+Package pdftex.def Info: scripts/freq_exp2_4.png  used on input line 262. on in
+put line 262.
+Package pdftex.def Info: Requested size: 227.62204pt x 170.71628pt on input lin
+e 262.
+
+Underfull \hbox (badness 10000) in paragraph at lines 250--265
+
+ []
+
+[7]
+<scripts/freq_exp2_all.png, id=194, 462.528pt x 346.896pt>
 File: scripts/freq_exp2_all.png Graphic file (type png)
 <use scripts/freq_exp2_all.png>
-Package pdftex.def Info: scripts/freq_exp2_all.png  used on input line 257. on 
-input line 257.
+Package pdftex.def Info: scripts/freq_exp2_all.png  used on input line 269. on 
+input line 269.
 Package pdftex.def Info: Requested size: 227.62204pt x 170.71628pt on input lin
-e 257.
- [7 </home/nick/Documents/uio/FYS2150/Rapport 3/scripts/raw_exp2_4.png> </home/
+e 269.
+ [8 </home/nick/Documents/uio/FYS2150/Rapport 3/scripts/raw_exp2_4.png> </home/
 nick/Documents/uio/FYS2150/Rapport 3/scripts/energy_exp2_4.png> </home/nick/Doc
 uments/uio/FYS2150/Rapport 3/scripts/freq_exp2_4.png>]
 
-LaTeX Warning: Reference `eqn:E_f' on page 8 undefined on input line 284.
+LaTeX Warning: Reference `eqn:E_f' on page 9 undefined on input line 296.
 
-[8 </home/nick/Documents/uio/FYS2150/Rapport 3/scripts/freq_exp2_all.png>]
+[9 </home/nick/Documents/uio/FYS2150/Rapport 3/scripts/freq_exp2_all.png>]
 (/home/nick/Documents/uio/FYS2150/Rapport 3/rapport3_elast_nichoka_newformating
 .bbl)
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 311.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 323.
 
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-Underfull \hbox (badness 10000) in paragraph at lines 314--315
+Underfull \hbox (badness 10000) in paragraph at lines 326--327
 [][]$\T1/cmtt/m/n/10.95 https : / / en . wikipedia . org / wiki / Beat _ (acous
 tics ) #Mathematics _ and _
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 317--318
+Underfull \hbox (badness 10000) in paragraph at lines 329--330
 [][]$\T1/cmtt/m/n/10.95 https : / / en . wikipedia . org / wiki / Euler % E2 % 
 80 % 93Bernoulli _ beam _ theory #
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 320--321
+Underfull \hbox (badness 10000) in paragraph at lines 332--333
 [][]$\T1/cmtt/m/n/10.95 http : / / www . uio . no / studier / emner / matnat / 
 fys / FYS2150 / v18 / kursmateriell /
  []
@@ -1309,20 +1323,20 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <9> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 2.
- [9] [10]
+ [10] [11]
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 87.
- [11])
-(/home/nick/Documents/uio/FYS2150/Rapport 3/scripts/FYS2150lib.py) [12]
-(/home/nick/Documents/uio/FYS2150/Rapport 3/scripts/lab_data.py [13] [14]
-[15]) [16]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 332.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 332.
+ [12])
+(/home/nick/Documents/uio/FYS2150/Rapport 3/scripts/FYS2150lib.py) [13]
+(/home/nick/Documents/uio/FYS2150/Rapport 3/scripts/lab_data.py [14] [15]
+[16] [17]) [18]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 344.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 344.
 
 (/home/nick/Documents/uio/FYS2150/Rapport 3/rapport3_elast_nichoka_newformating
 .aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 332.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 332.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 344.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 344.
 Package rerunfilecheck Info: File `rapport3_elast_nichoka_newformating.out' has
  not changed.
 (rerunfilecheck)             Checksum: B6BF879E9D37228ECA21093046165CA8;1390.
@@ -1333,13 +1347,13 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 332.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 344.
  ) 
 Here is how much of TeX's memory you used:
- 21309 strings out of 492990
- 384110 string characters out of 6135005
- 738486 words of memory out of 5000000
- 24023 multiletter control sequences out of 15000+600000
+ 21332 strings out of 492990
+ 384500 string characters out of 6135005
+ 749632 words of memory out of 5000000
+ 24029 multiletter control sequences out of 15000+600000
  24127 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,11n,65p,1276b,2012s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1364,10 +1378,10 @@ pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti0900.pfb></usr/share/texm
 f/fonts/type1/public/cm-super/sfti1095.pfb></usr/share/texmf/fonts/type1/public
 /cm-super/sftt1095.pfb>
 Output written on "/home/nick/Documents/uio/FYS2150/Rapport 3/rapport3_elast_ni
-choka_newformating.pdf" (16 pages, 588550 bytes).
+choka_newformating.pdf" (18 pages, 614904 bytes).
 PDF statistics:
- 808 PDF objects out of 1000 (max. 8388607)
- 743 compressed objects within 8 object streams
- 447 named destinations out of 1000 (max. 500000)
- 221 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 837 PDF objects out of 1000 (max. 8388607)
+ 768 compressed objects within 8 object streams
+ 463 named destinations out of 1000 (max. 500000)
+ 226 words of extra memory for PDF output out of 10000 (max. 10000000)
 
