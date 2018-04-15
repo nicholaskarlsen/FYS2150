@@ -95,6 +95,7 @@ savefig("figs/thickdat.png")
 close()
 
 f_root = 1213.72
+#f_root = 1240
 f_err = 0.04  # resolution of FFT
 M_err = 9.8974331835e-05  # from linfit above (da)
 
@@ -105,6 +106,7 @@ E_sound = E_sound(f=f_root,
                   L=l_rod,
                   d=d_mean,
                   M=weight_data("rod"))
+
 
 print "E from root f = %e" % E_sound
 
@@ -217,3 +219,5 @@ print abs(D) - s_D
 print "|D| = %e" % abs(D)
 print "s_D = %e" % s_D
 print "2s_D = %e" % (2 * s_D)
+
+print "D/s_d = ", abs(D) / s_D

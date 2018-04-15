@@ -112,11 +112,11 @@ plt.close()
 figure2(rel_path + "forsok4.mat", style="--", cross=1)
 plt.xlabel("Frequency [Hz]")
 plt.ylabel("Amplitude")
-#plt.ticklabel_format(style='sci', axis='y', scilimits=(0,0))
+plt.ticklabel_format(style='sci', axis='y', scilimits=(0,0))
 #plt.xticks(rotation=10)
 plt.title("FFT of attempt no. 4 (Zoom at peak)\n$\Delta f=0.04$ Hz")
 plt.savefig("freq_exp2_4.png")
-plt.close()
+plt.show()
 
 
 for i in range(1, 8):

@@ -18,20 +18,32 @@
 \usepackage{esint}
 \usepackage{hyperref}
 \usepackage{listings}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+}
+\usepackage{listings}
 \lstset{ %
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
   basicstyle=\footnotesize,        % the size of the fonts that are used for the code
   breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
   breaklines=true,                 % sets automatic line breaking
   captionpos=t,                    % sets the caption-position to bottom
-  deletekeywords={...},            % if you want to delete keywords from the given langauge
+  commentstyle=\color{teal},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
   escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
   extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
   frame=single,                    % adds a frame around the code
   keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
- % langauge=Python,                 % the langauge of the code
+  keywordstyle=\color{blue},       % keyword style
+ % language=Python,                 % the language of the code
   morekeywords={*,...},           % if you want to add more keywords to the set
   numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
   numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{black}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
   showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
   showstringspaces=false,          % underline spaces within strings only
   showtabs=false,                  % show tabs within strings adding particular underscores
@@ -56,13 +68,16 @@
 \maketitle
 
 \begin{abstract}
-Determining the Youngs' modulus of a brass rod by measuring the deflection in three-point bending and determining its root frequency. Comparing the two methods and investigating if their results overlap.
+Determining the Young's modulus of a brass rod by measuring the deflection in three-point bending and determining its root frequency. Comparing the two methods and investigating if their results overlap.
 \end{abstract}
 
 %\tableofcontents
 
 \section{\label{sect:intro}Introduction}
-    
+  This report contains the procedure, results and analysis of experiments performed in an attempt to determine the Young's modulus of a Brass rod. We performed two different methods for determining it experimentally; By suspending a varied load unto the rod whilst held up by two knives and determining the Young's modulus by the resulting deflection of the rod, and by listening for the root frequency emitted from the rod when struck by a hammer, both by ear and numerically by recording the audio and looking at the frequency domain of the data by Fourier transforming it.
+
+  The goal was to obtain two independent values for the Young's modulus whose values overlap within the uncertainties of the experiments, suggesting an accurate result of Young's modulus. 
+
 \section{\label{sect:theory}Theory}
   \subsection{Three-point bending}
   From the Euler-Bernoulli beam theory \cite{3pt}, it follows that the deflection of a beam supported by two points of distance $l$ and a load $mg$ halfway between the two knives is given by
@@ -100,7 +115,7 @@ Determining the Youngs' modulus of a brass rod by measuring the deflection in th
       f_S = \frac{|\omega - \omega'|}{2}\frac{1}{2\pi}
       \label{eqn:beats}
     \end{equation}
-    When two signals of similar frequencies, $\omega, \omega'$, superimpose, there is an audible beat of a certain frequency, $f_S$. The frequency of this audible beat is given by Eqn. \ref{eqn:beats}, and becomes shorter the lower the difference in frequencies between the two signals.
+    When two signals of similar frequencies, $\omega, \omega'$, superimpose, there is an audible beat of a certain frequency, $f_S$. The frequency of this audible beat is given by Eqn. \ref{eqn:beats}, and becomes lower the smaller the difference in frequencies between the two signals.
 
   \subsection{Errors}
     When performing arithmetic operations on recorded data, the uncertainty in the data must also carry over to the derived results. How these uncertainties are propagated in different operations can be found in Practical Physics \cite{squires}.
@@ -122,7 +137,7 @@ Determining the Youngs' modulus of a brass rod by measuring the deflection in th
       \label{fig:exp_1}
      \end{figure}
 
-    Using Fig. \ref{fig:aparatus1} as a reference; The brass rod, A, was laid on the "knives" B and C, in order to ensure that that the dial gauge, manufactured by Baker\footnote{I did not take note of the model number of the particular dial gauge that was used during the lab. While working on this report, i have become aware that each Baker dial gauge is individually calibrated. Therefore, i have no values for the instrumental error in the deflection measurements.}, was positioned halfway between B and C, we measured the distance from the dial gauge to B and C using a measuring tape of type Lufkin pee wee 2m Y612CM with uncertainty $\pm 0.1$cm, adjusting the rod such that the difference in measurements would be sufficiently small. At the middle of the rod, there was a ring attached, as shown in Fig. \ref{fig:aparatus1cs}. The flat surface of the ring was in contact with the needle of the dial gauge at G. In order to ensure that the flat surface of the ring was at right angle with the needle, we turned the rod such that the reading of the dial gauge would be at a minimum, as the skewer the surface, the greater the reading. This process was repeated at the start of every attempt of the experiment.
+    Using Fig. \ref{fig:aparatus1} as a reference; First, we ensured that the needle of the Baker\footnote{I did not take note of the model number of the particular dial gauge that was used during the lab. While working on this report, i have become aware that each Baker dial gauge is individually calibrated. Therefore, i have no values for the instrumental error in the deflection measurements.} dial gague was centered between B and C. We did this by measuring the distance from F to B and F to C, making adjustments such that the difference was sufficiently small. The distances were measured using a measuring tape of type Lufkin pee wee 2m Y612CM with an uncertainty of $\pm 0.1$cm. The brass rod, A, was laid on the "knives" B and C, such that the overhang of the rod from B and C were equal. In the middle of the rod, there was a ring attached, as shown in Fig. \ref{fig:aparatus1cs}. The flat surface of the ring was in contact with the needle of the dial gauge at G. In order to ensure that the flat surface of the ring was at right angle with the needle, we turned the rod such that the reading of the dial gauge would be at a minimum, as the skewer the surface, the greater the reading. This process was repeated at the start of every attempt of the experiment.
 
     After having prepared the apparatus, three masses of roughly $0.5$g, $1$kg and $2$kg which we denoted $m_a, m_b$ and $m_c$ respectively. They were placed carefully in the tray denoted m in Fig. \ref{fig:aparatus1}, in different combinations so that we would get readings for the deflection of the rod at $\approx \{0.5, 1, 1.5, 2, 2.5, 3, 3.5\}$kg, recorded by reading the dial gauge.
 
@@ -137,7 +152,7 @@ Determining the Youngs' modulus of a brass rod by measuring the deflection in th
         A speaker was connected to a signal generator. We started the signal generator at 1200Hz and hit the brass rod with a plastic hammer on the the flat surface on one end of the rod. By ear, there was an audible beat due to the superposition of the two signals. We adjusted the signal generator such that the the frequency of the beat was minimized, and there was essentially no audible difference between the two signals. We did this by trying above and below where we thought the root frequency was, eventually zeroing in on a value.
 
       \subsubsection{By Fourier transform}
-        A USB microphone was placed close to the rod, and faced towards it. The microphone was connected to a computer running matlab, with a script that collects audio data from it and Fourier transforms it using FFT. The recordings made were made with a sampling frequency of $8\times1024$ Hz and varying durations. As before, we hit the rod using a plastic hammer and recorded the data. A total of 7 recordings were made.
+        A USB microphone was placed close to the rod, and faced towards it. The microphone was connected to a computer running matlab, with a script that collects audio data from it and Fourier transforms it using a fast Fourier transform, FFT. The recordings made were made with a sampling frequency of $8\times1024$ Hz and varying durations. As before, we hit the rod using a plastic hammer and recorded the data. A total of 7 recordings were made.
 
       \subsection{Other measurements}
         \subsubsection{Mass}
@@ -189,7 +204,7 @@ Determining the Youngs' modulus of a brass rod by measuring the deflection in th
       \label{fig:thick} 
     \end{figure} 
 
-    Table \ref{tab:masses} contains all of the masses measured by the balance scale. The measured mass of the reference weight (which is assumed to be its true mass) is fitted against its measured value with the balance scale using a least square fit, the gradient and zero point in this fit is used to calibrate the weight, and the corrected masses are given in table \ref{tab:masses_calibrated}.
+    Table \ref{tab:masses} contains all of the masses measured by the balance scale. The stated mass of the reference weights (which is assumed to be their true mass) is fitted against its measured values from the balance scale using a least square fit, the gradient and zero point from this fit is used to calibrate the rough weights and rod, and the corrected masses are given in table \ref{tab:masses_calibrated}.
     \newline
     \newline
     In Fig. \ref{fig:thick} the thickness of the brass rod, measured with a micrometer is shown as a histogram. The mean thickness from this data is $d=15.99\,$mm with a standard deviation $\sigma_m = 1.8\,\mu \textup{m}$
@@ -247,7 +262,10 @@ Determining the Youngs' modulus of a brass rod by measuring the deflection in th
 
   \subsection{Results from measuring the speed of sound in the rod}
 
-    When hearing for beats, me and my lab-partner decided that the root frequency was $\approx 1240\enspace\textup{Hz}$ by the method described in the experimental section.
+    When hearing for beats, me and my lab-partner decided that the root frequency was $\approx 1240\enspace\textup{Hz}$ by the method described in the experimental section. This leads to the following, approximate value of youngs modulus;
+    \begin{equation}
+      E_{beats} = 108\,\textup{GPa}
+    \end{equation}
     \newline
     \begin{figure}[H]
       \centering
@@ -293,7 +311,7 @@ Determining the Youngs' modulus of a brass rod by measuring the deflection in th
       \label{tab:fftdat}
     \end{table}
 
-    Using the root frequency gathered from attempt 4 and 5 (which are identical), the Young's modulus, using Eqn. \ref{eqn:E_f} is
+    Using the root frequency gathered from attempt 4 and 5 (which are identical), the Young's modulus, using Eqn. \ref{eqn:root_tone} is
     \begin{equation}
       E_{sound} = 103.7 \pm 0.2 \% \,\textup{G}\textup{Pa}
     \end{equation}
@@ -301,10 +319,16 @@ Determining the Youngs' modulus of a brass rod by measuring the deflection in th
 
 \newpage
 \section{\label{sect:discussion}Discussion}
+  For the two independently measured values of Young's modulus to be in agreement with each other, one would expect the difference, $|D|=E_{sound} - E_{deflection}$ to be less than two times the uncertainty of the difference, $s_D$. For the calculated values of $E_{deflection},E_{sound}$, the absolute value of the difference divided by the uncertainty of the difference; $|D|/s_D = 5.3$. Implying that either both, or at least one of the measured values of E is incorrect.
+  \newline
+  \newline
+  Initially, my biggest worry for a systematic error were in the measurements made of the deflection of the beam, however, the uncertainty of $A$, $dA$ was sufficiently small, and not the largest of the accounted for errors in that part of the experiment (which was $l_{BC, outer}$). There may be other systematic errors which I have not thought of, but it seems unlikely.
+  \newline
+  \newline
+  The Young's' modulus measured by beats and recording on the other hand, I have much less information about. The method of listening for beats, if quite obviously flawed and should only serve as an approximation as it is based on the judgment of whomever is listening and therefore quite prone to human error. But as far as the recording is concerned, I know very little about the accuracy of the microphone even though it was quite consistent between attempts. Could perhaps the frequency recorded by the microphone be shifted a bit? The recorded frequency being shifted down compared to the the actual frequency could be a possible explanation as to why there isn't overlap. But this is purely speculation on my part, as I did not make a recording of a known frequency to test the validity of the recorded frequency by.
 
-Note STD.DEV of deflection increases with m (system is disturbed). Assume the disturbance is normally distributed, therefore error -> given by STD. DEV.
- 
 \section{\label{sect:conclusion}Conclusion}
+  In conclusion, I can not with any certainty decide on which of the methods yielded the most accurate result nor if they were both flawed in some fashion. For this, more a closer look at the accuracy of the recorded audio data would be helpful. The results do however point to the value of $E$ for the brass rod being in the range 103.7GPa - 108GPa ($\pm$ uncertainties). But ultimately, more data is required for a more conclusive result, and the results of this report must be taken with a grain of salt due to the potential ramifications of working with an inaccurate value of the Young's modulus.
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 %%% END OF MAIN BODY %%%
@@ -336,7 +360,7 @@ G.~L. Squires.
 
 \appendix*
 \section{Code}
-All of the code used to produce this report. Anything noteworthy should already be mentioned in the main body of the report. Note that when this code was written, readability was not a huge concern, so some of it may not be very easy to interpret. 
+All of the code used to produce this report are included in this appendix. Included only for the sake of documenting my full work, and was not written with the intention of it being read by anyone. As such it would most likely be rather difficult for anyone (including myself at times) to make sense of it.
 \lstinputlisting[language=python]{scripts/FFTlyd.py}
 \lstinputlisting[language=python]{scripts/FYS2150lib.py}
 \lstinputlisting[language=python]{scripts/lab_data.py}
