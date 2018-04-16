@@ -221,3 +221,16 @@ print "s_D = %e" % s_D
 print "2s_D = %e" % (2 * s_D)
 
 print "D/s_d = ", abs(D) / s_D
+
+
+print "\n\n\n\n"
+print "Data:"
+print "A = %.3e" % (abs(A))
+print dA
+print "l = %f" % l_BC
+print s_l_BC   
+print "d = %.4e" % d_mean
+print d_err
+print "\n\n\n"
+print "f = %f" % f_root  
+print "M = %f" % weight_data("rod")

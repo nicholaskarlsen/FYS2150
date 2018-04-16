@@ -1,0 +1,7 @@
+This is makeindex, version 2.15 [MiKTeX 2.9.6500 64-bit] (kpathsea + Thai support).
+Scanning input file tables...
+!! Input index error (file = tables, line = 1):
+   -- Unknown index keyword \documentclass.
+done (0 entries accepted, 1 rejected).
+Nothing written in tables.ind.
+Transcript written in tables.ilg.
