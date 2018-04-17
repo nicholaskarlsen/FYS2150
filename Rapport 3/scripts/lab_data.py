@@ -197,7 +197,7 @@ l_knife_diameter = 4.09 * 1e-3
 l_BC = l_BC_outer - l_knife_diameter
 s_l_BC = np.sqrt((0.1e-2)**2 + (0.01e-3)**2)
 
-E_deflect = (4.0 * l_BC**3 * const.g / (3 * pi * abs(A) * d_mean**4))
+E_deflect = (4.0 * l_BC**3 * const.g) / (3 * pi * abs(A) * d_mean**4)
 print "\nE from deflection = %e" % E_deflect
 S_E = E_deflect * np.sqrt((dA / A)**2 + (4.0 * d_err / d_mean)**2 +
                                         (3.0 * s_l_BC / l_BC)**2)
