@@ -9,6 +9,8 @@
 %---------------------------------------------------------------------
 
 videonavn   = '/home/nick/Videos/fys2150drag/B2.avi'; %Navnet p� filmen dere vil hente bilder fra
+% videonavn   = 'litenmetallkule.avi'; %Navnet p� filmen dere vil hente bilder fra
+
 
 film = VideoReader(videonavn);
 nFrames = film.NumberOfFrames;
@@ -23,8 +25,8 @@ frameRate = film.frameRate;
 nstart      = 300; %Nummeret p� det f�rste bildet du vil bruke i filmen
 nslutt      = 900; %Nummeret p� det siste bildet du vil bruke i filmen
 
-xpos        = 22:750; %Hvilke koordinater i x-retning du �nsker � ta med
-ypos        = 15:236; %Hvilke koordinater i y-retning du �nsker � ta med
+xpos        = 1:1904; %Hvilke koordinater i x-retning du �nsker � ta med
+ypos        = 1:294; %Hvilke koordinater i y-retning du �nsker � ta med
 
 %---------------------------------------------------------------------
 % Sjekk at innstillinger er mulige

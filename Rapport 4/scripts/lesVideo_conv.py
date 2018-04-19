@@ -13,117 +13,147 @@ import numpy as np
 import skvideo.io
 import inspect
 import os
-from PIL import Image
 import matplotlib.pyplot as plt
 from skimage.measure import regionprops
-import skimage.morphology as morph
-from skimage import filters
 from matplotlib.image import imread
-
-
-_file = "B2.avi"
+import skimage.color
+from skimage import util
+# from PIL import Image
+# import skimage.morphology as morph
+# from skimage import filters
 
 
 def rgb2gray(rgb):
     '''
     Converts shape=(x,y,rgb) array to grayscale see wiki page:
     '''
-    return np.dot(rgb[...,:3], [0.299, 0.587, 0.114])
+    return np.dot(rgb[...,:3], [0.299, 0.587, 0.114]).astype(int)
 
 
-def rbg2binary(image):
+def gray2binary(gray, limBW=128):
     """Converts RGB image to binary grayscale of 0 OR 255
     image must be array of shape=(N, M, RGB)
     """
-    gray = rgb2gray(image)
     bw = np.asarray(gray).copy()
-    limBW = 128             # Threshhold of B/W
     bw[bw < limBW] = 0      # Black
     bw[bw >= limBW] = 255   # White
-    bw = bw.astype(int)     # Setting type to integer, for regionprops to work
-
     return bw
 
 
-"""
-By default, asumes file is in same folder as script.
-Edit this section if in different folder, but
-note that skvideo requires the FULL path of file,
-not just relative.
-"""
-def main():
+def trackCircle(filename="litenmetallkule.avi", path="current",
+                hMin=0, hMax=-1, wMin=0, wMax=-1):
+
     # Fetching current dir path
     folderPath = os.path.dirname(
         os.path.abspath(
             inspect.getfile(
                 inspect.currentframe())))
-    folderPath = "/home/nick/Videos/fys2150drag"
-    #adds current dir to filename
-    filename = folderPath + "/" + _file
+    if path != "current":
+        folderPath = path
+        "if path is specified"
+
+    # skvideo requires full path
+    fullFilename = folderPath + "/" + filename
 
     print "Reading video..."
 
-    video = skvideo.io.vread(filename)
+    video = skvideo.io.vread(fullFilename)
     totalFrames = len(video)
-    print video.shape
+
     print "Number of frames:", len(video)
 
     frameStart = 0
     frameStop = totalFrames
-    frameCount = frameStart     # Counts frames
 
     "Creates array to store x, y vals of CM"
-    xPos = np.zeros(frameStop - frameStart)     # x-position of CM
-    yPos = np.zeros(frameStop - frameStart)     # y-position of CM
+    cmPos = np.zeros([frameStop - frameStart, 2])
 
-    for frame in xrange(600, 601):
-        bwFrame = rbg2binary(video[frame])
-        props = regionprops(label_image=bwFrame)  # Detects shapes in image
-        cm = props[0].centroid                    # Detects centroids
-        xPos[frameCount] = cm[0]                  # save xpos of centroid
-        yPos[frameCount] = cm[1]                  # save ypos of centroid
-        print "frame", frameCount, "-", "Center of mass:", cm
-        frameCount += 1
+    validFrames = []  # Keeps track of usable frames
 
-        def plot_im():
-            "plot frame + CM, used to check functionality"
-            fig = plt.figure()
-            plt.subplot(211)
-            plt.imshow(video[frame])
-            plt.subplot(212)
-            plt.imshow(bwFrame, cmap = plt.get_cmap('gray'))
-            plt.plot(cm[1], cm[0], "ro", label="Center of mass")
-            plt.legend()
-            plt.show()
-        plot_im()
+    for frame in xrange(totalFrames):
+        """
+        Need to invert image for regionprops to work, only finds white obj
+        on black background, not black on white.
+        """
+        # convert to binary grayscale to filter out noise
+        invFrame = video[frame]
+        bwFrame = gray2binary(
+            rgb2gray(
+                util.invert(invFrame)))[hMin:hMax, wMin:wMax]
+        # Detects shapes in image
+        props = regionprops(label_image=bwFrame.astype(int))
+        if len(props) == 0:
+            pass
+        else:
+            cmPos[frame] = props[0].centroid  # Detects centroids
+            validFrames.append(frame)
+            # Print info to terminal while processing
+            print "frame", frame,\
+                  "-", "Center of mass:",\
+                  "x=%i, y=%i" % (cmPos[frame][1], cmPos[frame][0])
+
+            def plot_im():
+                "plot frame + CM, used to check functionality"
+                fig = plt.figure()
+                plt.subplot(311)
+                plt.imshow(video[frame, hMin:hMax, wMin:wMax])
+                plt.subplot(312)
+                plt.imshow(bwFrame, cmap=plt.get_cmap('gray'))
+                plt.plot(cmPos[frame, 1], cmPos[frame, 0],
+                         "ro", label="Center of mass")
+                plt.show()
+    return cmPos.astype(int), validFrames
 
 def testFunc():
-    img = imread("bilde5.png")
-    bw = rgb2gray(img)
-    limBW = 128
-    bw[bw<limBW] = 0
-    bw[bw>=limBW] = 0
+    """
+    Testing that method of finding C.M works properly
+    """
+    import skimage.color
+    #img = imread("bilde5.png")
+    img = imread("frame_inv2.png")
+    bwImg = skimage.color.rgb2gray(img)
+    plt.subplot(211)
+    plt.imshow(bwImg, cmap=plt.get_cmap('gray'))
+
+    props = regionprops(label_image=bwImg.astype(int))
+    cm = props[0].centroid
+
+    plt.subplot(212)
+    plt.imshow(img)
+    plt.plot(cm[1], cm[0], "ro",
+             label="Center of mass = (%i, %i)" % (cm[1], cm[0]))
+    plt.legend()
+    plt.show()
 
 
-if __name__ == '__main__':
-    #testFunc()
-    main()
-"""
-fig2 = plt.figure()
-plt.subplot(221)
-plt.plot(xPos, "x")
-plt.subplot(212)
-plt.plot(yPos, "x")
-plt.show()
-"""
-"""
-for frame in range(totalFrames):
-    image = rgb2gray(video[frame])
-    threshold_value = filters.threshold_otsu(image)
-    labeled_foreground = (image > threshold_value).astype(int)
-    properties = regionprops(labeled_foreground, image)
-    center_of_mass = properties[0].centroid
-    weighted_center_of_mass = properties[0].weighted_centroid
+if __name__ == "__main__":
 
-    print(center_of_mass)
-"""
+    folderPath = "/home/nick/Videos/fys2150drag"
+
+    cm, validFrames = trackCircle(filename="B2.avi",
+                                  path=folderPath,
+                                  hMin=67, hMax=216)
+
+    if len(cm[:, 1]) != len(validFrames):
+        print "Tracking interupted in some frames,"
+        print "Only returning uninterupted frames."
+        x = []
+        y = []
+        for validFrame in validFrames:
+            x.append(cm[validFrame, 1])
+            y.append(cm[validFrame, 0])
+        x = np.array(x).astype(int)
+        y = np.array(y).astype(int)
+    else:
+        x = cm[validFrames[0]:validFrames[-1], 1]
+        y = cm[validFrames[0]:validFrames[-1], 0]
+
+    plt.subplot(211)
+    plt.plot(validFrames, x, "x")
+    plt.xlabel("Frame")
+    plt.ylabel("x-position of center of mass [px]")
+    plt.subplot(212)
+    plt.plot(validFrames, y, "x")
+    plt.xlabel("Frame")
+    plt.ylabel("y-position of center of mass [px]")
+    plt.show()
