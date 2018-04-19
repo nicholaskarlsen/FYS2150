@@ -22,8 +22,8 @@ frameRate = film.frameRate;
 % Innstillinger som studenten selv m� sette opp
 %---------------------------------------------------------------------
 
-nstart      = 1; %Nummeret p� det f�rste bildet du vil bruke i filmen
-nslutt      = nFrames; %Nummeret p� det siste bildet du vil bruke i filmen
+nstart      = 0; %Nummeret p� det f�rste bildet du vil bruke i filmen
+nslutt      = 90; %Nummeret p� det siste bildet du vil bruke i filmen
 
 xpos        = 1:vidWidth; %Hvilke koordinater i x-retning du �nsker � ta med
 ypos        = 67:215; %Hvilke koordinater i y-retning du �nsker � ta med

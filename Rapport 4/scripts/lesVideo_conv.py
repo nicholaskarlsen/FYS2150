@@ -39,7 +39,6 @@ def gray2binary(gray, limBW=128):
     bw[bw >= limBW] = 255   # White
     return bw
 
-
 def trackCircle(filename="litenmetallkule.avi", path="current",
                 hMin=0, hMax=-1, wMin=0, wMax=-1):
 
@@ -70,38 +69,61 @@ def trackCircle(filename="litenmetallkule.avi", path="current",
 
     validFrames = []  # Keeps track of usable frames
 
+    def detectCirc(image):
+        """
+        Inverts color of image and detects center of circle shape.
+        Asumes circle is the ONLY object in image, so noise
+        needs to be filtered out
+        """
+        invFrame = image
+        bwFrame = gray2binary(
+            rgb2gray(
+                util.invert(invFrame)))[hMin:hMax, wMin:wMax]
+        # Detects shapes in image
+        props = regionprops(label_image=bwFrame.astype(int))
+        return props, invFrame, bwFrame
+
     for frame in xrange(totalFrames):
         """
         Need to invert image for regionprops to work, only finds white obj
         on black background, not black on white.
         """
         # convert to binary grayscale to filter out noise
-        invFrame = video[frame]
-        bwFrame = gray2binary(
-            rgb2gray(
-                util.invert(invFrame)))[hMin:hMax, wMin:wMax]
-        # Detects shapes in image
-        props = regionprops(label_image=bwFrame.astype(int))
+        props = detectCirc(video[frame])[0]
+
+        # Bad way of checking if the ball is in frame
         if len(props) == 0:
             pass
         else:
             cmPos[frame] = props[0].centroid  # Detects centroids
-            validFrames.append(frame)
+            validFrames.append(frame)  # Keeps track of frames with ball
+
             # Print info to terminal while processing
             print "frame", frame,\
                   "-", "Center of mass:",\
                   "x=%i, y=%i" % (cmPos[frame][1], cmPos[frame][0])
 
-            def plot_im():
-                "plot frame + CM, used to check functionality"
-                fig = plt.figure()
-                plt.subplot(311)
-                plt.imshow(video[frame, hMin:hMax, wMin:wMax])
-                plt.subplot(312)
-                plt.imshow(bwFrame, cmap=plt.get_cmap('gray'))
-                plt.plot(cmPos[frame, 1], cmPos[frame, 0],
-                         "ro", label="Center of mass")
-                plt.show()
+
+    def plot_im(frame=int(totalFrames/2.0)):
+        "plot frame + CM, used to check functionality"
+        im = video[frame]
+        props, invFrame, bwFrame = detectCirc(im)
+        cmPos[frame] = props[0].centroid
+        plt.subplot(311)
+        plt.imshow(invFrame)
+        plt.title("Raw image, frame:%i" % frame)
+        plt.plot(cmPos[frame, 1], cmPos[frame, 0]+hMin,
+                 "ro", label="Center of mass")
+        plt.legend()
+        plt.subplot(312)
+        plt.imshow(bwFrame, cmap=plt.get_cmap('gray'))
+        plt.plot(cmPos[frame, 1], cmPos[frame, 0],
+                 "ro", label="Center of mass")
+        plt.title("Processed image, frame:%i" % frame)
+        plt.legend()
+        plt.show()
+    plot_im()
+    
     return cmPos.astype(int), validFrames
 
 def testFunc():
