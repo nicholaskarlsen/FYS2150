@@ -69,19 +69,35 @@ def trackCircle(filename="litenmetallkule.avi", path="current",
 
     validFrames = []  # Keeps track of usable frames
 
+    def genFilter(image):
+        """
+        Generates an array to filter out 
+        static background based on first frame
+
+        NOT YET IMPLEMENTED
+        """
+        gsImage = rgb2gray(image)
+        bwImage = gray2binary(gsImage)
+        bwImage = bwImage/255.0
+        return bwImage.astype(int)
+
     def detectCirc(image):
         """
         Inverts color of image and detects center of circle shape.
         Asumes circle is the ONLY object in image, so noise
         needs to be filtered out
         """
+        #staticBg = genFilter(video[0])
+
         invFrame = image
         bwFrame = gray2binary(
             rgb2gray(
                 util.invert(invFrame)))[hMin:hMax, wMin:wMax]
+        bwFrame = bwFrame # * staticBg
         # Detects shapes in image
         props = regionprops(label_image=bwFrame.astype(int))
         return props, invFrame, bwFrame
+
 
     for frame in xrange(totalFrames):
         """
