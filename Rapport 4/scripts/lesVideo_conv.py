@@ -11,22 +11,20 @@ Note: If skvideo.io package is missing, install
 
 import numpy as np
 import skvideo.io
-import inspect, os
+import inspect
+import os
 from PIL import Image
 import matplotlib.pyplot as plt
-from skimage import io, color
+from skimage.measure import regionprops
 import skimage.morphology as morph
-from skimage.measure import label
-from skimage.filters import threshold_otsu
+from skimage import filters
 
-# Name of file, relative path.
+
 _file = "B2.avi"
 
 def rgb2gray(rgb):
     '''
-    Converts (x, y, rgb) array to grayscale see wiki page:
-    https://en.wikipedia.org/wiki/Grayscale#Converting_color_to_grayscale
-    for details
+    Converts shape=(x,y,rgb) array to grayscale see wiki page:
     '''
     return np.dot(rgb[...,:3], [0.299, 0.587, 0.114])
 
@@ -46,6 +44,8 @@ folderPath = "/home/nick/Videos/fys2150drag"
 #adds current dir to filename
 filename = folderPath + "/" + _file
 
+print "Reading video..."
+
 video = skvideo.io.vread(filename)
 totalFrames = len(video)
 print video.shape
@@ -53,63 +53,57 @@ print "Number of frames:", len(video)
 
 frameStart = 0
 frameStop = totalFrames
+frameCount = frameStart     # Counts frames
 
-xPos = np.zeros(frameStop - frameStart) # x-position of CM
-yPos = np.zeros(frameStop - frameStart) # y-position of CM
+"Creates array to store x, y vals of CM"
+xPos = np.zeros(frameStop - frameStart)     # x-position of CM
+yPos = np.zeros(frameStop - frameStart)     # y-position of CM
 
-frameCount = frameStart # Counts frames
+for frame in xrange(600, 601):
+    gray = rgb2gray(video[frame])
+    bw = np.asarray(gray).copy()
+    limBW = 128             # Threshhold of B/W
+    bw[bw < limBW] = 0      # Black
+    bw[bw >= limBW] = 255   # White
+    bw = bw.astype(int)     # Setting type to integer, for regionprops to work
+    props = regionprops(label_image=bw)     # Detects shapes in image
+    cm = props[0].centroid                  # Detects centroids
+    xPos[frameCount] = cm[0]                # save xpos of centroid
+    yPos[frameCount] = cm[1]                # save ypos of centroid
+    print "frame", frameCount, "-", "Center of mass:", cm
+    frameCount += 1
 
-print video[500].shape
-gray = rgb2gray(video[500])
-bw = np.asarray(gray).copy()
-# Pixel range is 0...255, 256/2 = 128
-bw[bw < 128] = 0    # Black
-bw[bw >= 128] = 255 # White
-plt.imshow(bw, cmap = plt.get_cmap('gray'))
+    def plot_im():
+        "plot frame + CM, used to check functionality"
+        fig = plt.figure()
+        plt.subplot(211)
+        plt.imshow(video[frame])
+        plt.subplot(212)
+        plt.imshow(bw, cmap = plt.get_cmap('gray'))
+        plt.plot(cm[1], cm[0], "ro", label="Center of mass")
+        plt.legend()
+        plt.show()
+    plot_im()
+
+
+
+
+"""
+fig2 = plt.figure()
+plt.subplot(221)
+plt.plot(xPos, "x")
+plt.subplot(212)
+plt.plot(yPos, "x")
 plt.show()
+"""
+"""
+for frame in range(totalFrames):
+    image = rgb2gray(video[frame])
+    threshold_value = filters.threshold_otsu(image)
+    labeled_foreground = (image > threshold_value).astype(int)
+    properties = regionprops(labeled_foreground, image)
+    center_of_mass = properties[0].centroid
+    weighted_center_of_mass = properties[0].weighted_centroid
 
-Strel = morph.disk(10)
-Strel2 = morph.disk(11)
-plt.figure(figsize=(7,7))
-plt.subplot(131)
-plt.imshow(Strel)
-plt.title("2-Pixel Radius Disk Element")
-plt.subplot(133)
-plt.imshow(Strel2)
-plt.title("5-Pixel Radius Disk Element")
-
-def plot_image(data, title):
-    """
-    This function is used to plot the images used in this example.
-    :param data: image file
-    :param title: string to use as the plot title
-    """
-    plt.figure(figsize=(7,7))
-    io.imshow(data)
-    plt.axis('off')
-    plt.title(title)
-    plt.show()
-
-BWimg_dil = morph.dilation(bw, Strel)
-plot_image(BWimg_dil, "Dilated")
-
-BWimg_close = morph.closing(BWimg_dil,Strel2)
-plot_image(BWimg_close, "Closed")
-
-L = label(BWimg_close)
-plot_image(color.label2rgb(L), 'Labeled Regions')
-
-half_length = int(np.floor(np.size(L,1)/2))
-L_cntr = L[half_length,half_length]
-print "Label of blob that contains the center pixel: {}".format(L_cntr)
-
-
-Seg = L
-Seg[Seg != L_cntr] = 0
-Seg[Seg == L_cntr] = 1
-plot_image(Seg, 'ROI')
-
-
-Mask = morph.dilation(Seg,Strel2)
-plot_image(Mask, "Mask")
-
+    print(center_of_mass)
+"""
