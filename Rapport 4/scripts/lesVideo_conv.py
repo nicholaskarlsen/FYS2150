@@ -5,7 +5,7 @@ Reads video file and converts to binary image
 resulting in easy data analysis.
 author: Nicholas Karlsen
 
-Note: skvideo is not included in anaconda by default,
+Note: skvideo is not included in anaconda python,
 install by 'pip install sk-video' in terminal.
 '''
 
@@ -41,6 +41,17 @@ def gray2binary(gray, limBW=128):
     bw[bw >= limBW] = 255   # White
     return bw
 
+def genFilter(image):
+    """
+    Generates an array to filter out
+    static background based on first frame
+
+    NOT YET IMPLEMENTED
+    """
+    gsImage = rgb2gray(image)
+    bwImage = gray2binary(gsImage)
+    bwImage = bwImage / 255.0
+    return bwImage.astype(int)
 
 def trackCircle(filename="litenmetallkule.avi", path="current",
                 hMin=0, hMax=-1, wMin=0, wMax=-1):
@@ -55,16 +66,18 @@ def trackCircle(filename="litenmetallkule.avi", path="current",
           if left as default, it will asume same path as script.
     hMin, hMax, wMin, wMax: used for cropping the image.
     """
+
     # Fetching current dir path
     folderPath = os.path.dirname(
         os.path.abspath(
             inspect.getfile(
                 inspect.currentframe())))
+
+    # If path is specified, use that instead.
     if path != "current":
         folderPath = path
         "if path is specified"
 
-    # skvideo requires full path
     fullFilename = folderPath + "/" + filename
 
     print "Reading video..."
@@ -81,18 +94,6 @@ def trackCircle(filename="litenmetallkule.avi", path="current",
     cmPos = np.zeros([frameStop - frameStart, 2])
 
     validFrames = []  # Keeps track of usable frames
-
-    def genFilter(image):
-        """
-        Generates an array to filter out
-        static background based on first frame
-
-        NOT YET IMPLEMENTED
-        """
-        gsImage = rgb2gray(image)
-        bwImage = gray2binary(gsImage)
-        bwImage = bwImage / 255.0
-        return bwImage.astype(int)
 
     def detectCirc(image):
         """
@@ -200,11 +201,11 @@ if __name__ == "__main__":
         y = cm[validFrames[0]:validFrames[-1], 0]
 
     plt.subplot(211)
-    plt.plot(validFrames, x, "x")
+    plt.plot(validFrames, x, ".")
     plt.xlabel("Frame")
     plt.ylabel("x-position of center of mass [px]")
     plt.subplot(212)
-    plt.plot(validFrames, y, "x")
+    plt.plot(validFrames, y, ".")
     plt.xlabel("Frame")
     plt.ylabel("y-position of center of mass [px]")
     plt.show()
