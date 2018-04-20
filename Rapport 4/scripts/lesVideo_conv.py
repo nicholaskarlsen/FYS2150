@@ -5,8 +5,8 @@ Reads video file and converts to binary image
 resulting in easy data analysis.
 author: Nicholas Karlsen
 
-Note: If skvideo.io package is missing, install
-"sk-video" using pip
+Note: skvideo is not included in anaconda by default,
+install by 'pip install sk-video' in terminal.
 '''
 
 import numpy as np
@@ -16,8 +16,8 @@ import os
 import matplotlib.pyplot as plt
 from skimage.measure import regionprops
 from matplotlib.image import imread
-import skimage.color
 from skimage import util
+# import skimage.color
 # from PIL import Image
 # import skimage.morphology as morph
 # from skimage import filters
@@ -25,23 +25,36 @@ from skimage import util
 
 def rgb2gray(rgb):
     '''
-    Converts shape=(x,y,rgb) array to grayscale see wiki page:
+    Converts shape=(N,M,rgb) array to (N, M) grayscale array see wiki page
     '''
-    return np.dot(rgb[...,:3], [0.299, 0.587, 0.114]).astype(int)
+    return np.dot(rgb[..., :3], [0.299, 0.587, 0.114]).astype(int)
 
 
 def gray2binary(gray, limBW=128):
-    """Converts RGB image to binary grayscale of 0 OR 255
-    image must be array of shape=(N, M, RGB)
+    """Converts grayscale image to binary grayscale of 0 OR 255
+    image must be array of shape=(N, M)
+    gray: (N, M) array
+    limBW:
     """
     bw = np.asarray(gray).copy()
     bw[bw < limBW] = 0      # Black
     bw[bw >= limBW] = 255   # White
     return bw
 
+
 def trackCircle(filename="litenmetallkule.avi", path="current",
                 hMin=0, hMax=-1, wMin=0, wMax=-1):
-
+    """
+    Takes video file as input, filters out static background based on
+    first frame and finds the CM of circle in every frame. Requires
+    circle to be only object in frame (after filtering), so requires static
+    background. If not, try adjust hMin, hMax, wMin, wMax to crop out moving
+    background.
+    filename: filename of video
+    path: FULL path of file, eg '/home/nick/Videos/fys2150drag'.
+          if left as default, it will asume same path as script.
+    hMin, hMax, wMin, wMax: used for cropping the image.
+    """
     # Fetching current dir path
     folderPath = os.path.dirname(
         os.path.abspath(
@@ -71,14 +84,14 @@ def trackCircle(filename="litenmetallkule.avi", path="current",
 
     def genFilter(image):
         """
-        Generates an array to filter out 
+        Generates an array to filter out
         static background based on first frame
 
         NOT YET IMPLEMENTED
         """
         gsImage = rgb2gray(image)
         bwImage = gray2binary(gsImage)
-        bwImage = bwImage/255.0
+        bwImage = bwImage / 255.0
         return bwImage.astype(int)
 
     def detectCirc(image):
@@ -93,11 +106,11 @@ def trackCircle(filename="litenmetallkule.avi", path="current",
         bwFrame = gray2binary(
             rgb2gray(
                 util.invert(invFrame)))[hMin:hMax, wMin:wMax]
-        bwFrame = bwFrame # * staticBg
+        bwFrame = bwFrame  # * staticBg
         # Detects shapes in image
         props = regionprops(label_image=bwFrame.astype(int))
-        return props, invFrame, bwFrame
 
+        return props, invFrame, bwFrame
 
     for frame in xrange(totalFrames):
         """
@@ -119,8 +132,7 @@ def trackCircle(filename="litenmetallkule.avi", path="current",
                   "-", "Center of mass:",\
                   "x=%i, y=%i" % (cmPos[frame][1], cmPos[frame][0])
 
-
-    def plot_im(frame=int(totalFrames/2.0)):
+    def plot_im(frame=int(totalFrames / 2.0)):
         "plot frame + CM, used to check functionality"
         im = video[frame]
         props, invFrame, bwFrame = detectCirc(im)
@@ -128,7 +140,7 @@ def trackCircle(filename="litenmetallkule.avi", path="current",
         plt.subplot(311)
         plt.imshow(invFrame)
         plt.title("Raw image, frame:%i" % frame)
-        plt.plot(cmPos[frame, 1], cmPos[frame, 0]+hMin,
+        plt.plot(cmPos[frame, 1], cmPos[frame, 0] + hMin,
                  "ro", label="Center of mass")
         plt.legend()
         plt.subplot(312)
@@ -139,8 +151,9 @@ def trackCircle(filename="litenmetallkule.avi", path="current",
         plt.legend()
         plt.show()
     plot_im()
-    
+
     return cmPos.astype(int), validFrames
+
 
 def testFunc():
     """
