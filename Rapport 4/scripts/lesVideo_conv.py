@@ -17,6 +17,7 @@ import matplotlib.pyplot as plt
 from skimage.measure import regionprops
 from matplotlib.image import imread
 from skimage import util
+import FYS2150lib as fys # Used for linfit
 # import skimage.color
 # from PIL import Image
 # import skimage.morphology as morph
@@ -123,7 +124,7 @@ def trackCircle(filename="litenmetallkule.avi", path="current",
 
         # Bad way of checking if the ball is in frame
         if len(props) == 0:
-            pass
+            cmPos[frame] = "nan"
         else:
             cmPos[frame] = props[0].centroid  # Detects centroids
             validFrames.append(frame)  # Keeps track of frames with ball
@@ -182,7 +183,9 @@ if __name__ == "__main__":
 
     folderPath = "/home/nick/Videos/fys2150drag"
 
-    cm, validFrames = trackCircle(filename="B2.avi",
+    vidLabel = "A1"
+
+    cm, validFrames = trackCircle(filename=vidLabel + ".avi",
                                   path=folderPath,
                                   hMin=67, hMax=216)
 
@@ -200,12 +203,33 @@ if __name__ == "__main__":
         x = cm[validFrames[0]:validFrames[-1], 1]
         y = cm[validFrames[0]:validFrames[-1], 0]
 
-    plt.subplot(211)
-    plt.plot(validFrames, x, ".")
+    x = np.array(x)
+    y = np.array(y)
+    validFrames = np.array(validFrames)
+
+    print "Find start/stop of terminal velocity (straight,\
+           steep line) to perform linfit:"
+
+    plt.plot(validFrames, x, "o")
     plt.xlabel("Frame")
     plt.ylabel("x-position of center of mass [px]")
-    plt.subplot(212)
-    plt.plot(validFrames, y, ".")
+    plt.title("Use to determine start/stop frame of linfit")
+    plt.show()
+
+    start = int(input("Start index:"))
+    stop = int(input("Stop index:"))
+
+    m, c, dm, dc = fys.linfit(validFrames[start:stop], x[start:stop])
+
+    plt.subplot(211)
+    plt.plot(validFrames, x, ".", label="Position of CM")
+    plt.plot(validFrames[start:stop], validFrames[start:stop] * m + c, label="linear fit, y=mx+c")
+    plt.text(0, 1000, "m = %i [px/frame]\n dm = %i [px/frame]" % (m, dm))
     plt.xlabel("Frame")
-    plt.ylabel("y-position of center of mass [px]")
+    plt.ylabel("x-pos [px]")
+    plt.legend()
+    plt.subplot(212)
+    plt.plot(validFrames, y, ".", label="Position of CM")
+    plt.xlabel("Frame")
+    plt.ylabel("y-pos  [px]")
     plt.show()
