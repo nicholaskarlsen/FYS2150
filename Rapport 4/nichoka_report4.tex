@@ -80,11 +80,9 @@
 
 \section{\label{sect:theory}Theory}
 
-\section{\label{section:experimental}Experimental Procedure}
-  \subsection{Determining framerate of the camera}
+\section{\label{section:experimental}Experimental Procedure} 
+  \subsection{Video capture}
     
-    
-
     \begin{figure}[H]
       \center
       \includegraphics[width=7cm]{scripts/figs/sync_fps.png}
@@ -93,7 +91,12 @@
     \end{figure}
   
 
-  \begin{figure}[H]
+    In order to capture the motion of the balls, a USB video camera was connected to a computer running uEye cockpit \cite{website:ueye}, which we used to change the settings of the camera and make recordings. 
+
+    First, the error of the stated FPS of the camera had to be determined. This was done by connecting a series of circular LEDs (see Fig. \ref{fig:FpsSignal}) to a signal generator. The light emitted would "circle" at a rate which could be changed using the signal generator. By adjusting the signal such that the emitted light would seem stationary when observed through the video feed in uEye cockpit, the FPS of the camera determined to be 
+    
+
+  \begin{figure}[h]
     \center
     \subfloat[][Large tube]{\includegraphics[width=8cm, angle=90]{scripts/figs/bilde_scale1.png}\label{<figure1>}}
     \subfloat[][Small tube]{\includegraphics[width=8cm, angle=90]{scripts/figs/bilde_scale2.png}\label{<figure1>}}
@@ -107,46 +110,51 @@
     \caption{Most of the balls used in the experiment, excluding the ones labeled small 1 and 2.}
   \end{figure}
 
-\section{\label{sect:discuss}Discussion}
 
 \section{\label{sect:results}Results}
-  \end{multicols*}
+\end{multicols*}
 
   \begin{table}[H]
     \center
-    \begin{tabular}{| l | l | l | l | l | l |}
+    \begin{tabular}{ r | l  l  r  r  r }
+      
+      Type       & Mass [g] & Diameter [mm]   & FPS    & T [$^\circ$C]   & Filename \\ 
       \hline
-      Type       & Mass[g] & Diameter[mm]   & FPS    & T[C]   & Filena  \\ \hline
-      Metal      & 502.76  & 48.98          & 100    & 22.7   & A1.avi  \\ \hline
-      Metal      & 28.13   & 19.02          & 100    & 22.8   & A2.avi  \\ \hline 
-      Metal      & 6.99    & 11.97          & 100    & 22.6   & A3.avi  \\ \hline
-      Metal      & 2.08    & 7.99           & 100    & 22.6   & A4.avi  \\ \hline
-      Metal      & 0.68    & 5.48           & 100    & 22.5   & A5.avi  \\ \hline
-      Metal      & 0.10    & 2.98           & 100    & 22.6   & A6.avi  \\ \hline
-      Plastic    & 488.41  & 99.4           & 100    & 22.5   & B1.avi  \\ \hline
-      Plastic    & 61.56   & 50.02          & 100    & 22.5   & B2.avi  \\ \hline
-      Plastic    & 7.12    & 23.89          & 100    & 22.6   & B3.avi  \\ \hline
-      Plastic    & 0.87    & 12.06          & 100    & 22.6   & B4.avi  \\ \hline
-      White      & 29.74   & 25.24          & 100    & 22.6   & C1.avi  \\ \hline
-      BigBlack   & 31.42   & 21.08          & 100    & 22.5   & C4.avi  \\ \hline
-      SmallBlack & 5.67    & 16.45          & 100    & 22.5   & C5.avi  \\ \hline
-      BigGreen   & 31.60   & 21.86          & 100    & 22.4   & C3.avi  \\ \hline
-      SmallGreen & 5.60    & 16.38          & 100    & 22.3   & C6.avi  \\ \hline
-      BigRed     & 18.44   & 24.01          & 100    & 22.3   & C2.avi  \\ \hline
-      Glass      & 0.27    & 5.81           & 100    & 22.3   & C7.avi  \\ \hline
-      Small 1    & 4.1e-3  & 1.0            & 100    & 23.7   & D1.avi  \\ \hline
-      Small 2    & 12.0e-3 & 1.59           & 100    & 23.7   & D2.avi  \\ \hline   
+      Metal       & 502.76  & 48.98          & 100    & 22.7   & A1.avi  \\ 
+      Metal       & 28.13   & 19.02          & 100    & 22.8   & A2.avi  \\  
+      Metal       & 6.99    & 11.97          & 100    & 22.6   & A3.avi  \\ 
+      Metal       & 2.08    & 7.99           & 100    & 22.6   & A4.avi  \\ 
+      Metal       & 0.68    & 5.48           & 100    & 22.5   & A5.avi  \\ 
+      Metal       & 0.10    & 2.98           & 100    & 22.6   & A6.avi  \\ 
+      \\
+      Plastic     & 488.41  & 99.4           & 100    & 22.5   & B1.avi  \\ 
+      Plastic     & 61.56   & 50.02          & 100    & 22.5   & B2.avi  \\ 
+      Plastic     & 7.12    & 23.89          & 100    & 22.6   & B3.avi  \\ 
+      Plastic     & 0.87    & 12.06          & 100    & 22.6   & B4.avi  \\ 
+      \\
+      White       & 29.74   & 25.24          & 100    & 22.6   & C1.avi  \\ 
+      BigB lack   & 31.42   & 21.08          & 100    & 22.5   & C4.avi  \\ 
+      Small Black & 5.67    & 16.45          & 100    & 22.5   & C5.avi  \\ 
+      Big Green   & 31.60   & 21.86          & 100    & 22.4   & C3.avi  \\ 
+      Small Green & 5.60    & 16.38          & 100    & 22.3   & C6.avi  \\ 
+      Big Red     & 18.44   & 24.01          & 100    & 22.3   & C2.avi  \\ 
+      Glass       & 0.27    & 5.81           & 100    & 22.3   & C7.avi  \\ 
+      \\
+      Small 2     & 12.0E-3 & 1.59           & 100    & 23.7   & D2.avi  \\    
+      Small 1     & 4.1E-3  & 1.0            & 100    & 23.7   & D1.avi  \\ 
     \end{tabular}
-    \caption{}
+    \caption{Spheres}
   \end{table}
-  
-  \begin{multicols*}{2}
 
+\begin{multicols*}{2}
+
+\section{\label{sect:discuss}Discussion}
 \section{\label{sect:conclusion}Conclusion}
 
+\bibliographystyle{plain}
+\bibliography{references} 
+
 \end{multicols*}
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 %%% END OF MAIN BODY %%%

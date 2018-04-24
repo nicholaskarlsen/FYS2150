@@ -179,12 +179,39 @@ def testFunc():
     plt.show()
 
 
+def readlabdat(filename):
+    """
+    Used to read the file which stores the parameters of the
+    sphere
+    """
+    vids = []; mass = []; radius = []; temp = []
+    
+    file = open(filename, "r")
+    for line in file:
+        cols = line.split()
+        mass.append(cols[1])
+        radius.append(cols[2])
+        temp.append(cols[-2])
+        vids.append(cols[-1])
+    file.close()
+
+    return mass, radius, temp, vids
+
+
 if __name__ == "__main__":
+
+    mass, radius, temp, vids = readlabdat("data/labdata.dat")
 
     folderPath = "/home/nick/Videos/fys2150drag"
 
-    vidLabel = "A1"
+    datrow = 1
 
+    mass = float(mass)
+    radius = float(radius)
+    temp = float(temp)
+
+    vidLabel = str(vids[datrow])
+    """
     cm, validFrames = trackCircle(filename=vidLabel + ".avi",
                                   path=folderPath,
                                   hMin=67, hMax=216)
@@ -233,3 +260,4 @@ if __name__ == "__main__":
     plt.xlabel("Frame")
     plt.ylabel("y-pos  [px]")
     plt.show()
+    """

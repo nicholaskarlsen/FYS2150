@@ -1,17 +1,14 @@
 Type        Mass[g] Diameter[mm]    FPS     T[C]    Filename
-
 Metal       502.76  48.98           100     22.7    A1.avi
 Metal       28.13   19.02           100     22.8    A2.avi 
 Metal       6.99    11.97           100     22.6    A3.avi
 Metal       2.08    7.99            100     22.6    A4.avi
 Metal       0.68    5.48            100     22.5    A5.avi
 Metal       0.10    2.98            100     22.6    A6.avi
-
 Plastic     488.41  99.4            100     22.5    B1.avi
 Plastic     61.56   50.02           100     22.5    B2.avi
 Plastic     7.12    23.89           100     22.6    B3.avi
 Plastic     0.87    12.06           100     22.6    B4.avi
-
 White       29.74   25.24           100     22.6    C1.avi
 BigBlack    31.42   21.08           100     22.5    C4.avi
 SmallBlack  5.67    16.45           100     22.5    C5.avi
@@ -19,6 +16,5 @@ BigGreen    31.60   21.86           100     22.4    C3.avi
 SmallGreen  5.60    16.38           100     22.3    C6.avi
 BigRed      18.44   24.01           100     22.3    C2.avi
 Glass       0.27    5.81            100     22.3    C7.avi
-
 Small 1     4.1e-3  1.0             100     23.7    D1.avi
 Small 2     12.0e-3 1.59            100     23.7    D2.avi   
