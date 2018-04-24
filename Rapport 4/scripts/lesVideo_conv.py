@@ -179,85 +179,89 @@ def testFunc():
     plt.show()
 
 
-def readlabdat(filename):
-    """
-    Used to read the file which stores the parameters of the
-    sphere
-    """
-    vids = []; mass = []; radius = []; temp = []
-    
-    file = open(filename, "r")
-    for line in file:
-        cols = line.split()
-        mass.append(cols[1])
-        radius.append(cols[2])
-        temp.append(cols[-2])
-        vids.append(cols[-1])
-    file.close()
-
-    return mass, radius, temp, vids
 
 
 if __name__ == "__main__":
 
+    def readlabdat(filename):
+        """
+        Used to read the file which stores the parameters of the
+        sphere
+        """
+        vids = []; mass = []; radius = []; temp = []
+        
+        file = open(filename, "r")
+        for line in file:
+            cols = line.split()
+            mass.append(cols[1])
+            radius.append(cols[2])
+            temp.append(cols[-2])
+            vids.append(cols[-1])
+        file.close()
+
+        return mass, radius, temp, vids
     mass, radius, temp, vids = readlabdat("data/labdata.dat")
 
     folderPath = "/home/nick/Videos/fys2150drag"
 
-    datrow = 1
+    rows = [1, ]
 
-    mass = float(mass)
-    radius = float(radius)
-    temp = float(temp)
+    outfile = open("data/results.dat", "w")
 
-    vidLabel = str(vids[datrow])
-    """
-    cm, validFrames = trackCircle(filename=vidLabel + ".avi",
-                                  path=folderPath,
-                                  hMin=67, hMax=216)
+    for row in rows:
+        mass = float(mass[row])
+        radius = float(radius[row])
+        temp = float(temp[row])
+        vidFile = str(vids[row])
 
-    if len(cm[:, 1]) != len(validFrames):
-        print "Tracking interupted in some frames,"
-        print "Only returning uninterupted frames."
-        x = []
-        y = []
-        for validFrame in validFrames:
-            x.append(cm[validFrame, 1])
-            y.append(cm[validFrame, 0])
-        x = np.array(x).astype(int)
-        y = np.array(y).astype(int)
-    else:
-        x = cm[validFrames[0]:validFrames[-1], 1]
-        y = cm[validFrames[0]:validFrames[-1], 0]
+        cm, validFrames = trackCircle(filename=vidFile,
+                                      path=folderPath,
+                                      hMin=67, hMax=216)
 
-    x = np.array(x)
-    y = np.array(y)
-    validFrames = np.array(validFrames)
+        if len(cm[:, 1]) != len(validFrames):
+            print "Tracking interupted in some frames,"
+            print "Only returning uninterupted frames."
+            x = []
+            y = []
+            for validFrame in validFrames:
+                x.append(cm[validFrame, 1])
+                y.append(cm[validFrame, 0])
+            x = np.array(x).astype(int)
+            y = np.array(y).astype(int)
+        else:
+            x = cm[validFrames[0]:validFrames[-1], 1]
+            y = cm[validFrames[0]:validFrames[-1], 0]
 
-    print "Find start/stop of terminal velocity (straight,\
-           steep line) to perform linfit:"
+        x = np.array(x)
+        y = np.array(y)
+        validFrames = np.array(validFrames)
 
-    plt.plot(validFrames, x, "o")
-    plt.xlabel("Frame")
-    plt.ylabel("x-position of center of mass [px]")
-    plt.title("Use to determine start/stop frame of linfit")
-    plt.show()
+        print "Find start/stop of terminal velocity (straight, steep line) to perform linfit:"
 
-    start = int(input("Start index:"))
-    stop = int(input("Stop index:"))
+        plt.plot(validFrames, x, "o")
+        plt.xlabel("Frame")
+        plt.ylabel("x-position of center of mass [px]")
+        plt.title("Use to determine start/stop frame of linfit")
+        plt.show()
 
-    m, c, dm, dc = fys.linfit(validFrames[start:stop], x[start:stop])
+        start = int(input("Start index:"))
+        stop = int(input("Stop index:"))
 
-    plt.subplot(211)
-    plt.plot(validFrames, x, ".", label="Position of CM")
-    plt.plot(validFrames[start:stop], validFrames[start:stop] * m + c, label="linear fit, y=mx+c")
-    plt.text(0, 1000, "m = %i [px/frame]\n dm = %i [px/frame]" % (m, dm))
-    plt.xlabel("Frame")
-    plt.ylabel("x-pos [px]")
-    plt.legend()
-    plt.subplot(212)
-    plt.plot(validFrames, y, ".", label="Position of CM")
-    plt.xlabel("Frame")
-    plt.ylabel("y-pos  [px]")
-    plt.show()
-    """
+        m, c, dm, dc = fys.linfit(validFrames[start:stop], x[start:stop])
+
+        plt.subplot(211)
+        plt.plot(validFrames, x, ".", label="Position of CM")
+        plt.plot(validFrames[start:stop],
+                 validFrames[start:stop] * m + c,
+                 label="linear fit, y=mx+c")
+        plt.text(0, 1000, "m = %i [px/frame]\n dm = %i [px/frame]" % (m, dm))
+        plt.xlabel("Frame")
+        plt.ylabel("x-pos [px]")
+        plt.legend()
+        plt.subplot(212)
+        plt.plot(validFrames, y, ".", label="Position of CM")
+        plt.xlabel("Frame")
+        plt.ylabel("y-pos  [px]")
+        plt.show()
+
+        outfile.write(vids[row]+"&"+ m+"&"+dm+"\\")
