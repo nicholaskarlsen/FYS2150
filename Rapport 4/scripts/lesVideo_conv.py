@@ -204,17 +204,12 @@ if __name__ == "__main__":
 
     folderPath = "/home/nick/Videos/fys2150drag"
 
-    rows = [1, ]
+    rows = [1, 2, 3, 4]
 
     outfile = open("data/results.dat", "w")
 
     for row in rows:
-        mass = float(mass[row])
-        radius = float(radius[row])
-        temp = float(temp[row])
-        vidFile = str(vids[row])
-
-        cm, validFrames = trackCircle(filename=vidFile,
+        cm, validFrames = trackCircle(filename=str(vids[row]),
                                       path=folderPath,
                                       hMin=67, hMax=216)
 
@@ -264,4 +259,6 @@ if __name__ == "__main__":
         plt.ylabel("y-pos  [px]")
         plt.show()
 
-        outfile.write(vids[row]+"&"+ m+"&"+dm+"\\")
+        outfile.write(vids[row] + " & " + "%i"%(m) + " & " + "%i"%dm + "\\\ \n")
+
+    outfile.close()
