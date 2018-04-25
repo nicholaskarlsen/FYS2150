@@ -14,6 +14,7 @@ import skvideo.io
 import inspect
 import os
 import matplotlib.pyplot as plt
+import scipy.constants
 from skimage.measure import regionprops
 from matplotlib.image import imread
 from skimage import util
@@ -176,6 +177,7 @@ def testFunc():
     plt.plot(cm[1], cm[0], "ro",
              label="Center of mass = (%i, %i)" % (cm[1], cm[0]))
     plt.legend()
+    plt.savefig("figs/graphs/%s_1.png"%vids[row][:-4])
     plt.show()
 
 
@@ -204,7 +206,7 @@ if __name__ == "__main__":
 
     folderPath = "/home/nick/Videos/fys2150drag"
 
-    rows = [1, 2, 3, 4]
+    rows = range(1, 19)
 
     outfile = open("data/results.dat", "w")
 
@@ -257,8 +259,11 @@ if __name__ == "__main__":
         plt.plot(validFrames, y, ".", label="Position of CM")
         plt.xlabel("Frame")
         plt.ylabel("y-pos  [px]")
+        plt.savefig("figs/graphs/%s_2.png"%vids[row][:-4])
         plt.show()
 
-        outfile.write(vids[row] + " & " + "%i"%(m) + " & " + "%i"%dm + "\\\ \n")
+        outfile.write(vids[row] + " & " + "%i"%(m) + " & " + "%i"%dm + "&" + "%.2f"%mass[row] + "&" + "%.2f"%radius[row] +"\\\ \n")
+
+        # More plots
 
     outfile.close()
