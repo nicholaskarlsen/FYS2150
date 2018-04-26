@@ -13,4 +13,3 @@ nu = sum(a.*Tpoly);
 mu = rho*nu;
 
 end
-
