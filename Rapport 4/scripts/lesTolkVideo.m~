@@ -8,7 +8,7 @@
 % Studenten m� selv sette inn korrekt filnavn
 %---------------------------------------------------------------------
 
-videonavn   = '/home/nick/Videos/fys2150drag/B4.avi'; %Navnet p� filmen dere vil hente bilder fra
+videonavn   = '/home/nick/Videos/fys2150drag/B2.avi'; %Navnet p� filmen dere vil hente bilder fra
 % videonavn   = 'litenmetallkule.avi'; %Navnet p� filmen dere vil hente bilder fra
 
 
@@ -84,7 +84,7 @@ for i=1:nBilder
     bwop = imopen(bwscaled,strel('disk',0));
     
     % Fjern sammenhengende omr�der mindre enn et antall pixler
-    bwop = bwareaopen(bwop,100);
+    bwop = bwareaopen(bwop,600);
     
     % Vis ferdig bilde, hvis �nskelig
     %figure(2); imshow(bwop);
@@ -115,7 +115,15 @@ vx = diff(bpos_x);          % x component of velocity
 vy = diff(bpos_y);          % y ...
 v = sqrt(vx.^2 + vy.^2);    % speed of ball (px/frame)
 
-plot(v);
+
+[nu, mu, rho] = nuOlje(22.7);        % Properties of oil
+
+Fd = mass .* g;                      % Fg = Fd at terminal v
+Re = rho .* v .* radius .* / mu;     % Reynold number
+CR = Fd / (rho .* v.^2 .* radius.^2) % R-dragcoefficient
+CS = Fd / (mu .* v .* r)
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -123,4 +131,4 @@ plot(v);
 % Lagre resultat.
 %---------------------------------------------------------------------
 
-save('data/B4.mat','bpos_x', 'bpos_y', 'v','frameRate');
+save('BallongPosisjon.mat','bpos_x', 'bpos_y','frameRate');

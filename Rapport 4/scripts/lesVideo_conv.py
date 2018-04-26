@@ -206,7 +206,7 @@ if __name__ == "__main__":
 
     folderPath = "/home/nick/Videos/fys2150drag"
 
-    rows = [7, 8, 9, 10]
+    rows = [10]
 
     outfile = open("data/B_results.dat", "w")
 
@@ -223,8 +223,8 @@ if __name__ == "__main__":
             for validFrame in validFrames:
                 x.append(cm[validFrame, 1])
                 y.append(cm[validFrame, 0])
-            x = np.array(x).astype(int)
-            y = np.array(y).astype(int)
+            x = np.array(x)
+            y = np.array(y)
         else:
             x = cm[validFrames[0]:validFrames[-1], 1]
             y = cm[validFrames[0]:validFrames[-1], 0]
@@ -235,7 +235,7 @@ if __name__ == "__main__":
 
         print "Find start/stop of terminal velocity (straight, steep line) to perform linfit:"
         plt.subplot(211)
-        plt.plot(validFrames, x, "o")
+        plt.plot(validFrames, x)
         plt.xlabel("Frame")
         plt.ylabel("x-position of center of mass [px]")
         plt.title("Use to determine start/stop frame of linfit")
@@ -253,7 +253,7 @@ if __name__ == "__main__":
         plt.plot(validFrames[start:stop],
                  validFrames[start:stop] * m + c,
                  label="linear fit, y=mx+c")
-        plt.text(0, 1000, "m = %i [px/frame]\n dm = %i [px/frame]" % (m, dm))
+        plt.text(0, 1000, "m = %.2f [px/frame]\n dm = %.2f [px/frame]" % (m, dm))
         plt.xlabel("Frame")
         plt.ylabel("x-pos [px]")
         plt.legend()

@@ -1,4 +1,4 @@
-function [nu,mu] = nuOlje(T)
+function [nu,mu, rho] = nuOlje(T)
 % Beregne kinematisk (nu) og dynamisk (mu) vikositet for Shell-oljen nr. 68
 % som en funksjon av temperatur i grader C. 
 %
