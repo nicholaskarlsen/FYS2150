@@ -109,6 +109,14 @@ for i=1:nBilder
     end
 end
 
+
+vx = diff(bpos_x);          % x component of velocity
+vy = diff(bpos_y);          % y ...
+v = sqrt(vx.^2 + vy.^2);    % speed of ball
+
+[nu, mu] = nuOlje(22.7); 
+
+
 %---------------------------------------------------------------------
 % Lagre resultat.
 %---------------------------------------------------------------------

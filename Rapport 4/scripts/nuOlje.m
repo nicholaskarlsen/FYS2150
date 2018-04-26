@@ -9,8 +9,8 @@ rho = 886; % kg/m^3 ved 15 C
 
 Tpoly=[1,T,T^2,T^3,T^4,T^5];
 
-nu = sum(a.*Tpoly)
-mu = rho*nu
+nu = sum(a.*Tpoly);
+mu = rho*nu;
 
 end
 

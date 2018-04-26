@@ -47,8 +47,6 @@ def genFilter(image):
     """
     Generates an array to filter out
     static background based on first frame
-
-    NOT YET IMPLEMENTED
     """
     gsImage = rgb2gray(image)
     bwImage = gray2binary(gsImage)
@@ -82,7 +80,7 @@ def trackCircle(filename="litenmetallkule.avi", path="current",
 
     fullFilename = folderPath + "/" + filename
 
-    print "Reading video..."
+    print "Reading video... %s" %fullFilename
 
     video = skvideo.io.vread(fullFilename)
     totalFrames = len(video)
@@ -151,7 +149,10 @@ def trackCircle(filename="litenmetallkule.avi", path="current",
         plt.plot(cmPos[frame, 1], cmPos[frame, 0],
                  "ro", label="Center of mass")
         plt.title("Processed image, frame:%i" % frame)
+        plt.savefig("figs/graphs/%s_1.png"%vids[row][:-4])
         plt.legend()
+        plt.subplot(313)
+        plt.hist(np.ravel(im), 256)
         plt.show()
     plot_im()
 
@@ -177,7 +178,6 @@ def testFunc():
     plt.plot(cm[1], cm[0], "ro",
              label="Center of mass = (%i, %i)" % (cm[1], cm[0]))
     plt.legend()
-    plt.savefig("figs/graphs/%s_1.png"%vids[row][:-4])
     plt.show()
 
 
@@ -206,9 +206,9 @@ if __name__ == "__main__":
 
     folderPath = "/home/nick/Videos/fys2150drag"
 
-    rows = range(1, 19)
+    rows = [7, 8, 9, 10]
 
-    outfile = open("data/results.dat", "w")
+    outfile = open("data/B_results.dat", "w")
 
     for row in rows:
         cm, validFrames = trackCircle(filename=str(vids[row]),
@@ -234,11 +234,13 @@ if __name__ == "__main__":
         validFrames = np.array(validFrames)
 
         print "Find start/stop of terminal velocity (straight, steep line) to perform linfit:"
-
+        plt.subplot(211)
         plt.plot(validFrames, x, "o")
         plt.xlabel("Frame")
         plt.ylabel("x-position of center of mass [px]")
         plt.title("Use to determine start/stop frame of linfit")
+        plt.subplot(212)
+        plt.plot(np.diff(x))
         plt.show()
 
         start = int(input("Start index:"))
@@ -262,7 +264,7 @@ if __name__ == "__main__":
         plt.savefig("figs/graphs/%s_2.png"%vids[row][:-4])
         plt.show()
 
-        outfile.write(vids[row] + " & " + "%i"%(m) + " & " + "%i"%dm + "&" + "%.2f"%mass[row] + "&" + "%.2f"%radius[row] +"\\\ \n")
+        outfile.write(vids[row] + " & " + "%i"%(m) + " & " + "%i"%dm + "&" + "%s"%mass[row] + "&" + "%s"%radius[row] +"\\\ \n")
 
         # More plots
 
