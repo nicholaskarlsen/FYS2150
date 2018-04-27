@@ -98,7 +98,7 @@
 
     In order to get the conversion factor between pixels and meters, a still picture was taken of the tubes with a known length in frame, at a distance roughly equal to where the balls would travel. This had to be done for each experimental setup. For our known lengths, we used a meter rule and a $30$ cm ruler for the large and small scale experiments respectively. See Fig. \ref{fig:scale1}.
 
-    \begin{figure}[h]
+    \begin{figure}[H]
       \center
       \subfloat[][Large tube]{\includegraphics[width=8cm, angle=90]{scripts/figs/bilde_scale1.png}\label{<figure1>}}
       \subfloat[][Small tube]{\includegraphics[width=8cm, angle=90]{scripts/figs/bilde_scale2.png}\label{<figure1>}}
@@ -112,15 +112,6 @@
 
     The set of balls which were to be dropped in the large scale setup are depicted in Fig. \ref{fig:balls}. Additionally, there were two smaller balls which were dropped in the small scale setup. The mass of the balls was measured using a digital scale with a precision of $0.01$g \cite{_proscale_????}, except for the two smallest balls, for which the mass was given by the lab instructor. The diameter of the balls was measured using a Vernier Caliper with a precision of $0.01$mm, again, except for the two smallest balls, which diameter was provided by the lab instructor.
 
-  \subsection{Procedure}
-    The experiment was performed by 3 people performing 3 different, simultaneous tasks. It can technically be performed by one person, but due to the nature of the experiment, it is not recommended, as it is not practical to make repeated readings if something goes wrong.
-
-    The camera was pointed towards the large-scale tube, and prepared as described in section \ref{subsect:vidcap} between each reading. It was important that the lighting in the room was fairly constant for the video capture, so curtains were put in front of the windows. The camera was kept at 100 FPS for every experiment. For some of the balls with relatively low terminal velocity, the FPS could have been lowered to save space without making any significant sacrifices to the accuracy, but as we did not have any predicted values for the terminal velocity of the individual balls, we opted to keep it at 100FPS for every single experiment.
-
-    Before each experiment, the temperature of the oil was measured using an IR-thermometer with a precision of $\pm2^\circ$C \cite{_fluke_????}. Which is used to determine the viscosity of the oil.
-
-    For each experiment, a ball was picked up by hand and brought to the top of the tube by ladder. The ball was gripped tightly before carefully submerging it in the oil. After having ensured the person operating the camera is ready, the ball was dropped. It is critical that the ball is dropped in a certain way, otherwise it may gain too much horizontal velocity, which at worst can cause it to hit the side of the tube halfway through\footnote{Which happened in our first attempt}. In order to minimize this, it is important to separate the fingers gripping the ball at the same time when dripping it, instead of letting it slide out of the hand. Sliding it out, leads it to spin, which in turn may lead it to move horizontally.
-
     \begin{figure}[H]
       \center
       \includegraphics[width=7cm]{scripts/figs/IMG_20180321_131204.jpg}
@@ -128,38 +119,50 @@
       \label{fig:balls}
     \end{figure}
 
+  \subsection{Procedure}
+    The experiment was performed by 3 people performing 3 different, simultaneous tasks. It can technically be performed by one person, but due to the nature of the experiment, it is not recommended, as it is not practical to make repeated readings if something goes wrong.
+
+    The camera was pointed towards the large-scale tube, and prepared as described in section \ref{subsect:vidcap} between each reading. It was important that the lighting in the room was fairly constant for the video capture, so curtains were put in front of the windows. The camera was kept at 100 FPS for every experiment. For some of the balls with relatively low terminal velocity, the FPS could have been lowered to save space without making any significant sacrifices to the accuracy, but as we did not have any predicted values for the terminal velocity of the individual balls, we opted to keep it at 100FPS for every single experiment.
+
+    Before each experiment, the temperature of the oil was measured using an IR-thermometer with a precision of $\pm2^\circ$C \cite{_fluke_????}. Which is used to determine the viscosity of the oil.
+
+    For each experiment, a ball was picked up by hand and brought to the top of the tube by ladder. The ball was gripped tightly before carefully submerging it in the oil. After having ensured the person operating the camera software was ready to record, the ball was dropped. It was critical that the ball was dropped in a certain way, otherwise it gained too much horizontal velocity, which at worst could cause it to hit the side of the tube halfway through\footnote{Which happened in our first attempt} the tube. In order to avoid this, it is important to separate the fingers gripping the ball at the same time when dropping it, instead of letting it slide out of the hand. Sliding it out, leads it to spin, which in turn may lead it to move horizontally.
+
+    The same procedure was performed for the small-scale experiments.
+    
+
 
 
 \section{\label{sect:results}Results}
 
   \begin{table}[H]
     \center
-    \begin{tabular}{ r | l  l  r  r  r }
+    \begin{tabular}{ r | l  l l  r  r  r }
       
-      Type       & Mass [g] & Diameter [mm]   & FPS    & T [$^\circ$C]   & Label \\ 
+      Type       & Mass [g] & Diameter [mm] & $v_c$ [$\textup{ms}^-1$] & FPS    & T [$^\circ$C]   & Label \\ 
       \hline
-      Metal       & 502.76  & 48.98          & 100    & 22.7   & A1  \\ 
-      Metal       & 28.13   & 19.02          & 100    & 22.8   & A2  \\  
-      Metal       & 6.99    & 11.97          & 100    & 22.6   & A3  \\ 
-      Metal       & 2.08    & 7.99           & 100    & 22.6   & A4  \\ 
-      Metal       & 0.68    & 5.48           & 100    & 22.5   & A5  \\ 
-      Metal       & 0.10    & 2.98           & 100    & 22.6   & A6  \\ 
+      Metal       & 502.76  & 48.98         & N/A & 100    & 22.7   & A1  \\ 
+      Metal       & 28.13   & 19.02         & & 100    & 22.8   & A2  \\  
+      Metal       & 6.99    & 11.97         & & 100    & 22.6   & A3  \\ 
+      Metal       & 2.08    & 7.99          & & 100    & 22.6   & A4  \\ 
+      Metal       & 0.68    & 5.48          & & 100    & 22.5   & A5  \\ 
+      Metal       & 0.10    & 2.98          & & 100    & 22.6   & A6  \\ 
       \\
-      Plastic     & 488.41  & 99.4           & 100    & 22.5   & B1  \\ 
-      Plastic     & 61.56   & 50.02          & 100    & 22.5   & B2  \\ 
-      Plastic     & 7.12    & 23.89          & 100    & 22.6   & B3  \\ 
-      Plastic     & 0.87    & 12.06          & 100    & 22.6   & B4  \\ 
+      Plastic     & 488.41  & 99.4          & & 100    & 22.5   & B1  \\ 
+      Plastic     & 61.56   & 50.02         & & 100    & 22.5   & B2  \\ 
+      Plastic     & 7.12    & 23.89         & & 100    & 22.6   & B3  \\ 
+      Plastic     & 0.87    & 12.06         & & 100    & 22.6   & B4  \\ 
       \\
-      White       & 29.74   & 25.24          & 100    & 22.6   & C1  \\ 
-      BigB lack   & 31.42   & 21.08          & 100    & 22.5   & C4  \\ 
-      Small Black & 5.67    & 16.45          & 100    & 22.5   & C5  \\ 
-      Big Green   & 31.60   & 21.86          & 100    & 22.4   & C3  \\ 
-      Small Green & 5.60    & 16.38          & 100    & 22.3   & C6  \\ 
-      Big Red     & 18.44   & 24.01          & 100    & 22.3   & C2  \\ 
-      Glass       & 0.27    & 5.81           & 100    & 22.3   & C7  \\ 
+      White       & 29.74   & 25.24         & & 100    & 22.6   & C1  \\ 
+      Big Black   & 31.42   & 21.08         & & 100    & 22.5   & C4  \\ 
+      Small Black & 5.67    & 16.45         & & 100    & 22.5   & C5  \\ 
+      Big Green   & 31.60   & 21.86         & & 100    & 22.4   & C3  \\ 
+      Small Green & 5.60    & 16.38         & & 100    & 22.3   & C6  \\ 
+      Big Red     & 18.44   & 24.01         & & 100    & 22.3   & C2  \\ 
+      Glass       & 0.27    & 5.81          & & 100    & 22.3   & C7  \\ 
       \\
-      Small 1     & 4.1E-3  & 1.0            & 100    & 23.7   & D1  \\ 
-      Small 2     & 12.0E-3 & 1.59           & 100    & 23.7   & D2  \\    
+      Small 1     & 4.1E-3  & 1.0           & & 100    & 23.7   & D1  \\ 
+      Small 2     & 12.0E-3 & 1.59          & & 100    & 23.7   & D2  \\    
     \end{tabular}
     \caption{Spheres}
   \end{table}

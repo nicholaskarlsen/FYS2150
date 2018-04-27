@@ -8,7 +8,7 @@
 % Studenten m� selv sette inn korrekt filnavn
 %---------------------------------------------------------------------
 
-videonavn   = '/home/nick/Videos/fys2150drag/B4.avi'; %Navnet p� filmen dere vil hente bilder fra
+videonavn   = '/home/nick/Videos/fys2150drag/A2.avi'; %Navnet p� filmen dere vil hente bilder fra
 % videonavn   = 'litenmetallkule.avi'; %Navnet p� filmen dere vil hente bilder fra
 
 
@@ -76,7 +76,7 @@ for i=1:nBilder
     % Konverter til bin�rt
     % Her kan man velge mer avanserte metoder om n�dvendig, filtrere f�r 
     % konvertering osv. Det kan v�re n�dvendig � endre grenseverdien.
-    bwscaled = im2bw(bscaled,0.5); 
+    bwscaled = im2bw(bscaled,0.8); 
     
     % Fjern un�dvendige pixler (armer, annet st�y).
     % Det kan v�re n�dvendig � endre st�rrelsen p� disken, eventuelt
@@ -111,11 +111,49 @@ end
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-vx = diff(bpos_x);          % x component of velocity
-vy = diff(bpos_y);          % y ...
+px2m = 1075;
+rx = bpos_x / px2m      % x component of pos
+ry = bpos_y / px2m      % y component of vel
+vx = diff(rx);          % x component of velocity
+vy = diff(ry);          % y ...
 v = sqrt(vx.^2 + vy.^2);    % speed of ball (px/frame)
+frames = 1:length(v);
+time = frames / frameRate;
 
-plot(v);
+figure(1)
+hold on;
+plot(frames, v);
+ylabel("Speed [m/s]");
+xlabel("Time [frames]");
+title("Speed of ball (" +videonavn+")");
+hold off;
+
+sta = input('Start = ');
+sto = input('Stop = ');
+
+%[m_x, c_x, dm_x, dc_x] = linfit(time(sta:sto), rx(sta:sto)); % linfit of x direction
+%[m_y, c_y, dm_y, dc_y] = linfit(time(sta:sto), ry(sta:sto)); % linfit of y direction
+
+[Px,Sx,MUx] = polyfit(time(sta:sto), rx(sta:sto).',1);
+%[yhx, dx] = polyval(Px, Sx)
+[Py,Sy,MUy] = polyfit(time(sta:sto), ry(sta:sto).',1);
+%[yhy, dy] = polyval(Py, Sy);
+
+
+v_c = sqrt(Px(1).^2 + Py(1).^2);
+%dv_c = v_c .* (sqrt((mean(dx) / Px(1)).^2 + (mean(dy) / Py(1)).^2));
+
+
+figure(2)
+hold on;
+plot(time(sta:sto), v(sta:sto));
+ylabel("Speed [m/s]");
+xlabel("Time [s]");
+title("Speed of ball (" + videonavn + ")");
+hold off;
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -123,4 +161,4 @@ plot(v);
 % Lagre resultat.
 %---------------------------------------------------------------------
 
-save('data/B4.mat','bpos_x', 'bpos_y', 'v','frameRate');
+save('data/A2.mat','bpos_x', 'bpos_y', 'v','frameRate');
