@@ -8,7 +8,7 @@
 % Studenten m� selv sette inn korrekt filnavn
 %---------------------------------------------------------------------
 
-videonavn   = '/home/nick/Videos/fys2150drag/B2.avi'; %Navnet p� filmen dere vil hente bilder fra
+videonavn   = '/home/nick/Videos/fys2150drag/A6.avi'; %Navnet p� filmen dere vil hente bilder fra
 % videonavn   = 'litenmetallkule.avi'; %Navnet p� filmen dere vil hente bilder fra
 
 
@@ -27,7 +27,10 @@ nslutt      = nFrames; %Nummeret p� det siste bildet du vil bruke i filmen
 
 xpos        = 1:vidWidth; %Hvilke koordinater i x-retning du �nsker � ta med
 ypos        = 67:215; %Hvilke koordinater i y-retning du �nsker � ta med
-%ypos        = 1: vidHeight
+
+%xpos        = 1:948; %Hvilke koordinater i x-retning du �nsker � ta med
+%ypos        = 130: 185
+
 %---------------------------------------------------------------------
 % Sjekk at innstillinger er mulige
 %---------------------------------------------------------------------
@@ -76,7 +79,7 @@ for i=1:nBilder
     % Konverter til bin�rt
     % Her kan man velge mer avanserte metoder om n�dvendig, filtrere f�r 
     % konvertering osv. Det kan v�re n�dvendig � endre grenseverdien.
-    bwscaled = im2bw(bscaled,0.7); 
+    bwscaled = im2bw(bscaled,0.69); 
     
     % Fjern un�dvendige pixler (armer, annet st�y).
     % Det kan v�re n�dvendig � endre st�rrelsen p� disken, eventuelt
@@ -84,7 +87,7 @@ for i=1:nBilder
     bwop = imopen(bwscaled,strel('disk',0));
     
     % Fjern sammenhengende omr�der mindre enn et antall pixler
-    bwop = bwareaopen(bwop,100);
+    bwop = bwareaopen(bwop,1);
     
     % Vis ferdig bilde, hvis �nskelig
     %figure(2); imshow(bwop);
@@ -111,7 +114,9 @@ end
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-px2m = 1075;
+px2m = 1075;            % large
+%px2m = 1253/25E-2       % small
+
 rx = bpos_x / px2m      % x component of pos
 ry = bpos_y / px2m      % y component of vel
 vx = diff(rx);          % x component of velocity
@@ -165,4 +170,4 @@ hold off;
 % Lagre resultat.
 %---------------------------------------------------------------------
 
-save('data/B2.mat','bpos_x', 'bpos_y', 'v','frameRate', 'rx', 'ry', 'v_c');
+save('data/A6.mat','bpos_x', 'bpos_y', 'v','frameRate', 'rx', 'ry', 'v_c');

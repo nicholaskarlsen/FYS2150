@@ -5,49 +5,51 @@ The style file: plain.bst
 Database file #1: references.bib.bib
 Warning--entry type for "_ueye_????" isn't style-file defined
 --line 2 of file references.bib.bib
+Warning--entry type for "wikipedia_contributors_grayscale_2018" isn't style-file defined
+--line 41 of file references.bib.bib
 Warning--to sort, need author or key in _ueye_????
 Warning--to sort, need author or key in _shell_????
 Warning--to sort, need author or key in _proscale_????
 Warning--to sort, need author or key in _fluke_????
-You've used 4 entries,
+You've used 5 entries,
             2118 wiz_defined-function locations,
-            506 strings with 4213 characters,
-and the built_in function-call counts, 612 in all, are:
-= -- 48
-> -- 4
+            511 strings with 4355 characters,
+and the built_in function-call counts, 814 in all, are:
+= -- 66
+> -- 11
 < -- 0
-+ -- 4
-- -- 0
-* -- 22
-:= -- 65
-add.period$ -- 4
-call.type$ -- 4
-change.case$ -- 12
++ -- 7
+- -- 2
+* -- 27
+:= -- 98
+add.period$ -- 7
+call.type$ -- 5
+change.case$ -- 16
 chr.to.int$ -- 0
-cite$ -- 8
-duplicate$ -- 28
-empty$ -- 93
-format.name$ -- 0
-if$ -- 149
+cite$ -- 9
+duplicate$ -- 35
+empty$ -- 115
+format.name$ -- 2
+if$ -- 193
 int.to.chr$ -- 0
-int.to.str$ -- 4
+int.to.str$ -- 5
 missing$ -- 0
-newline$ -- 15
-num.names$ -- 0
-pop$ -- 32
+newline$ -- 20
+num.names$ -- 2
+pop$ -- 43
 preamble$ -- 1
-purify$ -- 8
+purify$ -- 11
 quote$ -- 0
-skip$ -- 40
+skip$ -- 46
 stack$ -- 0
-substring$ -- 20
-swap$ -- 4
+substring$ -- 25
+swap$ -- 5
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 16
+type$ -- 20
 warning$ -- 4
-while$ -- 0
-width$ -- 5
-write$ -- 22
-(There were 5 warnings)
+while$ -- 2
+width$ -- 6
+write$ -- 31
+(There were 6 warnings)

@@ -80,6 +80,17 @@
 \section{\label{sect:theory}Theory}
 
   \subsection{Image processing\label{sect:imgpro}}
+      \begin{equation}
+        Y_{i, j} = 0.2126\cdot\textup{I}_{i, j, 1} 
+        + 0.7152\cdot\textup{I}_{i, j, 2} 
+        + 0.0722\cdot\textup{I}_{i, j, 3}
+        \label{eqn:rgb2gray}
+      \end{equation}
+      An image can be represented by an $M \times N$ array, where each entry, $\textup{I}_{i, j}$ is a list of varying lenght depending on the color space of the image. RGB 3 entries and grayscale 1 entry. Conversion from RGB to Grayscale is calculated by Eqn \ref{eqn:rgb2gray} where I$_{i, j, ...}$ denotes array elements of the input RGB image adn Y$_{i, j}$ the output grayscale image. \cite{wikipedia_contributors_grayscale_2018}
+
+      
+
+
 
 \section{\label{section:experimental}Experimental Procedure} 
   
@@ -92,7 +103,7 @@
       \label{fig:FpsSignal}
     \end{figure}
   
-    In order to capture the motion of the balls, a USB video camera was connected to a computer running uEye cockpit\cite{_ueye_????}, a program which allowed us to change the settings of the camera, as well as record video files. The image was set to grayscale and the contrast, exposure, gain etc was changed such that the color histogram in uEye would show two significant, separated peaks such that it would be easy to process the image using the method described in the theory section \ref{sect:imgpro}.
+    In order to capture the motion of the balls, a USB video camera was connected to a computer running uEye cockpit\cite{_ueye_????}, a program which allowed us to change the settings of the camera, as well as record video files. The image was set to grayscale and the contrast, exposure, gain etc was changed such that the color histogram in uEye would show two significant, separated peaks such that it would be easy to process the image using the method described in section \ref{sect:imgpro}.
 
     Next, the error of the set FPS of the camera had to be determined. This was done by connecting a series of LEDs in a circle (see Fig. \ref{fig:FpsSignal}) to a signal generator. The light emitted would "circle" at a rate which could be changed using the signal generator. By adjusting the rate such that the emitted light would seem stationary when observed through the video feed in uEye, the true FPS of the camera could be determined. In our test, we set the camera to film at 60 FPS and the rate was adjusted untill the period of the LED was synced up with the camera at $3.60047$ KHz, the equivalent of $60.00783$ periods per second.
 
@@ -129,8 +140,6 @@
     For each experiment, a ball was picked up by hand and brought to the top of the tube by ladder. The ball was gripped tightly before carefully submerging it in the oil. After having ensured the person operating the camera software was ready to record, the ball was dropped. It was critical that the ball was dropped in a certain way, otherwise it gained too much horizontal velocity, which at worst could cause it to hit the side of the tube halfway through\footnote{Which happened in our first attempt} the tube. In order to avoid this, it is important to separate the fingers gripping the ball at the same time when dropping it, instead of letting it slide out of the hand. Sliding it out, leads it to spin, which in turn may lead it to move horizontally.
 
     The same procedure was performed for the small-scale experiments.
-    
-
 
 
 \section{\label{sect:results}Results}
@@ -138,20 +147,27 @@
   \begin{table}[H]
     \center
     \caption{Results}
-    \begin{tabular}{ r | l  l l  r  r  r }
-      \input{scripts/data/labdata.dat} 
+    \begin{tabular}{ r | l  l l  l  l  l }
+      \input{scripts/data/labdata.dat}
     \end{tabular}
     \label{tab:results}
   \end{table}
 
+  \begin{figure}[H]
+    \center
+    \subfloat[][$v_c$ against $F_g/r$]{\includegraphics[width=8cm]{scripts/figs/v_fgr.png}\label{}}
+    \subfloat[][$v_c^2$ against $F_g/r^2$]{\includegraphics[width=8cm]{scripts/figs/v2_fgr2.png}\label{}}\\
+    \subfloat[][$C_R$ against $R_e$]{\includegraphics[width=8cm]{scripts/figs/CR_RE.png}\label{}}
+    \subfloat[][$C_S$ against $R_e$]{\includegraphics[width=8cm]{scripts/figs/CS_RE.png}\label{}}
+    \caption{Data sets}
+    \label{fig:scale1}
+  \end{figure}
 
 \section{\label{sect:discuss}Discussion}
 \section{\label{sect:conclusion}Conclusion}
 
 \bibliographystyle{plain}
-\bibliography{references.bib} 
-
-
+\bibliography{references.bib}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 %%% END OF MAIN BODY %%%
