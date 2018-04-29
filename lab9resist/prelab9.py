@@ -22,14 +22,14 @@ def ex_4():
     plt.plot(Fg, vt_3, label="vt_3")
     plt.plot(Fg, vt_4, label="vt_4")
     plt.legend()
-    plt.close()
+    plt.show()
 
     v_fd = vt_3 / np.sqrt(Fg)
     v_fd_std = fy.stddev(v_fd)
     v_fd_mean = np.mean(v_fd)
     print v_fd_std
     print v_fd_mean
-
+ex_4()
 def ex_8():
     img = Image.open("ballongbilde.png")
     pix = np.array(img)

@@ -8,7 +8,7 @@
 % Studenten m� selv sette inn korrekt filnavn
 %---------------------------------------------------------------------
 
-videonavn   = '/home/nick/Videos/fys2150drag/B2.avi'; %Navnet p� filmen dere vil hente bilder fra
+videonavn   = '/home/nick/Videos/fys2150drag/A2.avi'; %Navnet p� filmen dere vil hente bilder fra
 % videonavn   = 'litenmetallkule.avi'; %Navnet p� filmen dere vil hente bilder fra
 
 
@@ -76,7 +76,7 @@ for i=1:nBilder
     % Konverter til bin�rt
     % Her kan man velge mer avanserte metoder om n�dvendig, filtrere f�r 
     % konvertering osv. Det kan v�re n�dvendig � endre grenseverdien.
-    bwscaled = im2bw(bscaled,0.7); 
+    bwscaled = im2bw(bscaled,0.8); 
     
     % Fjern un�dvendige pixler (armer, annet st�y).
     % Det kan v�re n�dvendig � endre st�rrelsen p� disken, eventuelt
@@ -122,35 +122,27 @@ time = frames / frameRate;
 
 figure(1)
 hold on;
-subplot(221)
 plot(frames, v);
 ylabel("Speed [m/s]");
 xlabel("Time [frames]");
 title("Speed of ball (" +videonavn+")");
-subplot(222);
-plot(bpos_x,'o');
-xlabel("frame");
-ylabel("x-pos");
-subplot(223);
-plot(bpos_y,'o');
-xlabel("frame");
-ylabel("y-pos");
 hold off;
 
 sta = input('Start = ');
 sto = input('Stop = ');
 
-[m_x, c_x, dm_x, dc_x] = linfit(time(sta:sto), rx(sta:sto).'); % linfit of x direction
-[m_y, c_y, dm_y, dc_y] = linfit(time(sta:sto), ry(sta:sto).'); % linfit of y direction
+[m_x, c_x, dm_x, dc_x] = linfit(time(sta:sto), rx(sta:sto)); % linfit of x direction
+[m_y, c_y, dm_y, dc_y] = linfit(time(sta:sto), ry(sta:sto)); % linfit of y direction
 
 
 
-v_c = sqrt(m_x.^2 + m_y.^2)
+v_c = sqrt(m_x.^2 + m_y.^2);
 
 
 figure(2)
 hold on;
 plot(time(sta:sto), v(sta:sto));
+plot(time(sta:sto), v_c*time(sta:sto) + (c_x + c_y.^2))
 ylabel("Speed [m/s]");
 xlabel("Time [s]");
 title("Speed of ball (" + videonavn + ")");
@@ -165,4 +157,4 @@ hold off;
 % Lagre resultat.
 %---------------------------------------------------------------------
 
-save('data/B2.mat','bpos_x', 'bpos_y', 'v','frameRate', 'rx', 'ry', 'v_c');
+save('data/A2.mat','bpos_x', 'bpos_y', 'v','frameRate');
