@@ -86,9 +86,24 @@
         + 0.0722\cdot\textup{I}_{i, j, 3}
         \label{eqn:rgb2gray}
       \end{equation}
-      An image can be represented by an $M \times N$ array, where each entry, $\textup{I}_{i, j}$ is a list of varying lenght depending on the color space of the image. RGB 3 entries and grayscale 1 entry. Conversion from RGB to Grayscale is calculated by Eqn \ref{eqn:rgb2gray} where I$_{i, j, ...}$ denotes array elements of the input RGB image adn Y$_{i, j}$ the output grayscale image. \cite{wikipedia_contributors_grayscale_2018}
+      An image can be represented by an $M \times N$ array, where each entry, $\textup{I}_{i, j}$ is a list of varying length depending on the color space of the image, consisting of numbers from 0 to 256, signifying the intensity of each color. RGB 3 entries and gray scale 1 entry. Conversion from RGB to gray scale is calculated by Eqn. \ref{eqn:rgb2gray} where I$_{i, j, ...}$ denotes array elements of the input RGB image and Y$_{i, j}$ the output gray scale image. \cite{wikipedia_contributors_grayscale_2018}
+      \newline
+      A gray scale image can be further simplified by converting it to a binary black or white image. i.e, an image consisting only of black or white pixels. Such an image can be created by Eqn. \ref{gray2bin} where $X_{i, j}$ denotes the array element of the output binary image and T the threshold, a number between 1 and 256.
+      \begin{equation}
+        X_{i, j} = \left\{ 
+        \begin{matrix}
+          Y_{i,j} \geq T & 256 \\
+          Y_{i, j} < T & 0
+        \end{matrix}
+        \right.
+        \label{gray2bin}
+      \end{equation}
+      The properties of a binary image can then be determined by an algorithm such as \lstinline{regionprops()} which determines the properties of shapes present in the image. For the purposes of analyzing a video, and finding the position of one particular shape in each frame of that video, it is important that the binary image only contains one shape and minimal noise, else \lstinline{regionprops()} may not work as desired.
 
-      
+      In order to achieve this, two methods in particular are easy to implement. 1) If the object moves in an "open" area, cropping the image may suffice as a way to filter out anything undesirable. This is the most efficient method as far as computation time is concerned. It does however limit the possibility of completely automating the analysis of a large quantity of videos. 2) If the background is entirely static, or almost. The background can be filtered out by multiplying each frame of the video by an inverted image of the background divided by 256. Such an inverted image will have value 0 where the static objects are located, and 1 everywhere else.
+
+
+
 
 
 
