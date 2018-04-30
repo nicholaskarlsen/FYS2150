@@ -273,6 +273,9 @@ INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm0800.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm0600.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm0900.tfm
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 4/scripts/figs/graphs/B1_1.png
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 4/scripts/figs/graphs/B1_1.png
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 4/scripts/figs/graphs/B1_1.png
 INPUT /home/nick/Documents/uio/FYS2150/Rapport 4/scripts/figs/sync_fps.png
 INPUT /home/nick/Documents/uio/FYS2150/Rapport 4/scripts/figs/sync_fps.png
 INPUT /home/nick/Documents/uio/FYS2150/Rapport 4/scripts/figs/sync_fps.png
@@ -310,6 +313,9 @@ INPUT /home/nick/Documents/uio/FYS2150/Rapport 4/scripts/figs/CR_RE.png
 INPUT /home/nick/Documents/uio/FYS2150/Rapport 4/scripts/figs/CS_RE.png
 INPUT /home/nick/Documents/uio/FYS2150/Rapport 4/scripts/figs/CS_RE.png
 INPUT /home/nick/Documents/uio/FYS2150/Rapport 4/scripts/figs/CS_RE.png
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 4/scripts/figs/D1_speed.png
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 4/scripts/figs/D1_speed.png
+INPUT /home/nick/Documents/uio/FYS2150/Rapport 4/scripts/figs/D1_speed.png
 INPUT /home/nick/Documents/uio/FYS2150/Rapport 4/nichoka_report4.bbl
 INPUT /home/nick/Documents/uio/FYS2150/Rapport 4/nichoka_report4.bbl
 INPUT /home/nick/Documents/uio/FYS2150/Rapport 4/nichoka_report4.aux

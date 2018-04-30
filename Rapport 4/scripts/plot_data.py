@@ -91,21 +91,22 @@ plt.savefig("figs/v2_fgr2.png")
 plt.close()
 
 plt.figure(figsize=(8, 4), dpi=100)
-plt.plot(Re, CS, "ro")
+plt.plot(Re, CS, "ro", label="Data points")
 plt.ylabel("$C_S$")
 plt.xlabel("$R_e$")
 for i in range(len(v)):
     plt.annotate(vids[i].strip()[:2], (Re[i], CS[i]))
 plt.grid("on")
 plt.tight_layout()
+plt.legend()
 plt.savefig("figs/CS_RE.png")
 plt.close()
 
 plt.figure(figsize=(8, 4), dpi=100)
-plt.plot(Re, CR, "ro")
+plt.plot(Re[:-1], CR[:-1], "ro")
 plt.ylabel("$C_R$")
 plt.xlabel("$R_e$")
-for i in range(len(v)):
+for i in range(len(v)-1):
     plt.annotate(vids[i].strip()[:2], (Re[i], CR[i]))
 plt.grid("on")
 plt.tight_layout()
@@ -119,4 +120,8 @@ for i in range(len(Re)):
 outfile = open("data/FINAL_table2.dat", "w")
 outfile.write("Type &  Mass [g] &  Radius [mm] & $v_c$ [ms$^{-1}$] & $R_e$ & $C_S$ & $ C_R$ & FPS  &  T [$^\circ$C]  &  Label \\\ \hline \n")
 for row in range(len(mass)):
-    outfile.write("%s"%ty[row].strip() + " & " + "%.2f"%(mass[row] * 1E3) + " & " + "%.2f"%(radius[row]*1E3) + " & " + "%.2f"%v[row] + " & " + "%.2f"%Re[row] + " & " + "%.2f"%CS[row] + "&" + "%.2f"%CR[row] + " & " + "100" + " & " + "%.1f"%temp[row] + "&"+ "%s"%(vids[row].strip()[:2]) +"\\\ \n")
+    outfile.write("%s"%ty[row].strip() + " & " + "%.2f"%(mass[row] * 1E3) + " & " + "%.2f"%(radius[row]*1E3) + " & " + "%.3f"%v[row] + " & " + "%.3f"%Re[row] + " & " + "%.3f"%CS[row] + "&" + "%.3f"%CR[row] + " & " + "100" + " & " + "%.1f"%temp[row] + "&"+ "%s"%(vids[row].strip()[:2]) +"\\\ \n")
+
+
+for i in range(len(mass)):
+    print vids[i].strip()[:2], "%.2e"%(mass[i] / (np.pi * radius[i]**3 * (4.0 / 3.0)))
