@@ -26,11 +26,12 @@ def readlabdat(filename):
     sphere
     """
     vids = []; mass = []; diameter = []; temp = []
-    v = []
+    v = []; ty=[]
 
     file = open(filename, "r")
     for line in file:
         cols = line.split("&")
+        ty.append(cols[0])
         mass.append(cols[1])
         diameter.append(cols[2])
         v.append(cols[3])
@@ -38,10 +39,11 @@ def readlabdat(filename):
         vids.append(cols[-1])
     file.close()
 
-    return mass, diameter, temp, vids, v
-mass, diameter, temp, vids, v = readlabdat("data/labdata.dat")
+    return mass, diameter, temp, vids, v, ty
 
-for listname in [mass, diameter, temp, vids, v]:
+mass, diameter, temp, vids, v, ty = readlabdat("data/labdata.dat")
+
+for listname in [mass, diameter, temp, vids, v, ty]:
     listname.pop(6)
     listname.pop(0)
     listname.pop(0)
@@ -66,33 +68,55 @@ CR = Fd / (rho_oil * v**2 * radius**2)
 CS = Fd / (mu_oil * v * radius)
 Re = rho_oil * v * radius / mu_oil
 
-plt.plot(Fg / radius, v, "x")
+plt.figure(figsize=(8, 4), dpi=100)
+plt.plot(Fd / radius, v, "ro")
 plt.ylabel("$v_c \enspace  [ms^{-1}]$")
-plt.xlabel("$F_g / r \enspace [Nm^{-1}]$")
+plt.xlabel("$F_d / r \enspace [Nm^{-1}]$")
+for i in range(len(v)):
+    plt.annotate(vids[i].strip()[:2], (Fd[i] / radius[i], v[i]))
 plt.grid("on")
-plt.savefig("figs/v_fgr.png")
+plt.tight_layout()
+plt.savefig("figs/v_fgr.png", dpi=200)
 plt.close()
 
-plt.plot(Fg / radius**2, v**2, "x")
+plt.figure(figsize=(8, 4), dpi=100)
+plt.plot(Fd / radius**2, v**2, "ro")
 plt.ylabel("$v_c^2 \enspace  [m^2s^{-2}]$")
-plt.xlabel("$F_g / r^2 \enspace [Nm^{-2}]$")
+plt.xlabel("$F_d / r^2 \enspace [Nm^{-2}]$")
+for i in range(len(v)):
+    plt.annotate(vids[i].strip()[:2], (Fd[i] / radius[i]**2, v[i]**2))
 plt.grid("on")
+plt.tight_layout()
 plt.savefig("figs/v2_fgr2.png")
 plt.close()
 
-plt.plot(Re, CS, "x")
+plt.figure(figsize=(8, 4), dpi=100)
+plt.plot(Re, CS, "ro")
 plt.ylabel("$C_S$")
 plt.xlabel("$R_e$")
+for i in range(len(v)):
+    plt.annotate(vids[i].strip()[:2], (Re[i], CS[i]))
 plt.grid("on")
+plt.tight_layout()
 plt.savefig("figs/CS_RE.png")
 plt.close()
 
-plt.plot(Re, CR, "x")
+plt.figure(figsize=(8, 4), dpi=100)
+plt.plot(Re, CR, "ro")
 plt.ylabel("$C_R$")
 plt.xlabel("$R_e$")
+for i in range(len(v)):
+    plt.annotate(vids[i].strip()[:2], (Re[i], CR[i]))
 plt.grid("on")
+plt.tight_layout()
 plt.savefig("figs/CR_RE.png")
 plt.close()
 
 for i in range(len(Re)):
-    print "r = %5.2em | m = %5.2e | Re = %4.2f | CR = %4.2e | CS = %4.2e" %(radius[i],mass[i], Re[i], CR[i], CS[i])
+    print "r = %5.2em | m = %5.2e | Re = %4.2f | CR = %4.2f | CS = %4.2f | %s" %(radius[i],mass[i], Re[i], CR[i], CS[i], vids[i].strip()[:2])
+
+
+outfile = open("data/FINAL_table2.dat", "w")
+outfile.write("Type &  Mass [g] &  Radius [mm] & $v_c$ [ms$^{-1}$] & $R_e$ & $C_S$ & $ C_R$ & FPS  &  T [$^\circ$C]  &  Label \\\ \hline \n")
+for row in range(len(mass)):
+    outfile.write("%s"%ty[row].strip() + " & " + "%.2f"%(mass[row] * 1E3) + " & " + "%.2f"%(radius[row]*1E3) + " & " + "%.2f"%v[row] + " & " + "%.2f"%Re[row] + " & " + "%.2f"%CS[row] + "&" + "%.2f"%CR[row] + " & " + "100" + " & " + "%.1f"%temp[row] + "&"+ "%s"%(vids[row].strip()[:2]) +"\\\ \n")

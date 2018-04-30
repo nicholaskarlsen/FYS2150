@@ -184,24 +184,35 @@
 
 \section{\label{sect:results}Results}
 
+
   \begin{table}[H]
     \center
     \caption{Results}
-    \begin{tabular}{ r | l  l l  l  l  l }
-      \input{scripts/data/labdata.dat}
+    \begin{tabular}{ r | l  l  l  l  l  l  l l  l }
+      \input{scripts/data/FINAL_table.dat}
     \end{tabular}
     \label{tab:results}
   \end{table}
 
   \begin{figure}[H]
     \center
-    \subfloat[][$v_c$ against $F_g/r$]{\includegraphics[width=8cm]{scripts/figs/v_fgr.png}\label{}}
-    \subfloat[][$v_c^2$ against $F_g/r^2$]{\includegraphics[width=8cm]{scripts/figs/v2_fgr2.png}\label{}}\\
-    \subfloat[][$C_R$ against $R_e$]{\includegraphics[width=8cm]{scripts/figs/CR_RE.png}\label{}}
-    \subfloat[][$C_S$ against $R_e$]{\includegraphics[width=8cm]{scripts/figs/CS_RE.png}\label{}}
-    \caption{Data sets}
-    \label{fig:scale1}
+    \subfloat[][$v_c$ against $F_g/r$]{\includegraphics[scale=0.75]{scripts/figs/v_fgr.png}\label{}}\\
+    \subfloat[][$v_c^2$ against $F_g/r^2$]{\includegraphics[scale=0.75]{scripts/figs/v2_fgr2.png}\label{}}
+    \caption{Relationship between velocty, radius and , where the annotations denote which ball the point represents}
+    \label{fig:plots1}
   \end{figure}
+
+    \begin{figure}[H]
+    \center
+    \subfloat[][$C_R$ against $R_e$]{\includegraphics[scale=0.75]{scripts/figs/CR_RE.png}\label{}}
+    \\
+    \subfloat[][$C_S$ against $R_e$]{\includegraphics[scale=0.75]{scripts/figs/CS_RE.png}\label{}}
+    \caption{Relationship between the dimensionless variables and Reynolds number, where the annotations denote which ball the point represents}
+    \label{fig:plots2}
+  \end{figure}
+
+
+
 
 \section{\label{sect:discuss}Discussion}
 \section{\label{sect:conclusion}Conclusion}
