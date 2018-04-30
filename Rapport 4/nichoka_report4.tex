@@ -79,6 +79,31 @@
 
 \section{\label{sect:theory}Theory}
 
+  \subsection{Fluid dynamics}
+
+    \subsubsection{Forces}
+    For a body falling vertically under gravity, there are primarily three forces acting. Gravity, Upthrust and Drag. Gravity is expressed quite simply by $F_g = mg$, where $m$ denotes the mass of the body and $g$ the acceleration due to gravity, which is for the purposes of this report is taken to be equal to $9.80665$ms$^{-2}$ \cite{wiki:grav}. 
+
+    Upthrust is given by Archimedes principle, and stated mathematically in Eqn. \ref{eqn:archi}, where $V$ denotes the volume of the body and $\rho$ the density of the medium in which the body is submerged.
+
+    \begin{equation}
+      F_u = \rho V g
+      \label{eqn:archi}
+    \end{equation}
+
+    Lastly, drag, $F_d$. The drag force is quite a complex one, as its form varies depending on the type of flow which the body is undertaking, which is either idealized, laminar flow with straight, continuous field lines or turbulent flow, with chaotic field lines.
+    In equilibrium, when the body is traveling at constant velocity, the relationship between the forces is given by Eqn. \ref{eqn:equil}, which means that $F_d$ can be expressed in terms of $F_g$ and $F_u$.
+    
+    \begin{equation}
+      \sum F = F_g - F_u - F_d = 0
+      \label{eqn:equil}
+    \end{equation}
+    Enabling us to study the drag force by making measurements of the comparatively simple forces, gravity and upthrust while the system is in a state of equilibrium.
+
+    \subsection{Types of flow}
+    
+
+
   \subsection{Image processing\label{sect:imgpro}}
       \begin{equation}
         Y_{i, j} = 0.2126\cdot\textup{I}_{i, j, 1} 
@@ -86,7 +111,7 @@
         + 0.0722\cdot\textup{I}_{i, j, 3}
         \label{eqn:rgb2gray}
       \end{equation}
-      An image can be represented by an $M \times N$ array, where each entry, $\textup{I}_{i, j}$ is a list of varying length depending on the color space of the image, consisting of numbers from 0 to 256, signifying the intensity of each color. RGB 3 entries and gray scale 1 entry. Conversion from RGB to gray scale is calculated by Eqn. \ref{eqn:rgb2gray} where I$_{i, j, ...}$ denotes array elements of the input RGB image and Y$_{i, j}$ the output gray scale image. \cite{wikipedia_contributors_grayscale_2018}
+      An image can be represented by an $M \times N$ array, where each entry, $\textup{I}_{i, j}$ is a list of varying length depending on the color space of the image, consisting of numbers from 0 to 256, signifying the intensity of each color. RGB 3 entries and gray scale 1 entry. Conversion from RGB to gray scale is calculated by Eqn. \ref{eqn:rgb2gray} where I$_{i, j, ...}$ denotes array elements of the input RGB image and Y$_{i, j}$ the output gray scale image. \cite{wiki:grayscale}
       \newline
       A gray scale image can be further simplified by converting it to a binary black or white image. i.e, an image consisting only of black or white pixels. Such an image can be created by Eqn. \ref{gray2bin} where $X_{i, j}$ denotes the array element of the output binary image and T the threshold, a number between 1 and 256.
       \begin{equation}

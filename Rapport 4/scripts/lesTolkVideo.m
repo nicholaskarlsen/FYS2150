@@ -8,7 +8,7 @@
 % Studenten m� selv sette inn korrekt filnavn
 %---------------------------------------------------------------------
 
-videonavn   = '/home/nick/Videos/fys2150drag/A6.avi'; %Navnet p� filmen dere vil hente bilder fra
+videonavn   = '/home/nick/Videos/fys2150drag/B2.avi'; %Navnet p� filmen dere vil hente bilder fra
 % videonavn   = 'litenmetallkule.avi'; %Navnet p� filmen dere vil hente bilder fra
 
 
@@ -162,12 +162,10 @@ title("Speed of ball (" + videonavn + ")");
 hold off;
 
 
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %---------------------------------------------------------------------
 % Lagre resultat.
 %---------------------------------------------------------------------
 
-save('data/A6.mat','bpos_x', 'bpos_y', 'v','frameRate', 'rx', 'ry', 'v_c');
+save('data/B2.mat','bpos_x', 'bpos_y', 'v','frameRate', 'rx', 'ry', 'v_c');

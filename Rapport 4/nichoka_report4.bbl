@@ -12,9 +12,14 @@ Shell tellus s2 m 68 technical data sheet.
 \bibitem{_ueye_????}
 {uEye} cockpit - {IDS} imaging development systems {GmbH}.
 
-\bibitem{wikipedia_contributors_grayscale_2018}
-Wikipedia contributors.
-\newblock Grayscale --- wikipedia, the free encyclopedia.
-\newblock Page Version {ID}: 825417562.
+\bibitem{wiki:grayscale}
+{Wikipedia contributors}.
+\newblock Grayscale --- {Wikipedia}{,} the free encyclopedia, 2018.
+\newblock [Online; accessed 30-April-2018].
+
+\bibitem{wiki:grav}
+{Wikipedia contributors}.
+\newblock Standard gravity --- {Wikipedia}{,} the free encyclopedia, 2018.
+\newblock [Online; accessed 30-April-2018].
 
 \end{thebibliography}
