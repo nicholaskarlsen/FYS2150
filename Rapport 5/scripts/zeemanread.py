@@ -45,10 +45,13 @@ def readZeeman(filename):
     img = imread(filename)
     bwImg = rgb2gray(img)
     binImg = gray2binary(bwImg, 17)
+    binCrop = binImg[475:525, 0:-1]
+
     plt.imshow(bwImg, cmap=plt.get_cmap('gray'))
     plt.show()
     plt.axhline(0, linestyle="-", color="r")
-    plt.imshow(binImg[475:525, 0:-1],cmap=plt.get_cmap('gray'))
+    plt.imshow(binCrop,cmap=plt.get_cmap('gray'))
     plt.show()
 
-readZeeman("figs/ZEEMAN1A.jpg")
+
+readZeeman("figs/ZEEMAN4A.jpg")
