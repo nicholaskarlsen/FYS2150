@@ -1,4 +1,4 @@
-\documentclass[11pt,a4paper, twocolumn]{article}
+\documentclass[11pt,a4paper]{article}
 \usepackage{float}
 \usepackage{verbatim}
 \usepackage{subfig}
@@ -16,6 +16,7 @@
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{esint}
+\usepackage{blindtext}
 \usepackage{hyperref}
 \usepackage{listings}
 \hypersetup{
@@ -57,7 +58,8 @@
 
 %\preprint{APS/123-QED}
 
-\title{FYS2150 \\ Lab Report: Drag}% Force line breaks with \\
+\title{Waveoptics\\
+\normalsize{FYS2150 Lab Report}}
 
 \author{Nicholas Karlsen}
 % \email{nichoka@student.matnat.uio.no}
@@ -68,7 +70,6 @@
 \maketitle
 
 \begin{abstract}
-  Abstract goes here
 \end{abstract}
 
 %\tableofcontents
@@ -76,24 +77,19 @@
 \section{\label{sect:intro}Introduction}
 
 \section{\label{sect:theory}Theory}
-
 \section{\label{section:experimental}Experimental Procedure} 
-
+  \subsection{Zeeman effect}
 \section{\label{sect:results}Results}
   \subsection{\label{subsect:res_Zeeman}}
-  \onecolumn
- 
-  \begin{figure}[H]
+  \begin{figure}[!b]
     \center
-    \subfloat[][$B = 1A$]{\includegraphics[width=8cm]{scripts/figs/ZEEMAN1A.jpg}\label{fig:zeeman_1A}}
-    \subfloat[][$B = 2A$]{\includegraphics[width=8cm]{scripts/figs/ZEEMAN2A.jpg}\label{fig:zeeman_2A}} \\
-    \subfloat[][$B = 3A$]{\includegraphics[width=8cm]{scripts/figs/ZEEMAN3A.jpg}\label{fig:zeeman_3A}}
-    \subfloat[][$B = 4A$]{\includegraphics[width=8cm]{scripts/figs/ZEEMAN4A.jpg}\label{fig:zeeman_4A}}
-    \caption{Observed difraction lines due to $\pi$-transitions for different magnetic fields}
+    \subfloat[][$I = 1\,\textup{A}$]{\includegraphics[width=8cm]{scripts/figs/ZEEMAN1A.jpg}\label{fig:zeeman_1A}}
+    \subfloat[][$I = 2\,\textup{A}$]{\includegraphics[width=8cm]{scripts/figs/ZEEMAN2A.jpg}\label{fig:zeeman_2A}} \\
+    \subfloat[][$I = 3\,\textup{A}$]{\includegraphics[width=8cm]{scripts/figs/ZEEMAN3A.jpg}\label{fig:zeeman_3A}}
+    \subfloat[][$I = 4\,\textup{A}$]{\includegraphics[width=8cm]{scripts/figs/ZEEMAN4A.jpg}\label{fig:zeeman_4A}}
+    \caption{Split difraction lines due to $\sigma$-transitions for different magnitudes of magnetic field}
     \label{fig:scale1}
   \end{figure}
-  \twocolumn
-
 \section{\label{sect:discuss}Discussion}
 
 \section{\label{sect:conclusion}Conclusion}
