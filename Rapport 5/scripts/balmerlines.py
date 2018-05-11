@@ -30,15 +30,15 @@ He_wlen = wlen(He_theta)
 
 
 
-def dTheta(dah, dav):
+def dTheta(dah=0.01, dav=0.01):
     "error in measured angle"
     return 0.5 * np.sqrt(dah**2 + dav**2)
 
 
-def dWlen(d_ah, d_av, theta, d_err, Wlen):
+def dWlen(theta, Wlen, d_err=1E-9):
     "Error in measured wavelength"
     a = d_err / d
-    b = dTheta(d_ah, d_av) / np.tan(theta)
+    b = dTheta() / np.tan(theta)
     return Wlen * np.sqrt(a**2 + b**2)
 
 
@@ -49,7 +49,6 @@ def balmerlines(last_n):
 
 print "Balmer lines", balmerlines(10)
 print
-
 print "Helium lines", He_wlen
 print
 print "-------------"
@@ -63,4 +62,23 @@ plt.scatter(balmerlines(20), np.zeros_like(balmerlines(20)) + 0.5,
 plt.xlim(400E-9, 700E-9)
 plt.yticks([])
 plt.legend()
-plt.show()
+plt.close()
+
+
+def hydrogen_table():
+    outfile = open("dat/hydrogenlines.dat", "w")
+    outfile.write("$\\alpha_v$ & $\\alpha_h$ & $\\theta$ & $\\lambda$ [nm]")
+    outfile.write("\n")
+    outfile.write("\\\\ \\hline ")
+    for i in range(len(H_ah)):
+        outfile.write("$%.2f \\pm 0.01 ^\\circ$" % H_av[i])
+        outfile.write(" & ")
+        outfile.write("$%.2f \\pm 0.01^\\circ$" % H_ah[i])
+        outfile.write(" & ")
+        outfile.write("$%.2f \\pm %.2f^\\circ$" % (H_theta[i], dTheta()))
+        outfile.write(" & ")
+        outfile.write("$%.2f \\pm %.2f$" % (H_wlen[i] * 1e9, dWlen(H_theta[i], H_wlen[i]) * 1e9))
+        outfile.write(" \\\\")
+    outfile.close()
+
+hydrogen_table()

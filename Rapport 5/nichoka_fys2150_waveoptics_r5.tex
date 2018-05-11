@@ -80,8 +80,18 @@
 \section{\label{section:experimental}Experimental Procedure} 
   \subsection{Zeeman effect}
 \section{\label{sect:results}Results}
-  \subsection{\label{subsect:res_Zeeman}}
-  \begin{figure}[!b]
+  \subsection{\label{subsect:spectral}Spectral Lines}
+  \begin{table}[H]
+    \center
+    \caption{Hydrogen Lines}
+    \begin{tabular}{ l l l l}
+      \input{scripts/dat/hydrogenlines.dat}
+    \end{tabular}
+    \label{tab:hydrogen}
+  \end{table}
+
+  \subsection{\label{subsect:res_Zeeman}Zeeman Effect}
+  \begin{figure}[H]
     \center
     \subfloat[][$I = 1\,\textup{A}$]{\includegraphics[width=8cm]{scripts/figs/ZEEMAN1A.jpg}\label{fig:zeeman_1A}}
     \subfloat[][$I = 2\,\textup{A}$]{\includegraphics[width=8cm]{scripts/figs/ZEEMAN2A.jpg}\label{fig:zeeman_2A}} \\

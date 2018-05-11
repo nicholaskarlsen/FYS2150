@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex nichoka_waveoptics_alt"] 1525952089 "nichoka_waveoptics_alt.aux" "nichoka_waveoptics_alt.bbl" "nichoka_waveoptics_alt" 1525952090
+["bibtex nichoka_waveoptics_alt"] 1526032556 "nichoka_waveoptics_alt.aux" "nichoka_waveoptics_alt.bbl" "nichoka_waveoptics_alt" 1526032556
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/abbrv.bst" 1480098433 20329 b5fed53e10044d0f8112183785c759b1 ""
   "nichoka_waveoptics_alt.aux" 1525952090 1705 0666afdf7730023ef308904411eb5939 ""
   "nichoka_waveoptics_alt.bcf" 0 -1 0 ""
   "refs.bib" 0 -1 0 ""
   (generated)
-  "nichoka_waveoptics_alt.bbl"
   "nichoka_waveoptics_alt.blg"
-["pdflatex"] 1525952089 "nichoka_waveoptics_alt.tex" "/home/nick/Documents/uio/FYS2150/Rapport 5/nichoka_waveoptics_alt.pdf" "nichoka_waveoptics_alt" 1525952090
+  "nichoka_waveoptics_alt.bbl"
+["pdflatex"] 1525952089 "nichoka_waveoptics_alt.tex" "/home/nick/Documents/uio/FYS2150/Rapport 5/nichoka_waveoptics_alt.pdf" "nichoka_waveoptics_alt" 1526032556
   "/etc/texmf/web2c/texmf.cnf" 1516135388 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/nick/Documents/uio/FYS2150/Rapport 5/nichoka_waveoptics_alt.aux" 1525952090 1705 0666afdf7730023ef308904411eb5939 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -77,12 +77,12 @@
   "nichoka_waveoptics_alt.aux" 1525952090 1705 0666afdf7730023ef308904411eb5939 ""
   "nichoka_waveoptics_alt.bbl" 0 -1 0 "bibtex nichoka_waveoptics_alt"
   "nichoka_waveoptics_alt.out" 1525952090 138 3d2514cc15f72d9e7ea8053faa92116a ""
-  "nichoka_waveoptics_alt.tex" 1525952089 3009 271d72e4e365a6e33862e8fa0697c277 ""
+  "nichoka_waveoptics_alt.tex" 1525952092 3009 271d72e4e365a6e33862e8fa0697c277 ""
   "scripts/figs/ZEEMAN1A.jpg" 1524683368 49371 ffb7df8bfbe49956bc56a1d69bc34759 ""
   (generated)
-  "nichoka_waveoptics_alt.pdf"
+  "nichoka_waveoptics_alt.aux"
+  "/home/nick/Documents/uio/FYS2150/Rapport 5/nichoka_waveoptics_alt.pdf"
   "nichoka_waveoptics_alt.out"
   "/home/nick/Documents/uio/FYS2150/Rapport 5/nichoka_waveoptics_alt.log"
-  "/home/nick/Documents/uio/FYS2150/Rapport 5/nichoka_waveoptics_alt.pdf"
+  "nichoka_waveoptics_alt.pdf"
   "nichoka_waveoptics_alt.log"
-  "nichoka_waveoptics_alt.aux"
