@@ -33,7 +33,7 @@ def gray2binary(gray, limBW=128):
     return bw
 
 
-def readZeeman(filename):
+def readZeeman(filename, lowerThresh, higherThresh):
     #import skimage.color
     if isinstance(filename, basestring) is False:
         raise TypeError("Filename arguement not string")
@@ -69,9 +69,32 @@ def readZeeman(filename):
                     outline_indeces_row.append(j)
         outline_indeces_row.pop(0)  # remove the zero
         outline_indeces.append(outline_indeces_row)
-    print outline_indeces[30]
-    plt.plot(outline_indeces[30], np.zeros_like(outline_indeces[30]) + 30, "rx")
+    d_outlines = outline_indeces[30]
+
+    plt.plot(d_outlines, np.zeros_like(d_outlines) + 30, "ro")
+    plt.title("Chose lower and higher threshhold")
+    plt.close()
+
+    d_outlines = filter(lambda f: f < higherThresh and f > lowerThresh, d_outlines)
+
+    if len(d_outlines)%2 != 0:
+        raise ValueError("outlines not even number, check threshhold")
+
+    d_center = []
+    counter = 0
+    while counter < len(d_outlines):
+            d_center.append((d_outlines[counter] + d_outlines[counter + 1]) / 2.0)
+            counter += 2
+    plt.imshow(binCrop, cmap=plt.get_cmap("gray"))
+    plt.plot(d_center, np.zeros_like(d_center) + 30, "ro")
+    plt.yticks([])
+    plt.xticks(d_center, rotation=-25)
     plt.show()
 
-
-readZeeman("figs/ZEEMAN4A.jpg")
+    d_3 = d_center[-1] - d_center[0]
+    d_2 = d_center[-2] - d_center[1]
+    d_1 = d_center[-3] - d_center[2]
+    print "d_1 = ", d_1
+    print "d_2 = ", d_2
+    print "d_3 = ", d_3
+readZeeman("figs/ZEEMAN4A.jpg", 255, 955)
