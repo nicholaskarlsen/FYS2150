@@ -5,15 +5,10 @@
 '''
 
 import numpy as np
-import skvideo.io
-import inspect
-import os
 import matplotlib.pyplot as plt
-import scipy.constants
-from skimage.measure import regionprops
 from matplotlib.image import imread
-from skimage import util
-# import skimage.color
+from skimage import measure
+from scipy import ndimage
 # from PIL import Image
 # import skimage.morphology as morph
 # from skimage import filters
@@ -48,10 +43,15 @@ def readZeeman(filename):
     binCrop = binImg[475:525, 0:-1]
 
     plt.imshow(bwImg, cmap=plt.get_cmap('gray'))
-    plt.show()
+    plt.close()
     plt.axhline(0, linestyle="-", color="r")
     plt.imshow(binCrop,cmap=plt.get_cmap('gray'))
+    plt.close()
+
+    edge_horizont = ndimage.sobel(binCrop, 0)
+    edge_vertical = ndimage.sobel(binCrop, 1)
+    magnitude = np.hypot(edge_horizont, edge_vertical)
+
+    plt.imshow(magnitude, cmap=plt.get_cmap("gray"))
     plt.show()
-
-
 readZeeman("figs/ZEEMAN4A.jpg")
