@@ -33,7 +33,7 @@ def gray2binary(gray, limBW=128):
     return bw
 
 
-def readZeeman(filename, lowerThresh, higherThresh):
+def readZeeman(filename, lowerThresh, higherThresh, g2bThresh=20):
     #import skimage.color
     if isinstance(filename, basestring) is False:
         raise TypeError("Filename arguement not string")
@@ -51,9 +51,8 @@ def readZeeman(filename, lowerThresh, higherThresh):
     edge_horizont = ndimage.sobel(binCrop, 0)
     edge_vertical = ndimage.sobel(binCrop, 1)
     magnitude = np.hypot(edge_horizont, edge_vertical)
-    outlines = gray2binary(magnitude, 20)
+    outlines = gray2binary(magnitude, g2bThresh)
     plt.imshow(outlines, cmap=plt.get_cmap("gray"))
-    print np.shape(outlines)
 
     outline_indeces = []
 
@@ -89,12 +88,51 @@ def readZeeman(filename, lowerThresh, higherThresh):
     plt.plot(d_center, np.zeros_like(d_center) + 30, "ro")
     plt.yticks([])
     plt.xticks(d_center, rotation=-25)
-    plt.show()
+    plt.close()
 
     d_3 = d_center[-1] - d_center[0]
     d_2 = d_center[-2] - d_center[1]
     d_1 = d_center[-3] - d_center[2]
-    print "d_1 = ", d_1
-    print "d_2 = ", d_2
-    print "d_3 = ", d_3
-readZeeman("figs/ZEEMAN4A.jpg", 255, 955)
+    
+    return d_1, d_2, d_3 
+
+d14, d24, d34 = readZeeman("figs/ZEEMAN4A.jpg", 255, 955)
+d13, d23, d33 = readZeeman("figs/ZEEMAN3A.jpg", 255, 955)
+d12, d22, d23 = readZeeman("figs/ZEEMAN2A.jpg", 255, 955)
+#readZeeman("figs/ZEEMAN1A.jpg", 255, 955, 100)
+
+
+
+def readZeemanAlt(filename):
+    #import skimage.color
+    if isinstance(filename, basestring) is False:
+        raise TypeError("Filename arguement not string")
+    img = imread(filename)
+    bwImg = rgb2gray(img)
+    binImg = gray2binary(bwImg, 17)
+    binCrop = binImg[475:525, 0:-1]
+    bwCrop = bwImg[475:525, 0:-1]
+    bwRow = bwCrop[30]
+    plt.imshow(bwImg, cmap=plt.get_cmap('gray'))
+    plt.close()
+    plt.subplot(212)
+    plt.axhline(0, linestyle="-", color="r")
+    plt.imshow(bwCrop, cmap=plt.get_cmap('gray'))
+    plt.xlabel("Pixel")
+    plt.yticks([])
+    plt.subplot(211)
+    plt.plot(bwRow)
+    plt.ylabel("Intensity"); plt.xlabel("Pixel")
+    plt.tight_layout()
+    plt.show()
+
+
+readZeemanAlt("figs/ZEEMAN1A.jpg")
+
+def mu_B(B, d1, d2, d3):
+    hc = 1.98644568E-25     # [CODATA]
+    sigma = float(d2**2 - d1**2) / (d3**2 - d1**2)
+    tx4 = 3.0 * 4.0
+    print sigma
+
+    return (hc / tx4) * (sigma / B)
