@@ -19,6 +19,7 @@
 \usepackage{blindtext}
 \usepackage{hyperref}
 \usepackage{listings}
+
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
@@ -79,10 +80,62 @@
 \section{\label{sect:theory}Theory}
 
 \section{\label{section:experimental}Experimental Procedure} 
-   
+    \subsection{Diffraction Grating}
+
+    
+
+    \begin{figure}[H]
+        \center
+        \includegraphics[width=8cm]{scripts/figs/diff_diagram.png}
+        \caption{Sketch of aparature used to measure diffraction lines of a laser}
+    \end{figure}
+
+    \subsection{Diffraction spectroscopy}
+
+    In order to determine the wavelength of some of the spectral lines in Hydrogen and helium, a spectrometer similar to the one depicted in Fig. \ref{fig:spectrometer} was used. Both the Collimator and the grating were fixed, and whilst the telescope was only fixed radially (relative to the center of the grating). The telescope was connected to a vernier scale, which read its angle $\theta$ relative to the collimator.
+
+    \begin{figure}[H]
+        \center
+        \includegraphics[width=8cm]{scripts/figs/PHY251_H_spectrum_fig1.png}
+        \caption{Sketch of spectrometer used to measure angle of diffraction(Source: \url{http://felix.physics.sunysb.edu/~allen/252/PHY251_H_spectrum_fig1.gif})}
+        \label{fig:spectrometer}
+    \end{figure}
+
+    Light coming from the source is passed through the collimator, hits the grating at a tangent and is diffracted. The visible wavelengths was then be observed through the telescope, and their angle of diffraction recorded by the vernier scale to an accuracy of $10^{-1}\,\textup{deg}$. The diffracted wavelengths were mirrored on both sides, and by taking the difference in their angle on the vernier scale we get $\theta$ satisfying Braggs' law INSERT REFERENCE TO BRAGGS LAW for $n=1$, used to determine the wavelength of the observed spectral line. In addition to recording the angle, we also made note of the color we "think" we saw, which was later used as a way to check the validity of our calculated wavelengths.
+
+    This procedure was performed for both Helium and Hydrogen, for which all clearly visible spectral lines were recorded in succession from the central top (parallel with the collimator) in both the "left" and "right" direction. The angles were recorded in succession from the center in order to ensure that each successive left angle would be in accordance with the corresponding right angle. In addition, we made sure their recorded color matched and that we got the same number of measurements on both sides.
+
+    Lastly, in order for the lines to be visible, the room in which the experiment was performed was kept dark by covering the windows. For the Hydrogen source in particular, additional measures had to be taken by covering the apparatus in a plastic bag whilst finding the spectral lines, in an attempt to filter out make them more visible. This was only partially successful, as the lines were still quite difficult to see clearly.
+
     \subsection{Zeeman effect}
 
 \section{\label{sect:results}Results}
+    \subsection{Diffraction Patters}
+
+    \begin{table}[H]
+        \center
+        \caption{Single slit}
+         \begin{tabular}{l l l}
+            Diameter of primary minima [cm] & Calculated Width of Slit [mm] & Stated Width of Slit [mm] \\ \hline
+            2.35 & 0.56 & 0.48 \\ 
+            4.70 & 0.28 & 0.24 \\
+            10.60 & 0.12 & 0.12
+         \end{tabular}
+         \label{tab:singleslit}
+    \end{table}
+
+    \begin{table}[H]
+        \center
+        \caption{Two parallel slits}
+         \begin{tabular}{l l l l}
+            Observed No. Peaks & Expected No. Peaks & Width of slits [mm] & Separation of slits [mm] \\ \hline
+            9 & 9 & 0.12 & 0.6 \\
+            5 & 5 & 0.24 & 0.6 \\
+            9 & 11 & 0.24 & 1.2 
+         \end{tabular}
+         \label{tab:paraslit}
+    \end{table}
+
     \subsection{\label{subsect:spectral}Spectral Lines}
     
     \begin{table}[H]

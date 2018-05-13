@@ -98,7 +98,7 @@ def readZeeman(filename, lowerThresh, higherThresh, g2bThresh=20):
 
 d14, d24, d34 = readZeeman("figs/ZEEMAN4A.jpg", 255, 955)
 d13, d23, d33 = readZeeman("figs/ZEEMAN3A.jpg", 255, 955)
-d12, d22, d23 = readZeeman("figs/ZEEMAN2A.jpg", 255, 955)
+d12, d22, d32 = readZeeman("figs/ZEEMAN2A.jpg", 255, 955)
 #readZeeman("figs/ZEEMAN1A.jpg", 255, 955, 100)
 
 
@@ -133,6 +133,11 @@ def mu_B(B, d1, d2, d3):
     hc = 1.98644568E-25     # [CODATA]
     sigma = float(d2**2 - d1**2) / (d3**2 - d1**2)
     tx4 = 3.0 * 4.0
-    print sigma
 
     return (hc / tx4) * (sigma / B)
+
+mu_B_4 = mu_B(685.5e-3, d14, d24, d34)
+mu_B_3 = mu_B(526.5e-3, d13, d23, d33)
+mu_B_2 = mu_B(354.5e-3, d12, d22, d32)
+
+print np.mean([mu_B_4, mu_B_3, mu_B_2])
