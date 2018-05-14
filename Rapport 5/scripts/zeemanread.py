@@ -124,8 +124,7 @@ def readZeemanAlt(filename):
     plt.plot(bwRow)
     plt.ylabel("Intensity"); plt.xlabel("Pixel")
     plt.tight_layout()
-    plt.show()
-
+    plt.close()
 
 readZeemanAlt("figs/ZEEMAN1A.jpg")
 
@@ -140,4 +139,26 @@ mu_B_4 = mu_B(685.5e-3, d14, d24, d34)
 mu_B_3 = mu_B(526.5e-3, d13, d23, d33)
 mu_B_2 = mu_B(354.5e-3, d12, d22, d32)
 
-print np.mean([mu_B_4, mu_B_3, mu_B_2])
+def print_diameters(list):
+    n = 1
+    for item in list:
+        print "d_%i = %.1f" % (n, item)
+        n += 1
+    return
+
+print "\n4A Diameters"
+print_diameters([d14, d24, d34])
+
+print "\n3A Diameters"
+print_diameters([d13, d23, d33])
+
+print "\n2A Diameters"
+print_diameters([d12, d22, d32])
+
+print "\nMu_B:\n"
+print "I = 4A -> %.4e" % mu_B_4
+print "I = 3A -> %.4e" % mu_B_3
+print "I = 2A -> %.4e" % mu_B_2
+
+
+print "Mean mu_B", np.mean([mu_B_4, mu_B_3, mu_B_2])

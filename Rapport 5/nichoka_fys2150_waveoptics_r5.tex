@@ -78,11 +78,38 @@
 \section{\label{sect:intro}Introduction}
 
 \section{\label{sect:theory}Theory}
+  \subsection{Diffraction \& Interference}
+    When a monochromatic light wave of wavelength $\lambda$ is passed through a slit of width $a$, the emerging diffraction pattern's measured intensity, $E$, in line, $x$, tangential to the path of the light satisfies the proportionality Eqn. \ref{eqn:single_E}, where $u \equiv x / \lambda R$, $R$ denoting the distance between the slit and the line, $x$.
+    \begin{equation}
+      E_1(x) \propto a^2 \left( \frac{\sin(\pi a u)}{\pi a u} \right)
+      \label{eqn:single_E}
+    \end{equation}
+
+    The intensity is at a minimum when $sin(\pi a u) = 0$, which occurs when $au$ is an integer and not zero.
+
+    For two parallel slits with a distance A between, the intensity is instead given by Eqn. \ref{eqn:para_E}, which will have intensity minima when either $au = n$ for nonzero $n \in \mathbb Z$ or $Au = 2n$ for $n \in \mathbb Z$.
+
+    \begin{equation}
+      E_2(x) \propto 4a^2\cos^2(\pi A u) \left( \frac{\sin(\pi a u)}{\pi a u} \right)^2
+      \label{eqn:para_E}
+    \end{equation}
+
+    This can be generalized for N parallel slits satisfying Eqn. \ref{eqn:N_para}
+    \begin{equation}
+      E_N(x) \propto a^2 
+          \left(
+          \frac{\sin (N \pi A u)}{\sin (\pi A u)} \cdot
+          \frac{\sin (\pi a u)}{\pi a u}^2
+          \right)
+          \label{eqn:N_para}
+    \end{equation}
 
 \section{\label{section:experimental}Experimental Procedure} 
     \subsection{Diffraction Grating}
+      To investigate the specifications of a selection of slits, and their effect on laser, we used an apparatus as sketched in Fig. \ref{fig:laser}, where a laser lined up with two lenses and a diffraction slit(s) secured on an optical track. Laser passing through is then reflected by a mirror onto a screen in order to effectively increase the distance $R$, in which the laser has passed. This reflection does presumably cause the measurements to deviate slightly from the theoretical model used, but for the purposes of this experiment this deviation is taken to be negligible. 
+      Additionally, neither the laser source nor the optical track were fastened to the table and both were easily moved. We took care not to move them, but due to a very limited workspace this may have happened.
 
-    An aparature, sketched in \ref{fig:laser}
+      As we swapped between different types slits, the patterns projected onto the screen was recorded by outlining their features on a piece of paper held up to the screen with a pen. Drawing the lines in the "correct" position was not easy to do in a precise manner, and is likely the source of a significant error in our final results across all of the different measurements. Afterwards, distance between the lines was measured using a ruler.
 
     \begin{figure}[H]
         \center
@@ -111,7 +138,7 @@
     \subsection{Zeeman effect}
 
 \section{\label{sect:results}Results}
-    \subsection{Diffraction Patters}
+    \subsection{Diffraction Patterns}
 
     \begin{table}[H]
         \center
@@ -159,15 +186,32 @@
 
     \subsection{\label{subsect:res_Zeeman}Zeeman Effect}
 
-        \begin{figure}[H]
-            \center
-            \subfloat[][$I = 1\,\textup{A}$]{\includegraphics[width=8cm]{scripts/figs/ZEEMAN1A.jpg}\label{fig:zeeman_1A}}
-            \subfloat[][$I = 2\,\textup{A}$]{\includegraphics[width=8cm]{scripts/figs/ZEEMAN2A.jpg}\label{fig:zeeman_2A}} \\
-            \subfloat[][$I = 3\,\textup{A}$]{\includegraphics[width=8cm]{scripts/figs/ZEEMAN3A.jpg}\label{fig:zeeman_3A}}
-            \subfloat[][$I = 4\,\textup{A}$]{\includegraphics[width=8cm]{scripts/figs/ZEEMAN4A.jpg}\label{fig:zeeman_4A}}
-            \caption{Split difraction lines due to $\sigma$-transitions for different magnitudes of magnetic field}
-            \label{fig:scale1}
-        \end{figure}
+      The pictures taken of the split diffraction lines are shown in Fig.\ref{fig:zeeman_pics} and the associated results computed using zeemanread.py (see appendix \ref{app:scripts}) are shown in Table \ref{tab:zeeman_table}. The image shown in Fig. \ref{fig:zeeman_1A} could not be successfully processed by my script, and is therefore not included in Table \ref{tab:zeeman_table}.
+
+      \begin{figure}[H]
+          \center
+          \subfloat[][$I = 1\,\textup{A}$]{\includegraphics[width=8cm]{scripts/figs/ZEEMAN1A.jpg}\label{fig:zeeman_1A}}
+          \subfloat[][$I = 2\,\textup{A}$]{\includegraphics[width=8cm]{scripts/figs/ZEEMAN2A.jpg}\label{fig:zeeman_2A}} \\
+          \subfloat[][$I = 3\,\textup{A}$]{\includegraphics[width=8cm]{scripts/figs/ZEEMAN3A.jpg}\label{fig:zeeman_3A}}
+          \subfloat[][$I = 4\,\textup{A}$]{\includegraphics[width=8cm]{scripts/figs/ZEEMAN4A.jpg}\label{fig:zeeman_4A}}
+          \caption{Split difraction lines due to $\sigma$-transitions for different magnitudes of magnetic field}
+          \label{fig:zeeman_pics}
+      \end{figure}
+
+      \begin{table}[H]
+        \center
+        \caption{Zeeman results}
+        \begin{tabular}{ l  l  l  l  l  l }
+          $I$ [A] & $\bar B(I)$ [mT] & $\bar d_1(I)$ [px] & $\bar d_2(I)$ [px] & $\bar d_3(I)$ [px] & $\tilde{\mu_B}$ [$\textup J\,\textup T^{-1}$] \\ \hline
+
+          4 & 685.5 & 423.5 & 524.5 & 661.0 & $8.977\cdot 10^{-27}$ \\
+          3 & 526.5 & 437.0 & 515.0 & 668.5 & $9.123\cdot 10^{-27}$ \\ 
+          2 & 354.5 & 450.0 & 503.0 & 677.5 & $9.195\cdot 10^{-27}$ \\ 
+        \end{tabular}
+        \label{tab:zeeman_table}
+    \end{table}
+
+
 
 \section{\label{sect:discuss}Discussion}
 
@@ -182,9 +226,9 @@
 %%% END OF MAIN BODY %%%
 %%%%%%%%%%%%%%%%%%%%%%%%
 
-%\appendix*
-%\section{Scripts}
-%\lstinputlisting[language=python]{scripts/lesVideo_conv.py}
-%\lstinputlisting{scripts/data/labdata.dat}
+\appendix*
+\section{Scripts\label{app:scripts}}
+\lstinputlisting[language=python]{scripts/zeemanread.py}
+\lstinputlisting[language=python]{scripts/balmerlines.py}
 
 \end{document}
