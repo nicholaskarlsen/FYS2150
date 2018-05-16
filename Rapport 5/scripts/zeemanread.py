@@ -180,4 +180,4 @@ print "I = 1A -> %.3e" % mu_B_1
 
 print "Mean mu_B %.3e" % np.mean([mu_B_4, mu_B_3, mu_B_2, mu_B_1])
 
-print (9.274009994E-24 - np.mean([mu_B_4, mu_B_3, mu_B_2, mu_B_1])) / 9.274009994E-24  * 100
+print (9.274009994E-24 -

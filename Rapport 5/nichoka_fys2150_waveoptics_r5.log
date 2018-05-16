@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.5.11)  15 MAY 2018 02:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.5.11)  16 MAY 2018 12:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1128,7 +1128,7 @@ ne 135.
 <scripts/figs/diff_diagram.png, id=133, 784.9325pt x 427.5975pt>
 File: scripts/figs/diff_diagram.png Graphic file (type png)
 <use scripts/figs/diff_diagram.png>
-Package pdftex.def Info: scripts/figs/diff_diagram.png  used on input line 150.
+Package pdftex.def Info: scripts/figs/diff_diagram.png  used on input line 152.
 
 (pdftex.def)             Requested size: 227.62204pt x 123.99356pt.
  [3 <./scripts/figs/ZEEMAN_ENERGYLEVELS.jpg>]
@@ -1136,7 +1136,7 @@ Package pdftex.def Info: scripts/figs/diff_diagram.png  used on input line 150.
 File: scripts/figs/PHY251_H_spectrum_fig1.png Graphic file (type png)
 <use scripts/figs/PHY251_H_spectrum_fig1.png>
 Package pdftex.def Info: scripts/figs/PHY251_H_spectrum_fig1.png  used on input
- line 161.
+ line 163.
 (pdftex.def)             Requested size: 227.62204pt x 110.63167pt.
  [4 <./scripts/figs/diff_diagram.png (PNG copy)> <./scripts/figs/PHY251_H_spect
 rum_fig1.png>]
@@ -1144,10 +1144,10 @@ rum_fig1.png>]
 File: scripts/figs/ZEEMAN_EXPERIMENTAL.png Graphic file (type png)
 <use scripts/figs/ZEEMAN_EXPERIMENTAL.png>
 Package pdftex.def Info: scripts/figs/ZEEMAN_EXPERIMENTAL.png  used on input li
-ne 175.
+ne 177.
 (pdftex.def)             Requested size: 426.79134pt x 133.54303pt.
 
-Overfull \hbox (8.53766pt too wide) in paragraph at lines 175--176
+Overfull \hbox (8.53766pt too wide) in paragraph at lines 177--178
  [] 
  []
 
@@ -1156,33 +1156,33 @@ Overfull \hbox (8.53766pt too wide) in paragraph at lines 175--176
 File: scripts/zeeman_1a_intensity.png Graphic file (type png)
 <use scripts/zeeman_1a_intensity.png>
 Package pdftex.def Info: scripts/zeeman_1a_intensity.png  used on input line 22
-5.
+7.
 (pdftex.def)             Requested size: 370.02289pt x 277.51717pt.
  [6]
 <scripts/figs/B_calibration_curve.png, id=179, 794.97pt x 792.9625pt>
 File: scripts/figs/B_calibration_curve.png Graphic file (type png)
 <use scripts/figs/B_calibration_curve.png>
 Package pdftex.def Info: scripts/figs/B_calibration_curve.png  used on input li
-ne 232.
+ne 234.
 (pdftex.def)             Requested size: 426.79134pt x 425.72505pt.
 
-Overfull \hbox (8.53766pt too wide) in paragraph at lines 232--233
+Overfull \hbox (8.53766pt too wide) in paragraph at lines 234--235
  [] 
  []
 
 [7 <./scripts/zeeman_1a_intensity.png>] [8 <./scripts/figs/B_calibration_curve.
 png (PNG copy)>]
-Overfull \hbox (48.89029pt too wide) in paragraph at lines 250--257
+Overfull \hbox (48.89029pt too wide) in paragraph at lines 252--259
  [] 
  []
 
 
-Overfull \hbox (30.15498pt too wide) in paragraph at lines 262--269
+Overfull \hbox (30.15498pt too wide) in paragraph at lines 264--271
  [] 
  []
 
 
-Overfull \hbox (105.58786pt too wide) in paragraph at lines 274--281
+Overfull \hbox (105.58786pt too wide) in paragraph at lines 276--283
  [] 
  []
 
@@ -1190,30 +1190,30 @@ Overfull \hbox (105.58786pt too wide) in paragraph at lines 274--281
 <scripts/figs/ZEEMAN1A.jpg, id=207, 1284.8pt x 1027.84pt>
 File: scripts/figs/ZEEMAN1A.jpg Graphic file (type jpg)
 <use scripts/figs/ZEEMAN1A.jpg>
-Package pdftex.def Info: scripts/figs/ZEEMAN1A.jpg  used on input line 312.
+Package pdftex.def Info: scripts/figs/ZEEMAN1A.jpg  used on input line 314.
 (pdftex.def)             Requested size: 227.62204pt x 182.08607pt.
 <scripts/figs/ZEEMAN2A.jpg, id=208, 1284.8pt x 1027.84pt>
 File: scripts/figs/ZEEMAN2A.jpg Graphic file (type jpg)
 <use scripts/figs/ZEEMAN2A.jpg>
-Package pdftex.def Info: scripts/figs/ZEEMAN2A.jpg  used on input line 313.
+Package pdftex.def Info: scripts/figs/ZEEMAN2A.jpg  used on input line 315.
 (pdftex.def)             Requested size: 227.62204pt x 182.08607pt.
 
-Overfull \hbox (36.9904pt too wide) in paragraph at lines 312--313
+Overfull \hbox (36.9904pt too wide) in paragraph at lines 314--315
  [][][] 
  []
 
 <scripts/figs/ZEEMAN3A.jpg, id=209, 1284.8pt x 1027.84pt>
 File: scripts/figs/ZEEMAN3A.jpg Graphic file (type jpg)
 <use scripts/figs/ZEEMAN3A.jpg>
-Package pdftex.def Info: scripts/figs/ZEEMAN3A.jpg  used on input line 314.
+Package pdftex.def Info: scripts/figs/ZEEMAN3A.jpg  used on input line 316.
 (pdftex.def)             Requested size: 227.62204pt x 182.08607pt.
 <scripts/figs/ZEEMAN4A.jpg, id=210, 1284.8pt x 1027.84pt>
 File: scripts/figs/ZEEMAN4A.jpg Graphic file (type jpg)
 <use scripts/figs/ZEEMAN4A.jpg>
-Package pdftex.def Info: scripts/figs/ZEEMAN4A.jpg  used on input line 315.
+Package pdftex.def Info: scripts/figs/ZEEMAN4A.jpg  used on input line 317.
 (pdftex.def)             Requested size: 227.62204pt x 182.08607pt.
 
-Overfull \hbox (36.9904pt too wide) in paragraph at lines 314--316
+Overfull \hbox (36.9904pt too wide) in paragraph at lines 316--318
  [][][][] 
  []
 
@@ -1221,19 +1221,19 @@ Overfull \hbox (36.9904pt too wide) in paragraph at lines 314--316
 /figs/ZEEMAN3A.jpg> <./scripts/figs/ZEEMAN4A.jpg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 350.
+(hyperref)                removing `math shift' on input line 352.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mu' on input line 350.
+(hyperref)                removing `\mu' on input line 352.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 350.
+(hyperref)                removing `subscript' on input line 352.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 350.
+(hyperref)                removing `math shift' on input line 352.
 
 [12] (./nichoka_fys2150_waveoptics_r5.bbl
 Underfull \hbox (badness 1484) in paragraph at lines 14--20
@@ -1265,21 +1265,21 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 2.
 
 [13] [14] [15] [16]) (./scripts/balmerlines.py [17] [18]) [19]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 368.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 368.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 370.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 370.
 
 (./nichoka_fys2150_waveoptics_r5.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 368.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 368.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 370.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 370.
 Package rerunfilecheck Info: File `nichoka_fys2150_waveoptics_r5.out' has not c
 hanged.
 (rerunfilecheck)             Checksum: 664A13DCFD04D50DF327E5F077B3A3E8;1245.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 368.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 370.
  ) 
 Here is how much of TeX's memory you used:
  21419 strings out of 492982
  383299 string characters out of 6138579
- 714663 words of memory out of 5000000
+ 726664 words of memory out of 5000000
  24220 multiletter control sequences out of 15000+600000
  22648 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1305,7 +1305,7 @@ rm1095.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></us
 r/share/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf-d
 ist/fonts/type1/public/cm-super/sfti1095.pfb></usr/share/texmf-dist/fonts/type1
 /public/cm-super/sftt1095.pfb>
-Output written on nichoka_fys2150_waveoptics_r5.pdf (19 pages, 1313417 bytes).
+Output written on nichoka_fys2150_waveoptics_r5.pdf (19 pages, 1313371 bytes).
 PDF statistics:
  721 PDF objects out of 1000 (max. 8388607)
  654 compressed objects within 7 object streams

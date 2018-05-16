@@ -1,4 +1,5 @@
-from pylab import *
+import numpy as np
+import matplotlib.pyplot as plt
 
 def readfile(filename):
     print "Opening file"
@@ -11,17 +12,16 @@ def readfile(filename):
         z.append(col[1])
     file.close()
     print "Closing file"
-    y = array(y)
-    z = array(z)
+    yz = np.array([y, z])
+    np.save(filename.split(".")[0], yz)
+    return 
 
-    return y, z
+#readfile("polarisering1.dat")
+#readfile("polarisering2.dat")
+#readfile("polarisering3.dat")
 
-y1, z1 = readfile("polarisering1.dat")
-
-print "plotting y1"
-plot(y1)
-print "plotting z1"
-plot(z1)
-savefig("temp.png")
-close()
-print "Done"
+yz1 = np.load("polarisering1.npy")
+plt.plot(yz1[0])
+plt.show()
+#yz2 = np.load("polarisering2.npy")
+#yz3 = np.load("polarisering3.npy")
