@@ -39,7 +39,7 @@ def readZeeman(filename, lowerThresh, higherThresh, g2bThresh=20):
         raise TypeError("Filename arguement not string")
     img = imread(filename)
     bwImg = rgb2gray(img)
-    binImg = gray2binary(bwImg, 17)
+    binImg = gray2binary(bwImg, 21)    #17 works
     binCrop = binImg[475:525, 0:-1]
 
     plt.imshow(bwImg, cmap=plt.get_cmap('gray'))
@@ -178,6 +178,4 @@ print "I = 2A -> %.3e" % mu_B_2
 print "I = 1A -> %.3e" % mu_B_1
 
 
-print "Mean mu_B %.3e" % np.mean([mu_B_4, mu_B_3, mu_B_2, mu_B_1])
-
-print (9.274009994E-24 -
+print "Mean mu_B %.3e" % np.mean([mu_B_4, mu_B_3, mu_B_2])
