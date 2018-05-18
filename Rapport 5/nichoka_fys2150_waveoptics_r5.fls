@@ -334,9 +334,6 @@ INPUT scripts/zeemanread.py
 INPUT scripts/zeemanread.py
 INPUT /usr/share/texmf-dist/tex/latex/base/omscmr.fd
 INPUT /usr/share/texmf-dist/tex/latex/base/omscmr.fd
-INPUT scripts/balmerlines.py
-INPUT scripts/balmerlines.py
-INPUT scripts/balmerlines.py
 INPUT nichoka_fys2150_waveoptics_r5.aux
 INPUT ./nichoka_fys2150_waveoptics_r5.out
 INPUT ./nichoka_fys2150_waveoptics_r5.out
