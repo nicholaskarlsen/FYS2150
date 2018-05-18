@@ -121,10 +121,10 @@
 
       For each chemical element and molecule, there is an associated set of discrete wavelengths  which its emitted light can have. These discrete wavelength are due to internal changes in energy levels, and can be predicted by looking at all the possible changes $\Delta E$ and calculating the wavelength of the photon with this energy by using the Energy-momentum relation \cite{wiki:energy_momentum} and de Broglies equation \cite{wiki:debroglie}.
 
-      Some of the visible lines of hydrogen are referred to as the Balmer series, and is calculated by Eqn. \ref{eqn:balmer} and shown in Fig. \ref{fig:balmer_lines}.
+      The spectral lines of hydrogen, and other hydrogen-like elements are predicted by Eqn. \ref{eqn:Rydenberg}, The Rydenberg formula, where $Z$ denotes the atomic number of the element, $R=1.09737\times10^{7}\,\textup{m}^{-1}$ the Rydenberg constant and $n', n$ speciffic integers which determine the series and speciffic line respectively. For hydrogen, the visible lines are found in the Balmer series, $n'=2$ and $n=3, 4, 5, \dots$
       \begin{equation}
-         \lambda_n = \frac{1}{R \left[ \left(\frac{1}{2}\right)^2 - \left(\frac{1}{n}\right)^2 \right]} 
-         \label{eqn:balmer}
+         \lambda_n = \frac{1}{R Z^2 \left[ \left(\frac{1}{n'}\right)^2 - \left(\frac{1}{n}\right)^2 \right]} 
+         \label{eqn:Rydenberg}
       \end{equation}
 
     \subsection{The Zeeman Effect}
@@ -351,6 +351,7 @@
 
   \subsection{Comparison of found $\mu_B$ and reference value}
     CODATA states $\mu_B = 9.274 009 994(57)\times10^{-24}\,J\,T^{-1}$, which means that the mean value of the Bohr magneton, $\left< \tilde{\mu_B}\right>$, deviates $\approx 2\%$ from the reference value, not accounting for uncertainties. Seeing as all 4 measurements fall close to this individually, i suspect my estimation for the error $\Delta \delta$ as discussed in \ref{sect:zeeman_expt} may be a gross over-estimation. Further, without any significant insight into the precision of the FP-interferometer, it is difficult to assert whether the deviation between the CODATA value and the measured result can be attributed to experimental uncertainties, or errors in the post-processing of the results.
+
 
 \section{\label{sect:conclusion}Conclusion}
   When performing experiments of this nature, quantifying the potential errors that may occur outside of the instrumental uncertainties seems quite a difficult task. Regardless, the deviation between what is expected and what is measured using these techniques seems to only deviate by a few percent, even when the methodology is seemingly prone to errors. And ultimately, considering the scales at which these macroscopic experiments measure, it is notable that the measurements "only" seems to deviate by a few percent of what is expected.
