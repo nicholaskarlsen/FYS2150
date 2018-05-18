@@ -67,13 +67,13 @@
 \maketitle
 
 \begin{abstract}
-  Exploring how Laser light behaves when passed through slits and grating of varying kinds and using this behavior to observe the emission lines of Hydrogen, Helium and Cadmium.
+  Exploring how Laser light behaves when passed through slits and grating of varying kinds and using this behavior to observe the emission lines of Hydrogen, Helium and Cadmium and finally using FP-inferometry to find the Bohr magneton.
 \end{abstract}
 
 %\tableofcontents
 
 \section{\label{sect:intro}Introduction}
-  This report contains a summary of a lab day in which me and my lab partner performed experiments in which we explored how measurements could be made using the wave-like behavior of light, in particular, diffraction and interference.
+  This report contains a summary and analysis of a lab day in which me and my lab partner performed experiments in which we explored how measurements could be made using the wave-like behavior of light, in particular, diffraction and interference.
   To begin with, we start by looking at the behavior of Laser light diffracted through a wide array of different singular slits, parallel slits and circular slits. After which we measured some of the emission lines of Hydrogen and Helium by the use of diffraction grating and lastly, by the use of an FP-interferometer the split, and slightly shifted emission lines of Cadmium subject to a magnetic field we deduced the Bohr magneton, $\mu_B$, experimentally.
 
 \section{\label{sect:theory}Theory}
@@ -119,13 +119,26 @@
         \label{fig:balmer_lines}
       \end{figure}
 
-      For each chemical element and molecule, there is an associated set of discrete wavelengths  which its emitted light can have. These discrete wavelength are due to internal changes in energy levels, and can be predicted by looking at all the possible changes $\Delta E$ and calculating the wavelength of the photon with this energy by using the Energy-momentum relation \cite{wiki:energy_momentum} and de Broglies equation \cite{wiki:debroglie}.
+      For each chemical element, there is an associated set of discrete wavelengths  which its emitted light can have. These discrete wavelength are due to internal changes in energy levels, and can be predicted by looking at all the possible changes $\Delta E$ and calculating the wavelength of the photon with this energy by using the Energy-momentum relation \cite{wiki:energy_momentum} and de Broglies equation \cite{wiki:debroglie}.
 
-      The spectral lines of hydrogen, and other hydrogen-like elements are predicted by Eqn. \ref{eqn:Rydenberg}, The Rydenberg formula, where $Z$ denotes the atomic number of the element, $R=1.09737\times10^{7}\,\textup{m}^{-1}$ the Rydenberg constant and $n', n$ speciffic integers which determine the series and speciffic line respectively. For hydrogen, the visible lines are found in the Balmer series, $n'=2$ and $n=3, 4, 5, \dots$
+      The spectral lines of hydrogen, and other hydrogen-like elements are predicted by Eqn. \ref{eqn:Rydenberg}, The Rydenberg formula, where $Z$ denotes the atomic number of the element, $R=1.09737\times10^{7}\,\textup{m}^{-1}$ the Rydenberg constant and $n, n'$ are the principal quantum numbers of the electron before and after its transition. For hydrogen, the visible lines are found in the Balmer series, $n'=2$ and $n=3, 4, 5, \dots$, shown in table \ref{tab:balmerlines} and visually in Fig. \ref{fig:balmer_lines}
       \begin{equation}
          \lambda_n = \frac{1}{R Z^2 \left[ \left(\frac{1}{n'}\right)^2 - \left(\frac{1}{n}\right)^2 \right]} 
          \label{eqn:Rydenberg}
       \end{equation}
+
+          \begin{table}[H]
+        \center
+        \caption{The Balmer series.}
+         \begin{tabular}{l | l l l l l l}
+          n       & 3 & 4 & 5 & 6 & 7 & $\infty$ \\ \hline
+          $\lambda$ &  656.3nm & 486.1nm & 434.0nm & 410.2nm & 397.0nm & 364.6nm 
+         \end{tabular}
+         \label{tab:balmerlines}
+    \end{table}
+
+
+
 
     \subsection{The Zeeman Effect}
       When subject to a uniform magnetic field, $B$, the energy levels of a moluecule are shifted \cite{griffiths}. Resulting in additional, slightly shifted emission lines of wavelengths $\lambda \pm \delta \lambda$. See fig. \ref{fig:zeeman_energy}. with tangential polarization relative to the emission lines for $B=0$.
@@ -196,9 +209,9 @@
         \label{bohrmagneton}
       \end{equation}
 
-      I am unable to quantify the uncertainties of this experiment, and will therefore assume that they are negligible. As a result, the only uncertainty i am certain of, is that of $\delta$, which was found to have an uncertainty of $\pm 0.005$ for the rings due resulting from currents, $I=4A, 3A, 2A$ using the formulae for error propagation given in squires \cite{squires_practical_2001}. Based on this error, $\Delta \mu_B$ is then found by Eqn. \ref{eqn:muberror}, where the uncertainties of $hc$, $t$, and $B$ are neglected. The error of $\sigma$ is found by the equations \ref{eqn:sigmaerr}, where $\Delta d =1$. This estimate of the uncertainty results in uncertainties of $\mu_B$ in order of magnitude $10^{-25}$, approximately an order of magnitude larger than the expected value of $\mu_B$.
+      As I am unable to quantify all of the uncertainties of this experiment, I will have to assume that most of them are negligible. The only uncertainty i am certain of, is that of $\delta$. The uncertainty of $\sigma$ stems from only being able to determine the inner and outer locations of the diameters of the rings to an $\pm 1$px. This leads to $\sigma$ having an uncertainty of $\approx\pm 0.005$. This was found using the formulae for the propogation of errors in Squires\cite{squires_practical_2001} and the derivation is shown in Eqn \ref{eqn:sigmaerr}. Based on this error, $\Delta \mu_B$ is then found by Eqn. \ref{eqn:muberror}, where the uncertainties of $hc$, $t$, and $B$ are neglected. The error of $\sigma$ is found by the equations \ref{eqn:sigmaerr}, where $\Delta d =1$. This estimate of the uncertainty results in uncertainties of $\mu_B$ in order of magnitude $10^{-25}$, approximately an order of magnitude less than the expected value of $\mu_B$.
       \begin{equation}
-        \Delta \mu_B = \mu_B \sqrt{\left(\frac{\Delta \delta}{\delta}\right)^2}
+        \Delta \mu_B = \mu_B \sqrt{\left(\frac{\Delta \sigma}{\sigma}\right)^2}
         \label{eqn:muberror}
       \end{equation}
 
@@ -206,7 +219,7 @@
          \begin{split}
            \Delta d_i^2 &= 2d_i^2\frac{\Delta d_i}{d} = 2d_i\Delta d \\
            \Delta (d_i^2 - d_j^2 ) &= \sqrt{(\Delta d_i^2)^2 + (\Delta d_j^2)^2} = 2\Delta d\sqrt{(d_i)^2 + (d_j)^2} \\
-           \Delta\left(\frac{d_i^2 - d_j^2}{d_k^2 - d_j^2}\right) &=
+           \Delta \sigma &=
            \left(\frac{d_i^2 - d_j^2}{d_k^2 - d_j^2}\right) 
            \sqrt{ 
             \left(
@@ -307,7 +320,7 @@
 
     \subsection{\label{subsect:res_Zeeman}Zeeman Effect}
 
-      The pictures taken of the split diffraction lines are shown in Fig.\ref{fig:zeeman_pics} and the associated results computed using the script "zeemanread.py" (see appendix \ref{app:scripts}) are shown in Table \ref{tab:zeeman_table}.
+      The pictures taken of the split diffraction lines are shown in Fig.\ref{fig:zeeman_pics} and the associated results computed using the script "zeemanread.py" (see appendix \ref{app:scripts}) are shown in Table \ref{tab:zeeman_table}, where I denotes the current Applied to the electromagnet resulting in $\bar B(I)$, determined from the calibration curve \ref{fig:cali_curve}. $\bar d_i$, the diameters of rings $i=1,2,3$ found using zeeman.py (Included in appendix \ref{app:scripts}), $\tilde{\mu_B}$, the resulting values for the bohr magneton, along with the mean value, $\left<\tilde{\mu_B}\right>$.
 
       \begin{figure}[H]
           \center
@@ -325,11 +338,11 @@
         \begin{tabular}{ l  l  l  l  l  r }
           $I$ [A] & $\bar B(I)$ [mT] & $\bar d_1(I)$ [px] & $\bar d_2(I)$ [px] & $\bar d_3(I)$ [px] & $\tilde{\mu_B}$ [$\textup J\,\textup T^{-1}$] \\ \hline
 
-          4 & 685.5 & $423.5 \pm 1$ & $524.5 \pm 1$ & $661.0 \pm 1$ & $8.977\cdot 10^{-24}$ \\
-          3 & 526.5 & $437.0 \pm 1$ & $515.0 \pm 1$ & $668.5 \pm 1$ & $9.123\cdot 10^{-24}$ \\ 
-          2 & 354.5 & $450.0 \pm 1$ & $503.0 \pm 1$ & $677.5 \pm 1$ & $9.195\cdot 10^{-24}$ \\ 
-          1 & 176.0 & $463 \pm 1$ & $489 \pm 1$ & $686 \pm 1$ & $9.086\cdot 10^{-27}$ \\  \hline
-            &       &   &     &     &     $\left< \tilde{\mu_B}\right>= 9.095\cdot 10^{-24}$
+          4 & 685.5 & $423.5 \pm 1$ & $524.5 \pm 1$ & $661.0 \pm 1$ & $9.122\pm 0.138 \cdot 10^{-24}$ \\
+          3 & 526.5 & $437.0 \pm 1$ & $515.0 \pm 1$ & $668.5 \pm 1$ & $9.186\pm 0.176\cdot 10^{-24}$ \\ 
+          2 & 354.5 & $450.0 \pm 1$ & $503.0 \pm 1$ & $677.5 \pm 1$ & $9.402\pm 0.254\cdot 10^{-24}$ \\ 
+          1 & 176.0 & $463 \pm 1$ & $489 \pm 1$ & $686 \pm 1$ & $9.086\pm 0.498\cdot 10^{-27}$ \\  \hline
+            &       &   &     &     &     $\left< \tilde{\mu_B}\right>= 9.199\cdot 10^{-24}$
         \end{tabular}
         \label{tab:zeeman_table}
     \end{table}
@@ -350,8 +363,7 @@
     Therefore, it is obvious that the intensity of the spectrum, and the environment\footnote{As in; the amount of light pollution present} in which the measurements are made pays a significant part in the accuracy of the measurements. Additionally, a significant portion of the "expected" lines did not show up at all, presumably due to a low intensity, which as seen in table \ref{tab:paraslit} can lead to "false" conclusions, where in the last row, observations pointed to 9 intensity peaks, but theory predicted 11. The two remaining peaks were simply too dim to be seen.
 
   \subsection{Comparison of found $\mu_B$ and reference value}
-    CODATA states $\mu_B = 9.274 009 994(57)\times10^{-24}\,J\,T^{-1}$, which means that the mean value of the Bohr magneton, $\left< \tilde{\mu_B}\right>$, deviates $\approx 2\%$ from the reference value, not accounting for uncertainties. Seeing as all 4 measurements fall close to this individually, i suspect my estimation for the error $\Delta \delta$ as discussed in \ref{sect:zeeman_expt} may be a gross over-estimation. Further, without any significant insight into the precision of the FP-interferometer, it is difficult to assert whether the deviation between the CODATA value and the measured result can be attributed to experimental uncertainties, or errors in the post-processing of the results.
-
+    CODATA states that the value of the Bohr magneton, $\mu_B = 9.274 009 994(57)\times10^{-24}\,J\,T^{-1}$. The values found in table \ref{tab:zeeman_table} all overlap with this value within their uncertainties, and as such, it seems a fair assumption that the main contributor of uncertainty was the due to the limitations of image processing, since i could only determine the inner and outer diameter of the rings based on the discrete pixel values. Further, it seems as the current rises,the measured value of $\mu_B$ tends toward the CODATA value, based on these few measurements. the uncertainty also becomes smaller, which further strenghtens the assumption that the main contributor of uncertainty is that of $\sigma$.
 
 \section{\label{sect:conclusion}Conclusion}
   When performing experiments of this nature, quantifying the potential errors that may occur outside of the instrumental uncertainties seems quite a difficult task. Regardless, the deviation between what is expected and what is measured using these techniques seems to only deviate by a few percent, even when the methodology is seemingly prone to errors. And ultimately, considering the scales at which these macroscopic experiments measure, it is notable that the measurements "only" seems to deviate by a few percent of what is expected.

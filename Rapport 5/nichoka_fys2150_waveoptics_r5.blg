@@ -1,13 +1,49 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: nichoka_fys2150_waveoptics_r5.aux
+This is BibTeX, Version 0.99d (TeX Live 2017/Arch Linux)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: nichoka_fys2150_waveoptics_r5.aux
 The style file: plain.bst
-I couldn't open database file references.bib.bib
----line 96 of file nichoka_fys2150_waveoptics_r5.aux
- : \bibdata{references.bib
- :                        }
-I'm skipping whatever remains of this command
-I found no database files---while reading file nichoka_fys2150_waveoptics_r5.aux
-Warning--I didn't find a database entry for "wiki:energy_momentum"
-Warning--I didn't find a database entry for "wiki:debroglie"
-Warning--I didn't find a database entry for "griffiths"
-Warning--I didn't find a database entry for "squires_practical_2001"
-(There were 2 error messages)
+Database file #1: references.bib.bib
+Warning--empty year in griffiths
+Warning--empty year in squires_practical_2001
+You've used 4 entries,
+            2118 wiz_defined-function locations,
+            515 strings with 4570 characters,
+and the built_in function-call counts, 902 in all, are:
+= -- 84
+> -- 28
+< -- 0
++ -- 12
+- -- 8
+* -- 38
+:= -- 159
+add.period$ -- 14
+call.type$ -- 4
+change.case$ -- 16
+chr.to.int$ -- 0
+cite$ -- 6
+duplicate$ -- 38
+empty$ -- 89
+format.name$ -- 8
+if$ -- 191
+int.to.chr$ -- 0
+int.to.str$ -- 4
+missing$ -- 4
+newline$ -- 25
+num.names$ -- 8
+pop$ -- 34
+preamble$ -- 1
+purify$ -- 12
+quote$ -- 0
+skip$ -- 22
+stack$ -- 0
+substring$ -- 20
+swap$ -- 4
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 12
+warning$ -- 2
+while$ -- 8
+width$ -- 5
+write$ -- 46
+(There were 2 warnings)

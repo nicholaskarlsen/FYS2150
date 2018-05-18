@@ -136,24 +136,21 @@ def mu_B(B, d1, d2, d3):
     tx4 = 3.0 * 4.0e-3
 
     #errors
-    d1sq_err = 2 * d1
-    d2sq_err = 2 * d2
-    d3sq_err = 2 * d3
-    d2_d1_err = np.sqrt(d1sq_err**2 + d2sq_err**2)
-    d3_d1_err = np.sqrt(d1sq_err**2 + d3sq_err**2)
-    P1 = d2_d1_err / (d2**2 - d1**2)
-    P2 = d3_d1_err / (d3**2 - d1**2)
+    Dd = 1
+    P1 = 2 * Dd * np.sqrt(d2**2 + d1**2) /  (d2**2 - d1**2)
+    P2 = 2 * Dd * np.sqrt(d3**2 + d1**2) /  (d3**2 - d1**2)
     sigma_err = sigma * np.sqrt(P1**2 + P2**2)
+
     print "sigma error", sigma_err
     muB = (hc / tx4) * (sigma / B)
     muB_err = muB * (sigma_err/ sigma)
     print muB_err
-    return muB
+    return muB, muB_err
 
-mu_B_4 = mu_B(685.5e-3, d14, d24, d34)
-mu_B_3 = mu_B(526.5e-3, d13, d23, d33)
-mu_B_2 = mu_B(354.5e-3, d12, d22, d32)
-mu_B_1 = mu_B(176.0e-3, 463, 489, 686)
+mu_B_4, err4 = mu_B(685.5e-3, d14, d24, d34)
+mu_B_3, err3 = mu_B(526.5e-3, d13, d23, d33)
+mu_B_2, err2 = mu_B(354.5e-3, d12, d22, d32)
+mu_B_1, err1 = mu_B(176.0e-3, 463, 489, 686)
 
 def print_diameters(list):
     n = 1
@@ -172,10 +169,10 @@ print "\n2A Diameters"
 print_diameters([d12, d22, d32])
 
 print "\nMu_B:\n"
-print "I = 4A -> %.3e" % mu_B_4
-print "I = 3A -> %.3e" % mu_B_3
-print "I = 2A -> %.3e" % mu_B_2
-print "I = 1A -> %.3e" % mu_B_1
+print "I = 4A -> %.3e" % mu_B_4, err4
+print "I = 3A -> %.3e" % mu_B_3, err3
+print "I = 2A -> %.3e" % mu_B_2, err2
+print "I = 1A -> %.3e" % mu_B_1, err1
 
 
-print "Mean mu_B %.3e" % np.mean([mu_B_4, mu_B_3, mu_B_2])
+print "Mean mu_B %.3e" % np.mean([mu_B_4, mu_B_3, mu_B_2,mu_B_1])

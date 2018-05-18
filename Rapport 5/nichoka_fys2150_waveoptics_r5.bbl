@@ -1,3 +1,29 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{griffiths}
+D.~J Griffiths.
+\newblock {\em Introduction to Quantum Mechanics}.
+\newblock Cambridge University Press, 2nd edition.
+
+\bibitem{squires_practical_2001}
+G.~L Squires.
+\newblock {\em Practical Physics}.
+\newblock Cambridge University Press, 4th edition.
+
+\bibitem{wiki:energy_momentum}
+{Wikipedia contributors}.
+\newblock Energy–momentum relation --- {Wikipedia}{,} the free encyclopedia.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Energy%E2%80%93momentum_relation&oldid=839578451},
+  2018.
+\newblock [Online; accessed 14-May-2018].
+
+\bibitem{wiki:debroglie}
+{Wikipedia contributors}.
+\newblock Matter wave --- {Wikipedia}{,} the free encyclopedia.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Matter_wave&oldid=830205957},
+  2018.
+\newblock [Online; accessed 14-May-2018].
 
 \end{thebibliography}
