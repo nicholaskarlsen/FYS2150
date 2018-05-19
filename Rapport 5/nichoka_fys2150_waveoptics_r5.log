@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.5.11)  18 MAY 2018 17:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.5.11)  18 MAY 2018 17:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1157,8 +1157,7 @@ File: scripts/zeeman_1a_intensity.png Graphic file (type png)
 Package pdftex.def Info: scripts/zeeman_1a_intensity.png  used on input line 24
 0.
 (pdftex.def)             Requested size: 370.02289pt x 277.51717pt.
- [6]
-<scripts/figs/B_calibration_curve.png, id=183, 794.97pt x 792.9625pt>
+<scripts/figs/B_calibration_curve.png, id=174, 794.97pt x 792.9625pt>
 File: scripts/figs/B_calibration_curve.png Graphic file (type png)
 <use scripts/figs/B_calibration_curve.png>
 Package pdftex.def Info: scripts/figs/B_calibration_curve.png  used on input li
@@ -1169,8 +1168,8 @@ Overfull \hbox (8.53766pt too wide) in paragraph at lines 247--248
  [] 
  []
 
-[7 <./scripts/zeeman_1a_intensity.png>] [8 <./scripts/figs/B_calibration_curve.
-png (PNG copy)>]
+[6] [7 <./scripts/zeeman_1a_intensity.png>] [8 <./scripts/figs/B_calibration_cu
+rve.png (PNG copy)>]
 Overfull \hbox (48.89029pt too wide) in paragraph at lines 265--272
  [] 
  []
@@ -1279,13 +1278,13 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 382.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 382.
 Package rerunfilecheck Info: File `nichoka_fys2150_waveoptics_r5.out' has not c
 hanged.
-(rerunfilecheck)             Checksum: 664A13DCFD04D50DF327E5F077B3A3E8;1245.
+(rerunfilecheck)             Checksum: 328E85CFF8CC1E0AF67FA1768850F919;1248.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 382.
  ) 
 Here is how much of TeX's memory you used:
  21272 strings out of 492982
  381262 string characters out of 6138579
- 713917 words of memory out of 5000000
+ 713926 words of memory out of 5000000
  24184 multiletter control sequences out of 15000+600000
  22648 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1312,7 +1311,7 @@ r/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-d
 ist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf-dist/fonts/type1
 /public/cm-super/sfti1095.pfb></usr/share/texmf-dist/fonts/type1/public/cm-supe
 r/sftt1095.pfb>
-Output written on nichoka_fys2150_waveoptics_r5.pdf (17 pages, 1308076 bytes).
+Output written on nichoka_fys2150_waveoptics_r5.pdf (17 pages, 1308096 bytes).
 PDF statistics:
  592 PDF objects out of 1000 (max. 8388607)
  527 compressed objects within 6 object streams

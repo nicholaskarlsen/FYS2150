@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex nichoka_fys2150_waveoptics_r5"] 1526651497 "nichoka_fys2150_waveoptics_r5.aux" "nichoka_fys2150_waveoptics_r5.bbl" "nichoka_fys2150_waveoptics_r5" 1526657362
+["bibtex nichoka_fys2150_waveoptics_r5"] 1526658820 "nichoka_fys2150_waveoptics_r5.aux" "nichoka_fys2150_waveoptics_r5.bbl" "nichoka_fys2150_waveoptics_r5" 1526659066
   "/usr/share/texmf-dist/bibtex/bst/base/plain.bst" 1520157249 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "nichoka_fys2150_waveoptics_r5.aux" 1526657361 8951 41168ad45406deca149847edde928056 ""
+  "nichoka_fys2150_waveoptics_r5.aux" 1526659043 8960 cc8f88de5779a2f384ec22cb06673665 ""
   "references.bib" 1526650681 4390 6c0fe64867cd03dfe8cfe7ff66122443 ""
   (generated)
-  "nichoka_fys2150_waveoptics_r5.bbl"
   "nichoka_fys2150_waveoptics_r5.blg"
-["pdflatex"] 1526657360 "nichoka_fys2150_waveoptics_r5.tex" "nichoka_fys2150_waveoptics_r5.pdf" "nichoka_fys2150_waveoptics_r5" 1526657362
+  "nichoka_fys2150_waveoptics_r5.bbl"
+["pdflatex"] 1526659042 "nichoka_fys2150_waveoptics_r5.tex" "nichoka_fys2150_waveoptics_r5.pdf" "nichoka_fys2150_waveoptics_r5" 1526659066
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1520157211 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1520157216 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecbx1000.tfm" 1520157221 3584 2d666ecf6d466d8b007246bc2f94d9da ""
@@ -205,10 +205,10 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1520157258 32585 d82bbcf7626b7842c87671687479e852 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1526049336 2570953 760b5bb0cbd280885d9f95318df536c1 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1526049332 7738161 fcc58708fe6ac56ba04e44ea1c9273c5 ""
-  "nichoka_fys2150_waveoptics_r5.aux" 1526657361 8951 41168ad45406deca149847edde928056 ""
-  "nichoka_fys2150_waveoptics_r5.bbl" 1526651498 877 89e2712da9157b8cedb7490e0b5a64f2 "bibtex nichoka_fys2150_waveoptics_r5"
-  "nichoka_fys2150_waveoptics_r5.out" 1526657361 1245 664a13dcfd04d50df327e5f077b3a3e8 ""
-  "nichoka_fys2150_waveoptics_r5.tex" 1526657360 27155 62034d0bcc0f63b26818edf7c6342ae5 ""
+  "nichoka_fys2150_waveoptics_r5.aux" 1526659043 8960 cc8f88de5779a2f384ec22cb06673665 ""
+  "nichoka_fys2150_waveoptics_r5.bbl" 1526658820 877 89e2712da9157b8cedb7490e0b5a64f2 "bibtex nichoka_fys2150_waveoptics_r5"
+  "nichoka_fys2150_waveoptics_r5.out" 1526659043 1248 328e85cff8cc1e0af67fa1768850f919 ""
+  "nichoka_fys2150_waveoptics_r5.tex" 1526659058 27159 2d6162eb6af61da0355b99d60978553c ""
   "scripts/dat/heliumlines.dat" 1526310617 748 4e1b926cbbbfe1d70e98705b92450592 ""
   "scripts/dat/hydrogenlines.dat" 1526310617 356 369d5318d7e5ab6d4c82feb6ad4bac61 ""
   "scripts/figs/B_calibration_curve.png" 1526324658 183244 011d7cacac0bab6485a0b38f203a4532 ""
@@ -224,11 +224,11 @@
   "scripts/zeeman_1a_intensity.png" 1526652402 30473 fc85f7d2de25bed0dffcf189ed3e369b ""
   "scripts/zeemanread.py" 1526652420 5199 187db825318f8c2a8ae9c3eeab0d3368 ""
   (generated)
-  "nichoka_fys2150_waveoptics_r5.run.xml"
-  "nichoka_fys2150_waveoptics_r5.out"
   "nichoka_fys2150_waveoptics_r5.bcf"
+  "nichoka_fys2150_waveoptics_r5.run.xml"
   "/home/nick/Documents/uio/FYS2150/Rapport 5/nichoka_fys2150_waveoptics_r5.log"
-  "/home/nick/Documents/uio/FYS2150/Rapport 5/nichoka_fys2150_waveoptics_r5.pdf"
   "nichoka_fys2150_waveoptics_r5.pdf"
   "nichoka_fys2150_waveoptics_r5.aux"
+  "/home/nick/Documents/uio/FYS2150/Rapport 5/nichoka_fys2150_waveoptics_r5.pdf"
+  "nichoka_fys2150_waveoptics_r5.out"
   "nichoka_fys2150_waveoptics_r5.log"
