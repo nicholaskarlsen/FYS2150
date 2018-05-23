@@ -13,7 +13,7 @@ def read_capfile(filename):
     angle = []
     intensity = []
     capfile.readline()
-    print capfile.readline().split()[:4]
+    #print capfile.readline().split()[:4]
     for i in range(2):
         capfile.readline()
     for line in capfile:
@@ -32,23 +32,34 @@ def read_capfile(filename):
 
 
 time1, angle1, intensity1 = read_capfile("data/run1_p_polarisert.txt")
+startIndex = 150
+stopIndex = 600
+poly = np.polyfit(np.rad2deg(angle1)[startIndex:stopIndex], intensity1[startIndex:stopIndex], 2)
 
-plt.plot(np.rad2deg(angle1[:-1]), intensity1[:-1], linestyle="--", color="black")
-plt.plot(np.rad2deg(angle1[:-1]), intensity1[:-1], ".", color="red")
-plt.xlabel("Angle [deg]")
-plt.ylabel("Intensity [%]")
-plt.title("P-Polarized light")
-plt.grid("on")
-plt.show()
+theta = np.linspace(0, 60, 1e3)
+
+def plot1():
+    plt.plot(np.rad2deg(angle1[:-1]), intensity1[:-1], linestyle="--", color="black")
+    plt.plot(np.rad2deg(angle1[:-1]), intensity1[:-1], ".", color="red")
+    plt.plot(theta,poly[0]*theta**2 + poly[1]*theta + poly[2])
+    plt.xlabel("Angle [deg]")
+    plt.ylabel("Intensity [%]")
+    plt.title("P-Polarized light")
+    plt.grid("on")
+    plt.show()
+
+plot1()
+
 
 time2, angle2, intensity2 = read_capfile("data/run1_s_polarisert.txt")
 time3, angle3, intensity3 = read_capfile("data/run2_s_polarisert.txt")
 
-plt.plot(np.rad2deg(angle2), intensity2, "r.", label="Run #1")
-plt.plot(np.rad2deg(angle3), intensity3, "b.", label="Run #2")
-plt.xlabel("Angle [deg]")
-plt.ylabel("Intensity [%]")
-plt.title("S-Polarized light")
-plt.grid("on")
-plt.legend()
-plt.show()
+def plot2():
+    plt.plot(np.rad2deg(angle2), intensity2, "r.", label="Run #1")
+    plt.plot(np.rad2deg(angle3), intensity3, "b.", label="Run #2")
+    plt.xlabel("Angle [deg]")
+    plt.ylabel("Intensity [%]")
+    plt.title("S-Polarized light")
+    plt.grid("on")
+    plt.legend()
+    plt.show()
