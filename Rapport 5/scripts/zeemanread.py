@@ -33,7 +33,7 @@ def gray2binary(gray, limBW=128):
     return bw
 
 
-def readZeeman(filename, lowerThresh, higherThresh, g2bThresh=20):
+def readZeeman(filename, lowerThresh, higherThresh, g2bThresh=20, plot=False):
     #import skimage.color
     if isinstance(filename, basestring) is False:
         raise TypeError("Filename arguement not string")
@@ -72,7 +72,10 @@ def readZeeman(filename, lowerThresh, higherThresh, g2bThresh=20):
 
     plt.plot(d_outlines, np.zeros_like(d_outlines) + 30, "ro")
     plt.title("Chose lower and higher threshhold")
-    plt.close()
+    if plot == True:
+        plt.show()
+    else:
+        plt.close()
 
     d_outlines = filter(lambda f: f < higherThresh and f > lowerThresh, d_outlines)
 
