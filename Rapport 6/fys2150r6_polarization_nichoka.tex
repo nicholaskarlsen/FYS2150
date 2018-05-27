@@ -1,4 +1,4 @@
-\documentclass[11pt,a4paper, twocolumn]{article}
+\documentclass[11pt,a4paper]{article}
 \usepackage{float}
 \usepackage{verbatim}
 \usepackage{subfig}
@@ -6,7 +6,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{geometry}
 \usepackage{enumitem}
-%\geometry{verbose,lmargin=2cm,rmargin=2cm, bmargin=2cm, tmargin=2cm}
+\geometry{verbose,lmargin=2cm,rmargin=2cm, bmargin=3cm, tmargin=3cm}
 \usepackage{wrapfig}
 \usepackage{tikz}
 \usetikzlibrary{decorations.markings}
@@ -65,13 +65,15 @@
 %  but any date may be explicitly specified
 
 \maketitle
-
 \begin{abstract}
+  Studying the properties of linearly and circularly polarized light and testing how well the properties match up to theoretical predictions.
 \end{abstract}
+\twocolumn
 
 %\tableofcontents
 
 \section{\label{sect:intro}Introduction}
+  
 
 \section{\label{sect:theory}Theory}
 
@@ -79,6 +81,30 @@
 
 \section{\label{sect:results}Results}
   
+  The intensity measurements presented in table \ref{tab:ana}, where light from a spectral lamp is passed through a single polarization filter has a standard deviation of 19, which is used as the estimated uncertainty for further measurements made with the luxmeter.
+
+
+  \begin{table}[H]
+      \center
+      \caption{Measured intensity when passing unpolarized light through a single polarization filter, $\theta$ denoting the angle of the filter.}
+       \begin{tabular}{r | l}
+        $\theta$ [deg] & Intensity [Lux] \\ \hline
+         \input{scripts/data/ana.dat}
+       \end{tabular}
+       \label{tab:ana}
+  \end{table}
+
+  \begin{table}[H]
+      \center
+      \caption{Measured intensity when passing unpolarized light through a single polarization filter, $\theta$ denoting the angle of the filter.}
+       \begin{tabular}{r | l}
+        $\theta$ [deg] & Intensity [Lux] \\ \hline
+         \input{scripts/data/ana_pola.dat}
+       \end{tabular}
+       \label{tab:ana_pola}
+  \end{table}
+
+
   \begin{figure}[H]
     \center
     \includegraphics[scale=0.8]{scripts/ppolar.png}
