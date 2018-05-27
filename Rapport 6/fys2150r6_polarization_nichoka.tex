@@ -4,9 +4,9 @@
 \usepackage{subfig}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage{geometry}
+%\usepackage{geometry}
+%\geometry{verbose,lmargin=2cm,rmargin=2cm, bmargin=3cm, tmargin=3cm}
 \usepackage{enumitem}
-\geometry{verbose,lmargin=2cm,rmargin=2cm, bmargin=3cm, tmargin=3cm}
 \usepackage{wrapfig}
 \usepackage{tikz}
 \usetikzlibrary{decorations.markings}
@@ -79,6 +79,13 @@
 
 \section{\label{section:experimental}Experimental Procedure} 
 
+  \begin{figure}[H]
+    \center
+    \includegraphics[width=4cm]{scripts/figs/diagram_1.png}
+    \caption{Aparature to test the polarization of light emitted from a spectral lamp using a polarization filter with variable angle $\theta$ as an analyzator and measuring the intensity of the filtered light using the luxmeter.}
+    \label{fig:lux_ana_lamp}
+  \end{figure}
+
 \section{\label{sect:results}Results}
   
   The intensity measurements presented in table \ref{tab:ana}, where light from a spectral lamp is passed through a single polarization filter has a standard deviation of 19, which is used as the estimated uncertainty for further measurements made with the luxmeter.
@@ -86,7 +93,7 @@
 
   \begin{table}[H]
       \center
-      \caption{Measured intensity when passing unpolarized light through a single polarization filter, $\theta$ denoting the angle of the filter.}
+      \caption{Measured intensity when passing unpolarized light through a single polarization filter, $\theta$ denoting the angle of the filter. Aparature depicted in Fig. \ref{fig:lux_ana_lamp}}
        \begin{tabular}{r | l}
         $\theta$ [deg] & Intensity [Lux] \\ \hline
          \input{scripts/data/ana.dat}
@@ -94,27 +101,18 @@
        \label{tab:ana}
   \end{table}
 
-  \begin{table}[H]
-      \center
-      \caption{Measured intensity when passing unpolarized light through a single polarization filter, $\theta$ denoting the angle of the filter.}
-       \begin{tabular}{r | l}
-        $\theta$ [deg] & Intensity [Lux] \\ \hline
-         \input{scripts/data/ana_pola.dat}
-       \end{tabular}
-       \label{tab:ana_pola}
-  \end{table}
 
 
   \begin{figure}[H]
     \center
-    \includegraphics[scale=0.8]{scripts/ppolar.png}
-    \caption{Intensity profile of p-polarised light}
+    \includegraphics[width=4cm]{scripts/ppolar.png}
+    \caption{Intensity profile due to p-polarized light, where $\phi_P$ denotes the Brewster angle.}
   \end{figure}
 
   \begin{figure}[H]
     \center
-    \includegraphics[scale=0.8]{scripts/spolar.png}
-    \caption{Intensity profile of p-polarised light}
+    \includegraphics[width=4cm]{scripts/spolar.png}
+    \caption{Intensity profile due to p-polarized light from two separate attempts of the experiment.}
   \end{figure}
 
 \section{\label{sect:discuss}Discussion}
@@ -122,6 +120,8 @@
 \section{\label{sect:conclusion}Conclusion}
 
 
+\bibliographystyle{plain}
+\bibliography{references.bib}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 %%% END OF MAIN BODY %%%
