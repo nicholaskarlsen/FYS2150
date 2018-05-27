@@ -40,14 +40,22 @@ theta = np.linspace(0, 60, 1e3)
 
 
 def plot1():
-    plt.plot(np.rad2deg(angle1[:-1]), intensity1[:-1], linestyle="--", color="black")
+   # plt.plot(np.rad2deg(angle1[:-1]), intensity1[:-1], linestyle="--", color="black")
+    plt.figure(figsize=(3.5, 3.5), dpi=100)
     plt.plot(np.rad2deg(angle1[:-1]), intensity1[:-1], ".", color="red")
-    plt.plot(theta, poly[0] * theta**2 + poly[1] * theta + poly[2])
+    minIndex = np.argmin(intensity1[:-1])       # finding angle of brewster index
+    brewster = np.rad2deg(angle1[minIndex])     # brewster index in radians
+    brewIntensity = intensity1[minIndex]        # corresponding intensity
+    plt.annotate(
+        '$\\phi_P$ = %.2f$^\\circ$' % brewster,
+        xy=(brewster, brewIntensity), arrowprops=dict(arrowstyle='->'), xytext=(30, 25))
     plt.xlabel("Angle [deg]")
     plt.ylabel("Intensity [%]")
     plt.title("P-Polarized light")
     plt.grid("on")
-    plt.show()
+    plt.tight_layout()
+    plt.savefig("ppolar.png", dpi=150)
+    plt.close()
 
 
 plot1()
@@ -58,6 +66,7 @@ time3, angle3, intensity3 = read_capfile("data/run2_s_polarisert.txt")
 
 
 def plot2():
+    plt.figure(figsize=(3.5, 3.5), dpi=100)
     plt.plot(np.rad2deg(angle2), intensity2, "r.", label="Run #1")
     plt.plot(np.rad2deg(angle3), intensity3, "b.", label="Run #2")
     plt.xlabel("Angle [deg]")
@@ -65,4 +74,8 @@ def plot2():
     plt.title("S-Polarized light")
     plt.grid("on")
     plt.legend()
-    plt.show()
+    plt.tight_layout()
+    plt.savefig("spolar.png", dpi=150)
+    plt.close()
+
+plot2()
