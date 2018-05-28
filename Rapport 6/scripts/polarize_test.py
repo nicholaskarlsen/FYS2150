@@ -5,6 +5,7 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
+import FYS2150lib as fys
 
 angles = np.array([0,
     -10, -20, -30, -40, -50, -60, -70, -80, -90,
@@ -54,6 +55,20 @@ write_table(angles, lux1, "data/ana")
 print "Standard deviation of lux1 = %d" % np.std(lux1)
 
 
-plt.plot(lux2, np.cos(angles)**2, "x")
-plt.show()
-#plt.plot(angles, lux3, "x")
+#plt.plot(angles, lux1, "x")
+
+# exercise 2 plot
+def ex2():
+
+    angles_rad =np.deg2rad(angles)
+    plt.plot((lux2 - lux2[-1]), np.cos(angles_rad)**2, "x", label="Measured Data")
+    x = np.linspace(lux2[0]-lux2[-1], 0, 1e3)
+    m, c, dm, dc = fys.linfit(lux2 - lux2[-1], np.cos(angles_rad)**2)
+    plt.plot(x, m*x + c, label="Linear fit")
+    plt.legend()
+    plt.show()
+
+    return
+
+if __name__ == '__main__':
+    ex2()
