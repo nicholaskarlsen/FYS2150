@@ -65,6 +65,7 @@ def ex2():
     x = np.linspace(lux2[0]-lux2[-1], 0, 1e3)
     m, c, dm, dc = fys.linfit(lux2 - lux2[-1], np.cos(angles_rad)**2)
     plt.plot(x, m*x + c, label="Linear fit")
+    plt.xlabel()
     plt.legend()
     plt.show()
 
