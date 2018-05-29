@@ -144,7 +144,7 @@ def mu_B(B, d1, d2, d3):
     P2 = 2 * Dd * np.sqrt(d3**2 + d1**2) /  (d3**2 - d1**2)
     sigma_err = sigma * np.sqrt(P1**2 + P2**2)
 
-    print "sigma error", sigma_err
+    print "sigma error", sigma_err / sigma * 100
     muB = (hc / tx4) * (sigma / B)
     muB_err = muB * (sigma_err/ sigma)
     print muB_err
