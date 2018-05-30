@@ -82,8 +82,8 @@
   
   In order to minimize the effects that ambient light may have on the following experiments, the windows in the room were covered up and all lights not related to the experiment were turned off whilst data was being recorded, or observations were made.
 
-  \subsection{Checking the polarization of the spectral lamp}
-    In order to determine whether or not the light emitted from a speciffic Sodium spectral lamp, the intensity of light was measured using a luxmeter  after having gone through a polarization filter of variable angle acting as an analyzator, depicted in Fig \ref{fig:lux_ana_lamp}. When changing the angle of the analyzator, we defined a positive and negative direction, which was kept for all subsequent measurements using polarization filters. The angle of the polarization filter was changed in $10^\circ$ increments in the range $-90^\circ$ to $90^\circ$ and the intensity of the light measured by the luxmeter was noted for each angle. 
+  \subsection{\label{subsect:polar_lamp}Checking the polarization of the spectral lamp}
+    In order to determine whether or not the light emitted from a speciffic Sodium spectral lamp, the intensity of light was measured using a luxmeter\cite{data:luxmeter} after having gone through a polarization filter of variable angle acting as an analyzator, depicted in Fig \ref{fig:lux_ana_lamp}. When changing the angle of the analyzator, we defined a positive and negative direction, which was kept for all subsequent measurements using polarization filters. The angle of the polarization filter was changed in $10^\circ$ increments in the range $-90^\circ$ to $90^\circ$ and the intensity of the light measured by the luxmeter was noted for each angle. 
 
 
   \begin{figure}[H]
@@ -95,14 +95,37 @@
 
   \subsection{Testing Malus' law}
 
-    In order to test Malus' law experimentally, we added a second polarization filter to our existing aperature, setting the first polarization filter to a fixed $0^\circ$ whilst the second one is used as the analyzator, depicted in Fig. \ref{fig:lux_ana_pola_lamp}. In order to minimize the effects that ambient light and other potential contaminants, the apparatus was kept as close to each other as possible. 
+    In order to test Malus' law experimentally, we added a second polarization filter to our existing aperature (see sect. \ref{subsect:polar_lamp}), setting the first polarization filter to a fixed angle at $0^\circ$ whilst the second one is used as the analyzator, depicted in Fig. \ref{fig:lux_ana_pola_lamp}. In order to minimize the effects that ambient light and other potential contaminants, the apparatus was kept as tightly stacked as possible. The intensity registered by the luxmeter was again measured in $10^\circ$ increments in the range $-90^\circ$ to $90^\circ$ which was noted in the lab journal. 
 
     \begin{figure}[H]
       \center
       \includegraphics[width=8cm]{scripts/figs/diagram_2.png}
-      \caption{Aparature to test Malus' law.}
+      \caption{Aparature to test Malus' law, where the polarizator is kept at a constant angle while the analyzator is varied.}
       \label{fig:lux_ana_pola_lamp}
     \end{figure}
+
+    Afterwards, a third polarization filter was placed after the analyzator and set to a fixed angle at $90^\circ$ (see Fig. \ref{fig:lux_pola_ana_pola_lamp}). The angle of the analyzator was once again varied as before, and the intensity recorded by the luxmeter was noted in the journal.
+
+    \begin{figure}[H]
+      \center
+      \includegraphics[width=8cm]{scripts/figs/diagram_3.png}
+      \caption{Alternative aparature to test Malus' law, where the two polarizators are kept at a constant angle while the analyzator is varied.}
+      \label{fig:lux_pola_ana_pola_lamp}
+    \end{figure}
+
+    \subsection{Reflection of polarized light}
+      In order to test how the intensity of S and P-polarized light, reflected from a prism with a varying angle of incidence, a modified spectroscope was used as shown in Fig. \ref{fig:mod_spectro}. the angle, and intensity was recorded digitally on a computer using capstone. The angle recorder only measured the change in angle from starting the recording, so there was a notable uncertainty in zeroing the apparatus before starting. The sights, used to read the angle manually were blocked by a cable, such that it could not be used properly, and the geometry of the spectrometer itself was not perfect. For large angles, i.e when the incident line is nearly parallel with the plane of reflection, it was observed that some of the light was transmitted through the prism rather than being reflected. This is likely due to the prism not being properly aligned with the laser, which was reflected in the results. As such, the data for large angles $\phi$ do not follow what is expected, which must be taken into account when reading the results.
+
+      As for making the measurements, the polarisator was set either parallel or tangential to the reflective plane of the prism and the prism was adjusted such that the reflective plane was paralell to the laser beam. Captstone was then started and the luxmeter and prism were slowly rotated untill the angle between the laser and the luxmeter was roughly $65^\circ$. This was repeated for both S and P-polarized light.
+
+    \begin{figure}[H]
+      \center
+      \includegraphics[width=8cm]{scripts/figs/modified_spectrometer.png}
+      \caption{Modified spectrometer used to test how the intensity of reflected, polarized light changes with the angle of incidence.}
+      \label{fig:mod_spectro}
+    \end{figure}
+
+  \subsection{Exploring the optical properties of Calcite crystal}
 
 
 \section{\label{sect:results}Results}
@@ -125,19 +148,20 @@
   \begin{figure}[H]
     \center
     \includegraphics[width=8cm]{scripts/ppolar.png}
-    \caption{Intensity profile due to p-polarized light, where $\phi_P$ denotes the Brewster angle.}
+    \caption{Intensity profile due to p-polarized light, where $\phi_P$ denotes the Brewster angle. Note that the measurements for angles prior to the peak are to be negated as discussed in the experimental section.}
   \end{figure}
 
   \begin{figure}[H]
     \center
     \includegraphics[width=8cm]{scripts/spolar.png}
-    \caption{Intensity profile due to p-polarized light from two separate attempts of the experiment.}
+    \caption{Intensity profile due to p-polarized light from two separate attempts of the experiment. Note that the measurements for angles prior to the peak are to be negated as discussed in the experimental section.}
   \end{figure}
 
 \section{\label{sect:discuss}Discussion}
 
 \section{\label{sect:conclusion}Conclusion}
 
+\onecolumn
 
 \bibliographystyle{plain}
 \bibliography{references_rep6.bib}
