@@ -58,7 +58,7 @@ write_table(angles, lux1, "data/ana")
 
 # plt.plot(angles, lux1, "x")
 
-# exercise 2 plot
+# exercise 2 plot`
 def ex2():
 
     angles_rad = np.deg2rad(angles)

@@ -1,4 +1,4 @@
-\documentclass[11pt,a4paper]{article}
+\documentclass[11pt,a4paper,twocolumn]{article}
 \usepackage{float}
 \usepackage{verbatim}
 \usepackage{subfig}
@@ -64,12 +64,14 @@
 \date{\today}% It is always \today, today,
 %  but any date may be explicitly specified
 
-\maketitle
-\begin{abstract}
-  Studying the properties of linearly and circularly polarized light and testing how well the properties match up to theoretical predictions.
-\end{abstract}
-
-\twocolumn
+\twocolumn[
+  \begin{@twocolumnfalse}
+    \maketitle
+    \begin{abstract}
+      Studying the properties of linearly and circularly polarized light and testing how well the properties match up to theoretical predictions.
+    \end{abstract}
+  \end{@twocolumnfalse}
+]
 
 %\tableofcontents
 
@@ -84,7 +86,7 @@
     \begin{figure}[H]
       \center
       \includegraphics[width=8cm]{scripts/figs/calcite.jpg}
-      \caption{Crystaline structure of calcite (Source: \url{http://lecturedemo.ph.unimelb.edu.au/Optics/Crystal-optics/Oh-1-Calcite-Crystal-Model/Calcite-Diagram)}}
+      \caption{Crystaline structure of calcite (Source: \url{http://lecturedemo.ph.unimelb.edu.au/Optics/Crystal-optics/Oh-1-Calcite-Crystal-Model/Calcite-Diagram})}
       \label{fig:calcite}
     \end{figure}
 
@@ -92,8 +94,10 @@
   
   In order to minimize the effects that ambient light may have on the following experiments, the windows in the room were covered up and all lights not related to the experiment were turned off whilst data was being recorded, or observations were made.
 
+  In all subsequent parts of this report, the spectral lamb to which i refer is a sodioum spectral lamp emitting close to monochromatic light of wavelength $\lambda=589nm$ in air.
+
   \subsection{\label{subsect:polar_lamp}Checking the polarization of the spectral lamp}
-    In order to determine whether or not the light emitted from a specific Sodium spectral lamp, the intensity of light was measured using a luxmeter\cite{data:luxmeter} after having gone through a polarization filter of variable angle acting as an analyzer, depicted in Fig \ref{fig:lux_ana_lamp}. When changing the angle of the analyzer, we defined a positive and negative direction, which was kept for all subsequent measurements using polarization filters. The angle of the polarization filter was changed in $10^\circ$ increments in the range $-90^\circ$ to $90^\circ$ and the intensity of the light measured by the luxmeter was noted for each angle. 
+    In order to determine whether or not the light emitted from the spectral lamp is polarized, the intensity of light was measured using a luxmeter\cite{data:luxmeter} after having gone through a polarization filter of variable angle acting as an analyzer, depicted in Fig \ref{fig:lux_ana_lamp}. When changing the angle of the analyzer, we defined a positive and negative direction, which was kept for all subsequent measurements using polarization filters. The angle of the polarization filter was changed in $10^\circ$ increments in the range $-90^\circ$ to $90^\circ$ and the intensity of the light measured by the luxmeter was noted for each angle. 
 
 
   \begin{figure}[H]
@@ -135,10 +139,18 @@
       \label{fig:mod_spectro}
     \end{figure}
 
+  \subsection{Light transmitted through an angled glass plate}
+
+
   \subsection{Observing birefringence in crystalline Calcite}
     We had two samples of crystalline calcite. One of which was naturally occurring sample, and another which was cut tangentially to its optical axis on two opposing sides. Both of the crystals were transparent\footnote{I believe the particular type of calcite used is named Iceland spar, or at the very least, it looks quite similar to it. See \url{https://en.wikipedia.org/wiki/Iceland_spar}}, and text was clearly readable when looking through them. The crystals were placed on an illuminated panel, on top of which was some text printed on transparent plastic. We then observed the text by looking through the two calcite crystals, both with and without a polarization filter acting as an Analyzer. 
 
     Afterwards, we used an aparature as the one depicted in Fig. INSERT REFERENCE TO FIGURE HERE to investigate how the crystals affected a thin beam of light which is passed through it. The crystals were held inbetween the analysator and lens, and we investigated how the intensity of the dots projected on the screen varied as we changed the angle of the analyzator.
+
+  \subsection{Circular polarization of light using Calcite waveplates}
+    In order to investigate the effect of the polarization of light emitted by the spectral lamp when passed through $\lambda /2$ waveplates, where $\lambda=589$, the most abundent wavelength of visible light emitted from the sodium spectral lamp, an aparature as depicted in Fig INSERT REFERENCE was prepared. The aparature allowed for the rotation of the waveplates along the axis paralell to the light being passed through it from the spectral lamp. There was however no markings on the waveplate to indicate its current orientation.
+
+    
 
 
 \section{\label{sect:results}Results}
@@ -170,7 +182,12 @@
     \caption{Intensity profile due to p-polarized light from two separate attempts of the experiment. Note that the measurements for angles prior to the peak are to be negated as discussed in the experimental section.}
   \end{figure}
 
-  \subsection{Observations from }
+  \subsection{Observations when looking at light passed through crystaline Calcite}
+    When observing text through the naturally occuring sample of crystaline calcite, the birefringence of calcite was observed by the text splitting into two, seemingly identical copies of each other. When placing a the small polarisation filter on top of the crystal and turning it, there were speciffic angles in which the text disapeared, one for each image. Without making any measurements, these angles seemed to be roughly $90^\circ$ relative to each other. Meaning the two images of the text are tangentially polarized relative to each other. 
+
+    When placing the sample in the aparature depicted in Fig. INSERT REFERENCE, there were two small circles of light projected onto the screen when the analyzator was set to $0^\circ$ and $90^\circ$.  Setting the analyzator to $+45^\circ$ resulted in one of the circle disapearing, and setting it to $-45^\circ$ made the other circle disapear.
+
+    When looking at the fabricated calcite sample, which was cut tangential to its optical axis. Only one image of the text was visible, and rotating a polarizing filter on top of it had no visible effect on the image. When investigating further, again using the aparature depcited in Fig. INSERT REFERENCE, there was only one circle projected onto the screen and rotating the analyzator had no visible effect on its illuminosity. 
 
 \section{\label{sect:discuss}Discussion}
 
