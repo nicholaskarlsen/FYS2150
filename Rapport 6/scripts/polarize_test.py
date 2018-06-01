@@ -56,7 +56,7 @@ write_table(angles, lux1, "data/ana")
 # print "Standard deviation of lux1 = %d" % np.std(lux1)
 
 
-#plt.plot(angles, lux1, "x")
+# plt.plot(angles, lux1, "x")
 
 # exercise 2 plot
 def ex2():
