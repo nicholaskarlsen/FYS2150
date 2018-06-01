@@ -1,7 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-#pltrcParams.update({'font.size': 13})  # Sets font size of plots
+# pltrcParams.update({'font.size': 13})  # Sets font size of plots
+
 
 def nuOlje(T):
     # Beregne kinematisk (nu) og dynamisk (mu) vikositet for Shell-oljen nr. 68
@@ -25,8 +26,12 @@ def readlabdat(filename):
     Used to read the file which stores the parameters of the
     sphere
     """
-    vids = []; mass = []; diameter = []; temp = []
-    v = []; ty=[]
+    vids = []
+    mass = []
+    diameter = []
+    temp = []
+    v = []
+    ty = []
 
     file = open(filename, "r")
     for line in file:
@@ -40,6 +45,7 @@ def readlabdat(filename):
     file.close()
 
     return mass, diameter, temp, vids, v, ty
+
 
 mass, diameter, temp, vids, v, ty = readlabdat("data/labdata.dat")
 
@@ -106,7 +112,7 @@ plt.figure(figsize=(8, 4), dpi=100)
 plt.plot(Re[:-1], CR[:-1], "ro")
 plt.ylabel("$C_R$")
 plt.xlabel("$R_e$")
-for i in range(len(v)-1):
+for i in range(len(v) - 1):
     plt.annotate(vids[i].strip()[:2], (Re[i], CR[i]))
 plt.grid("on")
 plt.tight_layout()
@@ -114,14 +120,16 @@ plt.savefig("figs/CR_RE.png")
 plt.close()
 
 for i in range(len(Re)):
-    print "r = %5.2em | m = %5.2e | Re = %4.2f | CR = %4.2f | CS = %4.2f | %s" %(radius[i],mass[i], Re[i], CR[i], CS[i], vids[i].strip()[:2])
+    print "r = %5.2em | m = %5.2e | Re = %4.2f | CR = %4.2f | CS = %4.2f | %s" % (radius[i], mass[i], Re[i], CR[i], CS[i], vids[i].strip()[:2])
 
 
 outfile = open("data/FINAL_table2.dat", "w")
-outfile.write("Type &  Mass [g] &  Radius [mm] & $v_c$ [ms$^{-1}$] & $R_e$ & $C_S$ & $ C_R$ & FPS  &  T [$^\circ$C]  &  Label \\\ \hline \n")
+outfile.write(
+    "Type &  Mass [g] &  Radius [mm] & $v_c$ [ms$^{-1}$] & $R_e$ & $C_S$ & $ C_R$ & FPS  &  T [$^\circ$C]  &  Label \\\ \hline \n")
 for row in range(len(mass)):
-    outfile.write("%s"%ty[row].strip() + " & " + "%.2f"%(mass[row] * 1E3) + " & " + "%.2f"%(radius[row]*1E3) + " & " + "%.3f"%v[row] + " & " + "%.3f"%Re[row] + " & " + "%.3f"%CS[row] + "&" + "%.3f"%CR[row] + " & " + "100" + " & " + "%.1f"%temp[row] + "&"+ "%s"%(vids[row].strip()[:2]) +"\\\ \n")
+    outfile.write("%s" % ty[row].strip() + " & " + "%.2f" % (mass[row] * 1E3) + " & " + "%.2f" % (radius[row] * 1E3) + " & " + "%.3f" % v[row] + " & " + "%.3f" %
+                  Re[row] + " & " + "%.3f" % CS[row] + "&" + "%.3f" % CR[row] + " & " + "100" + " & " + "%.1f" % temp[row] + "&" + "%s" % (vids[row].strip()[:2]) + "\\\ \n")
 
 
 for i in range(len(mass)):
-    print vids[i].strip()[:2], "%.2e"%(mass[i] / (np.pi * radius[i]**3 * (4.0 / 3.0)))
+    print vids[i].strip()[:2], "%.2e" % (mass[i] / (np.pi * radius[i]**3 * (4.0 / 3.0)))

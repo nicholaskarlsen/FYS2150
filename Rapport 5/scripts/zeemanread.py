@@ -39,7 +39,7 @@ def readZeeman(filename, lowerThresh, higherThresh, g2bThresh=20, plot=False):
         raise TypeError("Filename arguement not string")
     img = imread(filename)
     bwImg = rgb2gray(img)
-    binImg = gray2binary(bwImg, 21)    #17 works
+    binImg = gray2binary(bwImg, 21)  # 17 works
     binCrop = binImg[475:525, 0:-1]
 
     plt.imshow(bwImg, cmap=plt.get_cmap('gray'))
@@ -57,7 +57,8 @@ def readZeeman(filename, lowerThresh, higherThresh, g2bThresh=20, plot=False):
     outline_indeces = []
 
     for i in range(len(outlines)):
-        outline_indeces_row = [0]  # Setting first element to zero to make loop work
+        # Setting first element to zero to make loop work
+        outline_indeces_row = [0]
         for j in range(len(outlines[i])):
             if outlines[i, j] == 0:
                 pass
@@ -77,16 +78,17 @@ def readZeeman(filename, lowerThresh, higherThresh, g2bThresh=20, plot=False):
     else:
         plt.close()
 
-    d_outlines = filter(lambda f: f < higherThresh and f > lowerThresh, d_outlines)
+    d_outlines = filter(lambda f: f < higherThresh and f >
+                        lowerThresh, d_outlines)
 
-    if len(d_outlines)%2 != 0:
+    if len(d_outlines) % 2 != 0:
         raise ValueError("outlines not even number, check threshhold")
 
     d_center = []
     counter = 0
     while counter < len(d_outlines):
-            d_center.append((d_outlines[counter] + d_outlines[counter + 1]) / 2.0)
-            counter += 2
+        d_center.append((d_outlines[counter] + d_outlines[counter + 1]) / 2.0)
+        counter += 2
     plt.imshow(binCrop, cmap=plt.get_cmap("gray"))
     plt.plot(d_center, np.zeros_like(d_center) + 30, "ro")
     plt.yticks([])
@@ -96,14 +98,14 @@ def readZeeman(filename, lowerThresh, higherThresh, g2bThresh=20, plot=False):
     d_3 = d_center[-1] - d_center[0]
     d_2 = d_center[-2] - d_center[1]
     d_1 = d_center[-3] - d_center[2]
-    
-    return d_1, d_2, d_3 
+
+    return d_1, d_2, d_3
+
 
 d14, d24, d34 = readZeeman("figs/ZEEMAN4A.jpg", 255, 955)
 d13, d23, d33 = readZeeman("figs/ZEEMAN3A.jpg", 255, 955)
 d12, d22, d32 = readZeeman("figs/ZEEMAN2A.jpg", 255, 955)
 #readZeeman("figs/ZEEMAN1A.jpg", 255, 955, 100)
-
 
 
 def readZeemanAlt(filename):
@@ -125,12 +127,15 @@ def readZeemanAlt(filename):
     plt.yticks([])
     plt.subplot(211)
     plt.plot(bwRow)
-    plt.ylabel("Intensity"); plt.xlabel("Pixel")
+    plt.ylabel("Intensity")
+    plt.xlabel("Pixel")
     plt.tight_layout()
     plt.savefig("zeeman_1a_intensity.png")
     plt.close()
 
+
 readZeemanAlt("figs/ZEEMAN1A.jpg")
+
 
 def mu_B(B, d1, d2, d3):
     hc = 1.98644568E-25     # [CODATA]
@@ -138,22 +143,24 @@ def mu_B(B, d1, d2, d3):
 
     tx4 = 3.0 * 4.0e-3
 
-    #errors
+    # errors
     Dd = 1
-    P1 = 2 * Dd * np.sqrt(d2**2 + d1**2) /  (d2**2 - d1**2)
-    P2 = 2 * Dd * np.sqrt(d3**2 + d1**2) /  (d3**2 - d1**2)
+    P1 = 2 * Dd * np.sqrt(d2**2 + d1**2) / (d2**2 - d1**2)
+    P2 = 2 * Dd * np.sqrt(d3**2 + d1**2) / (d3**2 - d1**2)
     sigma_err = sigma * np.sqrt(P1**2 + P2**2)
 
     print "sigma error", sigma_err / sigma * 100
     muB = (hc / tx4) * (sigma / B)
-    muB_err = muB * (sigma_err/ sigma)
+    muB_err = muB * (sigma_err / sigma)
     print muB_err
     return muB, muB_err
+
 
 mu_B_4, err4 = mu_B(685.5e-3, d14, d24, d34)
 mu_B_3, err3 = mu_B(526.5e-3, d13, d23, d33)
 mu_B_2, err2 = mu_B(354.5e-3, d12, d22, d32)
 mu_B_1, err1 = mu_B(176.0e-3, 463, 489, 686)
+
 
 def print_diameters(list):
     n = 1
@@ -161,6 +168,7 @@ def print_diameters(list):
         print "d_%i = %.1f" % (n, item)
         n += 1
     return
+
 
 print "\n4A Diameters"
 print_diameters([d14, d24, d34])
@@ -178,4 +186,4 @@ print "I = 2A -> %.3e" % mu_B_2, err2
 print "I = 1A -> %.3e" % mu_B_1, err1
 
 
-print "Mean mu_B %.3e" % np.mean([mu_B_4, mu_B_3, mu_B_2,mu_B_1])
+print "Mean mu_B %.3e" % np.mean([mu_B_4, mu_B_3, mu_B_2, mu_B_1])

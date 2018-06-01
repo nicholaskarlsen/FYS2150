@@ -34,7 +34,8 @@ def read_capfile(filename):
 time1, angle1, intensity1 = read_capfile("data/run1_p_polarisert.txt")
 startIndex = 150
 stopIndex = 600
-poly = np.polyfit(np.rad2deg(angle1)[startIndex:stopIndex], intensity1[startIndex:stopIndex], 2)
+poly = np.polyfit(np.rad2deg(angle1)[
+                  startIndex:stopIndex], intensity1[startIndex:stopIndex], 2)
 
 theta = np.linspace(0, 60, 1e3)
 
@@ -43,7 +44,8 @@ def plot1():
    # plt.plot(np.rad2deg(angle1[:-1]), intensity1[:-1], linestyle="--", color="black")
     plt.figure(figsize=(3.5, 3.5), dpi=100)
     plt.plot(np.rad2deg(angle1[:-1]), intensity1[:-1], ".", color="red")
-    minIndex = np.argmin(intensity1[:-1])       # finding angle of brewster index
+    # finding angle of brewster index
+    minIndex = np.argmin(intensity1[:-1])
     brewster = np.rad2deg(angle1[minIndex])     # brewster index in radians
     brewIntensity = intensity1[minIndex]        # corresponding intensity
     plt.annotate(
@@ -77,5 +79,6 @@ def plot2():
     plt.tight_layout()
     plt.savefig("spolar.png", dpi=150)
     plt.close()
+
 
 plot2()

@@ -36,7 +36,7 @@ def raw_fig(filename):
     plt.plot(t, data)
     plt.xlabel("Time [s]")
     plt.ylabel("Amplitude")
-    plt.ticklabel_format(style='sci', axis='y', scilimits=(0,0))
+    plt.ticklabel_format(style='sci', axis='y', scilimits=(0, 0))
 
 
 raw_fig(rel_path + "forsok1.mat")
@@ -55,10 +55,10 @@ def figure1(filename):
     fut = np.transpose(fut)
     fh = int(len(energi) / 2.0)   # half lenght of data
     # Only plot first half of data, as FF mirrors in half-way point.
-    plt.plot(fut[:fh], energi[:fh]) 
+    plt.plot(fut[:fh], energi[:fh])
     plt.xlabel("Frequency [Hz]")
     plt.ylabel("Amplitude")
-    plt.ticklabel_format(style='sci', axis='y', scilimits=(0,0))
+    plt.ticklabel_format(style='sci', axis='y', scilimits=(0, 0))
 
 
 figure1(rel_path + "forsok1.mat")
@@ -99,10 +99,11 @@ def figure2(filename, style="-", cross=0):
 
     plt.grid("on")
 
+
 figure2(rel_path + "forsok1.mat", style="--", cross=1)
 plt.xlabel("Frequency [Hz]")
 plt.ylabel("Amplitude")
-plt.ticklabel_format(style='sci', axis='y', scilimits=(0,0))
+plt.ticklabel_format(style='sci', axis='y', scilimits=(0, 0))
 plt.xticks(rotation=10)
 plt.title("FFT of attempt no. 1 (Zoom at peak)\n$\Delta f=0.10$ Hz")
 plt.savefig("freq_exp2_1.png")
@@ -112,8 +113,8 @@ plt.close()
 figure2(rel_path + "forsok4.mat", style="--", cross=1)
 plt.xlabel("Frequency [Hz]")
 plt.ylabel("Amplitude")
-plt.ticklabel_format(style='sci', axis='y', scilimits=(0,0))
-#plt.xticks(rotation=10)
+plt.ticklabel_format(style='sci', axis='y', scilimits=(0, 0))
+# plt.xticks(rotation=10)
 plt.title("FFT of attempt no. 4 (Zoom at peak)\n$\Delta f=0.04$ Hz")
 plt.savefig("freq_exp2_4.png")
 plt.show()
@@ -125,7 +126,7 @@ for i in range(1, 8):
 plt.xlabel("Frequency [Hz]")
 plt.ylabel("Amplitude")
 plt.legend()
-plt.ticklabel_format(style='sci', axis='y', scilimits=(0,0))
+plt.ticklabel_format(style='sci', axis='y', scilimits=(0, 0))
 plt.xticks(rotation=10)
 plt.savefig("freq_exp2_all.png")
 plt.close()

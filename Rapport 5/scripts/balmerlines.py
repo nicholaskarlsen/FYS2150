@@ -22,9 +22,11 @@ H_theta = (H_ah - H_av) / 2.0
 
 d = 846.7e-9    # Gitterkonstant
 
+
 def wlen(theta):
     "returns wavelength associated with angle theta"
     return d * np.sin(np.deg2rad(theta))
+
 
 # Wavelengths
 H_wlen = wlen(H_theta)
@@ -62,7 +64,8 @@ plt.close()
 
 
 def hydrogen_table():
-    outfile = open("dat/hydrogenlines.dat", "w")  # Change to whatever outfile you want
+    # Change to whatever outfile you want
+    outfile = open("dat/hydrogenlines.dat", "w")
     outfile.write("$\\alpha_v$ & $\\alpha_h$ & $\\theta$ & $\\lambda$ [nm]")
     outfile.write("\n")
     outfile.write("\\\\ \\hline ")
@@ -73,13 +76,15 @@ def hydrogen_table():
         outfile.write(" & ")
         outfile.write("$%.2f \\pm %.2f^\\circ$" % (H_theta[i], dTheta()))
         outfile.write(" & ")
-        outfile.write("$%.2f \\pm %.2f$" % (H_wlen[i] * 1e9, dWlen(np.deg2rad(H_theta[i]), H_wlen[i]) * 1e9))
+        outfile.write("$%.2f \\pm %.2f$" % (
+            H_wlen[i] * 1e9, dWlen(np.deg2rad(H_theta[i]), H_wlen[i]) * 1e9))
         outfile.write(" \\\\")
     outfile.close()
 
 
 def helium_table():
-    outfile = open("dat/heliumlines.dat", "w")  # Change to whatever outfile you want
+    # Change to whatever outfile you want
+    outfile = open("dat/heliumlines.dat", "w")
     outfile.write("$\\alpha_v$ & $\\alpha_h$ & $\\theta$ & $\\lambda$ [nm]")
     outfile.write("\n")
     outfile.write("\\\\ \\hline ")
@@ -90,7 +95,8 @@ def helium_table():
         outfile.write(" & ")
         outfile.write("$%.2f \\pm %.2f^\\circ$" % (He_theta[i], dTheta()))
         outfile.write(" & ")
-        outfile.write("$%.2f \\pm %.2f$" % (He_wlen[i] * 1e9, dWlen(np.deg2rad(He_theta[i]), He_wlen[i]) * 1e9))
+        outfile.write("$%.2f \\pm %.2f$" % (
+            He_wlen[i] * 1e9, dWlen(np.deg2rad(He_theta[i]), He_wlen[i]) * 1e9))
         outfile.write(" \\\\")
     outfile.close()
 

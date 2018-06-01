@@ -35,9 +35,9 @@ def weight_data(set=1):
     m_c = (m_c_balance - b) / a     # approx 2000g
 
     # print "\nref weight \n", (m_reference_balance - b) / a
-    #print "\ncalibrated rough", m_a, m_b, m_c
-    #print "error rough", da
-    #print
+    # print "\ncalibrated rough", m_a, m_b, m_c
+    # print "error rough", da
+    # print
 
     m_rod_ring = np.array([2482.7, 2482.5, 2482.1]) * 1e-3
     m_ring = 34.4 * 1e-3    # kg
@@ -45,10 +45,10 @@ def weight_data(set=1):
     m_ring_c = (m_ring - b) / a  # kg
     m_rod_c = m_rod_ring_c - m_ring_c
 
-    #print mean(m_rod_ring)
-    #print "\ncalibrated rod", m_rod_c
-    #print "mass rod error", np.sqrt(2 * da**2)
-    #print
+    # print mean(m_rod_ring)
+    # print "\ncalibrated rod", m_rod_c
+    # print "mass rod error", np.sqrt(2 * da**2)
+    # print
 
     if set == sets[0]:  # Return corrected masses
         return m_a, m_b, m_c
@@ -83,14 +83,15 @@ d = np.array([15.98, 15.99, 15.99, 16.00,
               15.99, 15.99, 15.98, 15.99,
               15.99, 15.99]) * 1e-3
 d_mean = np.mean(d)
-d_err = fys.stddev(d)[1] # Std dev of mean
+d_err = fys.stddev(d)[1]  # Std dev of mean
 
 hist(d)
 ticklabel_format(style='sci', axis='x', scilimits=(0, 0))
 xlabel("thickness [m]")
 ylabel("No. occurrences")
 xticks(rotation=20)
-title("Measured thickness of rod\nmean thickness=%.3em, $\sigma_m=$%.3e"%(d_mean, d_err))
+title("Measured thickness of rod\nmean thickness=%.3em, $\sigma_m=$%.3e" %
+      (d_mean, d_err))
 savefig("figs/thickdat.png")
 close()
 
@@ -100,7 +101,7 @@ f_err = 0.04  # resolution of FFT
 M_err = 9.8974331835e-05  # from linfit above (da)
 
 l_rod = 144.4e-2    # m
-l_rod_err = 0.1e-2 
+l_rod_err = 0.1e-2
 
 E_sound = E_sound(f=f_root,
                   L=l_rod,
@@ -228,9 +229,9 @@ print "Data:"
 print "A = %.3e" % (abs(A))
 print dA
 print "l = %f" % l_BC
-print s_l_BC   
+print s_l_BC
 print "d = %.4e" % d_mean
 print d_err
 print "\n\n\n"
-print "f = %f" % f_root  
+print "f = %f" % f_root
 print "M = %f" % weight_data("rod")

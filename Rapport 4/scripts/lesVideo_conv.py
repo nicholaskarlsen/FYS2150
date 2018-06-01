@@ -18,7 +18,7 @@ import scipy.constants
 from skimage.measure import regionprops
 from matplotlib.image import imread
 from skimage import util
-import FYS2150lib as fys # Used for linfit
+import FYS2150lib as fys  # Used for linfit
 # import skimage.color
 # from PIL import Image
 # import skimage.morphology as morph
@@ -43,6 +43,7 @@ def gray2binary(gray, limBW=128):
     bw[bw >= limBW] = 255   # White
     return bw
 
+
 def genFilter(image):
     """
     Generates an array to filter out
@@ -52,6 +53,7 @@ def genFilter(image):
     bwImage = gray2binary(gsImage)
     bwImage = bwImage / 255.0
     return bwImage.astype(int)
+
 
 def trackCircle(filename="litenmetallkule.avi", path="current",
                 hMin=0, hMax=-1, wMin=0, wMax=-1):
@@ -80,7 +82,7 @@ def trackCircle(filename="litenmetallkule.avi", path="current",
 
     fullFilename = folderPath + "/" + filename
 
-    print "Reading video... %s" %fullFilename
+    print "Reading video... %s" % fullFilename
 
     video = skvideo.io.vread(fullFilename)
     totalFrames = len(video)
@@ -149,7 +151,7 @@ def trackCircle(filename="litenmetallkule.avi", path="current",
         plt.plot(cmPos[frame, 1], cmPos[frame, 0],
                  "ro", label="Center of mass")
         plt.title("Processed image, frame:%i" % frame)
-        plt.savefig("figs/graphs/%s_1.png"%vids[row][:-4])
+        plt.savefig("figs/graphs/%s_1.png" % vids[row][:-4])
         plt.legend()
         plt.subplot(313)
         plt.hist(np.ravel(im), 256)
@@ -181,8 +183,6 @@ def testFunc():
     plt.show()
 
 
-
-
 if __name__ == "__main__":
 
     def readlabdat(filename):
@@ -190,8 +190,11 @@ if __name__ == "__main__":
         Used to read the file which stores the parameters of the
         sphere
         """
-        vids = []; mass = []; radius = []; temp = []
-        
+        vids = []
+        mass = []
+        radius = []
+        temp = []
+
         file = open(filename, "r")
         for line in file:
             cols = line.split()
@@ -253,7 +256,8 @@ if __name__ == "__main__":
         plt.plot(validFrames[start:stop],
                  validFrames[start:stop] * m + c,
                  label="linear fit, y=mx+c")
-        plt.text(0, 1000, "m = %.2f [px/frame]\n dm = %.2f [px/frame]" % (m, dm))
+        plt.text(
+            0, 1000, "m = %.2f [px/frame]\n dm = %.2f [px/frame]" % (m, dm))
         plt.xlabel("Frame")
         plt.ylabel("x-pos [px]")
         plt.legend()
@@ -261,10 +265,11 @@ if __name__ == "__main__":
         plt.plot(validFrames, y, ".", label="Position of CM")
         plt.xlabel("Frame")
         plt.ylabel("y-pos  [px]")
-        plt.savefig("figs/graphs/%s_2.png"%vids[row][:-4])
+        plt.savefig("figs/graphs/%s_2.png" % vids[row][:-4])
         plt.show()
 
-        outfile.write(vids[row] + " & " + "%i"%(m) + " & " + "%i"%dm + "&" + "%s"%mass[row] + "&" + "%s"%radius[row] +"\\\ \n")
+        outfile.write(vids[row] + " & " + "%i" % (m) + " & " + "%i" %
+                      dm + "&" + "%s" % mass[row] + "&" + "%s" % radius[row] + "\\\ \n")
 
         # More plots
 
