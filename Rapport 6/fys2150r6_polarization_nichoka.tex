@@ -1,4 +1,4 @@
-\documentclass[11pt,a4paper]{article}
+\documentclass[11pt,a4paper, twocolumn]{article}
 \usepackage{float}
 \usepackage{verbatim}
 \usepackage{subfig}
@@ -63,15 +63,15 @@
 
 \date{\today}% It is always \today, today,
 %  but any date may be explicitly specified
-\maketitle
-%\twocolumn[
-%  \begin{@twocolumnfalse}
-%    \maketitle
-%    \begin{abstract}
-%      Studying the properties of linearly and circularly polarized light and testing how well the properties match up to theoretical predictions.
-%    \end{abstract}
-%  \end{@twocolumnfalse}
-%]
+
+\twocolumn[
+  \begin{@twocolumnfalse}
+    \maketitle
+    \begin{abstract}
+      Studying the properties of linearly and circularly polarized light and testing how well the properties match up to theoretical predictions.
+    \end{abstract}
+  \end{@twocolumnfalse}
+]
 
 %\tableofcontents
 
@@ -116,7 +116,7 @@
     \begin{figure}[H]
       \center
       \includegraphics[width=8cm]{scripts/figs/diagram_2.png}
-      \caption{Aparature to test Malus' law, where the polarizator is kept at a constant angle while the analyzer is varied.}
+      \caption{Aparature to test Malus' law, where the polarizer is kept at a constant angle while the analyzer is varied.}
       \label{fig:lux_ana_pola_lamp}
     \end{figure}
 
@@ -125,7 +125,7 @@
     \begin{figure}[H]
       \center
       \includegraphics[width=8cm]{scripts/figs/diagram_3.png}
-      \caption{Alternative aparature to test Malus' law, where the two polarizators are kept at a constant angle while the analyzer is varied.}
+      \caption{Alternative aparature to test Malus' law, where the two polarizers are kept at a constant angle while the analyzer is varied.}
       \label{fig:lux_pola_ana_pola_lamp}
     \end{figure}
 
@@ -180,9 +180,9 @@
       \label{fig:waveplate}
     \end{figure}
 
-    The polarizator was set to $0^\circ$ and the analyzator to $+90^\circ$. The waveplate is then rotated untill the projected image was at a minima. As we did not have a luxmeter, this was purely based on the observed intensity of the projection on the screen. When the intensity minima is reached with this configuration, the optical axis is at either $0^\circ$ or $90^\circ$ to the vertical axis. We then adjusted the polarizator to $+45^\circ$ and observed how the intensity of the projected light varied when adjusting the analyzator to different angles.
+    The polarizer was set to $0^\circ$ and the analyzator to $+90^\circ$. The waveplate is then rotated untill the projected image was at a minima. As we did not have a luxmeter, this was purely based on the observed intensity of the projection on the screen. When the intensity minima is reached with this configuration, the optical axis is at either $0^\circ$ or $90^\circ$ to the vertical axis. We then adjusted the polarizer to $+45^\circ$ and observed how the intensity of the projected light varied when adjusting the analyzator to different angles.
 
-    Afterwards, we added a second $\lambda/4$ waveplate to the aparature, which in combination effectively yields a $\lambda/2$ waveplate. The polarizator was then set to $+45^\circ$ and the analyzator to $-45^\circ$. We then turned the newly added waveplate, while leaving the old one in its previous orientation. The new waveplate was turned untill the projected light reached an intensity maxima. Again, the when this maxima occured was based on our judgement, as no quantitative measurement regarding its intensity was made. When the maxima was reached, the analyzator was turned to $+45^\circ$ and the intensity of the projected light was at a minimum.
+    Afterwards, we added a second $\lambda/4$ waveplate to the aparature, which in combination effectively yields a $\lambda/2$ waveplate. The polarizer was then set to $+45^\circ$ and the analyzator to $-45^\circ$. We then turned the newly added waveplate, while leaving the old one in its previous orientation. The new waveplate was turned untill the projected light reached an intensity maxima. Again, the when this maxima occured was based on our judgement, as no quantitative measurement regarding its intensity was made. When the maxima was reached, the analyzator was turned to $+45^\circ$ and the intensity of the projected light was at a minimum.
     
 
 
@@ -190,7 +190,7 @@
   
   \subsection{Polarization of light emitted by the spectral lamp}
 
-  The polarization of light emitted by the Sodium spectral lamb was investigated using an analyzator, and measured intensities using the luxmeter is presented in Table \ref{tab:ana}. A graph of this data is also provided in Fig. \ref{fig:ana_plot} for further clarity.
+  The polarization of light emitted by the Sodium spectral lamb was investigated using an analyzator, and measured intensities using the luxmeter is presented in Table \ref{tab:ana}. A graph of this data is also provided in Fig. \ref{fig:ana_plot} for added clarity.
 
   \begin{table}[H]
       \center
@@ -211,6 +211,9 @@
 
   \subsection{Confirming Malus law}
 
+  The measured intensities measured of $0^\circ$ polarized light for different angles $\theta$ of an analyzator, as depicted in Fig. \ref{fig:lux_ana_pola_lamp} is presented in Table \ref{fig:malus1} such that it should satisfy the proportionality $I \propto \cos^2(\theta)$ in accordance with Malus law. In addition to the measured data points, there is also a linear fit with its errors $\delta m, \delta c$.
+
+
   \begin{figure}[H]
     \center
     \includegraphics[width=8cm]{scripts/malus1.png}
@@ -218,26 +221,32 @@
     \label{fig:malus1}
   \end{figure}
 
+  Following, in Fig. \ref{fig:malus2} are the intensity measurements presented as a function of the angle of the analyzator in the aparature depicted in \ref{fig:lux_pola_ana_pola_lamp} where light is first polarized at $0^\circ$, passed through an analyzator of variable angle $\theta$, polarized again at $+90^\circ$ before its intensity is measured by the luxmeter.
+  
   \begin{figure}[H]
     \center
     \includegraphics[width=8cm]{scripts/malus2.png}
-    \caption{Intensity of light measured by luxmeter for different angles $\theta$ of analyzator which is positioned between two tangentially polarized polarizators at angles $-90^\circ$, $0$}
-    \label{fig:malus1}
+    \caption{Intensity of light measured by luxmeter for different angles $\theta$ of analyzator which is positioned between two tangential polarizers at angles $-90^\circ$, $0$ respectively. See Fig. \ref{fig:lux_pola_ana_pola_lamp}}
+    \label{fig:malus2}
   \end{figure}
 
 
   \subsection{Intensity of reflected light for S and P polarized light \label{sect:res_prism}}
 
+  The intensities for P and S polarized light reflected off a prism at different angles $\theta$ are presented in Figures \ref{fig:ppolar}, \ref{fig:spolar} respectively. In both graphs, the angle on the $x$-axis does not match the angle $\phi$ in Fig. \ref{fig:mod_spectro}, but rather $\phi + 90^\circ$. Additionally, the data prior to the primary peak in all plots have been left in, but should be ignored for reasons explained in section \ref{subsect:reflection_experimental}, as they deviate from the theoretical model due to flaws in the apparatus.
+
   \begin{figure}[H]
     \center
     \includegraphics[width=8cm]{scripts/ppolar.png}
     \caption{Intensity profile due to p-polarized light, where $\phi_P$ denotes the Brewster angle. Note that the measurements for angles prior to the peak are to be ignored as discussed in the experimental section.}
+    \label{fig:ppolar}
   \end{figure}
 
   \begin{figure}[H]
     \center
     \includegraphics[width=8cm]{scripts/spolar.png}
     \caption{Intensity profile due to p-polarized light from two separate attempts of the experiment. Note that the measurements for angles prior to the peaks are to be ignored as discussed in the experimental section.}
+    \label{fig:spolar}
   \end{figure}
 
   \subsection{Polarization of light transmitted through glass plate}
@@ -251,6 +260,9 @@
     When placing the sample in the apparatus depicted in Fig. \ref{fig:calcite}, there were two small circles of light projected onto the screen when the analyzator was set to $0^\circ$ and $90^\circ$.  Setting the analyzator to $+45^\circ$ resulted in one of the circle disappearing, and setting it to $-45^\circ$ made the other circle disappear.
 
     When looking at the fabricated calcite sample, which was cut tangential to its optical axis. Only one image of the text was visible, and rotating a polarizing filter on top of it had no visible effect on the image. When investigating further, again using the apparatus depicted in Fig. \ref{fig:calcite}, there was only one circle projected onto the screen and rotating the analyzator had no visible effect on its luminosity. 
+
+  \subsection{Observations on the intensity of light polarized with calcite waveplates}
+    When the $\lambda/4$ plate was placed in between a polarizer and an analyzator as depicted in Fig. \ref{fig:waveplate}
 
 \section{\label{sect:discuss}Discussion}
 
