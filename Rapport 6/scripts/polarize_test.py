@@ -70,7 +70,7 @@ def ex1():
 
     plt.tight_layout()
     plt.savefig("polartest.png", dpi=150)
-    plt.show()
+    plt.close()
 
 
 # exercise 2 plot`
@@ -102,7 +102,18 @@ def ex2():
 
     return
 
+def ex3():
+    plt.figure(figsize=(3.5, 3.5), dpi=100)
+    plt.plot(angles, lux3, "x")
+    plt.title("Intensity of light when varying \nangle $\\theta$ of analyzator between \ntwo tangential polarizators")
+    plt.xlabel("Angle of analyzator [deg]")
+    plt.ylabel("Intensity [Lux]")
+    plt.tight_layout()
+    plt.savefig("malus2.png", dpi=150)
+    plt.show()
+
 
 if __name__ == '__main__':
     ex1()
     ex2()
+    ex3()

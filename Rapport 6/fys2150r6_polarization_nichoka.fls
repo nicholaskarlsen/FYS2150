@@ -319,6 +319,9 @@ INPUT ./scripts/polartest.png
 INPUT scripts/malus1.png
 INPUT ./scripts/malus1.png
 INPUT ./scripts/malus1.png
+INPUT scripts/malus2.png
+INPUT ./scripts/malus2.png
+INPUT ./scripts/malus2.png
 INPUT scripts/ppolar.png
 INPUT ./scripts/ppolar.png
 INPUT ./scripts/ppolar.png
