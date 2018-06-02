@@ -58,20 +58,51 @@ write_table(angles, lux1, "data/ana")
 
 # plt.plot(angles, lux1, "x")
 
+# ex1 plot
+
+def ex1():
+    plt.figure(figsize=(3.5, 3.5), dpi=100)
+    plt.plot(angles, lux1, "x")
+
+    plt.title("Intensity of light passed\n through a single polarization filter")
+    plt.xlabel("Angle of analyzator [deg]")
+    plt.ylabel("Intensity [Lux]")
+
+    plt.tight_layout()
+    plt.savefig("polartest.png", dpi=150)
+    plt.show()
+
+
 # exercise 2 plot`
 def ex2():
 
     angles_rad = np.deg2rad(angles)
-    plt.plot((lux2 - lux2[-1]), np.cos(angles_rad)
-             ** 2, "x", label="Measured Data")
-    x = np.linspace(lux2[0] - lux2[-1], 0, 1e3)
-    m, c, dm, dc = fys.linfit(lux2 - lux2[-1], np.cos(angles_rad)**2)
+    plt.figure(figsize=(3.5, 3.5), dpi=100)
+
+    plt.plot(np.cos(angles_rad) ** 2, lux2 -
+             lux2[-1], "x", label="Measured Data")
+    x = np.linspace(np.cos(angles_rad[0]) **
+                    2, np.cos(angles_rad[-1]) ** 2, 1e3)
+    m, c, dm, dc = fys.linfit(np.cos(angles_rad)**2, lux2 - lux2[-1])
     plt.plot(x, m * x + c, label="Linear fit")
-    plt.legend()
-    plt.show()
+
+    plt.text(0.5, 20, r'$\delta m = %.2e$' % (dm),
+             fontsize=10)
+    plt.text(0.5, 10, r'$\delta c = %.2e$' % (dc),
+             fontsize=10)
+
+    plt.title(
+        "Intensity of polarized light\n passed through analyzator for\n different angles $\\theta$")
+    plt.xlabel("$\cos^2 \\theta$")
+    plt.ylabel("$E(\\theta) - E(\\theta=90^\circ)$ [Lux]")
+    plt.legend(loc="best")
+    plt.tight_layout()
+    plt.savefig("malus1.png", dpi=150)
+    plt.close()
 
     return
 
 
 if __name__ == '__main__':
+    ex1()
     ex2()

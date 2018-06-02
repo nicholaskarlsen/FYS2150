@@ -56,6 +56,7 @@ def plot1():
     plt.title("P-Polarized light")
     plt.grid("on")
     plt.tight_layout()
+    plt.title("")
     plt.savefig("ppolar.png", dpi=150)
     plt.close()
 

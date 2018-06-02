@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex fys2150r6_polarization_nichoka"] 1527886207 "fys2150r6_polarization_nichoka.aux" "fys2150r6_polarization_nichoka.bbl" "fys2150r6_polarization_nichoka" 1527886322
+["bibtex fys2150r6_polarization_nichoka"] 1527902296 "fys2150r6_polarization_nichoka.aux" "fys2150r6_polarization_nichoka.bbl" "fys2150r6_polarization_nichoka" 1527902297
   "/usr/share/texmf-dist/bibtex/bst/base/plain.bst" 1520157249 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "fys2150r6_polarization_nichoka.aux" 1527886322 6195 85fe8c058751053ee2bb86d9458b904c ""
+  "fys2150r6_polarization_nichoka.aux" 1527902297 8919 850f049dbc7533e9e861ab72cf79c391 ""
   "references_rep6.bib" 1527851999 779 7a525bdc848942e06ecb57b631cf654f ""
   (generated)
   "fys2150r6_polarization_nichoka.bbl"
   "fys2150r6_polarization_nichoka.blg"
-["pdflatex"] 1527886322 "fys2150r6_polarization_nichoka.tex" "fys2150r6_polarization_nichoka.pdf" "fys2150r6_polarization_nichoka" 1527886322
+["pdflatex"] 1527902296 "fys2150r6_polarization_nichoka.tex" "fys2150r6_polarization_nichoka.pdf" "fys2150r6_polarization_nichoka" 1527902297
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1520157211 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1520157216 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecbx1000.tfm" 1520157221 3584 2d666ecf6d466d8b007246bc2f94d9da ""
@@ -194,20 +194,25 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1520157258 32585 d82bbcf7626b7842c87671687479e852 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1527784848 2570953 760b5bb0cbd280885d9f95318df536c1 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1527784843 7738161 b4ab573e54fb84f86f0c6f44d5162bf8 ""
-  "fys2150r6_polarization_nichoka.aux" 1527886322 6195 85fe8c058751053ee2bb86d9458b904c ""
-  "fys2150r6_polarization_nichoka.bbl" 1527886207 495 f52ce4a5f8d3f12a0df8b4349980f0b7 "bibtex fys2150r6_polarization_nichoka"
-  "fys2150r6_polarization_nichoka.out" 1527886322 996 5cd94f3539f9ef0f23ec453f8df42abb ""
-  "fys2150r6_polarization_nichoka.tex" 1527886322 14213 e9ecd7ab4f55d5ae12565c5e684925aa ""
-  "scripts/data/ana.dat" 1527794731 255 9ff2bf1d1b5f6f28784a63a80393af46 ""
+  "fys2150r6_polarization_nichoka.aux" 1527902297 8919 850f049dbc7533e9e861ab72cf79c391 ""
+  "fys2150r6_polarization_nichoka.bbl" 1527902296 495 f52ce4a5f8d3f12a0df8b4349980f0b7 "bibtex fys2150r6_polarization_nichoka"
+  "fys2150r6_polarization_nichoka.out" 1527902297 1378 ba775da0d262cfe5ed5f955328305d72 ""
+  "fys2150r6_polarization_nichoka.tex" 1527902295 18227 cca7089b21b89d81dc2bd9bd2624df11 ""
+  "scripts/data/ana.dat" 1527901447 255 9ff2bf1d1b5f6f28784a63a80393af46 ""
   "scripts/figs/calcite.jpg" 1527785961 9798 8e653c5f399181dc0453d17c82a007b5 ""
   "scripts/figs/diagram_1.png" 1527785961 52907 7744505aaf9949ba1a82bce16ff503f5 ""
   "scripts/figs/diagram_2.png" 1527785961 59662 bf5960af9defcd6f8156b64d022764c6 ""
   "scripts/figs/diagram_3.png" 1527785961 64601 d5802d8ad013eb95d7dbb22a157032d9 ""
+  "scripts/figs/diagram_4.png" 1527894871 86840 6356ef55ba7186d677301badd68195f0 ""
+  "scripts/figs/diagram_5.png" 1527894871 77967 a5ec19d28b0c74f0e50fc7662f1cdb8d ""
+  "scripts/figs/diagram_6.png" 1527894871 67052 765435c9a2499be29dbc91574325f34a ""
   "scripts/figs/modified_spectrometer.png" 1527785961 164140 65831e61b8d385c50292494104ae3d7f ""
+  "scripts/malus1.png" 1527901451 50581 800d53074b8729f212187fbfe7ce6d50 ""
+  "scripts/polartest.png" 1527901447 33502 82ce00d1f3a64ff1da0f2ba3e08fedae ""
   "scripts/ppolar.png" 1527785961 30496 8133e84d5f1c63c3309a2757904539c8 ""
   "scripts/spolar.png" 1527785961 37023 19e039fa79980d51e3cc123e1ab2a0e8 ""
   (generated)
   "fys2150r6_polarization_nichoka.aux"
-  "fys2150r6_polarization_nichoka.out"
   "fys2150r6_polarization_nichoka.pdf"
+  "fys2150r6_polarization_nichoka.out"
   "fys2150r6_polarization_nichoka.log"
