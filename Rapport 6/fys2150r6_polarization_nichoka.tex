@@ -1,4 +1,4 @@
-\documentclass[11pt,a4paper,twocolumn]{article}
+\documentclass[11pt,a4paper]{article}
 \usepackage{float}
 \usepackage{verbatim}
 \usepackage{subfig}
@@ -63,15 +63,15 @@
 
 \date{\today}% It is always \today, today,
 %  but any date may be explicitly specified
-
-\twocolumn[
-  \begin{@twocolumnfalse}
-    \maketitle
-    \begin{abstract}
-      Studying the properties of linearly and circularly polarized light and testing how well the properties match up to theoretical predictions.
-    \end{abstract}
-  \end{@twocolumnfalse}
-]
+\maketitle
+%\twocolumn[
+%  \begin{@twocolumnfalse}
+%    \maketitle
+%    \begin{abstract}
+%      Studying the properties of linearly and circularly polarized light and testing how well the properties match up to theoretical predictions.
+%    \end{abstract}
+%  \end{@twocolumnfalse}
+%]
 
 %\tableofcontents
 
@@ -97,7 +97,9 @@
   In all subsequent parts of this report, the spectral lamb to which i refer is a sodioum spectral lamp emitting close to monochromatic light of wavelength $\lambda=589$nm in air.
 
   \subsection{\label{subsect:polar_lamp}Checking the polarization of the spectral lamp}
-    In order to determine whether or not the light emitted from the spectral lamp is polarized, the intensity of light was measured using a luxmeter\cite{data:luxmeter} after having gone through a polarization filter of variable angle acting as an analyzer, depicted in Fig \ref{fig:lux_ana_lamp}. When changing the angle of the analyzer, we defined a positive and negative direction, which was kept for all subsequent measurements using polarization filters. The angle of the polarization filter was changed in $10^\circ$ increments in the range $-90^\circ$ to $90^\circ$ and the intensity of the light measured by the luxmeter was noted for each angle. 
+    In order to determine whether or not the light emitted from the spectral lamp is polarized, the intensity of light was measured using a luxmeter\cite{data:luxmeter} after having gone through a polarization filter of variable angle acting as an analyzer, depicted in Fig \ref{fig:lux_ana_lamp}. When changing the angle of the analyzer, we defined a positive and negative direction, which was kept for all subsequent measurements using polarization filters. The angle of the polarization filter was changed in $10^\circ$ increments in the range $-90^\circ$ to $90^\circ$ and the intensity of the light measured by the luxmeter was noted for each angle.
+
+    The uncertainty of the luminosity measured by the luxmeter in the range we measured is $\pm (5\% + 2\enspace \textup{digits})$ \cite{data:luxmeter}. However, in the presence of other ambient light sources the measurements taken in this, and subsequent measurements may not accurately reflect the intended nature of the experiment.
 
 
   \begin{figure}[H]
@@ -131,6 +133,8 @@
       In order to test how the intensity of S and P-polarized light, reflected from a prism with a varying angle of incidence, a modified spectroscope was used as shown in Fig. \ref{fig:mod_spectro}. the angle, and intensity was recorded digitally on a computer using capstone. The angle recorder only measured the change in angle from starting the recording, so there was a notable uncertainty in zeroing the apparatus before starting. The sights, used to read the angle manually were blocked by a cable, such that it could not be used properly, and the geometry of the spectrometer itself was not perfect. For large angles, i.e when the incident line is nearly parallel with the plane of reflection, it was observed that some of the light was transmitted through the prism rather than being reflected. This is likely due to the prism not being properly aligned with the laser, which was reflected in the results. As such, the data for large angles $\phi$ do not follow what is expected, which must be taken into account when reading the results.
 
       As for making the measurements, the polarisator was set either parallel or tangential to the reflective plane of the prism and the prism was adjusted such that the reflective plane was paralell to the laser beam. Captstone was then started and the luxmeter and prism were slowly rotated untill the angle between the laser and the luxmeter was roughly $65^\circ$. This was repeated for both S and P-polarized light.
+
+      Afterwards, we investigated the direction of transmission of a pair of polaroid glasses using an analyzator. The analyzator was rotated and the change in intensity of light was observed through the polaroid glasses.
 
     \begin{figure}[H]
       \center
@@ -184,7 +188,7 @@
 
 \section{\label{sect:results}Results}
   
-  \subsection{Polarization of light emitted by the Na spectral lamp}
+  \subsection{Polarization of light emitted by the spectral lamp}
 
   The polarization of light emitted by the Sodium spectral lamb was investigated using an analyzator, and measured intensities using the luxmeter is presented in Table \ref{tab:ana}. A graph of this data is also provided in Fig. \ref{fig:ana_plot} for further clarity.
 
@@ -222,7 +226,7 @@
   \end{figure}
 
 
-  \subsection{Intensity of reflected light for S and P polarized light}
+  \subsection{Intensity of reflected light for S and P polarized light \label{sect:res_prism}}
 
   \begin{figure}[H]
     \center
@@ -237,13 +241,16 @@
   \end{figure}
 
   \subsection{Polarization of light transmitted through glass plate}
+    Using an apparatus as depicted in Fig. \ref{fig:glassplate}, we observed the polarization of light transmitted through the glass plate at different angles of incidence. When the glass plate was vertical such that the angle of incidence was $0^\circ$, there was no change in the intensity of the projected light when changing the angle of the analyzator. 
 
-  \subsection{Observations when looking at light passed through crystaline Calcite}
-    When observing text through the naturally occuring sample of crystaline calcite, the birefringence of calcite was observed by the text splitting into two, seemingly identical copies of each other. When placing a the small polarisation filter on top of the crystal and turning it, there were speciffic angles in which the text disapeared, one for each image. Without making any measurements, these angles seemed to be roughly $90^\circ$ relative to each other. Meaning the two images of the text are tangentially polarized relative to each other. 
+    The angle of incidence was then adjusted to the equivalent of the Brewster angle for the glass prism (see sect. \ref{sect:res_prism}), roughly $34^\circ$. For this angle, we observed an intensity maxima when the analyzator was at $0^\circ$ and a decreasing intensity as we slowly adjusted the analyzator in the positive and negative directions, reaching an intensity minima at both $\pm 90^\circ$. 
 
-    When placing the sample in the aparature depicted in Fig. \ref{fig:calcite}, there were two small circles of light projected onto the screen when the analyzator was set to $0^\circ$ and $90^\circ$.  Setting the analyzator to $+45^\circ$ resulted in one of the circle disapearing, and setting it to $-45^\circ$ made the other circle disapear.
+  \subsection{Observations when looking at light passed through crystalline Calcite}
+    When observing text through the naturally occurring sample of crystalline calcite, the birefringence of calcite was observed by the text splitting into two, seemingly identical copies of each other. When placing a the small polarization filter on top of the crystal and turning it, there were specific angles in which the text disappeared, one for each image. Without making any measurements, these angles seemed to be roughly $90^\circ$ relative to each other. Meaning the two images of the text are tangentially polarized relative to each other. 
 
-    When looking at the fabricated calcite sample, which was cut tangential to its optical axis. Only one image of the text was visible, and rotating a polarizing filter on top of it had no visible effect on the image. When investigating further, again using the aparature depcited in Fig. \ref{fig:calcite}, there was only one circle projected onto the screen and rotating the analyzator had no visible effect on its illuminosity. 
+    When placing the sample in the apparatus depicted in Fig. \ref{fig:calcite}, there were two small circles of light projected onto the screen when the analyzator was set to $0^\circ$ and $90^\circ$.  Setting the analyzator to $+45^\circ$ resulted in one of the circle disappearing, and setting it to $-45^\circ$ made the other circle disappear.
+
+    When looking at the fabricated calcite sample, which was cut tangential to its optical axis. Only one image of the text was visible, and rotating a polarizing filter on top of it had no visible effect on the image. When investigating further, again using the apparatus depicted in Fig. \ref{fig:calcite}, there was only one circle projected onto the screen and rotating the analyzator had no visible effect on its luminosity. 
 
 \section{\label{sect:discuss}Discussion}
 
