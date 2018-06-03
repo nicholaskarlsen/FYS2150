@@ -60,6 +60,8 @@ def plot1():
     plt.savefig("ppolar.png", dpi=150)
     plt.close()
 
+    print brewster + 90
+
 
 plot1()
 

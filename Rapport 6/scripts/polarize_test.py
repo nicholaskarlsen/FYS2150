@@ -33,7 +33,7 @@ lux3 = np.array([3,
 plt.plot(angles, lux1, "x")
 plt.xlabel("Angle [deg]")
 plt.ylabel("intensity [lux]")
-plt.title("Measured intensity of light passed through an analyzator")
+plt.title("Measured intensity of light passed through an analyzer")
 plt.close()
 
 
@@ -65,7 +65,7 @@ def ex1():
     plt.plot(angles, lux1, "x")
 
     plt.title("Intensity of light passed\n through a single polarization filter")
-    plt.xlabel("Angle of analyzator [deg]")
+    plt.xlabel("Angle of analyzer [deg]")
     plt.ylabel("Intensity [Lux]")
 
     plt.tight_layout()
@@ -92,7 +92,7 @@ def ex2():
              fontsize=10)
 
     plt.title(
-        "Intensity of polarized light\n passed through analyzator for\n different angles $\\theta$")
+        "Intensity of polarized light\n passed through analyzer for\n different angles $\\theta$")
     plt.xlabel("$\cos^2 \\theta$")
     plt.ylabel("$E(\\theta) - E(\\theta=90^\circ)$ [Lux]")
     plt.legend(loc="best")
@@ -105,8 +105,8 @@ def ex2():
 def ex3():
     plt.figure(figsize=(3.5, 3.5), dpi=100)
     plt.plot(angles, lux3, "x")
-    plt.title("Intensity of light when varying \nangle $\\theta$ of analyzator between \ntwo tangential polarizators")
-    plt.xlabel("Angle of analyzator [deg]")
+    plt.title("Intensity of light when varying \nangle $\\theta$ of analyzer between \ntwo tangential polarizers")
+    plt.xlabel("Angle of analyzer [deg]")
     plt.ylabel("Intensity [Lux]")
     plt.tight_layout()
     plt.savefig("malus2.png", dpi=150)
