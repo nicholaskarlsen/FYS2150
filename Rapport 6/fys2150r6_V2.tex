@@ -87,18 +87,31 @@ Lab Report: Time and Frequency}% Force line breaks with \\
 \section{\label{sect:theory}Theory}
   
   \subsection{Polarization}
+    The polarization of light is a wave-like property of light which essentially describes the direction in which the light waves oscillate as it propagates.
+    When light is said to be unpolarized, this essentially means that the light oscillates in all radial directions relative to its direction of propagation, where as linearly polarized light only oscillates in a specific direction. Additionally, there is circular polarization. Where the direction of polarization changes angularly as the wave is propagated forward.
+
+    In order to study the polarization of light, one can use polarization filters which allow for the filtering out of light with a specific angle of polarization. The intensity of light transmitted through a linear polarization filter is given my Malus' law, in Eqn. \ref{eqn:malus}, where $I$ denotes the intensity of light after transmission, $I_0$ before and the angles $\theta_1$, $\theta_2$ denote the angles of the polarization filter and the polarization the of light being transmitted through it it receptively.
+
+    \begin{equation}
+        I = I_0 \cos^2(\theta_2 - \theta_1)
+        \label{eqn:malus}
+    \end{equation}
+
+    Experimentally, a polarization filter can be used to polarize light in a specific direction, in which case it is referred to as a polarizer. Or it can be used to determine the direction of polarization, in which case it is referred to as an analyzer.
+
 
   \subsection{The Brewster angle}
-    When light hits a reflective surface, it is partially reflected and transmitted. For a particular angle of incidence, light with which is polarized at paralell to the plane of incidence is fully transmitted. This angle is named the Brewster angle, $\phi_B$ and is defined mathemtaically in Eqn. \ref{eqn:brewster}. In particular, when a wave goes from Air to another medium, such as light, the equation simplifies to $\tan \phi_B \approx n_2$, as the refractive index of air is $n_{air}\approx 1$.
+    When light hits a reflective surface, it is partially reflected and transmitted. For a particular angle of incidence, light which is polarized at paralell to the plane of incidence is fully transmitted. This angle is named the Brewster angle, $\phi_B$ and is defined mathemtaically in Eqn. \ref{eqn:brewster}. In particular, when a wave goes from Air to another medium, such as light, the equation simplifies to $\tan \phi_B \approx n_2$, as the refractive index of air is $n_{air}\approx 1$. Which is derived from Snell's Law. For more, see \cite{bolger}.
     \begin{equation}
         \tan \phi_B = \frac{n_2}{n_1}
         \label{eqn:brewster}
     \end{equation}
 
+    When light is reflected/transmitted on a surface, the components of light which are tangential and parallel to the plane of incidence is referred to as S and P polarized light respectively.
     
 
   \subsection{Birefringence}
-    Certain materials, such as Calcite crystal exhibit birefringent behavior, where it effectively has two separate refractive indices for light polarized at right angle to each other, meaning that when unpolarized light is passed through the crystal, two displaced images will be visible. Birefringence can occur for different reasons, but in the case of crystalline Calcite, it is due to the uniaxial geometry of its lattice (See fig. \ref{fig:calcite}). Where light which is polarized is perpendicular to this optical axis will follow a certain, set refractive index, regardless of the crystals orientation. 
+    Certain materials, such as Calcite crystal exhibit birefringent behavior, where it effectively has two separate refractive indices for light polarized at right angle to each other, meaning that when unpolarized light is passed through the crystal, two displaced images will be visible. Birefringence can occur for different reasons, but in the case of crystalline Calcite, it is due to the uniaxial geometry of its lattice (See fig. \ref{fig:calcite}). Where light which is polarized is perpendicular to this optical axis will follow a certain, set refractive index, regardless of the crystals orientation. This refractive index, denoted $n_o$ is referred to as the Ordinary refractive index. The refractive index, which depends on the angle at which the incident ray enters the crystal relative to the optical axis is denotes by $n_e$, the extraordinary refractive index.
 
     \begin{figure}[h!]
       \center

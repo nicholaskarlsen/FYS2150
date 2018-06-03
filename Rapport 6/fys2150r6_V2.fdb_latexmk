@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex fys2150r6_V2"] 1528046447 "fys2150r6_V2.aux" "fys2150r6_V2.bbl" "fys2150r6_V2" 1528046449
+["bibtex fys2150r6_V2"] 1528048971 "fys2150r6_V2.aux" "fys2150r6_V2.bbl" "fys2150r6_V2" 1528050009
   "/usr/share/texmf-dist/bibtex/bst/base/plain.bst" 1520157249 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "fys2150r6_V2.aux" 1528046449 10916 cac2be87fc0511c891819f3a8c27c01d ""
-  "fys2150r6_V2Notes.bib" 1528046448 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "fys2150r6_V2.aux" 1528050009 11013 474de26e99944bdef748beaebf28e093 ""
+  "fys2150r6_V2Notes.bib" 1528050008 0 d41d8cd98f00b204e9800998ecf8427e ""
   "references_rep6.bib" 1528045244 879 e46d7f0e06e8b05a9ac4a11d7e58c1da ""
   (generated)
-  "fys2150r6_V2.bbl"
   "fys2150r6_V2.blg"
-["pdflatex"] 1528046447 "fys2150r6_V2.tex" "fys2150r6_V2.pdf" "fys2150r6_V2" 1528046449
+  "fys2150r6_V2.bbl"
+["pdflatex"] 1528050008 "fys2150r6_V2.tex" "fys2150r6_V2.pdf" "fys2150r6_V2" 1528050009
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1520157216 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1520157226 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1520157226 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
@@ -55,6 +55,7 @@
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1520157213 32587 1788b0c1c5b39540c96f5e42ccd6dae8 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1520157213 32716 08e384dc442464e7285e891af9f45947 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb" 1520157213 32442 c975af247b6702f7ca0c299af3616b80 ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb" 1520157213 36310 f5ddc6715cc60deb16d9db5ded6a9391 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb" 1520157213 29078 718ea4567ceff944262b0f5b0800e1d9 ""
   "/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1520157251 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/share/texmf-dist/tex/generic/ifxetex/ifxetex.sty" 1520157235 1458 43ab4710dc82f3edeabecd0d099626b2 ""
@@ -100,10 +101,10 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1520157258 32585 d82bbcf7626b7842c87671687479e852 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1526049336 2570953 760b5bb0cbd280885d9f95318df536c1 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1526049332 7738161 fcc58708fe6ac56ba04e44ea1c9273c5 ""
-  "fys2150r6_V2.aux" 1528046449 10916 cac2be87fc0511c891819f3a8c27c01d ""
-  "fys2150r6_V2.bbl" 1528046447 348 e2b34133f73e8cb3934671511526b5d9 "bibtex fys2150r6_V2"
-  "fys2150r6_V2.out" 1528046449 2051 3faa76b7cd788e5c450585413e9d45f5 ""
-  "fys2150r6_V2.tex" 1528046446 24797 6cb7dbae15fb1a76b19b0f901b3a85b5 ""
+  "fys2150r6_V2.aux" 1528050009 11013 474de26e99944bdef748beaebf28e093 ""
+  "fys2150r6_V2.bbl" 1528048971 495 35718fe6b88b4106545bf6b1b39f6ea2 "bibtex fys2150r6_V2"
+  "fys2150r6_V2.out" 1528050009 2051 3faa76b7cd788e5c450585413e9d45f5 ""
+  "fys2150r6_V2.tex" 1528050007 26731 8ddd7eb5c7f98a91b4c4f04f519cfda3 ""
   "scripts/data/ana.dat" 1528043661 407 a29919417b7d903ce57f7e281b38ad6e ""
   "scripts/figs/calcite.jpg" 1527711818 9798 8e653c5f399181dc0453d17c82a007b5 ""
   "scripts/figs/diagram_1.png" 1527463786 52907 7744505aaf9949ba1a82bce16ff503f5 ""
@@ -119,8 +120,8 @@
   "scripts/ppolar.png" 1528025696 31686 ecba205aa3efc3084558e73de1539590 ""
   "scripts/spolar.png" 1528025696 37023 b52a9a6eb95398499dfd2271a6656926 ""
   (generated)
-  "fys2150r6_V2Notes.bib"
-  "fys2150r6_V2.pdf"
+  "fys2150r6_V2.out"
   "fys2150r6_V2.aux"
   "fys2150r6_V2.log"
-  "fys2150r6_V2.out"
+  "fys2150r6_V2.pdf"
+  "fys2150r6_V2Notes.bib"
