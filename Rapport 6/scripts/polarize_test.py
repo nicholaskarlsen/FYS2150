@@ -37,8 +37,9 @@ plt.title("Measured intensity of light passed through an analyzer")
 plt.close()
 
 
-def write_table(x, y, filename):
+def write_table(x, y, filename, error=False):
     # writes a table in LaTeX format
+    yerror = np.copy(y) * 0.05 + 2
     if len(x) != len(y):
         raise ValueError("Length of arrays do not match")
 
@@ -47,11 +48,13 @@ def write_table(x, y, filename):
         outfile.write("%d" % x[i])
         outfile.write(" & ")
         outfile.write("%d" % y[i])
+        if error == True:
+            outfile.write("$\pm %i$" % yerror[i])
         outfile.write(" \\\\ \n")
     outfile.close()
 
 
-write_table(angles, lux1, "data/ana")
+write_table(angles, lux1, "data/ana", error=True)
 
 # print "Standard deviation of lux1 = %d" % np.std(lux1)
 
@@ -61,8 +64,9 @@ write_table(angles, lux1, "data/ana")
 # ex1 plot
 
 def ex1():
+    lux1err = np.copy(lux1) * 0.05 + 2
     plt.figure(figsize=(3.5, 3.5), dpi=100)
-    plt.plot(angles, lux1, "x")
+    plt.errorbar(angles, lux1, yerr=lux1err, fmt="x")
 
     plt.title("Intensity of light passed\n through a single polarization filter")
     plt.xlabel("Angle of analyzer [deg]")
@@ -79,13 +83,17 @@ def ex2():
     angles_rad = np.deg2rad(angles)
     plt.figure(figsize=(3.5, 3.5), dpi=100)
 
-    plt.plot(np.cos(angles_rad) ** 2, lux2 -
-             lux2[-1], "x", label="Measured Data")
+    lux3err = np.sqrt((0.05 * np.copy(lux3) + 2)**2 + (0.05 * np.copy(lux3[-1]) + 2)**2)
+
+    # plt.plot(np.cos(angles_rad) ** 2, lux2 -
+    #         lux2[-1], "x", label="Measured Data")
     x = np.linspace(np.cos(angles_rad[0]) **
                     2, np.cos(angles_rad[-1]) ** 2, 1e3)
     m, c, dm, dc = fys.linfit(np.cos(angles_rad)**2, lux2 - lux2[-1])
     plt.plot(x, m * x + c, label="Linear fit")
 
+    plt.errorbar(np.cos(angles_rad)**2, lux2 - lux2[-1],
+                 yerr=lux3err, fmt='x')
     plt.text(0.5, 20, r'$\delta m = %.2e$' % (dm),
              fontsize=10)
     plt.text(0.5, 10, r'$\delta c = %.2e$' % (dc),
@@ -98,19 +106,22 @@ def ex2():
     plt.legend(loc="best")
     plt.tight_layout()
     plt.savefig("malus1.png", dpi=150)
-    plt.close()
+    plt.show()
 
     return
 
+
 def ex3():
+    lux3err = np.copy(lux3) * 0.05 + 2
     plt.figure(figsize=(3.5, 3.5), dpi=100)
-    plt.plot(angles, lux3, "x")
-    plt.title("Intensity of light when varying \nangle $\\theta$ of analyzer between \ntwo tangential polarizers")
+    plt.errorbar(angles, lux3, yerr=lux3err, fmt="x")
+    plt.title(
+        "Intensity of light when varying \nangle $\\theta$ of analyzer between \ntwo tangential polarizers")
     plt.xlabel("Angle of analyzer [deg]")
     plt.ylabel("Intensity [Lux]")
     plt.tight_layout()
     plt.savefig("malus2.png", dpi=150)
-    plt.show()
+    plt.close()
 
 
 if __name__ == '__main__':
