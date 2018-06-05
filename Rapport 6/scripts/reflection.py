@@ -49,8 +49,8 @@ def plot1():
     brewster = np.rad2deg(angle1[minIndex])     # brewster index in radians
     brewIntensity = intensity1[minIndex]        # corresponding intensity
     plt.annotate(
-        '$\\phi_P - 90^\circ$= %.2f$^\\circ$' % brewster,
-        xy=(brewster, brewIntensity), arrowprops=dict(arrowstyle='->'), xytext=(30, 25))
+        '$\\phi_P - 90^\circ$= %.2f$\pm 2^\\circ$' % brewster,
+        xy=(brewster, brewIntensity), arrowprops=dict(arrowstyle='->'), xytext=(25, 25))
     plt.xlabel("Angle [deg]")
     plt.ylabel("Intensity [%]")
     plt.title("P-Polarized light")
