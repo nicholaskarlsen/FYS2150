@@ -1,0 +1,8 @@
+#latex stuff
+*.aux
+*.fls
+*.log
+*.out
+*.blg
+#compiled python
+*.pyc
