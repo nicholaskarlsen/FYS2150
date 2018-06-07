@@ -1,7 +1,0 @@
-PWD /home/nick/Documents/uio/FYS2150/Rapport 2/scripts/tables
-INPUT /etc/texmf/web2c/texmf.cnf
-INPUT /usr/share/texmf/web2c/texmf.cnf
-INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
-INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
-INPUT /home/nick/Documents/uio/FYS2150/Rapport 2/scripts/tables/legocar.tex
-OUTPUT /home/nick/Documents/uio/FYS2150/Rapport 2/scripts/tables/legocar.log
