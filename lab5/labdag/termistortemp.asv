@@ -1,6 +1,0 @@
-function T = termistortemp(R)
-a = 1;
-b = 1;
-c = 1;
-T = a + b * log(R) + 
-end
