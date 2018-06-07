@@ -1,0 +1,344 @@
+              
+% ****** Start of file apssamp.tex ******
+%
+%   This file is part of the APS files in the REVTeX 4.1 distribution.
+%   Version 4.1r of REVTeX, August 2010
+%
+%   Copyright (c) 2009, 2010 The American Physical Society.
+%
+%   See the REVTeX 4 README file for restrictions and more information.
+%
+% TeX'ing this file requires that you have AMS-LaTeX 2.0 installed
+% as well as the rest of the prerequisites for REVTeX 4.1
+%
+% See the REVTeX 4 README file
+% It also requires running BibTeX. The commands are as follows:
+%
+%  1)  latex apssamp.tex
+%  2)  bibtex apssamp
+%  3)  latex apssamp.tex
+%  4)  latex apssamp.tex
+%
+\documentclass[%
+ reprint,
+%superscriptaddress,
+%groupedaddress,
+%unsortedaddress,
+%runinaddress,
+%frontmatterverbose, 
+%preprint,
+%showpacs,preprintnumbers,
+%nofootinbib,
+%nobibnotes,
+%bibnotes,
+ amsmath,amssymb,
+ aps,
+%pra,
+%prb,
+%rmp,
+%prstab,
+%prstper,
+%floatfix,
+]{revtex4-1}
+
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{hyperref}% add hypertext capabilities
+%\usepackage[mathlines]{lineno}% Enable numbering of text and display math
+%\linenumbers\relax % Commence numbering lines
+
+%\usepackage[showframe,%Uncomment any one of the following lines to test 
+%%scale=0.7, marginratio={1:1, 2:3}, ignoreall,% default settings
+%%text={7in,10in},centering,
+%%margin=1.5in,
+%%total={6.5in,8.75in}, top=1.2in, left=0.9in, includefoot,
+%%height=10in,a5paper,hmargin={3cm,0.8in},
+%]{geometry}
+\bibliographystyle{plain}
+
+%\graphicspath{{C:\Users\Nick\Documents\GitHub\FYS2150\lab1}}
+
+\begin{document}
+
+%\preprint{APS/123-QED}
+
+\title{FYS2150 \\
+Lab Report: Time and Frequency}% Force line breaks with \\
+
+\author{Nicholas Karlsen}
+% \email{nichoka@student.matnat.uio.no}
+
+\date{\today}% It is always \today, today,
+             %  but any date may be explicitly specified
+
+\begin{abstract}
+The goal for this lab was measuring time, and comparing three methods of doing so, of varying degrees of "sophistication"; an hourglass, a stopwatch and a photo-diode.
+\end{abstract}
+
+\maketitle
+
+%\tableofcontents
+
+\section{\label{sec:intro}Introduction}
+	The lab spanned 6 hours and consisted of measuring the period of a pendulum using three different methods of measurement; an hourglass, a stopwatch and a photo-diode connected to a computer. The experiments were performed by myself, and my lab partner Lars K. Skaarseth.
+
+\section{Theory}
+	The theory used in this lab report is almost entirely summed up by the following equations;
+	\begin{equation}
+        \label{eqn:period}
+		T = 2\pi \sqrt{\frac{L}{g}}
+	\end{equation}
+	Where $T$ denotes the period a swinging pendulum, $L$ the length of the wire by which the pendulum is suspended and $g$ the downward acceleration on the pendulum due to gravity.
+	\begin{equation}
+		\label{eqn:cm}
+		\vec R = \frac{1}{M} \sum_i m_i \vec r_i
+	\end{equation}
+	Where $\vec R$ denotes the position of the center of mass of a body of mass $M$ consisting of several smaller bodies of mass $m_i$ with individual center of mass at $r_i$.
+
+	Further detail can be found in "Elementary Mechanics Using Python" \cite{elempy}, or most other books covering introductory mechanics.
+
+\section{\label{section:experimentalproced}Experimental Procedure}
+    
+    \subsection{List of equipment used}
+    \begin{itemize}
+        \item Hourglass, generic, unknown duration
+        \item Pendulum, Aluminum cylinder, see Fig. \ref{fig:pendulum1}
+        \item Stopwatch, Cielo 100MT
+        \item Photo-diode
+        \item Cables
+        \item Meter-rule, Hultafors
+        \item Power supply
+        \item Data acquisition tool, NI USB-6211
+        \item PC with MATLAB installed
+        \item Umbraco Key
+        \item Screwdrivers
+        \item Reflective tape
+    \end{itemize}
+
+    \subsection{Preparation}
+        We connected an aluminum cylinder to a block of aluminum secured to a desk with a (i believe nylon?) string as shown in Fig. \ref{fig:pendulum1}. For the purposes of this experiment the string is assumed to be inextensible. 
+
+        The string was turned on the Outer side of the screws on the top block, and the inner at the bottom so that the string would form a "V" shape, or positive angle. This was done in an attempt to limit the sideways motion of the block as much as possible, so that more of its kinetic energy would be restricted to the forward/backward motion (from the perspective of Fig. \ref{fig:pendulum1}), which is the motion being measured in these experiments.
+
+        The length of the string, and later, the dimensions of the pendulum (As shown in Fig. \ref{fig:pendulum1}) were measured using a Hultafors meter-rule with an uncertainty of $\pm 1mm$ as well as a small uncertainty due to thermal expansion. Since we did not record the temperature in the room, i will assume standard temperature and pressure, thus negating the need to account for thermal expansion.
+
+    \begin{figure}
+        \center
+        \includegraphics[scale=0.06, angle=270]{experiment1.jpg}
+        \caption{A photograph showing how the pendulum was set up}
+        \label{fig:pendulum1}
+    \end{figure}
+
+    \subsection{\label{subsec:exp_hourglass}Hourglass}
+        In this this initial part of the experiment, we wanted to measure the number of swings made by the pendulum for the duration of an hourglass with an unknown duration. After having released the pendulum, we let it swing for one period before starting the hourglass, then both i and my lab partner then counted the number of swings separately in an attempt to minimize the chance human error when counting. Since we only counted complete swings, the measured value has an uncertainty of $\pm 1T$. The hourglass was also kept still on a table for its complete duration.
+    
+    \subsection{\label{subsect:exp_stopwatch}Stopwatch}
+        This part is mostly similar to the last one, the only difference being the method of measuring the period. This time we used a stopwatch (Cielo 100MT, uncertainty of $\pm 0.01s$) to record the time. In order to minimize human error, we opted to only measure the time every 10th swing and again, both of us counted the swings individually ensuring we would not record the time at the wrong number of swings. We used the lap function of the stop watch to save the time taken for every 10th swing as well as the total running time for the 100 swings that we recorded.
+
+        A rather significant source of error in this experiment comes from the reaction time, and to some extent the judgment of the person who is recording the time (he had to judge when the pendulum was at its apex).
+
+
+	\subsection{\label{subsect:exp_photodiode}Photo-diode}
+
+        \begin{figure}
+            \center
+            \includegraphics[scale=0.3]{experiment3.jpg}
+            \caption{A photograph showing how the photo-diode was set up and connected to the data acquisition box (NI USB-6211) for experiment no. 3 (Section \ref{subsect:exp_photodiode})}
+            \label{fig:pendulum3}
+        \end{figure}
+
+        In this part, we made our measurements electronically using a photo-diode connected to a computer with MATLAB via a data acquisition box (NI USB-6211). A photo-diode sends out IR light, when this light is not reflected back to an IR sensitive receiver, the photo-diode emits a constant 5V . When the IR light is reflected back to it, it instead emits 0V. For this reason, we had to attach a reflective material to the block of aluminum. We opted for some aluminum foil.
+        Once everything was properly connected (see Fig. \ref{fig:pendulum3}) we ran a MATLAB script \href{http://www.uio.no/studier/emner/matnat/fys/FYS2150/v18/kursmateriell/tid-og-frekvens/svingeperiode.m}{\textbf{svingeperiode.m}} to record the data and started the pendulum as previously. We repeated this 4 times with different settings and conditions.
+        Experiment 1 \& 2 were identical, measured at different frequencies. For experiment 3, we positioned the photo-diode such that it would aim at the top of the cylinder when it was at rest. In experiment 4, the pendulum was given a push rather than releasing it from rest.
+
+        \subsection{Measuring lengths}
+            \subsubsection{\label{subsubsect:strings}Length of string}
+                When measuring the length of the string, we measured it between the middle of the two strings, from the bottom and top of the aluminum at the top and bottom parts of the string respectively. We took great care to ensure that the pendulum was at rest when making the measurement, and kept our heads level with the ruler, and one eye closed when taking the reading in an attempt to minimize any misreading due to parallax. We also rested the Hultafors meter-rule against a right-angle ruler in an additional attempt to keep it stable and upright. We took 3 repeated readings, one of which was performed by a different person. 
+
+                After we had completed our measurements with the hourglass, we noticed a rather large initial rotational and sideways instability in the pendulum, leading us to (mistakingly, see section \ref{disc_problems}) shorten the string by roughly 10cm. After having changed the length of the string, we repeated the exact same procedure of measuring the new length except we only did two measurements, again alternating who took the reading.
+
+            \subsubsection{\label{subsubsect:dim_cyllinder}Dimensions of cylinder}
+                The cylinder, and the T-bracket on top where the string is connected was also measured using the Hultafors meter-rule. This time, we only made one measurement per length, all done by the same person. Other than that, similar considerations were made as when measuring the string.
+
+
+
+
+
+\section{\label{sect:results}Results}
+   
+    \subsection{\label{subsect:len_dim}Recorded lengths and dimensions}
+
+    	The dimensions of the pendulum, consisting of an aluminum T-bracket connected to a cylinder is given in Fig. \ref{fig:tbracket} and table \ref{tab:cylinder} respectively. The length at which it was suspended is given in table \ref{tab:string}
+
+        \begin{table}[h] % Length of string
+            \center
+            \caption{Length of string}
+            \label{tab:string}
+            \begin{tabular}{| p{5cm} | l | l | l |}
+                \hline
+                Measurement No. & 1 & 2 & 3 \\ \hline 
+                Length, Hourglass experiment [cm] ($\pm 0.1cm$) 
+                & 53.4 & 52.9 & 52.9\\ \hline
+                Length, Stopwatch \& Photo-diode experiment [cm] ($\pm 0.1cm$) 
+                & 45.3 & 45.2 &  \\ \hline
+            \end{tabular}
+        \end{table}
+
+        \begin{table}[h] % Length of string
+            \center
+            \caption{Dimensions of Cylinder}
+            \label{tab:cylinder}
+            \begin{tabular}{| l | l |}
+                \hline
+                Height [cm] ($\pm 0.1$)& 10.2 \\ \hline 
+                Diameter [cm] ($\pm 0.1$)& 9.7 \\ \hline
+
+            \end{tabular}
+        \end{table}
+
+    \begin{figure}
+        \center
+        \includegraphics[scale=0.45]{T-bracket_diagram.png}
+        \caption{A sketch showing the dimensions of the T-bracket connected to the cylinder. All numbers in cm with uncertainty $\pm 0.1 cm$ (Not to scale)}
+        \label{fig:tbracket}
+    \end{figure}
+
+	\subsection{Period recorded with hourglass}
+
+        The number of oscillations during the draining of the hourglass is listed on table \ref{tab:hourglass}
+
+    	\begin{table}[h] % Pendulum and hourglass
+            \center
+            \caption{Measurements with Hourglass}
+            \label{tab:hourglass}
+            \begin{tabular}{| l | l |}
+                \hline
+                Recording no. & Number of oscillations $(\pm 1)$\\ \hline
+                1 & 116 \\ \hline
+                2 & 121 \\ \hline
+                3 & 128 \\ \hline
+                \hline
+                Mean & 122 \\ \hline
+                Std. Dev. & 5 \\\hline
+            \end{tabular}
+    	\end{table}
+
+	\subsection{Period recorded with stopwatch}
+
+        The period of the pendulum measured with the stopwatch is listed on table \ref{tab:stopwatch}.
+        We also recorded the duration of the Hourglass using the stopwatch, listed in table \ref{tab:hourglass_stopwatch}
+
+    	\begin{table}[h] % Pendulum and stopwatch
+            \center
+            \caption{Measurements with Stopwatch}
+            \label{tab:stopwatch}
+    	    \begin{tabular}{| p{1.5cm} | p{2cm} | p{2cm} |}
+    		    \hline
+    		    Number of periods & Time per 10 oscillations [sec] ($\pm 0.01$) & Total time [min:sec] ($\pm 0.01$)\\ \hline
+    		    10 & 14.14 & 14.14 \\ \hline
+    		    20 & 14.31 & 28.53 \\ \hline
+    		    30 & 14.32 & 42.85 \\ \hline
+    		    40 & 14.40 & 57.25 \\ \hline
+    		    50 & 14.29 & 1:11.54 \\ \hline
+    		    60 & 14.39 & 1:25.93 \\ \hline
+    		    70 & 14.29 & 1:40.72 \\ \hline
+    		    80 & 14.34 & 1:54.46 \\ \hline
+    		    90 & 14.20 & 2:08.76 \\ \hline
+    		    100 & 14.52 & 2:23.28 \\ \hline
+                \hline
+                Mean period & 14.33 & N/A \\ \hline
+                Std. Dev & 0.10 & N/A \\ \hline
+            \end{tabular}
+        \end{table}
+
+    	\begin{table}[h] % Pendulum and hourglass
+            \center
+            \caption{Duration of Hourglass measured with stopwatch}
+            \label{tab:hourglass_stopwatch}
+            \begin{tabular}{| l | l |}
+                \hline
+                Recording no. & Time [min:sec] ($\pm 0.01s$)\\ \hline
+                1 & 3:08:40 \\ \hline
+                2 & 3:08:28 \\ \hline
+            \end{tabular}
+    	\end{table}
+        
+    \subsection{Period recorded with photo-diode}
+
+        Fig.\ref{fig:data1}, Fig.\ref{fig:data2}, Fig.\ref{fig:data3} and Fig.\ref{fig:data4} shows the result from experiments 1-4 listed on table \ref{tab:photodiode} respectively.
+
+        \begin{table}[h] % Pendulum and stopwatch
+            \caption{Measurements with photo-diode}
+            \label{tab:photodiode}
+            \begin{tabular}{| p{1.6cm} | p{1.4cm} | p{1.1cm} | p{1.3cm} | p{1.3cm} | p{1.5cm} |}
+                \hline
+                Experiment no. & Standard deviation of mean period & Mean period & Position of diode & Total measured time [s] & Measuring frequency [KHz] \\ \hline
+                1 & 5.6540e-4 & 1.4421 & Bottom & 120 & 25 \\ \hline
+                2 & 8.8552e-4 & 1.4502 & Bottom & 120 & 200 \\ \hline
+                3 & 0.0483 & 1.5816 & top & 120 & 25 \\ \hline
+                4 & 0.0026 & 1.4922 & Bottom & 120 & 25 \\ \hline
+            \end{tabular}
+        \end{table}
+        
+        \begin{figure}[h!]
+        	\center
+        	\includegraphics[scale=0.6]{forsok1fig1}
+        	\caption{Data from Experiment no. 1 using the photo-diode
+        	\footnote{Due to poor planning on my part, this figure, and the following all lack figure titles. I mistakingly did not keep all of the .mat files
+        	}}
+            \label{fig:data1}
+        \end{figure}
+
+        \begin{figure}[h!]
+        	\center
+        	\includegraphics[scale=0.6]{forsok2fig1}
+        	\caption{Data from Experiment no. 2 using the photo-diode}
+            \label{fig:data2}
+        \end{figure}
+
+        \begin{figure}[h!]
+        	\center
+        	\includegraphics[scale=0.6]{forsok3fig1}
+        	\caption{Data from Experiment no. 3 using the photo-diode}
+            \label{fig:data3}
+        \end{figure}
+
+        \begin{figure}[h!]
+        	\center
+        	\includegraphics[scale=0.6]{forsok4fig1}
+        	\caption{Data from Experiment no. 4 using the photo-diode}
+            \label{fig:data4}
+        \end{figure}
+
+    \subsection{\label{disc_problems}Problems}
+        As mentioned in the introduction, we did make one rather large experimental error, which does taint our data somewhat. After having completed our measurements with the Hourglass, we noticed a rather large initial sideways and rotational instability when attempting to start the pendulum for our measurements with the stopwatch. In order to minimize this instability, we decided to shorten the string, not considering the ramification this had on our data.
+
+
+\section{Discussion}
+	\subsection{Theoretical period}
+		\subsubsection{Center of mass}
+		The first thing to consider, and compare the measured results against would be the theoretical period of the system. Since the pendulum is roughly symmetrical in certain planes, i will assume it is and only look for the vertical component of the center of mass. Using Equation \ref{eqn:cm} and my measurements in section \ref{subsect:len_dim} \footnote{The volume of the parts serve as the mass in this case, as the entire pendulum is made of the same material} i found that the center of mass of the pendulum is $\sim 7.79cm$ from the top of the pendulum. If i had disregarded the mass of the T-bracket the C.M of the cylinder would have been at $8cm\,(\pm0.1cm)$, meaning it may be more accurate to simply neglect accounting for the T-bracket in this case. When calculating the uncertainty in the CM when accounting for the T-bracket (which is very tedious to do) i found that only one of the volumes would have an uncertainty of $\pm 2mm^3$. So the total uncertainty would be so large that it simply makes more sense to "ignore" the T-bracket when calculating the period of the pendulum.	
+		\subsubsection{Period}
+		Using equation \ref{eqn:period} along with the center of mass from the previous subsection i find that the theoretical period of the pendulum for the 52.9cm and 45.2cm strings respectively are 1.56s$(\pm 0.02)$ and 1.46s$(\pm 0.02)$ respectively. (Not accounting for the uncertainty that comes from my assumption that only the cylinder contributes to the C.M)
+
+	\subsection{The hourglass}
+		The most apparent problem with using the hourglass as a timekeeping tool is the rather large inconsistency it presents. While granted, we did only perform 3 readings of its duration using the pendulum, the spread of values we did get were rather significant with a standard deviation of 5 periods, equivalent of $\sim 8s$. The inconsistency of the hourglass was again observed when we timed it using a stopwatch (see table \ref{tab:hourglass_stopwatch}), observing a $12s$ difference between our two readings. This makes the hourglass a highly inconsistent, and inaccurate tool for measuring time.
+
+	\subsection{The stopwatch}
+		In stark contrast to the hourglass, the stopwatch is a seemingly much more accurate tool for measuring time, with a standard deviation of only $0.1s$. While the stopwatch itself is, theoretically, an excellent tool for measuring the period of a pendulum in terms of its error, one does have to consider the effects of human error in this experiment, which ultimately is what makes up the inconsistency in these results. The person recording the period has to both react and judge when the pendulum is at its apex. Either way, the mean of our recordings divided by 10 results in a mean recorded period of 1.43s, while reasonably close to the theoretical period, it is outside of three standard deviations away from the mean.
+
+	\subsection{The photo-diode}
+		As expected, the digital, automated solution comes out as the most accurate and precise with a standard deviation in order of magnitude $10^{-4}s$ in ideal conditions (As in experiment no. 1 \& 2, table \ref{tab:photodiode}). The "ideal conditions" being very important here. As we tested in experiment no. 3, table \ref{tab:photodiode} changing the position of the photo diode can have a quite significant impact on the quality of data. Note the sudden significant jump in period at $\sim 100s$ in Fig. \ref{fig:data3}, where we aimed the photo-diode much further up on the cylinder. This "error" arose because the photo-diode no longer consistently reflected its light on the aluminum foil of the pendulum. So while the photo-diode is incredibly precise and accurate, it does require careful set up to ensure that it can make its recordings properly due to how inflexible it is. 
+
+		Lastly, in regards to experiment no. 4. While it does have a standard deviation that is an order of magnitude higher than for 1 \& 2, this is likely due to the initial instability of the system after having received it's initial push. In retrospect, it would have been interesting to see how the period evolved in a longer timespan than just 120 seconds. The same goes for experiment 1 \& 2 as well, even though they are much more stable in general, it does seem that the readings has a tendency to converge after a while. 
+ 
+\section{Conclusion}
+	In summary, having compared the three different methods of measuring time, i think it's safe to disregard this particular hourglass as a reliable source of timekeeping. I would much rather trust my own counting than its timekeeping capabilities. As for the Stopwatch and photo-diode, i believe it's a case of what is being measured. For a uniform, controlled system such as this pendulum, the photo-diode is the most suitable and accurate of the two. Where as the Stopwatch is much more flexible in its usage, making it a much safer default choice for time keeping compared to the photo-diode, even though it is far less accurate and prone to human error.
+
+\bibliography{rapport1_ref}
+
+\end{document}
+%
+% ****** End of file apssamp.tex ******
+              

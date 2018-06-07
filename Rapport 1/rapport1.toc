@@ -1,0 +1,15 @@
+\contentsline {title}{FYS2150 \\ Lab Report: Time and Frequency}{1}{}
+\contentsline {abstract}{Abstract}{1}{}
+\tocdepth@munge 
+\contentsline {section}{\numberline {}Contents}{1}{}
+\tocdepth@restore 
+\contentsline {section}{\numberline {I}Introduction}{1}{}
+\contentsline {section}{\numberline {II}Theory}{1}{}
+\contentsline {section}{\numberline {III}Experimental Procedure}{1}{}
+\contentsline {subsection}{\numberline {A}Hourglass}{1}{}
+\contentsline {subsection}{\numberline {B}Stopwatch}{1}{}
+\contentsline {subsection}{\numberline {C}Photodiode}{1}{}
+\contentsline {section}{\numberline {IV}Results}{1}{}
+\contentsline {section}{\numberline {V}Discussion}{1}{}
+\contentsline {section}{\numberline {VI}Conclusion}{1}{}
+\contentsline {section}{\numberline {}References}{1}{}

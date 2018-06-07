@@ -1,0 +1,10 @@
+#latex stuff
+*.aux
+*.fls
+*.log
+*.out
+*.blg
+*.fdb_latexmk
+*.synctex.gz
+#compiled python
+*.pyc

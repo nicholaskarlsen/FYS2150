@@ -1,0 +1,166 @@
+              
+% ****** Start of file apssamp.tex ******
+%
+%   This file is part of the APS files in the REVTeX 4.1 distribution.
+%   Version 4.1r of REVTeX, August 2010
+%
+%   Copyright (c) 2009, 2010 The American Physical Society.
+%
+%   See the REVTeX 4 README file for restrictions and more information.
+%
+% TeX'ing this file requires that you have AMS-LaTeX 2.0 installed
+% as well as the rest of the prerequisites for REVTeX 4.1
+%
+% See the REVTeX 4 README file
+% It also requires running BibTeX. The commands are as follows:
+%
+%  1)  latex apssamp.tex
+%  2)  bibtex apssamp
+%  3)  latex apssamp.tex
+%  4)  latex apssamp.tex
+%
+\documentclass[%
+ reprint,
+%superscriptaddress,
+%groupedaddress,
+%unsortedaddress,
+%runinaddress,
+%frontmatterverbose, 
+%preprint,
+%showpacs,preprintnumbers,
+%nofootinbib,
+%nobibnotes,
+%bibnotes,
+ amsmath,amssymb,
+ aps,
+%pra,
+%prb,
+%rmp,
+%prstab,
+%prstper,
+%floatfix,
+]{revtex4-1}
+
+\usepackage{pgfplotstable}
+\usepackage{array}
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{hyperref}% add hypertext capabilities
+%\usepackage[mathlines]{lineno}% Enable numbering of text and display math
+%\linenumbers\relax % Commence numbering lines
+
+%\usepackage[showframe,%Uncomment any one of the following lines to test 
+%%scale=0.7, marginratio={1:1, 2:3}, ignoreall,% default settings
+%%text={7in,10in},centering,
+%%margin=1.5in,
+%%total={6.5in,8.75in}, top=1.2in, left=0.9in, includefoot,
+%%height=10in,a5paper,hmargin={3cm,0.8in},
+%]{geometry}
+\bibliographystyle{plain}
+
+%\graphicspath{{C:\Users\Nick\Documents\GitHub\FYS2150\lab1}}
+
+\begin{document}
+
+%\preprint{APS/123-QED}
+
+\title{Lab Report: Length, Velocity and Acceleration}% Force line breaks with \\
+
+\author{Nicholas Karlsen}
+% \email{nichoka@student.matnat.uio.no}
+
+\date{\today}% It is always \today, today,
+             %  but any date may be explicitly specified
+
+\begin{abstract}
+  A study on different methods for determining the length, velocity and acceleration of different objects, and the errors involved in these methods.
+\end{abstract}
+
+\maketitle
+
+%\tableofcontents
+
+\section{\label{sec:intro}Introduction}
+
+\section{\label{sec:theory}Theory}
+  \subsection{Pendulum}
+    \begin{equation}
+      \label{eqn:period}
+        T \approx 2\pi \sqrt{\frac{L}{g}}\enspace
+    \end{equation}
+    Where $T$ denotes the period of a pendulum, $L$ its length and $g$ the gravitational acceleration. The small angle approximation (Eqn. \ref{eqn:period})  is valid for angles $\theta \ll 1\, \textup{rad}$ with an error $\approx \pm 15 \, \textup{s}$ per day \cite{pend_wik}.
+  \subsection{Errors}
+    \begin{equation}
+    \label{eqn:sigma}
+      \sigma \approx \left(
+      \frac{\sum x_i^2 - \frac{1}{n}(\sum x_i)^2}
+      {n - 1}
+      \right)^\frac{1}{2}
+    \end{equation}
+    
+    \begin{equation}
+      \label{eqn:sigma_m}
+      \sigma_m \approx \left(
+      \frac{\sum x_i^2 - \frac{1}{n}(\sum x_i)^2}
+      {n(n - 1)}
+      \right)^\frac{1}{2}
+    \end{equation}
+
+    Where $\sigma, \sigma_m$ denotes the standard deviation, and the standard deviation of the mean respectively of a set of $n$ values $x_i$. \cite{squires}.
+
+    Any errors stated in a derived number will be calculated using the equations for combinations of errors found on page 29 in Squires \cite{squires}. Lastly, when using a linear fit on a set of linearly correlated data i used the expressions found on page 39 in Squires \cite{squires} to calculate the regression line, as well as its error.
+
+\section{\label{sec:exp_proced}Experimental Procedure}
+  \section{Measuring the lenght of a rod}
+  \section{Measuring the period and height of the Foucault's pendulum}
+  \section{Measuring the velocity of the lego-car}
+  \section{Measuring the velocity of the RC-car}
+
+\section{\label{sec:data} Results}
+  \begin{table}[h!]
+    \center
+    \caption{Lenght of rods}
+    \label{tab:lenrods}
+    \input{scripts/tables/lendat}
+  \end{table}
+
+  \begin{table}[h!]
+    \center
+    \caption{Uncertainty in Length measurement using the meter ruler}
+    \label{tab:uncert}
+    \input{scripts/tables/uncertainhulta}
+  \end{table}
+  
+  \begin{itemize}
+    \item $l_a:$ Recorded length
+    \item $dl_s:$ Error due to aiming of the ruler
+    \item $\sqrt n \cdot dl_l:$ Error due to curvature of joints
+    \item $dl_m:$ Error due to precision of measuring lines
+    \item $\alpha :\enspace 4\cdot10^{-5\circ} C^{-1}$, Coefficient of linear thermal expansion for glass fiber
+  \end{itemize}
+  
+  %\begin{table}[h!]
+  %  \center
+  %  \caption{Period of pendulum}
+  %  \label{tab:pendel}
+  %  \input{scripts/tables/perioddat}
+  %\end{table}
+  
+  \begin{figure}[h!]
+    \center
+    \includegraphics[scale=0.6]{scripts/figs/period.png}
+    \caption{Measurements of the Period of the Focault's Pendulum in the entrance hall at the Institute of Physics, UiO.}
+    \label{fig:pendel}
+  \end{figure}
+
+
+\section{\label{sec:disc}Discussion}
+\section{\label{sec:conc}Conclusion}
+
+
+    \bibliography{rapport2_ref}
+\end{document}
+%
+% ****** End of file apssamp.tex ******
+              
