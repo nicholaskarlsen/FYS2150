@@ -82,12 +82,12 @@ def trackCircle(filename="litenmetallkule.avi", path="current",
 
     fullFilename = folderPath + "/" + filename
 
-    print "Reading video... %s" % fullFilename
+    print("Reading video... %s" % fullFilename)
 
     video = skvideo.io.vread(fullFilename)
     totalFrames = len(video)
 
-    print "Number of frames:", len(video)
+    print("Number of frames:", len(video))
 
     frameStart = 0
     frameStop = totalFrames
@@ -131,9 +131,9 @@ def trackCircle(filename="litenmetallkule.avi", path="current",
             validFrames.append(frame)  # Keeps track of frames with ball
 
             # Print info to terminal while processing
-            print "frame", frame,\
+            print("frame", frame,\
                   "-", "Center of mass:",\
-                  "x=%i, y=%i" % (cmPos[frame][1], cmPos[frame][0])
+                  "x=%i, y=%i" % (cmPos[frame][1], cmPos[frame][0]))
 
     def plot_im(frame=int(totalFrames / 2.0)):
         "plot frame + CM, used to check functionality"
